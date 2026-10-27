@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment_id": "subsidiary_recourse_pair_v1",
+  "provenance": "All entities, amounts, contracts and outcomes are synthetic stipulated facts, not claims about a real company or real-world enforceability.",
+  "common": {
+    "currency": "USD",
+    "amount_unit": "millions",
+    "settlement_date": "2027-12-31",
+    "parent": {
+      "name": "Cedar Holdings (fictional)",
+      "standalone_cash_at_settlement": "110",
+      "bond_principal_due": "100",
+      "bond_terms": "One senior unsecured bullet bond, zero interest, all principal due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a parent guarantee if explicitly present. Parent bondholders have no direct claim on subsidiary assets."
+    },
+    "subsidiary": {
+      "name": "Cedar Operations (fictional)",
+      "parent_ownership_percent": "100",
+      "external_debt_principal_due": "80",
+      "debt_terms": "Subsidiary is the sole borrower. Zero interest, all principal due at settlement. Lender has first and sole debt claim on subsidiary net liquidation proceeds. The debt itself is legally non-recourse to the parent; an explicitly supplied separate parent guarantee is the only possible exception to no parent recourse. There are no other subsidiary creditors, obligations or preferred shares. Remaining subsidiary cash, if any, is distributed to parent as sole common shareholder."
+    },
+    "default_scenario": {
+      "subsidiary_default": true,
+      "subsidiary_net_liquidation_proceeds": "20",
+      "settlement_sequence": "First liquidate subsidiary and pay its lender from subsidiary proceeds. After this recovery, any parent guarantee claim becomes immediately due for the covered remaining shortfall. Finally settle parent claims and distribute any parent equity residual."
+    },
+    "no_default_comparison": {
+      "subsidiary_net_liquidation_proceeds": "110",
+      "terms": "A same-date counterfactual to measure economic exposure: only subsidiary net proceeds change. Parent standalone cash, debt principals, ownership and contract terms remain fixed. Subsidiary pays its lender before distributing its residual to parent. No subsidiary payment default occurs in this comparison."
+    },
+    "assumptions": [
+      "Parent standalone cash excludes all subsidiary assets, subsidiary proceeds and value of its equity stake. Add only actual subsidiary residual distributions to parent cash, once. Both cash pools are after all taxes, operating costs and administration expenses, before modeled claims.",
+      "Entities remain legally separate. No veil piercing, substantive consolidation, statutory parent liability, letters of support, voluntary bailout, reputational support payment, intercompany debt or other recourse exists. These are binding synthetic legal premises.",
+      "Parent ownership is limited-liability common equity. Any guarantee, if present, is a separate contractual obligation and is not created merely by ownership.",
+      "A parent guarantee claim, if present and triggered, ranks pari passu with the parent bond. Parent claims settle simultaneously: if cash is insufficient, each receives the same fraction of its claim. Parent common equity receives only the nonnegative residual.",
+      "Parent guarantee amounts are capped at the subsidiary debt remaining after subsidiary lender recoveries. No double recovery is allowed. No reimbursement, subrogation proceeds or other recoveries are available to parent; subsidiary assets have been exhausted before parent settlement.",
+      "Group reported gross borrowing principal is defined here as the sum of external parent and subsidiary borrowing principals, without netting cash. It is not a separate legal entity's claim. No guarantee accounting carrying value or accounting standard is specified.",
+      "No share counts, security purchase prices, EBITDA, default probabilities, discount rates or other market values are given. Compare conditional settlement distributions rather than market investment returns, expected losses, or a debt-to-EBITDA ratio."
+    ]
+  },
+  "structures": {
+    "A": {
+      "parent_guarantee": null
+    },
+    "B": {
+      "parent_guarantee": {
+        "cap": "80",
+        "terms": "Parent has issued an enforceable, irrevocable guarantee to the subsidiary lender, covering the subsidiary principal unpaid after subsidiary liquidation, capped at 80. It is binding at settlement, with no defenses, waiting period, fees or interest. It creates an immediately due senior unsecured parent payment claim on subsidiary payment default after applying subsidiary lender recoveries. It ranks pari passu with the parent bond and expires after settlement. This enforceability and rank are stipulated, not inferred from general law."
+      }
+    }
+  }
+}

@@ -1,9 +1,11 @@
 # Parallax
 
 Parallax evaluates how corporate financial obligations affect different stakeholders.
-This proof of concept prepares four financial-reasoning tasks from one synthetic
-company: two investor perspectives across base and stress scenarios. It can also
-submit all four to Meta Model API and save their unmodified responses for inspection.
+The original proof of concept prepares four financial-reasoning tasks from one
+synthetic company: two investor perspectives across base and stress scenarios.
+A second experiment compares non-recourse subsidiary debt with a parent-guaranteed
+structure for the same two investors. Both experiments can submit four independent
+requests to Meta Model API and save their unmodified responses for inspection.
 It uses Python's standard library with no third-party runtime or test dependencies.
 
 ## Run
@@ -206,3 +208,35 @@ one imprecise statement about equity's cash cushion. No model answers were corre
 
 Web UI, multi-agent orchestration, general financial-data ingestion and benchmarking
 infrastructure are intentionally outside this proof of concept.
+
+## Paired subsidiary-recourse experiment
+
+The [paired case and reference answers](cases/subsidiary_pair.md) specify one parent
+and its wholly owned subsidiary. Under subsidiary default, Case A has non-recourse
+subsidiary debt; Case B adds an enforceable parent guarantee. All common facts are
+stored once in [the input JSON](cases/subsidiary_pair.json), and tests check that
+only `evidence.parent_guarantee` changes across paired prompt evidence. Each
+structure is independently evaluated for parent equity and the parent senior
+unsecured bondholder. The same no-default comparison in every prompt makes lost
+subsidiary equity distributions measurable without implying parent debt liability.
+
+```sh
+uv sync --locked
+uv run python -m parallax.paired --all
+uv run --env-file .env python -m parallax.paired --evaluate --output results/subsidiary-pair-live.json
+uv run python -m unittest discover -s tests -v
+```
+
+The preview contains four answer-free API payloads. Live output uses the same
+separation of model-generated claims and local deterministic references as the
+original evaluation. The paired module reuses the existing Meta client and atomic
+checkpoint writer; no dependencies, models or generalized evaluation framework
+were added. Existing Harbor commands and saved results remain unchanged. Use a new
+output filename when repeating a live run.
+
+The first paired run completed all four requests. See the
+[unaltered responses](results/subsidiary-pair-live.json) and
+[short manual evaluation](results/subsidiary-pair-review.md). Calculated outcomes
+match the references across both structures and investor perspectives. The review
+separates numerical, legal-structure and investor-perspective findings, including
+a wording caveat and citation errors. All 22 tests pass.

@@ -1,0 +1,295 @@
+{
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "evaluation_schema_version": 1,
+  "evaluations": [
+    {
+      "deterministic_reference": {
+        "sent_to_model": false,
+        "values": {
+          "group_gross_borrowing_principal": "180.000000",
+          "lost_subsidiary_equity_distribution": "30.000000",
+          "no_default_parent_equity_distribution": "40.000000",
+          "no_default_subsidiary_equity_distribution": "30.000000",
+          "parent_bond_payment": "100.000000",
+          "parent_bond_recovery_percent": "100.000000",
+          "parent_cash_pool": "110.000000",
+          "parent_equity_decline_vs_no_default": "30.000000",
+          "parent_equity_distribution": "10.000000",
+          "parent_guarantee_claim": "0.000000",
+          "parent_guarantee_payment": "0.000000",
+          "parent_total_contractual_claims": "100.000000",
+          "subsidiary_debt_claim": "80.000000",
+          "subsidiary_equity_distribution": "0.000000",
+          "subsidiary_lender_payment_from_subsidiary": "20.000000",
+          "subsidiary_lender_total_recovery": "20.000000",
+          "subsidiary_unpaid_debt_after_liquidation": "60.000000"
+        }
+      },
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise analysis \u2014 Cedar Holdings / Cedar Operations \u2014 Structure A**\n*Perspective: `investor` = Holder of parent common equity. Amounts in `evidence.amount_unit` millions, `evidence.currency` USD. All facts synthetic per `evidence.provenance`.*\n\n### 1. Borrower and obligors vs group figure\n\n* **Subsidiary debt:** sole borrower is `evidence.subsidiary.name` Cedar Operations. Principal due `evidence.subsidiary.external_debt_principal_due` = 80, zero interest, all due at `evidence.settlement_date`.\n  Terms `evidence.subsidiary.debt_terms`: lender has first and sole debt claim on subsidiary net proceeds. Debt itself is legally non-recourse to parent.\n\n* **Parent debt:** obligor is `evidence.parent.name` Cedar Holdings. Principal due `evidence.parent.bond_principal_due` = 100. Terms `evidence.parent.bond_terms`: senior unsecured bullet, zero interest, all due at settlement. No collateral. Parent bondholders have no direct claim on subsidiary assets. No other parent claims except a guarantee if explicitly present.\n\n* **Parent guarantee for subsidiary debt:** `evidence.parent_guarantee` = null. Therefore no additional parent obligation is triggered.\n\nBinding premises `evidence.assumptions`:\nentities legally separate, no veil piercing, consolidation, statutory parent liability, support, bailout, intercompany debt or other recourse; ownership is limited-liability common equity, guarantee is separate and not created by ownership.\n\n> **Group reported gross borrowing:** defined `evidence.assumptions[5]` as sum of external principals without netting cash. Here 100 parent + 80 subsidiary = **180**. It is **not** a legal claim on either entity. Entity claims remain 100 against parent cash only, 80 against subsidiary proceeds only.\n\n### 2. Default scenario settlement trace\n\nInputs: `evidence.default_scenario.subsidiary_default`=true, `evidence.default_scenario.subsidiary_net_liquidation_proceeds`=20, `evidence.parent.standalone_cash_at_settlement`=110, `evidence.subsidiary.parent_ownership_percent`=100.\n\nSequence `evidence.default_scenario.settlement_sequence`: liquidate subsidiary -> pay subsidiary lender -> crystallize guarantee -> settle parent.\n\n**Subsidiary:**\nProceeds 20 vs debt 80.\nLender recovery = min(20,80) = **20**. Shortfall = 80-20 = **60 unpaid**.\nNo other subsidiary creditors per `evidence.subsidiary.debt_terms`.\nResidual for parent as sole common shareholder = max(20-80,0) = **0**.\n\nParent guarantee capped at remaining shortfall, no double recovery, no reimbursement per `evidence.assumptions[4]`, but guarantee = null so claim = **0**.\n\n**Parent:**\nCash pool per `evidence.assumptions[0]`: standalone excludes subsidiary assets; add only actual residual once.\nDistributable = 110 + 0 = **110**.\n\nParent claims: bond 100 + guarantee 0 = 100 total.\nRule `evidence.assumptions[3]`: pari passu pro-rata if insufficient; equity gets only non-negative residual.\n\nBond payment = **100 full** (100/100).\nEquity residual = 110-100 = **10** to parent common holders.\n\n> Subsidiary lender 25% recovery; parent bond 100% recovery; parent equity 10. Parent does **not** pay the 60 subsidiary shortfall.\n\n### 3. No-default counterfactual comparison\n\nInputs `evidence.no_default_comparison`: only subsidiary proceeds change to 110; parent cash, principals, ownership, terms fixed. Subsidiary pays lender before distributing residual; no default.\n\n**Subsidiary:** 110 vs 80.\nLender = **80 full**. Residual to parent = 110-80 = **30**.\n\n**Parent:** Distributable = 110 + 30 = **140**.\nBond = **100 full**. Equity residual = 140-100 = **40**.\n\nDifference default vs no-default:\nSubsidiary lender 20 vs 80 (-60); parent bond 100 vs 100 (0); parent equity 10 vs 40 (-30).\n\n### 4. Economic exposure\n\nSelected investor holds parent common equity \u2014 residual-only claim on parent pool. No direct liability for subsidiary debt due to non-recourse + no guarantee + limited liability.\n\nExposure is **indirect through the equity stake**: loss of subsidiary distribution. Here 30 less distributable to parent -> 30 less to equity (40 to 10). Downside floored at zero distribution; 60 subsidiary shortfall does not become negative contribution.\n\nOther parent investor class \u2014 parent bondholders \u2014 unaffected in these facts: standalone 110 alone covers 100 bond in both cases. They are senior to equity, have no direct subsidiary-asset claim, and would have ranked pari passu with any guarantee claim if one existed. Subsidiary distress therefore hits parent equity cushion first; bondholders bear no loss here.\n\nNo voluntary support, bailout or reallocation was added; cash, terms, 100% ownership and priorities unchanged.\n\n### 5. Uncertainties / limits\n\nOnly conditional settlement distributions compared, per `evidence.assumptions[6]`: no share counts, purchase prices, EBITDA, probabilities, discount rates or market values given \u2014 no investment return, expected loss or debt-to-EBITDA calculation possible. Cash pools are after taxes/costs/expenses, before modeled claims. No guarantee accounting value specified.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793126872,
+        "id": "chatcmpl-01a17eb0-b764-7208-a2f7-cffdcee5d46b",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3466,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2336
+          },
+          "prompt_tokens": 934,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 4400
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze this synthetic corporate structure from the selected parent-company investor perspective under the supplied subsidiary-default scenario. Identify the borrower and any obligors, distinguish entity-level contractual claims from group borrowing figures, and explain economic exposure. Show the necessary calculations and trace settlement cash flows at both entities, including any parent payment claims, creditor recoveries and shareholder distributions. Compare the supplied no-default counterfactual. Explain implications for the selected investor and for the other parent investor class. Preserve all supplied facts and do not introduce extra support payments or change cash, terms, ownership or priorities. Cite input field paths. Disclose uncertainties; use only the stipulated facts. Provide a concise analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"evidence\": {\"amount_unit\": \"millions\", \"assumptions\": [\"Parent standalone cash excludes all subsidiary assets, subsidiary proceeds and value of its equity stake. Add only actual subsidiary residual distributions to parent cash, once. Both cash pools are after all taxes, operating costs and administration expenses, before modeled claims.\", \"Entities remain legally separate. No veil piercing, substantive consolidation, statutory parent liability, letters of support, voluntary bailout, reputational support payment, intercompany debt or other recourse exists. These are binding synthetic legal premises.\", \"Parent ownership is limited-liability common equity. Any guarantee, if present, is a separate contractual obligation and is not created merely by ownership.\", \"A parent guarantee claim, if present and triggered, ranks pari passu with the parent bond. Parent claims settle simultaneously: if cash is insufficient, each receives the same fraction of its claim. Parent common equity receives only the nonnegative residual.\", \"Parent guarantee amounts are capped at the subsidiary debt remaining after subsidiary lender recoveries. No double recovery is allowed. No reimbursement, subrogation proceeds or other recoveries are available to parent; subsidiary assets have been exhausted before parent settlement.\", \"Group reported gross borrowing principal is defined here as the sum of external parent and subsidiary borrowing principals, without netting cash. It is not a separate legal entity's claim. No guarantee accounting carrying value or accounting standard is specified.\", \"No share counts, security purchase prices, EBITDA, default probabilities, discount rates or other market values are given. Compare conditional settlement distributions rather than market investment returns, expected losses, or a debt-to-EBITDA ratio.\"], \"currency\": \"USD\", \"default_scenario\": {\"settlement_sequence\": \"First liquidate subsidiary and pay its lender from subsidiary proceeds. After this recovery, any parent guarantee claim becomes immediately due for the covered remaining shortfall. Finally settle parent claims and distribute any parent equity residual.\", \"subsidiary_default\": true, \"subsidiary_net_liquidation_proceeds\": \"20\"}, \"no_default_comparison\": {\"subsidiary_net_liquidation_proceeds\": \"110\", \"terms\": \"A same-date counterfactual to measure economic exposure: only subsidiary net proceeds change. Parent standalone cash, debt principals, ownership and contract terms remain fixed. Subsidiary pays its lender before distributing its residual to parent. No subsidiary payment default occurs in this comparison.\"}, \"parent\": {\"bond_principal_due\": \"100\", \"bond_terms\": \"One senior unsecured bullet bond, zero interest, all principal due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a parent guarantee if explicitly present. Parent bondholders have no direct claim on subsidiary assets.\", \"name\": \"Cedar Holdings (fictional)\", \"standalone_cash_at_settlement\": \"110\"}, \"parent_guarantee\": null, \"settlement_date\": \"2027-12-31\", \"subsidiary\": {\"debt_terms\": \"Subsidiary is the sole borrower. Zero interest, all principal due at settlement. Lender has first and sole debt claim on subsidiary net liquidation proceeds. The debt itself is legally non-recourse to the parent; an explicitly supplied separate parent guarantee is the only possible exception to no parent recourse. There are no other subsidiary creditors, obligations or preferred shares. Remaining subsidiary cash, if any, is distributed to parent as sole common shareholder.\", \"external_debt_principal_due\": \"80\", \"name\": \"Cedar Operations (fictional)\", \"parent_ownership_percent\": \"100\"}}, \"experiment_id\": \"subsidiary_recourse_pair_v1\", \"investor\": \"Holder of parent common equity\", \"perspective\": \"equity_holder\", \"provenance\": \"All entities, amounts, contracts and outcomes are synthetic stipulated facts, not claims about a real company or real-world enforceability.\", \"structure\": \"A\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "structure": "A",
+      "task_id": "subsidiary_recourse_pair_v1:A:equity_holder"
+    },
+    {
+      "deterministic_reference": {
+        "sent_to_model": false,
+        "values": {
+          "group_gross_borrowing_principal": "180.000000",
+          "lost_subsidiary_equity_distribution": "30.000000",
+          "no_default_parent_equity_distribution": "40.000000",
+          "no_default_subsidiary_equity_distribution": "30.000000",
+          "parent_bond_payment": "100.000000",
+          "parent_bond_recovery_percent": "100.000000",
+          "parent_cash_pool": "110.000000",
+          "parent_equity_decline_vs_no_default": "30.000000",
+          "parent_equity_distribution": "10.000000",
+          "parent_guarantee_claim": "0.000000",
+          "parent_guarantee_payment": "0.000000",
+          "parent_total_contractual_claims": "100.000000",
+          "subsidiary_debt_claim": "80.000000",
+          "subsidiary_equity_distribution": "0.000000",
+          "subsidiary_lender_payment_from_subsidiary": "20.000000",
+          "subsidiary_lender_total_recovery": "20.000000",
+          "subsidiary_unpaid_debt_after_liquidation": "60.000000"
+        }
+      },
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Structure A - `Cedar Holdings (fictional)` / `Cedar Operations (fictional)` - Investor: `Holder of the entire parent senior unsecured bond`**\n\nAmounts in `evidence.amount_unit` millions `evidence.currency` USD at `evidence.settlement_date` 2027-12-31. Synthetic facts only per `evidence.provenance`.\n\n### 1. Borrower / obligors vs group figure\n\n* **Parent obligor:** `evidence.parent.name` owes `evidence.parent.bond_principal_due` = 100 to selected investor `evidence.investor`.\nTerms `evidence.parent.bond_terms`: one senior unsecured bullet, zero interest, all due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a guarantee if explicitly present. **Bondholders have no direct claim on subsidiary assets.**\n\n* **Subsidiary obligor:** `evidence.subsidiary.name` is sole borrower for `evidence.subsidiary.external_debt_principal_due` = 80.\nTerms `evidence.subsidiary.debt_terms`: zero interest, all due at settlement. Lender has first and sole debt claim on subsidiary net proceeds. Debt itself is legally non-recourse to parent. Remaining cash, if any, distributed to parent as sole common shareholder per `evidence.subsidiary.parent_ownership_percent` = 100.\n\n* **No additional obligor:** `evidence.parent_guarantee` = null. No guarantee claim is triggered. Ownership does not create guarantee per `evidence.assumptions[2]`.\n\n* **Legal separation binding:** `evidence.assumptions[1]`: legally separate, no veil piercing, consolidation, statutory parent liability, support letter, voluntary bailout, reputational payment, intercompany debt or other recourse.\n\n* **Group figure is not a claim:** `evidence.assumptions[5]` defines group reported gross borrowing = 100 parent + 80 subsidiary = **180**, without netting cash. It is not a separate entity's claim. Do not add claims across pools.\n\n### 2. Default scenario settlement trace - `evidence.default_scenario.subsidiary_default`=true\n\nSequence `evidence.default_scenario.settlement_sequence`: liquidate subsidiary first, then settle parent.\n\n**Subsidiary - proceeds `evidence.default_scenario.subsidiary_net_liquidation_proceeds`=20:**\n\n> Lender recovery = min(20,80) = 20\n> Shortfall = 80-20 = 60 borne by subsidiary lender\n> Residual to parent = max(20-80,0) = **0**\n\nSubsidiary assets exhausted before parent settlement per `evidence.assumptions[4]`. Parent has no liability for 60 shortfall.\n\n**Parent - standalone cash `evidence.parent.standalone_cash_at_settlement`=110:**\n\nRule `evidence.assumptions[0]`: standalone cash excludes subsidiary proceeds; add only actual residual once.\n\n> Parent cash available = 110 + 0 = 110\n> Parent contractual claims = 100 bond + 0 guarantee = 100\n> Bond payment = min(110,100) = **100, 100% recovery**\n> Parent common equity residual per `evidence.assumptions[3]` = max(110-100,0) = **10**\n\nNo pari-passu sharing needed; holder owns entire bond.\n\nCreditor recoveries: subsidiary lender 20/80=25%; parent bondholder 100/100=100%. Shareholder distributions: subsidiary to parent 0; parent to common equity 10.\n\n### 3. No-default counterfactual - `evidence.no_default_comparison.subsidiary_net_liquidation_proceeds`=110\n\nTerms `evidence.no_default_comparison.terms`: only subsidiary proceeds change; cash, principals, ownership, contracts fixed. Subsidiary pays lender before distributing residual. No default.\n\n**Subsidiary:**\n\n> Lender paid = 80, 100% recovery\n> Residual to parent = 110-80 = **30**\n\n**Parent:**\n\n> Parent cash = 110 + 30 = 140\n> Bond payment = **100, 100% recovery**\n> Equity residual = 140-100 = **40**\n\n### 4. Comparison - economic exposure\n\n|  | Default (20) | No-default (110) | Delta |\n|---|---|---|---|\n| Subsidiary lender | 20 | 80 | -60 |\n| Parent bondholder (selected) | 100 | 100 | 0 |\n| Parent equity residual | 10 | 40 | -30 |\n\n**Selected investor `evidence.perspective`=senior_unsecured_creditor:** No contractual exposure to subsidiary assets or shortfall and no loss in this pair. Insulated because claim is solely on parent cash pool 110, which alone covers 100, and no guarantee adds competing pari-passu claim. Indirect channel via lost upstream distribution does not impair bond here; it is absorbed below debt.\n\n**Other parent investor class - parent common equity:** Bears full economic effect of subsidiary distress via equity stake despite limited liability `evidence.assumptions[2]`. Loss = 30 foregone distribution (40 to 10), no additional liability to cover 60 subsidiary shortfall. No bailout made.\n\n### 5. Uncertainties / limits\n\nOnly conditional settlement distributions compared per `evidence.assumptions[6]`. No share counts, prices, EBITDA, probabilities, discount rates or market values given. Cannot infer market returns, expected loss, or debt/EBITDA. Both cash pools are after taxes, costs, admin, before modeled claims per `evidence.assumptions[0]`. Guarantee cap / no double-recovery rules `evidence.assumptions[4]` inapplicable as guarantee is null.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793126889,
+        "id": "chatcmpl-01a17eb0-f9a0-74ac-8214-bedc093ff60c",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3781,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2605
+          },
+          "prompt_tokens": 942,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 4723
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze this synthetic corporate structure from the selected parent-company investor perspective under the supplied subsidiary-default scenario. Identify the borrower and any obligors, distinguish entity-level contractual claims from group borrowing figures, and explain economic exposure. Show the necessary calculations and trace settlement cash flows at both entities, including any parent payment claims, creditor recoveries and shareholder distributions. Compare the supplied no-default counterfactual. Explain implications for the selected investor and for the other parent investor class. Preserve all supplied facts and do not introduce extra support payments or change cash, terms, ownership or priorities. Cite input field paths. Disclose uncertainties; use only the stipulated facts. Provide a concise analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"evidence\": {\"amount_unit\": \"millions\", \"assumptions\": [\"Parent standalone cash excludes all subsidiary assets, subsidiary proceeds and value of its equity stake. Add only actual subsidiary residual distributions to parent cash, once. Both cash pools are after all taxes, operating costs and administration expenses, before modeled claims.\", \"Entities remain legally separate. No veil piercing, substantive consolidation, statutory parent liability, letters of support, voluntary bailout, reputational support payment, intercompany debt or other recourse exists. These are binding synthetic legal premises.\", \"Parent ownership is limited-liability common equity. Any guarantee, if present, is a separate contractual obligation and is not created merely by ownership.\", \"A parent guarantee claim, if present and triggered, ranks pari passu with the parent bond. Parent claims settle simultaneously: if cash is insufficient, each receives the same fraction of its claim. Parent common equity receives only the nonnegative residual.\", \"Parent guarantee amounts are capped at the subsidiary debt remaining after subsidiary lender recoveries. No double recovery is allowed. No reimbursement, subrogation proceeds or other recoveries are available to parent; subsidiary assets have been exhausted before parent settlement.\", \"Group reported gross borrowing principal is defined here as the sum of external parent and subsidiary borrowing principals, without netting cash. It is not a separate legal entity's claim. No guarantee accounting carrying value or accounting standard is specified.\", \"No share counts, security purchase prices, EBITDA, default probabilities, discount rates or other market values are given. Compare conditional settlement distributions rather than market investment returns, expected losses, or a debt-to-EBITDA ratio.\"], \"currency\": \"USD\", \"default_scenario\": {\"settlement_sequence\": \"First liquidate subsidiary and pay its lender from subsidiary proceeds. After this recovery, any parent guarantee claim becomes immediately due for the covered remaining shortfall. Finally settle parent claims and distribute any parent equity residual.\", \"subsidiary_default\": true, \"subsidiary_net_liquidation_proceeds\": \"20\"}, \"no_default_comparison\": {\"subsidiary_net_liquidation_proceeds\": \"110\", \"terms\": \"A same-date counterfactual to measure economic exposure: only subsidiary net proceeds change. Parent standalone cash, debt principals, ownership and contract terms remain fixed. Subsidiary pays its lender before distributing its residual to parent. No subsidiary payment default occurs in this comparison.\"}, \"parent\": {\"bond_principal_due\": \"100\", \"bond_terms\": \"One senior unsecured bullet bond, zero interest, all principal due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a parent guarantee if explicitly present. Parent bondholders have no direct claim on subsidiary assets.\", \"name\": \"Cedar Holdings (fictional)\", \"standalone_cash_at_settlement\": \"110\"}, \"parent_guarantee\": null, \"settlement_date\": \"2027-12-31\", \"subsidiary\": {\"debt_terms\": \"Subsidiary is the sole borrower. Zero interest, all principal due at settlement. Lender has first and sole debt claim on subsidiary net liquidation proceeds. The debt itself is legally non-recourse to the parent; an explicitly supplied separate parent guarantee is the only possible exception to no parent recourse. There are no other subsidiary creditors, obligations or preferred shares. Remaining subsidiary cash, if any, is distributed to parent as sole common shareholder.\", \"external_debt_principal_due\": \"80\", \"name\": \"Cedar Operations (fictional)\", \"parent_ownership_percent\": \"100\"}}, \"experiment_id\": \"subsidiary_recourse_pair_v1\", \"investor\": \"Holder of the entire parent senior unsecured bond\", \"perspective\": \"senior_unsecured_creditor\", \"provenance\": \"All entities, amounts, contracts and outcomes are synthetic stipulated facts, not claims about a real company or real-world enforceability.\", \"structure\": \"A\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "structure": "A",
+      "task_id": "subsidiary_recourse_pair_v1:A:senior_unsecured_creditor"
+    },
+    {
+      "deterministic_reference": {
+        "sent_to_model": false,
+        "values": {
+          "group_gross_borrowing_principal": "180.000000",
+          "lost_subsidiary_equity_distribution": "30.000000",
+          "no_default_parent_equity_distribution": "40.000000",
+          "no_default_subsidiary_equity_distribution": "30.000000",
+          "parent_bond_payment": "68.750000",
+          "parent_bond_recovery_percent": "68.750000",
+          "parent_cash_pool": "110.000000",
+          "parent_equity_decline_vs_no_default": "40.000000",
+          "parent_equity_distribution": "0.000000",
+          "parent_guarantee_claim": "60.000000",
+          "parent_guarantee_payment": "41.250000",
+          "parent_total_contractual_claims": "160.000000",
+          "subsidiary_debt_claim": "80.000000",
+          "subsidiary_equity_distribution": "0.000000",
+          "subsidiary_lender_payment_from_subsidiary": "20.000000",
+          "subsidiary_lender_total_recovery": "61.250000",
+          "subsidiary_unpaid_debt_after_liquidation": "60.000000"
+        }
+      },
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Analysis - from `evidence.investor: Holder of parent common equity`**\n\nAll amounts in `evidence.amount_unit: millions` `evidence.currency: USD`. All entities, contracts synthetic per `evidence.provenance`.\n\n### 1. Who owes what - borrower vs obligors\n\n* **Sole borrower:** `evidence.subsidiary.name: Cedar Operations` for `evidence.subsidiary.external_debt_principal_due: 80`, zero interest, due at `evidence.settlement_date`.\n  `evidence.subsidiary.debt_terms`: Lender has first and sole debt claim on subsidiary net proceeds. Debt itself is legally **non-recourse to parent**; explicitly supplied separate guarantee is only possible exception. No other subsidiary creditors or preferred shares. Remainder, if any, to parent as sole common shareholder.\n\n* **Parent obligors - `evidence.parent.name: Cedar Holdings`:**\n  1. Senior unsecured bullet bond `evidence.parent.bond_principal_due: 100`, zero interest. `evidence.parent.bond_terms`: No collateral. No direct claim on subsidiary assets.\n  2. Enforceable irrevocable guarantee to subsidiary lender `evidence.parent_guarantee.cap: 80`, `evidence.parent_guarantee.terms`: covers subsidiary principal unpaid after subsidiary liquidation, capped at 80, immediately due senior unsecured parent claim on payment default after applying recoveries. Ranks pari passu with parent bond. Binding, no defenses.\n\n* `evidence.subsidiary.parent_ownership_percent: 100`. `evidence.assumptions[2]`: Ownership is limited-liability common equity. Guarantee is separate contractual obligation, not created by ownership.\n* `evidence.assumptions[1]`: Entities legally separate. No veil piercing, consolidation, statutory parent liability, support, bailout, intercompany debt or other recourse exists.\n\n> **Group figure is not a claim:** `evidence.assumptions[5]`: Group reported gross borrowing = 100 parent + 80 subsidiary = **180**, without netting cash. Not a separate legal entity's claim.\n\n### 2. Default scenario trace - `evidence.default_scenario`\n\n`evidence.default_scenario.subsidiary_default: true`, `evidence.default_scenario.subsidiary_net_liquidation_proceeds: 20`.\n`evidence.default_scenario.settlement_sequence`: liquidate subsidiary -> pay its lender -> guarantee becomes due for covered shortfall -> settle parent claims and equity residual.\n`evidence.assumptions[0]`: Parent standalone `evidence.parent.standalone_cash_at_settlement: 110` excludes subsidiary proceeds. Add only actual residual once. Both pools after taxes/costs, before modeled claims.\n`evidence.assumptions[3]`: Parent claims settle simultaneously pari passu; if insufficient cash same fraction each. Equity only nonnegative residual.\n`evidence.assumptions[4]`: Guarantee capped at remaining after subsidiary recoveries. No double recovery. No reimbursement/subrogation. Subsidiary assets exhausted before parent settlement.\n\n**Subsidiary settlement:**\nProceeds 20 - lender claim 80 = shortfall 60\n* Lender subsidiary recovery: min(20,80)= **20**\n* Distribution to parent shareholder: max(20-80,0)= **0**\n* Guarantee claim due: min(shortfall 60, cap 80)= **60**\n\n**Parent settlement:**\nDistributable cash = 110 + 0 = **110**\nTotal pari passu claims = 100 bond + 60 guarantee = **160**\nCash < claims -> pro-rata factor = 110/160 = **68.75%**\n\n* Parent bondholders: 100 * 0.6875 = **68.75**; recovery 68.75%, loss 31.25\n* Subsidiary lender guarantee recovery: 60 * 0.6875 = **41.25**\n* Parent equity residual: max(110-160,0)= **0**\n\n**Creditor total recoveries / shareholder:**\n* Subsidiary lender total = 20 + 41.25 = **61.25 / 80** = 76.56%, loss 18.75\n* Parent bond total = **68.75 / 100**\n* Parent common equity = **0**\n\nTotal cash in system 110+20=130 distributed 68.75+61.25+0=130.\n\nEconomic exposure for equity holder: loses all residual because (a) equity distribution from subsidiary wiped out (20<80), and (b) separate guarantee claim consumes 41.25 of parent cash pari passu ahead of equity.\n\n### 3. No-default counterfactual - `evidence.no_default_comparison`\n\n`evidence.no_default_comparison.subsidiary_net_liquidation_proceeds: 110`. `evidence.no_default_comparison.terms`: Only proceeds change. Parent cash, principals, ownership, terms fixed. Subsidiary pays lender before distributing residual. No payment default.\n\n**Subsidiary:**\n* Lender paid: **80** in full\n* Residual to parent: 110-80 = **30**\n* Guarantee not triggered: **0**\n\n**Parent:**\nDistributable = 110 + 30 = **140**\nClaims = 100 bond only\n* Bond paid: **100** in full\n* Equity residual: 140-100 = **40**\n\n### 4. Comparison\n\n| USD m | Default | No-default | Delta |\n|---|---|---|---|\n| Subs. lender total | 61.25 | 80 | -18.75 |\n| Parent bond | 68.75 | 100 | -31.25 |\n| Parent equity | 0 | 40 | -40 |\n| Total | 130 | 220 | -90 = proceeds drop 90 |\n\nEquity holder conditional outcome: 40 -> 0. Bondholder conditional outcome: 100 -> 68.75.\n\n### 5. Implications\n\n* **For selected investor - parent common equity:** In default, zero distribution. Limited liability does not protect parent cash from guarantee; guarantee ranks senior to equity and pari passu with bond. Equity is exposed both as 100% owner losing subsidiary residual and as residual claimant of parent diluted by guarantee.\n\n* **For other parent class - parent bondholders:** In no-default, whole. In default, impaired and diluted by competing guarantee claim sharing same parent pool, despite having no direct claim on subsidiary assets. Guarantee benefits subsidiary lender at expense of both parent bond and equity. No extra support payments assumed; priorities unchanged.\n\n### Uncertainties / Limits\n\nUse only stipulated facts. `evidence.assumptions[6]`: No share counts, purchase prices, EBITDA, default probabilities, discount rates or market values given. Compare conditional settlement distributions only, not market returns, expected losses or debt-to-EBITDA.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793126905,
+        "id": "chatcmpl-01a17eb1-3518-721e-82a1-a517da7e059b",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3794,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2400
+          },
+          "prompt_tokens": 1042,
+          "prompt_tokens_details": {
+            "cached_tokens": 625
+          },
+          "total_tokens": 4836
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze this synthetic corporate structure from the selected parent-company investor perspective under the supplied subsidiary-default scenario. Identify the borrower and any obligors, distinguish entity-level contractual claims from group borrowing figures, and explain economic exposure. Show the necessary calculations and trace settlement cash flows at both entities, including any parent payment claims, creditor recoveries and shareholder distributions. Compare the supplied no-default counterfactual. Explain implications for the selected investor and for the other parent investor class. Preserve all supplied facts and do not introduce extra support payments or change cash, terms, ownership or priorities. Cite input field paths. Disclose uncertainties; use only the stipulated facts. Provide a concise analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"evidence\": {\"amount_unit\": \"millions\", \"assumptions\": [\"Parent standalone cash excludes all subsidiary assets, subsidiary proceeds and value of its equity stake. Add only actual subsidiary residual distributions to parent cash, once. Both cash pools are after all taxes, operating costs and administration expenses, before modeled claims.\", \"Entities remain legally separate. No veil piercing, substantive consolidation, statutory parent liability, letters of support, voluntary bailout, reputational support payment, intercompany debt or other recourse exists. These are binding synthetic legal premises.\", \"Parent ownership is limited-liability common equity. Any guarantee, if present, is a separate contractual obligation and is not created merely by ownership.\", \"A parent guarantee claim, if present and triggered, ranks pari passu with the parent bond. Parent claims settle simultaneously: if cash is insufficient, each receives the same fraction of its claim. Parent common equity receives only the nonnegative residual.\", \"Parent guarantee amounts are capped at the subsidiary debt remaining after subsidiary lender recoveries. No double recovery is allowed. No reimbursement, subrogation proceeds or other recoveries are available to parent; subsidiary assets have been exhausted before parent settlement.\", \"Group reported gross borrowing principal is defined here as the sum of external parent and subsidiary borrowing principals, without netting cash. It is not a separate legal entity's claim. No guarantee accounting carrying value or accounting standard is specified.\", \"No share counts, security purchase prices, EBITDA, default probabilities, discount rates or other market values are given. Compare conditional settlement distributions rather than market investment returns, expected losses, or a debt-to-EBITDA ratio.\"], \"currency\": \"USD\", \"default_scenario\": {\"settlement_sequence\": \"First liquidate subsidiary and pay its lender from subsidiary proceeds. After this recovery, any parent guarantee claim becomes immediately due for the covered remaining shortfall. Finally settle parent claims and distribute any parent equity residual.\", \"subsidiary_default\": true, \"subsidiary_net_liquidation_proceeds\": \"20\"}, \"no_default_comparison\": {\"subsidiary_net_liquidation_proceeds\": \"110\", \"terms\": \"A same-date counterfactual to measure economic exposure: only subsidiary net proceeds change. Parent standalone cash, debt principals, ownership and contract terms remain fixed. Subsidiary pays its lender before distributing its residual to parent. No subsidiary payment default occurs in this comparison.\"}, \"parent\": {\"bond_principal_due\": \"100\", \"bond_terms\": \"One senior unsecured bullet bond, zero interest, all principal due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a parent guarantee if explicitly present. Parent bondholders have no direct claim on subsidiary assets.\", \"name\": \"Cedar Holdings (fictional)\", \"standalone_cash_at_settlement\": \"110\"}, \"parent_guarantee\": {\"cap\": \"80\", \"terms\": \"Parent has issued an enforceable, irrevocable guarantee to the subsidiary lender, covering the subsidiary principal unpaid after subsidiary liquidation, capped at 80. It is binding at settlement, with no defenses, waiting period, fees or interest. It creates an immediately due senior unsecured parent payment claim on subsidiary payment default after applying subsidiary lender recoveries. It ranks pari passu with the parent bond and expires after settlement. This enforceability and rank are stipulated, not inferred from general law.\"}, \"settlement_date\": \"2027-12-31\", \"subsidiary\": {\"debt_terms\": \"Subsidiary is the sole borrower. Zero interest, all principal due at settlement. Lender has first and sole debt claim on subsidiary net liquidation proceeds. The debt itself is legally non-recourse to the parent; an explicitly supplied separate parent guarantee is the only possible exception to no parent recourse. There are no other subsidiary creditors, obligations or preferred shares. Remaining subsidiary cash, if any, is distributed to parent as sole common shareholder.\", \"external_debt_principal_due\": \"80\", \"name\": \"Cedar Operations (fictional)\", \"parent_ownership_percent\": \"100\"}}, \"experiment_id\": \"subsidiary_recourse_pair_v1\", \"investor\": \"Holder of parent common equity\", \"perspective\": \"equity_holder\", \"provenance\": \"All entities, amounts, contracts and outcomes are synthetic stipulated facts, not claims about a real company or real-world enforceability.\", \"structure\": \"B\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "structure": "B",
+      "task_id": "subsidiary_recourse_pair_v1:B:equity_holder"
+    },
+    {
+      "deterministic_reference": {
+        "sent_to_model": false,
+        "values": {
+          "group_gross_borrowing_principal": "180.000000",
+          "lost_subsidiary_equity_distribution": "30.000000",
+          "no_default_parent_equity_distribution": "40.000000",
+          "no_default_subsidiary_equity_distribution": "30.000000",
+          "parent_bond_payment": "68.750000",
+          "parent_bond_recovery_percent": "68.750000",
+          "parent_cash_pool": "110.000000",
+          "parent_equity_decline_vs_no_default": "40.000000",
+          "parent_equity_distribution": "0.000000",
+          "parent_guarantee_claim": "60.000000",
+          "parent_guarantee_payment": "41.250000",
+          "parent_total_contractual_claims": "160.000000",
+          "subsidiary_debt_claim": "80.000000",
+          "subsidiary_equity_distribution": "0.000000",
+          "subsidiary_lender_payment_from_subsidiary": "20.000000",
+          "subsidiary_lender_total_recovery": "61.250000",
+          "subsidiary_unpaid_debt_after_liquidation": "60.000000"
+        }
+      },
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Analysis - from `investor`: Holder of entire parent senior unsecured bond - `perspective`: senior_unsecured_creditor**\n\nAll amounts in `evidence.amount_unit`: millions, `evidence.currency`: USD. All entities, contracts synthetic per `evidence.provenance`.\n\n### 1. Borrower vs obligors vs group figure\n\n* **Sole borrower:** `evidence.subsidiary.name` Cedar Operations for `evidence.subsidiary.external_debt_principal_due`: 80, zero interest, due at `evidence.settlement_date`. `evidence.subsidiary.debt_terms`: Lender has first and sole debt claim on subsidiary proceeds. Debt itself legally non-recourse to parent.\n* **Parent obligor:** `evidence.parent.name` Cedar Holdings for `evidence.parent.bond_principal_due`: 100 senior unsecured bullet, zero interest per `evidence.parent.bond_terms`. `evidence.parent.bond_terms`: Parent bondholders have no direct claim on subsidiary assets.\n* **Additional parent obligor in default only:** `evidence.parent_guarantee`: enforceable, irrevocable guarantee to subsidiary lender, `evidence.parent_guarantee.cap`: 80, covering principal unpaid after subsidiary liquidation. Per `evidence.parent_guarantee.terms` and `evidence.assumptions`: ranks pari passu with parent bond, settle simultaneously pro-rata if parent cash insufficient, capped at remaining shortfall, no double recovery.\n* **No other recourse:** `evidence.assumptions`: entities legally separate, no veil piercing, consolidation, statutory liability, support, bail-out, intercompany debt. Ownership is limited-liability common equity only `evidence.subsidiary.parent_ownership_percent`: 100%.\n\n> Group reported gross borrowing principal is **not a claim**. `evidence.assumptions`: defined as sum of external parent + subsidiary principals without netting cash = 100 + 80 = **180**. It is not a separate legal entity's claim. Entity claims are 100 at parent + 80 at subsidiary, plus contingent 60 guarantee claim at parent in default scenario only.\n\n### 2. Default settlement trace - `evidence.default_scenario`\n\nSequence per `evidence.default_scenario.settlement_sequence`: subsidiary first, then guarantee crystallizes, then parent settles.\n\n**Subsidiary - `evidence.default_scenario.subsidiary_net_liquidation_proceeds`: 20:**\n\n* Lender claim: 80\n* Paid from subsidiary: min(20,80) = **20**\n* Shortfall: 80-20 = **60**\n* Residual to parent as sole shareholder per `evidence.subsidiary.debt_terms`: 20-20 = **0**\n\n**Parent guarantee claim:**\nmin(shortfall 60, cap 80 per `evidence.parent_guarantee.cap`) = **60** immediately due senior unsecured at parent.\n\n**Parent - `evidence.parent.standalone_cash_at_settlement`: 110:**\n\nPer `evidence.assumptions`: standalone excludes subsidiary proceeds; add only actual residual once. Both pools after taxes/costs, before modeled claims.\n\n* Distributable parent cash = 110 + 0 = **110**\n* Senior pari passu claims = bond 100 + guarantee 60 = **160**\n* Cash < claims, so per `evidence.assumptions`: same fraction to each: 110/160 = **68.75%**\n\n> Bondholder receipt: 100 * 68.75% = **68.75**, loss 31.25 vs principal.\n> Guarantee payment to subsidiary lender: 60 * 68.75% = **41.25**\n> Parent equity residual per `evidence.assumptions`: max(0,110-160) = **0**\n\n**Creditor recoveries total:**\n\n* Selected investor (parent bond): 68.75 / 100 = **68.75%**\n* Subsidiary lender total: 20 + 41.25 = **61.25** / 80 = **76.56%**. Complies with cap and no double recovery per `evidence.assumptions`.\n* Parent shareholder distribution: **0**\n* Check: system cash 110+20=130 = 68.75+61.25+0.\n\nEconomic exposure of selected investor: no direct legal claim on subsidiary, but economically exposed two ways: (i) loss of subsidiary residual dividend that would augment parent cash, (ii) dilution by pari passu guarantee sharing parent cash. Even though 110 standalone > 100 bond, bond impairs to 68.75 because it must share with 60 guarantee.\n\n### 3. No-default counterfactual - `evidence.no_default_comparison`\n\nOnly change per `evidence.no_default_comparison.terms`: `evidence.no_default_comparison.subsidiary_net_liquidation_proceeds`: 110. Parent cash, principals, ownership, terms fixed.\n\n* Subsidiary pays lender: 80 in full, no default.\n* Residual to parent: 110-80 = **30**\n* Parent distributable: 110+30 = **140**\n* Parent claims: bond 100 only, guarantee 0 (no shortfall).\n* Bond paid: **100 in full**.\n* Equity residual: 140-100 = **40**\n\nLender 80/80 = 100%.\n\nComparison delta (no-default -> default, proceeds -90):\nBond 100 -> 68.75 (-31.25); Lender 80 -> 61.25 (-18.75); Parent equity 40 -> 0 (-40). Sum -90 = proceeds drop. No cash created or lost otherwise.\n\n### 4. Implications\n\n* **Selected parent bondholder:** full payment conditional on no subsidiary shortfall. In default, suffers 31.25 impairment despite parent solvency on standalone basis, entirely due to stipulated guarantee rank and loss of 30 residual.\n* **Other parent investor class - parent common equity:** junior residual only. Gets 40 in counterfactual, 0 in default. Limited liability per `evidence.assumptions` - receives nothing but not liable for remaining parent shortfall (160-110=50 unpaid) nor subsidiary shortfall; subsidiary assets exhausted before parent settlement, no reimbursement/subrogation per `evidence.assumptions`.\n\n### Uncertainties / limits\n\nUse only stipulated facts. Per `evidence.assumptions`: no share counts, prices, EBITDA, probabilities, discount/market values given. Compare only conditional settlement distributions, not market returns, expected losses, or debt-to-EBITDA.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793126919,
+        "id": "chatcmpl-01a17eb1-6e11-70e5-b2c1-5597199d1f20",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4045,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2712
+          },
+          "prompt_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 625
+          },
+          "total_tokens": 5095
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze this synthetic corporate structure from the selected parent-company investor perspective under the supplied subsidiary-default scenario. Identify the borrower and any obligors, distinguish entity-level contractual claims from group borrowing figures, and explain economic exposure. Show the necessary calculations and trace settlement cash flows at both entities, including any parent payment claims, creditor recoveries and shareholder distributions. Compare the supplied no-default counterfactual. Explain implications for the selected investor and for the other parent investor class. Preserve all supplied facts and do not introduce extra support payments or change cash, terms, ownership or priorities. Cite input field paths. Disclose uncertainties; use only the stipulated facts. Provide a concise analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"evidence\": {\"amount_unit\": \"millions\", \"assumptions\": [\"Parent standalone cash excludes all subsidiary assets, subsidiary proceeds and value of its equity stake. Add only actual subsidiary residual distributions to parent cash, once. Both cash pools are after all taxes, operating costs and administration expenses, before modeled claims.\", \"Entities remain legally separate. No veil piercing, substantive consolidation, statutory parent liability, letters of support, voluntary bailout, reputational support payment, intercompany debt or other recourse exists. These are binding synthetic legal premises.\", \"Parent ownership is limited-liability common equity. Any guarantee, if present, is a separate contractual obligation and is not created merely by ownership.\", \"A parent guarantee claim, if present and triggered, ranks pari passu with the parent bond. Parent claims settle simultaneously: if cash is insufficient, each receives the same fraction of its claim. Parent common equity receives only the nonnegative residual.\", \"Parent guarantee amounts are capped at the subsidiary debt remaining after subsidiary lender recoveries. No double recovery is allowed. No reimbursement, subrogation proceeds or other recoveries are available to parent; subsidiary assets have been exhausted before parent settlement.\", \"Group reported gross borrowing principal is defined here as the sum of external parent and subsidiary borrowing principals, without netting cash. It is not a separate legal entity's claim. No guarantee accounting carrying value or accounting standard is specified.\", \"No share counts, security purchase prices, EBITDA, default probabilities, discount rates or other market values are given. Compare conditional settlement distributions rather than market investment returns, expected losses, or a debt-to-EBITDA ratio.\"], \"currency\": \"USD\", \"default_scenario\": {\"settlement_sequence\": \"First liquidate subsidiary and pay its lender from subsidiary proceeds. After this recovery, any parent guarantee claim becomes immediately due for the covered remaining shortfall. Finally settle parent claims and distribute any parent equity residual.\", \"subsidiary_default\": true, \"subsidiary_net_liquidation_proceeds\": \"20\"}, \"no_default_comparison\": {\"subsidiary_net_liquidation_proceeds\": \"110\", \"terms\": \"A same-date counterfactual to measure economic exposure: only subsidiary net proceeds change. Parent standalone cash, debt principals, ownership and contract terms remain fixed. Subsidiary pays its lender before distributing its residual to parent. No subsidiary payment default occurs in this comparison.\"}, \"parent\": {\"bond_principal_due\": \"100\", \"bond_terms\": \"One senior unsecured bullet bond, zero interest, all principal due at settlement. No collateral, penalties, acceleration or cross-default. No other parent claims except a parent guarantee if explicitly present. Parent bondholders have no direct claim on subsidiary assets.\", \"name\": \"Cedar Holdings (fictional)\", \"standalone_cash_at_settlement\": \"110\"}, \"parent_guarantee\": {\"cap\": \"80\", \"terms\": \"Parent has issued an enforceable, irrevocable guarantee to the subsidiary lender, covering the subsidiary principal unpaid after subsidiary liquidation, capped at 80. It is binding at settlement, with no defenses, waiting period, fees or interest. It creates an immediately due senior unsecured parent payment claim on subsidiary payment default after applying subsidiary lender recoveries. It ranks pari passu with the parent bond and expires after settlement. This enforceability and rank are stipulated, not inferred from general law.\"}, \"settlement_date\": \"2027-12-31\", \"subsidiary\": {\"debt_terms\": \"Subsidiary is the sole borrower. Zero interest, all principal due at settlement. Lender has first and sole debt claim on subsidiary net liquidation proceeds. The debt itself is legally non-recourse to the parent; an explicitly supplied separate parent guarantee is the only possible exception to no parent recourse. There are no other subsidiary creditors, obligations or preferred shares. Remaining subsidiary cash, if any, is distributed to parent as sole common shareholder.\", \"external_debt_principal_due\": \"80\", \"name\": \"Cedar Operations (fictional)\", \"parent_ownership_percent\": \"100\"}}, \"experiment_id\": \"subsidiary_recourse_pair_v1\", \"investor\": \"Holder of the entire parent senior unsecured bond\", \"perspective\": \"senior_unsecured_creditor\", \"provenance\": \"All entities, amounts, contracts and outcomes are synthetic stipulated facts, not claims about a real company or real-world enforceability.\", \"structure\": \"B\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "structure": "B",
+      "task_id": "subsidiary_recourse_pair_v1:B:senior_unsecured_creditor"
+    }
+  ],
+  "experiment_id": "subsidiary_recourse_pair_v1",
+  "finished_at": "2026-10-27T18:48:28.650137+00:00",
+  "model": "muse-spark-1.3",
+  "notes": "Four independent requests. Model-generated claims are preserved without correction. Local deterministic references are never sent to the model. Common evidence is identical across A and B; only parent_guarantee changes.",
+  "started_at": "2026-10-27T18:47:26.289638+00:00"
+}
