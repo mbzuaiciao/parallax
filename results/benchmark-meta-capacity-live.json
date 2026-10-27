@@ -1,0 +1,143 @@
+{
+  "api_client_sha256": "543a622fc5f4889fc914b1465ff55b69dfbb993feb47e0b17f84165f2081e954",
+  "case_id": "meta_capacity_2026_disclosure",
+  "case_key": "meta-capacity",
+  "code_revision": "ffde3d317804ecc1898aa12ec462cb3afdd500cd",
+  "company": "Meta Platforms",
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "evaluations": [
+    {
+      "finished_at": "2026-10-27T19:57:21.227428+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-07-30**\n\n**Case:** `meta_capacity_2026_disclosure` \u2014 Meta contingent purchase of cloud capacity. Historical disclosure only. Not a complete contract or current-status assessment.\n\n### 1. Evidence Base - Disclosed Facts Only\n\nSingle source in scope:\n\n**[META_10Q \u2014 Meta Platforms Form 10-Q for June 30, 2026, filed 2026-07-30, period-end 2026-06-30]**\n\nProvision locators:\n\n* `Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'`\n* Repeated in `MD&A Contractual Obligations` \u2014 no additional terms supplied.\n\nDisclosed facts from supplied paraphrase/quote:\n\n* As of June 30, 2026, Meta reports contingent obligations to purchase **up to $14.72 billion** of cloud capacity **over five years**. [META_10Q, Note 9]\n* Obligation *\"which may be reduced if the cloud service provider is able to sell such capacity to other customers\"* \u2014 direct quote. [META_10Q, Note 9; MD&A]\n* Paragraph begins **\"In addition\"** \u2014 immediately after separate disclosure of **$349.31 billion of non-cancelable contractual commitments**, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The $349.31 billion aggregate is context, not part of this arrangement. [META_10Q, Note 9]\n* For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. [META_10Q, Note 9]\n* Provider is unnamed in this passage.\n* Passage does not identify a guarantee of another borrower's debt.\n\n$14.72 billion is a disclosed **maximum contingent amount**, not a payable balance, accrued liability, or expected loss.\n\n### 2. Obligors and Beneficiaries \u2014 Direct vs Contingent\n\n**Obligor:**\n* **Meta** as reporter of the contingent purchase obligation. Specific legal-entity obligor \u2014 parent vs subsidiary \u2014 not specified in supplied evidence. [META_10Q, Note 9]\n* **Nature: contingent only.** No direct \u2014 currently due, non-cancelable \u2014 amount is attributed to this arrangement in the supplied evidence. The direct/non-cancelable $349.31 billion is expressly separate via \"In addition.\"\n\nNo joint obligors, co-borrowers, or guarantors disclosed for this arrangement.\n\n**Beneficiary:**\n* **Unnamed cloud service provider** \u2014 seller / capacity provider entitled to payment if purchase is required. Identity not disclosed; must not be inferred. [META_10Q, Note 9]\n\nNo other beneficiaries disclosed. No guarantee of third-party debt, so there is no disclosed third-party borrower whose default triggers Meta payment.\n\n### 3. Payment Triggers, Effectiveness, Limits\n\n**Payment triggers:** Not fully specified.\n* Disclosed logic: obligation relates to purchase of cloud capacity, subject to reduction to extent provider sells such capacity to other customers.\n* Supplied evidence does not specify delivery / take-or-pay mechanics, minimum-take thresholds, price formula, or notice / call procedure. Whether non-resale alone creates a payment duty vs. actual delivery/acceptance is not disclosed.\n\n**Effectiveness / tenor:**\n* Reported as existing **as of June 30, 2026**. [META_10Q, Note 9]\n* Horizon: **over five years**. Exact start/end dates, phase-in, annual delivery schedule not disclosed. Do not assume straight-line to ~2031.\n\n**Contractual limits:**\n* **Cap: up to $14.72 billion** over the five-year period. [META_10Q, Note 9]\n* **Downward adjustment only disclosed:** reduction if provider resells capacity to others.\n* **Measurement limit:** for variable-term agreements, disclosure limited to minimum quantities and/or pricing as of reporting date; total beyond minimums not estimated. [META_10Q, Note 9]\n* No annual payment amounts disclosed for this arrangement \u2014 unlike the neighboring non-cancelable aggregate where 2026/2027 amounts are given. No unilateral cancellation right, pricing schedule, or delivery schedule disclosed.\n\n### 4. Recoveries, Remedies, Termination\n\n* **Recoveries / mitigation:** No post-payment recovery, indemnity, or set-off right disclosed. The resale clause is a **pre-payment reduction of exposure**, not a recovery of amounts paid.\n* **Remedies:** None disclosed \u2014 no cure rights, penalties, liquidated damages, security, collateral, or claim ranking disclosed. No creditor ranking may be assumed.\n* **Termination:** No termination, cancellation, renewal, or extension terms disclosed. Supplied evidence affirmatively notes absence of disclosed unilateral cancellation rights for this arrangement.\n\n### 5. Implications for Equity Investor in Meta Platforms\n\n**Disclosed fact:**\n* Contingent, off-aggregate exposure of up to $14.72 billion over five years, separate from $349.31 billion non-cancelable commitments. [META_10Q, Note 9]\n* Exposure is variable downward based on third-party sales by provider.\n* No timing, pricing, or seniority disclosed.\n\n**Conditional economic interpretation \u2014 distinct from fact:**\n* *If* capacity is not resold and is called, *then* Meta could face cash outflows up to the cap, reducing future free cash flow available to equity and potentially increasing funding needs during that five-year window.\n* *If* provider successfully resells capacity, *then* realized outflow could be materially below cap \u2014 but magnitude of potential reduction is undisclosed and cannot be quantified.\n* *If* purchases materialize in concentrated years, liquidity impact would differ vs. spread evenly \u2014 but no annual schedule is disclosed, so timing risk cannot be modeled from supplied evidence.\n* Not a disclosed debt guarantee; analysis should not treat as third-party credit support or as secured debt with priority in distress.\n\nNo disclosed cap should be treated as expected cost, liability, or loss provision.\n\n### 6. Material Missing Terms Preventing Definitive Quantitative Risk Assessment\n\nBased only on supplied evidence, cannot definitively assess probability-weighted cost, cash-flow timing, or downside:\n\n1. Annual / quarterly payment and delivery schedule\n2. Pricing \u2014 fixed vs variable, minimum quantities/prices applicable to this deal\n3. Conditions that trigger purchase vs excuse performance\n4. Definition/measurement of provider resale and reduction calculation\n5. Cancellation / termination / non-renewal rights and penalties\n6. Remedies for non-delivery / non-payment; security / ranking\n7. Accounting treatment \u2014 accrued vs disclosed only \u2014 beyond contingent-commitment description\n8. Counterparty identity, creditworthiness, and concentration \u2014 must not infer\n9. End date and whether five years is firm or extendable\n10. Currency, inflation adjustments, taxes, opex vs capex classification\n\nWithout these, no expected loss, present value, or per-share impact can be derived without inventing inputs, which is prohibited.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793131052,
+        "id": "chatcmpl-01a17ef0-7ca3-700b-b1a2-f36a174ab560",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3378,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1895
+          },
+          "prompt_tokens": 617,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3995
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "submitted_at": "2026-10-27T19:57:09.431394+00:00"
+    },
+    {
+      "finished_at": "2026-10-27T19:57:29.248693+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Case: `meta_capacity_2026_disclosure` - Meta contingent purchase of cloud capacity**\n**Analysis as of: 2026-07-30 - Historical disclosure only**\n\nUse only supplied evidence: `META_10Q` - Meta Platforms Form 10-Q for June 30, 2026, filed 2026-07-30, Accession 0001628280-26-050705.\n\n### 1. Arrangement in scope\n\nDisclosed fact: As of period-end 2026-06-30, Meta reports contingent obligations to purchase **up to $14.72 billion of cloud capacity over five years** [META_10Q - Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations].\n\nThis is the **only** arrangement in scope. The immediately preceding paragraph reporting **$349.31 billion of non-cancelable contractual commitments**, with **$53.52 billion and $81.65 billion due in 2026 and 2027**, is context, not part of this case [META_10Q - Note 9, same section]. The contingent paragraph begins \"In addition.\"\n\n### 2. Obligors and beneficiaries\n\n**Disclosed facts:**\n\n* **Obligor (contingent): Meta** - obligation to purchase cloud capacity is attributed to Meta.\n* **Beneficiary: unnamed cloud service provider** in this passage. Identity not disclosed. Do not infer.\n* **Not a guarantee:** Passage does not identify a guarantee of another borrower's debt [META_10Q - Note 9, per factual paraphrase].\n\n**Direct vs contingent distinction:**\n\n* **Contingent:** The $14.72bn cloud-capacity amount is described as contingent and presented **in addition to** non-cancelable commitments. It is not stated to be currently payable.\n* **Direct (context only):** The $349.31bn aggregate is described as non-cancelable contractual commitments across multiple categories - separate from this arrangement.\n\nThe $14.72bn cap must not be treated as an expected loss or payable balance.\n\n### 3. Contract terms as disclosed\n\n**Payment triggers:** Not fully specified. Disclosed trigger is conceptually the purchase obligation for cloud capacity over five years. Disclosure does not specify whether triggered by delivery, availability, take-or-pay, minimum-volume shortfall, or other mechanism.\n\n**Effectiveness:** Measured as of 2026-06-30 and reported 2026-07-30. Underlying agreement execution date, effective date, and conditions precedent are not disclosed.\n\n**Contractual limits - disclosed:**\n\n* Cap: **up to $14.72bn over five years**.\n* Reduction: **\"which may be reduced if the cloud service provider is able to sell such capacity to other customers\"** [META_10Q - Note 9, direct short quote].\n* Measurement rule: For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date [META_10Q - Note 9].\n\nConditional interpretation - distinct from fact: *If* third-party sales occur, economic exposure could be < $14.72bn; *if* not, exposure could remain at cap. Probability and amount of such sales are undisclosed.\n\n**Recoveries / mitigation:**\n\n* Disclosed fact: Only the third-party-sale reduction feature.\n* No disclosed post-payment recovery, set-off, resale right retained by Meta, or collateral.\n\n**Remedies, security / ranking, termination:**\n\n* None disclosed in supplied passage. Specifically undisclosed: annual payments for this arrangement, unilateral cancellation rights, detailed pricing or delivery schedule, security or claim ranking [META_10Q - Note 9, per paraphrase].\n\n### 4. Implications for a senior unsecured creditor of Meta Platforms\n\n**Disclosed-fact component:**\nCreditor faces a potential future cash outflow of up to $14.72bn over five years that is separate from the $349.31bn non-cancelable stack, with timing and seniority undisclosed.\n\n**Conditional economic interpretations - not facts:**\n* *If* triggered in full without third-party-sale reduction, *then* it would increase future funding needs and compete for operating cash flow available to service unsecured claims.\n* *If* materially mitigated by sales to other customers, *then* cash impact could be lower, but magnitude cannot be quantified from disclosure.\n* No assessment of relative priority can be made because security and claim ranking are undisclosed. Do not assume subordination or seniority.\n\nNo definitive quantitative risk assessment to the senior unsecured creditor is possible.\n\n### 5. Material missing terms and uncertainties\n\nTo quantify expected exposure, timing risk, or recovery, the following are missing: counterparty identity and concentration; annual / quarterly payment profile; price, volume, delivery and acceptance terms; precise trigger and take-or-pay vs. reservation-fee structure; effectiveness, term, extension, cancellation and termination rights; cure, default, and remedies; security, covenants, and ranking vs. senior unsecured claims; accounting treatment - payable vs. disclosed contingency; current status after 2026-06-30.\n\nSource is a 10-Q disclosure summary, not a complete contract.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793131060,
+        "id": "chatcmpl-01a17ef0-9c5e-75b7-a915-5ac3ae040625",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2539,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1441
+          },
+          "prompt_tokens": 619,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3158
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "status": "completed",
+      "submitted_at": "2026-10-27T19:57:21.231044+00:00"
+    }
+  ],
+  "finished_at": "2026-10-27T19:57:29.253187+00:00",
+  "information_cutoff": "2026-07-30",
+  "model": "muse-spark-1.3",
+  "notes": "Independent calls, no retries. Evidence is identical; only investor instruction changes. Local reference/annotation files are hashed for traceability but never supplied to the model. Unchanged provider JSON is saved; no automated financial accuracy score.",
+  "python_version": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "request_builder_sha256": "48253075e1e1e79c6f332a5f290716d6f775b0a18f9757fbab1030f3e4a18f8e",
+  "run_schema_version": 1,
+  "runner_sha256": "61488075c0e95fe29a08d739c1422dfc4eae4ab101d01d98f374f494f69b0467",
+  "source_versions": {
+    "annotations_sha256": "741a375720583d8e14005635081300d3ad736f2220c92437b53bbd5bb586d6d4",
+    "dataset": {
+      "author": "Alexander F. Wagner",
+      "license": "CC BY 4.0",
+      "license_file": "CC-BY-4.0.txt",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+      "retrieved_on": "2026-10-27",
+      "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+      "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+      "version": "1.1"
+    },
+    "evidence_sha256": "e9ee4feee125985b0fa42475b0eb6d04c71e452b15deee4e9baf40138ebbb860",
+    "primary_sources": [
+      {
+        "accession": "0001628280-26-050705",
+        "filed_on": "2026-07-30",
+        "id": "META_10Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+      }
+    ],
+    "reference_sha256": "636b6183c09481285b6a83f005fab5229620ce316f6a14b8de9013a1cd472504",
+    "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+  },
+  "started_at": "2026-10-27T19:57:09.430039+00:00",
+  "working_tree_dirty": true
+}

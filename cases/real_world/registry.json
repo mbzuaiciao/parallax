@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "cases": {
+    "nvidia-ports": {
+      "company": "NVIDIA",
+      "arrangement": "NVIDIA PORTS Technology Campus residual value guaranties",
+      "information_cutoff": "2026-08-26",
+      "evidence_file": "nvidia_ports.json",
+      "reference_file": "nvidia_ports_reference.json",
+      "annotations_file": "wagner_reference.json",
+      "perspectives": [
+        "equity_holder",
+        "senior_unsecured_creditor"
+      ],
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_file": "CC-BY-4.0.txt",
+        "retrieved_on": "2026-10-27"
+      },
+      "limitations": [
+        "Redacted formulas, schedules, costs and precise identities.",
+        "No issuer-wide risk inputs or established relative creditor ranking."
+      ]
+    },
+    "meta-capacity": {
+      "company": "Meta Platforms",
+      "arrangement": "Meta contingent purchase of cloud capacity",
+      "information_cutoff": "2026-07-30",
+      "evidence_file": "meta_capacity.json",
+      "reference_file": "meta_capacity_reference.json",
+      "annotations_file": "meta_capacity_wagner.json",
+      "perspectives": [
+        "equity_holder",
+        "senior_unsecured_creditor"
+      ],
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_file": "CC-BY-4.0.txt",
+        "retrieved_on": "2026-10-27"
+      },
+      "limitations": [
+        "Provider unnamed in selected primary passage; Wagner cross-filing identity is not a verified fact in the supplied pack.",
+        "No unilateral cancellation right, detailed pricing, contingent annual schedule or ranking disclosed."
+      ]
+    },
+    "coreweave-deposit": {
+      "company": "CoreWeave",
+      "arrangement": "CoreWeave MagAI refundable capacity deposit and in-substance debt",
+      "information_cutoff": "2026-08-12",
+      "evidence_file": "coreweave_deposit.json",
+      "reference_file": "coreweave_deposit_reference.json",
+      "annotations_file": "coreweave_deposit_wagner.json",
+      "perspectives": [
+        "equity_holder",
+        "senior_unsecured_creditor"
+      ],
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_file": "CC-BY-4.0.txt",
+        "retrieved_on": "2026-10-27"
+      },
+      "limitations": [
+        "Selected notes do not disclose relative priority, collateral or complete termination/redemption timing.",
+        "Twelve percent is the stated return/effective rate, not a supplied cash-coupon schedule; dated carrying amounts are not future payoff estimates."
+      ]
+    }
+  }
+}

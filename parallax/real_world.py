@@ -33,14 +33,18 @@ def load_disclosure():
     return case
 
 
-def build_disclosure_request(case, perspective=None):
+def build_disclosure_request(case, perspective=None, *, company="NVIDIA"):
     if perspective is not None and perspective not in INVESTORS:
         raise ValueError("Unknown investor perspective")
+    investor_labels = {
+        "equity_holder": f"an equity investor in {company}",
+        "senior_unsecured_creditor": f"a senior unsecured creditor of {company}",
+    }
     investor_instruction = (
         "Separately assess the implications for "
-        "(1) an equity investor in NVIDIA and (2) a senior unsecured creditor of NVIDIA. "
+        f"(1) an equity investor in {company} and (2) a senior unsecured creditor of {company}. "
         if perspective is None else
-        f"Assess the implications for {INVESTORS[perspective]}. "
+        f"Assess the implications for {investor_labels[perspective]}. "
     )
     # The separate Wagner reference file is intentionally neither imported nor read.
     evidence = {key: deepcopy(case[key]) for key in (

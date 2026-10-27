@@ -1,0 +1,90 @@
+{
+  "reference_schema_version": 1,
+  "case_key": "coreweave-deposit",
+  "verified_by": "Parallax primary-disclosure manual check (assistant), 2026-10-27",
+  "dataset": {
+    "author": "Alexander F. Wagner",
+    "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+    "version": "1.1",
+    "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+    "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_file": "CC-BY-4.0.txt",
+    "retrieved_on": "2026-10-27"
+  },
+  "locations": {
+    "K_NOTE10_MAGAI": {
+      "document_id": "CRWV_10K",
+      "locator": "Note 10, Magnetar Loan subsection"
+    },
+    "Q_NOTE10_TABLE": {
+      "document_id": "CRWV_10Q",
+      "locator": "Note 10 recourse-debt table, Magnetar Loan row"
+    },
+    "Q_NOTE10_MAGAI": {
+      "document_id": "CRWV_10Q",
+      "locator": "Note 10, Magnetar Loan subsection"
+    }
+  },
+  "verified_facts": [
+    {
+      "id": "C1",
+      "category": "obligors_beneficiaries",
+      "assertion": "CoreWeave service provider/refund obligor; MagAI Ventures deposited funds for its portfolio-company capacity.",
+      "document_id": "CRWV_10K",
+      "location_id": "K_NOTE10_MAGAI",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "C2",
+      "category": "obligation_classification",
+      "assertion": "February 2025 termination-right amendment led to disclosed in-substance debt classification; not an unrecognized third-party guarantee.",
+      "document_id": "CRWV_10K",
+      "location_id": "K_NOTE10_MAGAI",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "C3",
+      "category": "limits_triggers",
+      "assertion": "Consumption reduces deposit; unused deposit refundable; specified return multiplier on termination by either party. Four-year initial term and MagAI two-year extension option.",
+      "document_id": "CRWV_10K",
+      "location_id": "K_NOTE10_MAGAI",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "C4",
+      "category": "disclosed_amounts",
+      "assertion": "Original refundable deposit 230 million; December 2025 debt carrying 273 million includes 43 million premiums; equivalent annual return 12 percent.",
+      "document_id": "CRWV_10K",
+      "location_id": "K_NOTE10_MAGAI",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "C5",
+      "category": "disclosed_amounts",
+      "assertion": "June 2026 partial settlement 100 million; June 30 remaining carrying obligation 189 million includes unused deposit and accrued premiums. Do not add it again to reported debt totals.",
+      "document_id": "CRWV_10Q",
+      "location_id": "Q_NOTE10_MAGAI",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "C6",
+      "category": "limits_triggers",
+      "assertion": "Debt-table maturity January 2029, effective rate 12 percent; table classifies as recourse. This does not establish unsecured or equal ranking.",
+      "document_id": "CRWV_10Q",
+      "location_id": "Q_NOTE10_TABLE",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    }
+  ],
+  "annotation_relationship": "HL-0041 / HL-0041a: debt layer, carrying amount 0.189 USD billion at June 30, 2026, not 0.23 or the December 2025 0.273. Trigger field mentions the 12 percent multiplier; this is not a default probability or necessarily a cash coupon. Collateral_type n/a in the dataset is not proof of legal unsecured/equal ranking.",
+  "material_unknowns": [
+    "Selected notes do not disclose relative priority, collateral or complete termination/redemption timing.",
+    "Twelve percent is the stated return/effective rate, not a supplied cash-coupon schedule; dated carrying amounts are not future payoff estimates."
+  ],
+  "judgment_guidance": {
+    "equity_holder": "Assess conditional cash allocation and commercial/service economics without estimating undisclosed returns.",
+    "senior_unsecured_creditor": "Assess conditional liquidity, competing claims and recoverability without inventing claim priority.",
+    "both": "Separate unknown from zero; do not confuse cap, carrying value and payment schedule. Recognized source IDs are not semantic citation verification."
+  }
+}

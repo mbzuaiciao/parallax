@@ -1,0 +1,185 @@
+{
+  "assessment_schema_version": 1,
+  "case_key": "meta-capacity",
+  "evaluations": [
+    {
+      "judgment": {
+        "investor_implications": {
+          "status": "concern",
+          "notes": "Conditional cash/funding effects are sensible, but the equity discussion underplays the capacity/service consideration received. It offers a mostly cash-outflow thesis rather than a balanced cost-versus-use/value assessment; valuation is appropriately unquantified.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "missing_information": {
+          "status": "supported",
+          "notes": "Explicitly identifies absent delivery, pricing, timing, reduction calculation, identity, termination and priority information. Justifiably refuses probability-weighted exposure and recovery calculations; would also need issuer financial capacity.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "unsupported_assumptions": {
+          "status": "concern",
+          "notes": "Equity says analysis should not treat this as third-party credit support. Absence of a legal debt guarantee does not rule out economic demand support for a supplier. Its assertion that resale is a pre-payment reduction rather than recovery is a plausible interpretation, not an expressly disclosed settlement sequence.",
+          "response_excerpt": "analysis should not treat as third-party credit support",
+          "citations": []
+        }
+      },
+      "objective": {
+        "citations": {
+          "status": "supported",
+          "notes": "Cites the existing META_10Q identifier and actual Note 9 topic; equity also reproduces the supplied paragraph opening. These are manual source checks, not consequences of catalog membership.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "disclosed_amounts": {
+          "status": "supported",
+          "notes": "14.72 billion over five years retained as an up-to obligation. 349.31 billion and 53.52/81.65 billion are correctly kept as neighboring aggregate context, not the case payment schedule. No unsupported annual allocation.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CONTEXT"
+            }
+          ]
+        },
+        "limits_triggers": {
+          "status": "supported",
+          "notes": "Correct reduction for provider third-party sales; no invented annual trigger, unilateral cancellation, exact five-year start date or payment schedule. Mere recognition as contingent does not make an obligation optional.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "obligation_classification": {
+          "status": "concern",
+          "notes": "Correct contingent own purchase, but the direct-versus-contingent framing equates direct with currently due/non-cancelable. A contingent purchase can still be Meta's own contractual obligation. A legal debt guarantee is not established.",
+          "response_excerpt": "**Nature: contingent only.**",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "obligors_beneficiaries": {
+          "status": "supported",
+          "notes": "Meta as purchaser and unnamed cloud provider as supplier/beneficiary. Neither imports Wagner's cross-filing Nebius identity. Exact obligor legal-entity scope remains undisclosed.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        }
+      },
+      "perspective": "equity_holder"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "status": "supported",
+          "notes": "Conditional competition for operating cash flows and funding needs is justified. No relative ranking or numerical recovery is assumed; service/capacity received could matter economically but its value is not supplied.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "missing_information": {
+          "status": "supported",
+          "notes": "Explicitly identifies absent delivery, pricing, timing, reduction calculation, identity, termination and priority information. Justifiably refuses probability-weighted exposure and recovery calculations; would also need issuer financial capacity.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "unsupported_assumptions": {
+          "status": "supported",
+          "notes": "No material unsupported factual or ranking inference identified. Keeps resale mitigation and funding implications conditional; preserves provider anonymity. This is not proof that no error exists.",
+          "response_excerpt": "",
+          "citations": []
+        }
+      },
+      "objective": {
+        "citations": {
+          "status": "supported",
+          "notes": "Cites the existing META_10Q identifier and actual Note 9 topic; equity also reproduces the supplied paragraph opening. These are manual source checks, not consequences of catalog membership.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "disclosed_amounts": {
+          "status": "supported",
+          "notes": "14.72 billion over five years retained as an up-to obligation. 349.31 billion and 53.52/81.65 billion are correctly kept as neighboring aggregate context, not the case payment schedule. No unsupported annual allocation.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CONTEXT"
+            }
+          ]
+        },
+        "limits_triggers": {
+          "status": "supported",
+          "notes": "Correct reduction for provider third-party sales; no invented annual trigger, unilateral cancellation, exact five-year start date or payment schedule. Mere recognition as contingent does not make an obligation optional.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "obligation_classification": {
+          "status": "supported",
+          "notes": "Correctly separates the contingent purchase from the neighboring non-cancelable aggregate and from a guarantee of another borrower. Direct-context terminology is not evidence of unilateral cancellation.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        },
+        "obligors_beneficiaries": {
+          "status": "supported",
+          "notes": "Meta as purchaser and unnamed cloud provider as supplier/beneficiary. Neither imports Wagner's cross-filing Nebius identity. Exact obligor legal-entity scope remains undisclosed.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "META_10Q",
+              "location_id": "Q_NOTE9_CAPACITY"
+            }
+          ]
+        }
+      },
+      "perspective": "senior_unsecured_creditor"
+    }
+  ],
+  "pair_consistency": {
+    "status": "supported",
+    "notes": "Core disclosed facts and uncertainty remain stable across investor prompts. Different emphases do not justify different numerical exposures. Equity-specific economic omissions/overstatements are recorded separately, not a mechanical failure of evidence equality.",
+    "response_excerpt": "",
+    "citations": []
+  },
+  "reference_sha256": "636b6183c09481285b6a83f005fab5229620ce316f6a14b8de9013a1cd472504",
+  "review_type": "assistant_draft",
+  "reviewed_on": "2026-10-27",
+  "reviewer": "Parallax assistant; source-based semantic review draft, not an independent human rating",
+  "run_file": "results/benchmark-meta-capacity-live.json",
+  "run_sha256": "92b64fa75a4880273ef0d0482ccb8819b38a56b0c39be3d5db84b287d6d99fd5",
+  "summary": "Two successful calls. Disclosed parties, cap, tenor and reduction mechanism are preserved; the provider remains unnamed. Equity reasoning is too one-sided and overstates the exclusion of economic support; no aggregate accuracy score. All semantic verdicts are assistant drafts awaiting independent human review.",
+  "unscorable_fields": {
+    "expected_loss_or_probability": "No event probabilities, pricing model or joint-state estimates supplied.",
+    "creditor_recovery_or_relative_priority": "Selected disclosures lack complete capital structure, asset coverage and intercreditor terms.",
+    "equity_valuation_adjustment": "No valuation model, discount rates or security prices supplied.",
+    "future_cash_payment_schedule": "No complete schedule or contract formula sufficient to derive exact future cash payments."
+  }
+}

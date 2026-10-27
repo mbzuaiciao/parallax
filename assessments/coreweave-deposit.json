@@ -1,0 +1,185 @@
+{
+  "assessment_schema_version": 1,
+  "case_key": "coreweave-deposit",
+  "evaluations": [
+    {
+      "judgment": {
+        "investor_implications": {
+          "status": "concern",
+          "notes": "Service consumption, interest expense and liquidity allocation are relevant to equity. However, claiming termination increases cash outflow versus holding to term is unsupported without premium/timing/extension terms; earlier settlement might reduce future accrual.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "missing_information": {
+          "status": "supported",
+          "notes": "Identifies full amended terms, calculation bases, notice periods, current-classification/maturity ambiguity, service uptake, priority and issuer liquidity/capital structure. Appropriate refusal of expected payout or recovery estimate.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "unsupported_assumptions": {
+          "status": "concern",
+          "notes": "The termination-versus-hold comparison has no disclosed counterfactual cash schedule. The stated absence of service revenue in June is carefully phrased as no disclosed revenue; the input only confirms no services at December 2025, so actual H1 usage remains unknown.",
+          "response_excerpt": "increasing cash outflow vs. holding to term",
+          "citations": []
+        }
+      },
+      "objective": {
+        "citations": {
+          "status": "supported",
+          "notes": "Both use the two valid document IDs and correct Note 10 Magnetar subsection/debt-table locators. Exact table row and dated balances were manually checked; identifier recognition alone would not establish this.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_TABLE"
+            }
+          ]
+        },
+        "disclosed_amounts": {
+          "status": "supported",
+          "notes": "230 million initial deposit, December 2025 carrying 273 including 43 premium, June partial settlement 100, June 30 carrying 189 and 12 percent reproduced with dates/meanings. No fabricated 273-minus-100 reconciliation or forward payoff amount.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_MAGAI"
+            }
+          ]
+        },
+        "limits_triggers": {
+          "status": "supported",
+          "notes": "Correct unused-deposit refund, bilateral termination rights, return multiplier, four-year term/two-year option, and January 2029 table maturity. Does not invent a reconciliation, default trigger or equal ranking.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_TABLE"
+            }
+          ]
+        },
+        "obligation_classification": {
+          "status": "concern",
+          "notes": "Correct in-substance debt and conditional service/refund mechanics, but both list accounting/accretion as direct contractual obligations. Recording/carrying a liability and a historical payment are not separate contractual promises or new cash debts.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10K",
+              "location_id": "K_NOTE10_MAGAI"
+            }
+          ]
+        },
+        "obligors_beneficiaries": {
+          "status": "supported",
+          "notes": "CoreWeave is service/refund obligor; MagAI Ventures is depositor/refund beneficiary and approval party. Both treat Magnetar Loan as the disclosed label rather than infer an unstated corporate identity.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10K",
+              "location_id": "K_NOTE10_MAGAI"
+            }
+          ]
+        }
+      },
+      "perspective": "equity_holder"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "status": "concern",
+          "notes": "Competing recourse claim and termination liquidity risk are justified. Claiming reduced carrying amounts through settlements could improve availability is hedged but incomplete: paying cash also reduces liquid assets, so creditor benefit cannot be inferred from debt reduction alone.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "missing_information": {
+          "status": "supported",
+          "notes": "Identifies full amended terms, calculation bases, notice periods, current-classification/maturity ambiguity, service uptake, priority and issuer liquidity/capital structure. Appropriate refusal of expected payout or recovery estimate.",
+          "response_excerpt": "",
+          "citations": []
+        },
+        "unsupported_assumptions": {
+          "status": "concern",
+          "notes": "The potentially-improved-availability settlement inference needs the cash-use countereffect. The response otherwise appropriately distinguishes recourse classification from pari passu/unsecured status and says premium absent termination is not specified.",
+          "response_excerpt": "potentially improving availability for other creditors",
+          "citations": []
+        }
+      },
+      "objective": {
+        "citations": {
+          "status": "supported",
+          "notes": "Both use the two valid document IDs and correct Note 10 Magnetar subsection/debt-table locators. Exact table row and dated balances were manually checked; identifier recognition alone would not establish this.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_TABLE"
+            }
+          ]
+        },
+        "disclosed_amounts": {
+          "status": "supported",
+          "notes": "230 million initial deposit, December 2025 carrying 273 including 43 premium, June partial settlement 100, June 30 carrying 189 and 12 percent reproduced with dates/meanings. No fabricated 273-minus-100 reconciliation or forward payoff amount.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_MAGAI"
+            }
+          ]
+        },
+        "limits_triggers": {
+          "status": "supported",
+          "notes": "Correct unused-deposit refund, bilateral termination rights, return multiplier, four-year term/two-year option, and January 2029 table maturity. Does not invent a reconciliation, default trigger or equal ranking.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10Q",
+              "location_id": "Q_NOTE10_TABLE"
+            }
+          ]
+        },
+        "obligation_classification": {
+          "status": "concern",
+          "notes": "Correct in-substance debt and conditional service/refund mechanics, but both list accounting/accretion as direct contractual obligations. Recording/carrying a liability and a historical payment are not separate contractual promises or new cash debts.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10K",
+              "location_id": "K_NOTE10_MAGAI"
+            }
+          ]
+        },
+        "obligors_beneficiaries": {
+          "status": "supported",
+          "notes": "CoreWeave is service/refund obligor; MagAI Ventures is depositor/refund beneficiary and approval party. Both treat Magnetar Loan as the disclosed label rather than infer an unstated corporate identity.",
+          "response_excerpt": "",
+          "citations": [
+            {
+              "document_id": "CRWV_10K",
+              "location_id": "K_NOTE10_MAGAI"
+            }
+          ]
+        }
+      },
+      "perspective": "senior_unsecured_creditor"
+    }
+  ],
+  "pair_consistency": {
+    "status": "supported",
+    "notes": "Both preserve party roles, dated amounts, return/term options and unknown priority. Different investor concerns are reasonable; unsupported equity cost comparison and creditor settlement caveat are separate judgment concerns, not a changed principal or exposure estimate.",
+    "response_excerpt": "",
+    "citations": []
+  },
+  "reference_sha256": "f6b3d43d10fa2de270d6faf604bf6a7910ce37539738243d1ebcf158e0366ce1",
+  "review_type": "assistant_draft",
+  "reviewed_on": "2026-10-27",
+  "reviewer": "Parallax assistant; source-based semantic review draft, not an independent human rating",
+  "run_file": "results/benchmark-coreweave-deposit-live.json",
+  "run_sha256": "7e60c3aa3c586a0c6a2c4e0447714938a9729678b7692df55f531ddab8c23c22",
+  "summary": "Two successful calls. The model distinguishes dated debt carrying values from the original deposit and future termination payments. The equity answer makes an unsupported termination-versus-hold cash-cost comparison; creditor settlement reasoning needs a countervailing cash-outflow qualification. Semantic records are assistant drafts, not human-adjudicated scores.",
+  "unscorable_fields": {
+    "expected_loss_or_probability": "No event probabilities, pricing model or joint-state estimates supplied.",
+    "creditor_recovery_or_relative_priority": "Selected disclosures lack complete capital structure, asset coverage and intercreditor terms.",
+    "equity_valuation_adjustment": "No valuation model, discount rates or security prices supplied.",
+    "future_cash_payment_schedule": "No complete schedule or contract formula sufficient to derive exact future cash payments."
+  }
+}

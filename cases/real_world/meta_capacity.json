@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "meta_capacity_2026_disclosure",
+  "arrangement": "Meta contingent purchase of cloud capacity",
+  "analysis_as_of": "2026-07-30",
+  "preparation": "Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.",
+  "documents": [
+    {
+      "id": "META_10Q",
+      "title": "Meta Platforms Form 10-Q for June 30, 2026",
+      "accession": "0001628280-26-050705",
+      "filed_on": "2026-07-30",
+      "period_end": "2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+      "locator": "Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations",
+      "short_quote": "which may be reduced if the cloud service provider is able to sell such capacity to other customers",
+      "factual_paraphrase": "As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt."
+    }
+  ]
+}

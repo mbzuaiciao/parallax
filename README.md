@@ -358,3 +358,49 @@ contractual facts while documenting justified changes in investor priorities,
 unsupported cost/accounting assumptions, missing information and citation errors.
 The original combined result is unchanged. All 33 tests pass, including exact
 evidence equality and a check that only the investor phrase changes between prompts.
+
+## Small real-world benchmark registry
+
+The lightweight registry now supports **three arrangements**: the existing NVIDIA
+PORTS guaranties, Meta's contingent cloud-capacity purchase and CoreWeave's refundable
+capacity deposit reclassified as debt. Streamlit is unchanged. See the
+[method, case provenance and limitations](docs/benchmark.md),
+[human-review Markdown template](docs/review-template.md), and
+[pilot findings](results/benchmark-review.md).
+
+```sh
+uv sync --locked
+uv run python -m parallax.benchmark list
+uv run python -m parallax.benchmark preview nvidia-ports --perspective equity_holder
+uv run python -m parallax.benchmark preview meta-capacity
+uv run --env-file .env python -m parallax.benchmark run meta-capacity --output results/meta-new-run.json
+uv run --env-file .env python -m parallax.benchmark run coreweave-deposit --output results/coreweave-new-run.json
+uv run python -m parallax.benchmark assess-template meta-capacity --run results/meta-new-run.json --output assessments/meta-new-review.json
+uv run python -m parallax.benchmark summary assessments/meta-capacity.json assessments/coreweave-deposit.json
+uv run python -m unittest discover -s tests -v
+```
+
+Listing, previews and review commands work without a key. Each `run` attempts two
+independent investor requests, changing only the investor instruction; failures and
+incomplete outputs remain recorded. Output paths must be new. Exact requests and
+provider responses, source versions/hashes, Git/working-draft metadata and times
+are saved. NVIDIA's existing commands, prompts and results remain compatible.
+
+Primary evidence, reference facts and Wagner research annotations are separate
+files. Only primary evidence enters prompts. Automated checks cover bytes, protocol
+structure, completion statuses and recognized catalog identifiers; they do **not**
+grade narrative extraction, citation support, legal reasoning or economic judgment.
+Recorded assessments are explicitly assistant drafts awaiting human review.
+Missing/unscorable fields are explicit; no artificial accuracy scores are assigned.
+The [generated comparison](results/benchmark-comparison.md) is reproducible from
+the two assessment JSON files; it summarizes recorded verdicts, not automatic truth.
+
+Four new live requests completed successfully. Core extraction mostly preserves
+source facts, with cost/benefit, classification and settlement-reasoning concerns
+documented in the pilot review. No quantitative loss/recovery ground truth, new
+dependencies, retrieval or ingestion infrastructure were added. Dataset attribution
+is Alexander F. Wagner, *Leverage Beyond Debt: Evidence from the AI Build-Out (data)*,
+2026 v1.1, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); pinned provenance,
+adaptation notices and the unchanged license/disclaimer are linked in the method.
+All **41 tests pass**, including legacy NVIDIA/Streamlit regressions and the new
+registry, evidence-isolation, checkpointing and assessment-rendering checks.

@@ -1,0 +1,78 @@
+{
+  "reference_schema_version": 1,
+  "case_key": "meta-capacity",
+  "verified_by": "Parallax primary-disclosure manual check (assistant), 2026-10-27",
+  "dataset": {
+    "author": "Alexander F. Wagner",
+    "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+    "version": "1.1",
+    "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+    "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_file": "CC-BY-4.0.txt",
+    "retrieved_on": "2026-10-27"
+  },
+  "locations": {
+    "Q_NOTE9_CAPACITY": {
+      "document_id": "META_10Q",
+      "locator": "Note 9, Leases and Contractual Commitments, paragraph beginning 'In addition, as of June 30, 2026'"
+    },
+    "Q_NOTE9_CONTEXT": {
+      "document_id": "META_10Q",
+      "locator": "Note 9, preceding paragraph beginning 'As of June 30, 2026, we had'"
+    }
+  },
+  "verified_facts": [
+    {
+      "id": "M1",
+      "category": "obligors_beneficiaries",
+      "assertion": "Meta is purchaser; cloud provider is beneficiary/supplier but unnamed in the supplied passage.",
+      "document_id": "META_10Q",
+      "location_id": "Q_NOTE9_CAPACITY",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "M2",
+      "category": "obligation_classification",
+      "assertion": "Contingent purchase of capacity, not a corporate guarantee of another borrower; reduced by provider third-party sales.",
+      "document_id": "META_10Q",
+      "location_id": "Q_NOTE9_CAPACITY",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "M3",
+      "category": "disclosed_amounts",
+      "assertion": "Up to USD 14.72 billion over five years; no contingent annual payment allocation is disclosed.",
+      "document_id": "META_10Q",
+      "location_id": "Q_NOTE9_CAPACITY",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "M4",
+      "category": "limits_triggers",
+      "assertion": "Third-party capacity sales may reduce obligation. No unilateral cancellation right is disclosed in this passage.",
+      "document_id": "META_10Q",
+      "location_id": "Q_NOTE9_CAPACITY",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "M5",
+      "category": "disclosed_amounts",
+      "assertion": "USD 349.31 billion, 53.52 billion and 81.65 billion are separately stated aggregate commitments and due amounts, not a schedule for the 14.72 billion arrangement.",
+      "document_id": "META_10Q",
+      "location_id": "Q_NOTE9_CONTEXT",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    }
+  ],
+  "annotation_relationship": "HL-0047 links to HL-0034b (shared with HL-0034), a demand backstop classified U4/L3 with cap 14.72. The dataset identifies Nebius via cross-filing matching; that identity is NOT independently established by this selected Meta evidence. Its U4 non-cancelability inference is not equivalent to a disclosed unilateral cancellation provision. Do not count HL-0047 and HL-0034b as two cases.",
+  "material_unknowns": [
+    "Provider unnamed in selected primary passage; Wagner cross-filing identity is not a verified fact in the supplied pack.",
+    "No unilateral cancellation right, detailed pricing, contingent annual schedule or ranking disclosed."
+  ],
+  "judgment_guidance": {
+    "equity_holder": "Assess conditional cash allocation and commercial/service economics without estimating undisclosed returns.",
+    "senior_unsecured_creditor": "Assess conditional liquidity, competing claims and recoverability without inventing claim priority.",
+    "both": "Separate unknown from zero; do not confuse cap, carrying value and payment schedule. Recognized source IDs are not semantic citation verification."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "reference_schema_version": 1,
+  "case_key": "nvidia-ports",
+  "verified_by": "Parallax primary-disclosure manual check (assistant), 2026-10-27",
+  "dataset": {
+    "author": "Alexander F. Wagner",
+    "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+    "version": "1.1",
+    "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+    "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_file": "CC-BY-4.0.txt",
+    "retrieved_on": "2026-10-27"
+  },
+  "locations": {
+    "8K_ITEM101": {
+      "document_id": "SEC_8K",
+      "locator": "Item 1.01, Residual Value Guaranties"
+    },
+    "FORM_2": {
+      "document_id": "SEC_FORM",
+      "locator": "Section 2, effectiveness and payment conditions"
+    },
+    "FORM_8": {
+      "document_id": "SEC_FORM",
+      "locator": "Section 8, cap and enforcement conditions"
+    },
+    "FORM_12": {
+      "document_id": "SEC_FORM",
+      "locator": "Section 12, trigger/remedy menu"
+    },
+    "Q_NOTE17": {
+      "document_id": "SEC_10Q",
+      "locator": "Note 17, SB Energy Corp. guarantees"
+    }
+  },
+  "verified_facts": [
+    {
+      "id": "N1",
+      "category": "obligors_beneficiaries",
+      "assertion": "NVIDIA guarantor, OpenAI affiliate tenant and SB Energy-associated lessors; OpenAI reimbursement undertaking.",
+      "document_id": "SEC_8K",
+      "location_id": "8K_ITEM101",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "N2",
+      "category": "obligation_classification",
+      "assertion": "Residual-value guaranties have commencement, RFS and default/procedure conditions; not ordinary outstanding borrowing principal.",
+      "document_id": "SEC_FORM",
+      "location_id": "FORM_2",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "N3",
+      "category": "disclosed_amounts",
+      "assertion": "Initial shared aggregate cap is USD 105 billion, not an expected loss or a phase-specific amount.",
+      "document_id": "SEC_8K",
+      "location_id": "8K_ITEM101",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    },
+    {
+      "id": "N4",
+      "category": "limits_triggers",
+      "assertion": "Default plus landlord termination right/intent; remedy elections and redacted cap qualifications matter.",
+      "document_id": "SEC_FORM",
+      "location_id": "FORM_12",
+      "verification_method": "Manual reading of the cited primary SEC provision on 2026-10-27; semantic correctness still requires human review."
+    }
+  ],
+  "annotation_relationship": "Existing HL-0001 / HL-0001a: C2/L3 research classification; lower cell blank, gross and upper 105.0 USD billion. Keep original annotation file unchanged; blanks are not observed zero liabilities.",
+  "material_unknowns": [
+    "Redacted formulas, schedules, costs and precise identities.",
+    "No issuer-wide risk inputs or established relative creditor ranking."
+  ],
+  "judgment_guidance": {
+    "equity_holder": "Assess conditional cash allocation and commercial/service economics without estimating undisclosed returns.",
+    "senior_unsecured_creditor": "Assess conditional liquidity, competing claims and recoverability without inventing claim priority.",
+    "both": "Separate unknown from zero; do not confuse cap, carrying value and payment schedule. Recognized source IDs are not semantic citation verification."
+  }
+}
