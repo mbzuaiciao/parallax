@@ -1,0 +1,9 @@
+[project]
+name = "parallax"
+version = "0.1.0"
+description = "Investor-conditional financial reasoning on one synthetic company"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv]
+package = false

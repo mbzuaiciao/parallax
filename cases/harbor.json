@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "case_id": "harbor_guarantee_v1",
+  "company": "Harbor Components (fictional)",
+  "provenance": "All company figures, contracts and scenarios are synthetic assumptions, not reported facts about a real issuer.",
+  "currency": "USD",
+  "amount_unit": "millions",
+  "valuation_date": "2026-12-31",
+  "settlement_date": "2027-12-31",
+  "reported_debt": {
+    "instrument": "Senior unsecured bullet bond",
+    "principal": "100",
+    "annual_coupon_rate": "0.05",
+    "terms": "One full year of simple interest, paid with all principal at settlement. No interim payments, collateral, amortization, acceleration, covenants or default penalties. Interest stops at settlement."
+  },
+  "contingent_guarantee": {
+    "beneficiary": "Lender to an unrelated distributor (fictional)",
+    "cap": "40",
+    "terms": "An irrevocable guarantee expires after settlement. A distributor payment default at settlement immediately triggers a claim equal to its unpaid covered debt after lender recoveries, capped at 40 including interest and fees. No default means no claim. The claim ranks pari passu with the bond principal and coupon and is settled simultaneously. Harbor has no reimbursement, subrogation proceeds, collateral or other recovery in this model.",
+    "reporting_treatment": "The synthetic reported borrowings figure includes only the bond principal. No guarantee accounting carrying value is specified. Contingent describes the payment trigger; it does not assert zero recognition under any accounting standard."
+  },
+  "perspectives": {
+    "equity_holder": "Common equity holder: evaluate residual cash and downside to the residual claim; do not infer a market price or investment return.",
+    "senior_unsecured_creditor": "Holder of the entire bond: evaluate principal plus coupon coverage, recovery and dilution by the equally ranked guarantee claim."
+  },
+  "assumptions": [
+    "A single terminal cash pool is distributable at settlement. It is a scenario input, not a market valuation or a reported balance-sheet asset figure.",
+    "The pool is after all operating costs, taxes and administration expenses but before either modeled claim is paid; do not subtract guarantee payments twice.",
+    "Only the bond and a triggered guarantee compete for cash. There are no secured, statutory, preferred or other claims, subsidiaries, new financing or interim distributions.",
+    "If cash is insufficient, both claims receive the same fraction of their contractual amount. Equity gets only the positive residual, with limited liability.",
+    "No probabilities, discount rates or security purchase prices are supplied. Outcomes are conditional settlement cash flows, not expected values or investment recommendations.",
+    "The stress scenario jointly changes cash resources and distributor default; their correlation is stipulated, not estimated. Contract terms are stipulated and are not a claim about enforceability in a real jurisdiction."
+  ],
+  "scenarios": {
+    "base": {
+      "distributable_cash": "150",
+      "distributor_default": false,
+      "covered_debt_due": "50",
+      "lender_recoveries": "0",
+      "assumption": "Harbor produces 150 of terminal cash and the distributor pays its debt itself; the guarantee is not triggered. Lender recoveries are relevant only on default."
+    },
+    "stress": {
+      "distributable_cash": "110",
+      "distributor_default": true,
+      "covered_debt_due": "50",
+      "lender_recoveries": "10",
+      "assumption": "Harbor's terminal cash falls to 110 while the distributor defaults. The lender recovers 10 from the distributor against 50 due, leaving a covered shortfall of 40."
+    }
+  },
+  "reference_facts": [
+    {
+      "id": "sec_bond_payments",
+      "fact": "A bond issuer promises interest and repayment of principal at maturity; exact payment terms depend on the contract.",
+      "source_title": "SEC Investor Bulletin: What Are Corporate Bonds?",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/what-are",
+      "verified_on": "2026-10-27",
+      "scope": "General background only. The 5 percent coupon and all amounts here are synthetic contract assumptions."
+    },
+    {
+      "id": "sec_creditor_priority",
+      "fact": "In bankruptcy, bond investors have priority over shareholders in claims on company assets.",
+      "source_title": "SEC Investor Bulletin: What Are Corporate Bonds?",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/what-are",
+      "verified_on": "2026-10-27",
+      "scope": "Supports the creditor/equity distinction. Equal ranking of the guarantee and bond is a synthetic contractual assumption, not established by this source."
+    }
+  ]
+}
