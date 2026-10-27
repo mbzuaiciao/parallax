@@ -6,7 +6,57 @@ synthetic company: two investor perspectives across base and stress scenarios.
 A second experiment compares non-recourse subsidiary debt with a parent-guaranteed
 structure for the same two investors. Both experiments can submit four independent
 requests to Meta Model API and save their unmodified responses for inspection.
-It uses Python's standard library with no third-party runtime or test dependencies.
+The financial backend uses Python's standard library. The hackathon demo adds
+Streamlit as its only direct dependency; its required dependencies are locked by uv.
+
+## Launch the interactive demo
+
+From the repository root, launch saved-results mode without an API key:
+
+```sh
+uv sync --locked
+uv run streamlit run streamlit_app.py --server.address 127.0.0.1
+```
+
+Open [localhost:8501](http://localhost:8501). Select Harbor or Cedar, an investor
+perspective, and Harbor's base/stress scenario or Cedar's A/B guarantee structure.
+Cedar always uses the existing subsidiary-default scenario, with its no-default
+comparison available in the facts panel. The page shows synthetic contractual
+facts, expandable assumptions, locally verified reference calculations, and the
+matching historical Muse Spark response. All eight saved selections work offline
+without credentials or model requests. Historical timestamps and source files
+identify the saved outputs; model interpretations remain explicitly unverified.
+
+For the optional **Run fresh analysis** button, configure `MODEL_API_KEY` in the
+ignored local `.env` file as described below, then launch with uv loading it:
+
+```sh
+uv run --env-file .env streamlit run streamlit_app.py --server.address 127.0.0.1
+```
+
+Each button click sends exactly one request for the current company, perspective
+and scenario/structure through the existing Meta client. Reference answers remain
+excluded from prompts. Results stay in the browser session, associated with that
+selection; switching cases never shows another selection's fresh answer. No
+historical files are overwritten, no batch evaluation is run, and there are no
+automatic retries. Without a configured key the button is disabled. Keys are
+never entered in the page or included in requests saved on disk.
+
+For a short demonstration, compare Harbor's base and stress bond recovery, then
+switch Cedar between A and B: the parent has the same cash but a different legal
+claim under its guarantee. Toggle the investor to inspect the corresponding saved
+reasoning. Expand **All deterministic reference values** to compare claims with
+cash payments. Live analysis is optional.
+
+The UI reuses existing loaders, request builders, calculations and API client.
+Streamlit AppTest checks all eight saved selections with no key and no API calls,
+selected-only live submission with a mock, selection-bound session results and
+failure handling. Run the entire suite with
+`uv run python -m unittest discover -s tests -v`. No deployment infrastructure is
+required. Demo verification on October 27, 2026: all 25 tests passed, all eight
+saved selections were exercised without a key, and one live button request for
+Cedar B / senior unsecured creditor completed with finish reason `stop`. The fresh
+response was kept only in the verification session; previous results are unchanged.
 
 ## Run
 
@@ -206,8 +256,9 @@ responses and separate local references are saved in
 [manual review](results/first-live-review.md) records the numerical comparison and
 one imprecise statement about equity's cash cushion. No model answers were corrected.
 
-Web UI, multi-agent orchestration, general financial-data ingestion and benchmarking
-infrastructure are intentionally outside this proof of concept.
+Beyond the single-page Streamlit demo, multi-agent orchestration, general
+financial-data ingestion, benchmarking and deployment infrastructure remain
+outside this proof of concept.
 
 ## Paired subsidiary-recourse experiment
 
