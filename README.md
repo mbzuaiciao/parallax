@@ -9,7 +9,7 @@ requests to Meta Model API and save their unmodified responses for inspection.
 The financial backend uses Python's standard library. The hackathon demo adds
 Streamlit as its only direct dependency; its required dependencies are locked by uv.
 
-## Launch the interactive demo
+## Launch the interactive workstation
 
 From the repository root, launch saved-results mode without an API key:
 
@@ -18,27 +18,15 @@ uv sync --locked
 uv run streamlit run streamlit_app.py --server.address 127.0.0.1
 ```
 
-Open [localhost:8501](http://localhost:8501). The navigation has three sections:
+Open [localhost:8501](http://localhost:8501). Parallax operates as an issuer-centric financial analysis workstation inspired by Bloomberg Terminal workflows:
 
-- **Overview** leads with Cedar's synthetic controlled comparison: unchanged parent
-  reported principal and cash, but different contractual claims and bond recovery
-  (100% versus 68.75%). Cash-allocation bars distinguish bond, guarantee and equity
-  payments. The arithmetic and stipulated terms are expandable. Three concise
-  real-world cards introduce NVIDIA, Meta and CoreWeave, with historical cutoffs,
-  primary SEC links and limitations behind detail controls.
-- **Capital Structure** compares structures at fixed scenario inputs using the
-  existing Cedar and Harbor Decimal calculators. Switch investor to see conditional
-  bond shortfalls/recovery or equity distributions. Harbor also supports base/stress;
-  changing that scenario changes both cash and default, so it does not isolate the
-  guarantee effect. Reported principal, direct claims (including Harbor's coupon),
-  guarantee caps, triggered claims and actual payments remain distinct. A settlement
-  ledger, complete assumptions, reference values and historical answers are secondary.
-- **AI Reasoning Lab** compares recorded guided/neutral assessments for each real-world
-  case and investor. The cards show first-sentence excerpts of existing assistant
-  judgments, with full notes available below. The complete preliminary comparison,
-  source packs and separate reference annotations can be downloaded. Original model
-  text is hidden until requested; exact request/provider JSON is downloadable.
-  Earlier guided evaluations remain available as supplementary responses.
+- **Issuer Workspace & Search:** A prominent command and search bar enables instant ticker and issuer lookup (`NVDA`, `META`, `CRWV`, `CEDAR`, `HARBOR`). Unsupported issuer queries (e.g. `AAPL`, `Tesla`) render a clear "Coverage Status: Not Covered" panel. Parallax does not fabricate coverage, balance sheets, ratings, or live pricing.
+- **Persistent Context:** The active issuer, historical cutoff date, and investor perspective persist seamlessly across all analytical functions.
+- **Issuer Overview:** Leads with reconstructed corporate obligations, distinguishing nominal accounting debt from contingent caps. Displays explicit unscorable metric notices (Debt/EBITDA leverage, default probability, expected loss, recovery rates) to prevent fabricated totals.
+- **Financial Obligations:** Compact, audit-ready breakdown of reconstructed contracts, verified facts from the Wagner reference dataset, disclosed limitations, and primary SEC EDGAR accession links.
+- **Capital Structure:** Claims-oriented hierarchy distinguishing obligors, guarantees, priorities, and investor economic exposure. Supports Common Equity and Senior Unsecured Creditor perspectives, with Secured Creditor, Subordinated Creditor, and CDS Participant perspectives cleanly marked as independent experiment data pending.
+- **Scenario Analysis:** Dedicated Scenario Sandbox for deterministic synthetic benchmarks (Cedar Holdings subsidiary recourse pair and Harbor Components contingent guarantee), alongside real-world contractual activation sensitivity matrices.
+- **AI Diagnostics:** Evaluates model reliability using the preregistered 12-cell prompt-guidance ablation (`guidance-ablation-v1`). Features side-by-side Guided vs. Neutral prompt comparisons, supported findings, omissions, verbatim unsupported conclusions, and on-demand inspection of original saved responses.
 
 Synthetic figures are stipulated, conditional settlement outcomes, not market-value
 losses or expected returns. The same cash pool is used in each guarantee comparison.
@@ -51,7 +39,7 @@ The packs cannot determine issuer leverage ratios, equity valuations or creditor
 recoveries. Secured, subordinated and CDS perspectives need further contractual inputs
 and are not modeled.
 
-The lab displays **preliminary assistant-authored assessments**, not independent
+The diagnostics lab displays **preliminary assistant-authored assessments**, not independent
 blinded human ratings or correctness scores. Twelve completed ablation calls do not
 mean twelve correct answers. Curated evidence, one sample per cell, imperfect masking
 and assistant judgment limit inference. Research experiments, source packs, reference
@@ -64,7 +52,7 @@ file as described below, then launch with uv loading it:
 uv run --env-file .env streamlit run streamlit_app.py --server.address 127.0.0.1
 ```
 
-Expand **Optional live analysis** on Capital Structure or AI Reasoning Lab. One click
+Expand **Optional live analysis** on Capital Structure or AI Diagnostics. One click
 sends exactly one request for the selected case, investor and scenario/structure or
 prompt condition through the existing Meta client. References are excluded from
 requests. Responses stay bound to that selection in the session; historical files
@@ -72,24 +60,19 @@ are never overwritten, and there are no automatic retries. Without a configured 
 the button is disabled; the entire saved-results demo remains usable. No keys are
 entered in the page. This redesign makes no new live calls during verification.
 
-For a 30-second demonstration, start with Cedar's recovery change on Overview,
-open Capital Structure and switch equity/creditor, then visit the lab and compare
-NVIDIA's unsupported priority assertion across guidance conditions. Expand the
-original response or sources only when needed.
-
 The UI reuses the existing loaders, request builders, recorded assessments and API
 client. No dependencies or research data were added. Streamlit AppTest verifies
-navigation, investor/scenario switching, fixed-cash calculations, primary source
-links, keyless access to all saved combinations, original-response access and
-mocked single-selection live requests/errors. Run the complete suite with:
+issuer selection, unsupported issuer searches, persistent context across all 5 functions,
+fixed-cash calculations, primary source links, keyless access to all saved combinations,
+original-response access, planned perspective disclosures, and mocked single-selection live requests/errors. Run the complete suite with:
 
 ```sh
 uv run python -m unittest discover -s tests -v
 ```
 
-Redesign verification (October 27, 2026): all **50 tests pass**. A browser smoke
-check confirmed the compact overview, page navigation, investor switching and
-on-demand original model text. No new live inference was performed.
+Redesign verification: all **55 tests pass**. A browser smoke
+check confirmed the issuer workspace, 5-function navigation, investor switching,
+unsupported query handling, and on-demand original model text. No new live inference was performed.
 
 ## Run
 
