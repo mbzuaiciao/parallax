@@ -76,15 +76,33 @@ def render_response(response):
     st.markdown(choice["message"]["content"])
 
 
+def render_disclosure(evidence):
+    st.markdown("**Initial aggregate cap across the guaranties**")
+    st.write(evidence["documents"][0]["short_quote"])
+    st.write("NVIDIA provides contingent residual-value support to SB Energy-associated lessors for an OpenAI affiliate's leases. Some legal identities are redacted.")
+    st.markdown("**Contingent payment conditions**")
+    st.write("Covered Loss payments depend on lease commencement, ready-for-service, a defined tenant default, the landlord's right and intent to terminate, and notice/cure/verification procedures. Separate pre-RFS payment and project-cost provisions are partly redacted.")
+    st.markdown("**Reimbursement and mitigation**")
+    st.write("OpenAI agrees to reimburse and indemnify NVIDIA for amounts actually paid to the lessor. Collection is uncertain. Reletting/sale recoveries and conditional pursuit of insurance and Tenant Parent remedies can limit exposure; subrogation is postponed behind the landlord.")
+    st.markdown("**Material limitations**")
+    st.write("The initial cap has contractual qualifications; some costs do not reduce it. Formulae, schedules and costs are redacted. The pack does not establish claim ranking, collection rates or NVIDIA's financial capacity. It cannot support a leverage ratio, valuation adjustment or creditor recovery estimate.")
+    st.caption(evidence["preparation"])
+    st.markdown("**Underlying SEC disclosures**")
+    for document in evidence["documents"]:
+        st.markdown(f"[{document['title']}]({document['url']})")
+        with st.expander(f"{document['id']} · source context"):
+            st.caption(document["locator"])
+            st.write(document["factual_paraphrase"])
+
+
 def main():
     st.set_page_config(page_title="Parallax · Investor perspectives", page_icon="◈", layout="wide")
     st.caption("META AI HACKATHON · FINANCIAL REASONING DEMO")
     st.title("Parallax")
     st.write("Explore how corporate obligations affect equity holders and unsecured creditors.")
-    st.info("All companies, amounts, scenarios and contract terms are synthetic. Model interpretations can contain errors. Local calculations are verified by deterministic tests under the stated assumptions.")
 
     controls = st.columns(3)
-    company = controls[0].selectbox("Synthetic company", ("Harbor", "Cedar"), key="company")
+    company = controls[0].selectbox("Case", ("Harbor", "Cedar", "NVIDIA PORTS"), key="company")
     perspective = controls[1].selectbox(
         "Investor perspective", ("equity_holder", "senior_unsecured_creditor"),
         format_func=lambda p: "Common equity holder" if p == "equity_holder" else "Senior unsecured creditor",
@@ -93,32 +111,50 @@ def main():
     if company == "Harbor":
         variant = controls[2].selectbox("Economic scenario", ("base", "stress"), index=1,
                                         format_func=str.title, key="harbor_scenario")
-    else:
+    elif company == "Cedar":
         variant = controls[2].selectbox("Guarantee structure", ("A", "B"), index=1,
                                         format_func=lambda s: "A · Non-recourse" if s == "A" else "B · Parent guarantee",
                                         key="cedar_structure")
+    else:
+        variant = None
+        controls[2].caption("Historical SEC disclosure case · no synthetic scenario")
     selection = load_selection(company, perspective, variant)
-    st.caption(
-        f"Settlement: {selection['evidence']['settlement_date']} · All monetary amounts in USD millions. "
-        + ("Cedar summary figures refer to the parent company." if company == "Cedar" else "Harbor is the bond issuer and guarantor.")
-    )
-    st.subheader("Verified calculations")
-    labels = ("Available cash", "Contractual claims", "Bond recovery", "Equity distribution")
-    for column, label, value in zip(st.columns(4), labels, selection["summary"]):
-        column.metric(label, f"{number(value)}%" if label == "Bond recovery" else money(value))
-    st.caption("Computed locally from the synthetic inputs. These reference answers are never sent to the model. Cash payments can differ from contractual claims.")
+    if selection["synthetic"]:
+        st.info("All companies, amounts, scenarios and contract terms in this case are synthetic. Model interpretations can contain errors. Local calculations are verified by deterministic tests under the stated assumptions.")
+        st.caption(
+            f"Settlement: {selection['evidence']['settlement_date']} · All monetary amounts in USD millions. "
+            + ("Cedar summary figures refer to the parent company." if company == "Cedar" else "Harbor is the bond issuer and guarantor.")
+        )
+        st.subheader("Verified calculations")
+        labels = ("Available cash", "Contractual claims", "Bond recovery", "Equity distribution")
+        for column, label, value in zip(st.columns(4), labels, selection["summary"]):
+            column.metric(label, f"{number(value)}%" if label == "Bond recovery" else money(value))
+        st.caption("Computed locally from the synthetic inputs. These reference answers are never sent to the model. Cash payments can differ from contractual claims.")
+    else:
+        st.caption(f"Historical information cutoff: {selection['evidence']['analysis_as_of']} · NVIDIA PORTS · Not a statement of current status.")
+        st.info("The $105 billion initial aggregate cap is neither outstanding debt nor an expected loss. No numerical leverage, valuation or recovery estimate is established by this source pack. Model interpretations may contain errors.")
+        st.subheader("Investor focus")
+        st.write(
+            "Equity focus: potential commercial benefits versus contingent cash outflows and funds available for investment or shareholder distributions. No valuation effect is quantified."
+            if perspective == "equity_holder" else
+            "Creditor focus: liquidity and debt-service capacity, reimbursement collectability, and unknown claim priority. No default probability or bond recovery is estimated."
+        )
+        st.caption("Parallax explanatory guide: only the economic focus changes with the investor. The disclosed contractual facts, cap and historical evidence remain identical.")
 
     facts, reasoning = st.columns((1, 1.3), gap="large")
     with facts:
         st.subheader("Financial obligations")
-        render_obligations(company, selection["evidence"])
-        with st.expander("All deterministic reference values"):
-            st.table([
-                {"Calculation": key.replace("_", " ").capitalize(),
-                 "Value": f"{number(value)}%" if key.endswith("percent") else money(value)}
-                for key, value in selection["references"].items()
-            ])
-            st.caption("Calculated before rounding; six decimal places, half-even.")
+        if selection["synthetic"]:
+            render_obligations(company, selection["evidence"])
+            with st.expander("All deterministic reference values"):
+                st.table([
+                    {"Calculation": key.replace("_", " ").capitalize(),
+                     "Value": f"{number(value)}%" if key.endswith("percent") else money(value)}
+                    for key, value in selection["references"].items()
+                ])
+                st.caption("Calculated before rounding; six decimal places, half-even.")
+        else:
+            render_disclosure(selection["evidence"])
     with reasoning:
         st.subheader("Historical model output")
         run_time = datetime.fromisoformat(selection["historical_run_at"]).strftime("%Y-%m-%d %H:%M:%S UTC")

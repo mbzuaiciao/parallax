@@ -18,14 +18,25 @@ uv sync --locked
 uv run streamlit run streamlit_app.py --server.address 127.0.0.1
 ```
 
-Open [localhost:8501](http://localhost:8501). Select Harbor or Cedar, an investor
+Open [localhost:8501](http://localhost:8501). Select Harbor, Cedar or NVIDIA PORTS, an investor
 perspective, and Harbor's base/stress scenario or Cedar's A/B guarantee structure.
 Cedar always uses the existing subsidiary-default scenario, with its no-default
 comparison available in the facts panel. The page shows synthetic contractual
-facts, expandable assumptions, locally verified reference calculations, and the
-matching historical Muse Spark response. All eight saved selections work offline
+facts, expandable assumptions, locally verified reference calculations for the
+synthetic cases, and the matching historical Muse Spark response. All ten saved selections work offline
 without credentials or model requests. Historical timestamps and source files
 identify the saved outputs; model interpretations remain explicitly unverified.
+
+NVIDIA PORTS uses the existing real-world disclosure pack and the two independent
+investor responses, with an explicit **August 26, 2026 historical cutoff** and links
+to all three underlying SEC disclosures. Switching investor changes the explanatory
+economic focus and corresponding saved reasoning, while contractual facts and the
+disclosed initial aggregate cap remain identical. The **$105 billion cap is neither
+outstanding debt nor expected loss**; redacted terms, recoveries and missing financial
+information prevent a leverage ratio, valuation adjustment or recovery estimate.
+No synthetic calculation metrics or deterministic-reference table are shown for
+NVIDIA. Source-pack paraphrases and material qualifications remain available beside
+the unaltered, potentially fallible historical output.
 
 For the optional **Run fresh analysis** button, configure `MODEL_API_KEY` in the
 ignored local `.env` file as described below, then launch with uv loading it:
@@ -49,7 +60,7 @@ reasoning. Expand **All deterministic reference values** to compare claims with
 cash payments. Live analysis is optional.
 
 The UI reuses existing loaders, request builders, calculations and API client.
-Streamlit AppTest checks all eight saved selections with no key and no API calls,
+Streamlit AppTest checks all ten saved selections with no key and no API calls,
 selected-only live submission with a mock, selection-bound session results and
 failure handling. Run the entire suite with
 `uv run python -m unittest discover -s tests -v`. No deployment infrastructure is
@@ -57,6 +68,10 @@ required. Demo verification on October 27, 2026: all 25 tests passed, all eight
 saved selections were exercised without a key, and one live button request for
 Cedar B / senior unsecured creditor completed with finish reason `stop`. The fresh
 response was kept only in the verification session; previous results are unchanged.
+The NVIDIA extension passes all 35 tests, including keyless investor switching,
+absence of synthetic calculations and a mocked selected-only live request. No new
+live API calls were needed for this extension. The optional button reuses the
+existing investor-specific PORTS request builder and API client.
 
 ## Run
 
