@@ -197,8 +197,12 @@ Mocked tests cover prompt isolation, HTTP request and response handling, key
 preflight, response preservation, four-call persistence, failure checkpoints,
 incomplete outputs and CLI exit behavior. Tests never require a live key.
 
-Live verification is pending until `MODEL_API_KEY` is configured. No actual model
-responses or financial-reasoning findings have yet been recorded in this repository.
+The first live evaluation completed on October 27, 2026: all four requests returned
+`muse-spark-1.3` responses with finish reason `stop`. Exact requests, unmodified
+responses and separate local references are saved in
+[`results/first-live.json`](results/first-live.json). The
+[manual review](results/first-live-review.md) records the numerical comparison and
+one imprecise statement about equity's cash cushion. No model answers were corrected.
 
 Web UI, multi-agent orchestration, general financial-data ingestion and benchmarking
 infrastructure are intentionally outside this proof of concept.
