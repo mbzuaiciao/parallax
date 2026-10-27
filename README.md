@@ -291,3 +291,29 @@ The first paired run completed all four requests. See the
 match the references across both structures and investor perspectives. The review
 separates numerical, legal-structure and investor-perspective findings, including
 a wording caveat and citation errors. All 22 tests pass.
+
+## First real-world evaluation: NVIDIA PORTS
+
+One historical financing arrangement from Alexander F. Wagner's
+[*Leverage Beyond Debt: Evidence from the AI Build-Out (data)*](https://github.com/alex-wagner-research/leverage-beyond-debt)
+(2026, v1.1) has been evaluated: NVIDIA's PORTS residual-value guaranties. The
+[case documentation](cases/real_world/README.md) records the pinned dataset revision,
+primary SEC disclosures, source preparation, annotation separation, attribution,
+adaptations and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+The information cutoff is August 26, 2026, rather than a claim about current status.
+
+```sh
+uv run python -m parallax.real_world --preview
+uv run --env-file .env python -m parallax.real_world --evaluate --output results/nvidia-ports-repeat.json
+uv run python -m unittest discover -s tests -v
+```
+
+The command makes one request assessing both NVIDIA equity and senior unsecured
+creditors using a compact source pack prepared directly from SEC disclosures.
+Wagner's coded conclusions are kept in a separate, attributed comparison file and
+never sent to the model. The [unaltered live response](results/nvidia-ports-live.json)
+and [manual evaluation](results/nvidia-ports-review.md) record broad agreement on
+the contractual structure, supported investor-specific reasoning, an unsupported
+fee inference, and legal-label/citation caveats. No quantitative risk ground truth
+was invented. All 29 tests pass. Existing examples and UI are unchanged; this adds
+no general ingestion, retrieval system, dependency or UI feature.

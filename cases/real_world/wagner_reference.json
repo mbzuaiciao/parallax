@@ -1,0 +1,312 @@
+{
+  "attribution": "Alexander F. Wagner, Leverage Beyond Debt: Evidence from the AI Build-Out (data), 2026, version 1.1. University of Zurich; working paper and research dataset, not an independently adjudicated legal opinion.",
+  "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+  "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "retrieved_on": "2026-10-27",
+  "changes": "Selected columns from one contract and its one guarantee instrument; CSV string values preserved, serialized as JSON. Original blank cells remain empty strings. Added attribution, source hashes, table counts, evidence IDs and independently written codebook summaries. Other arrangements omitted.",
+  "endorsement": "No endorsement by Alexander F. Wagner is implied. The dataset is supplied without warranties; preserve the notices in CC-BY-4.0.txt.",
+  "dataset_units": "USD billions; empty means not applicable or not disclosed, never zero.",
+  "source_files": {
+    "data/core/contracts.csv": {
+      "sha256": "59250935b2e46c55d641d76a6b4ed9931c66dbc26ffd7711c8a80ac20073c99d",
+      "row_count": 155
+    },
+    "data/core/instruments.csv": {
+      "sha256": "efc2cda4d1b616d229e5cb8350d3b4a39a99c8c089f30718f6df63becee4845a",
+      "row_count": 243
+    },
+    "data/core/entities.csv": {
+      "sha256": "88279e1a6ef1909f5febc8e5c41dec86f2653efa43a5b0086874159ec988d2ad",
+      "row_count": 203
+    },
+    "data/core/firm_periods.csv": {
+      "sha256": "fbfb57aad3002f393b883ddbe1cba0e4a33ddb324585ab03cbfacfcaf72f994b",
+      "row_count": 37
+    },
+    "data/core/evidence.csv": {
+      "sha256": "2351f2dc70a7e3b283420333a1f33d035710543d8be1aef86fa4c994b2ec7452",
+      "row_count": 475
+    },
+    "codebook.md": {
+      "sha256": "e6abbe76bb99ba023b6b491770e08dcea670458933baf668d98b348984004b43"
+    },
+    "README.md": {
+      "sha256": "14cb5f46cd2f84ccecd06ee7c8711f4a196474bed434170beeca0ac69cf1e97d"
+    },
+    "CITATION.cff": {
+      "sha256": "8fa3e0a7f78cbfa83062197cc77900b6cf264fa69dcdd6142b96fd287e91a416"
+    },
+    "CHANGELOG.md": {
+      "sha256": "50fc3c33e485ad6babbb5ca1aa51281330dce95a089245e0789c6ae8fc8c0d5a"
+    },
+    "LICENSE": {
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    "data/filings.csv": {
+      "sha256": "1122d8fc467e7ffcc30b21186b7a2132043a5b1d17d228fcf763375de39dc48d"
+    }
+  },
+  "contracts": {
+    "contract_id": "HL-0001",
+    "source_accession": "0001045810-26-000069;0001045810-26-000075",
+    "source_doc": "nvda-20260817.htm;nvda2027q2ex101.htm;nvda-20260726.htm",
+    "announcement_date": "2026-08-17",
+    "effective_date": "per-phase lease commencement (9 phases; first expected NVDA FY2029)",
+    "obligor": "OpenAI affiliate (tenant)",
+    "beneficiary": "SB Energy landlord LLCs (DE)",
+    "guarantor": "NVIDIA",
+    "indemnitor": "OpenAI (reimburses NVIDIA)",
+    "instrument_type": "residual value guaranty (multiple related guaranties; shared cap)",
+    "maturity": "20y per phase lease",
+    "termination_right": "yes: OpenAI satisfactory credit rating; LC/surety substitute; tenant termination; mutual pre-RFS abandonment",
+    "recourse_type": "guarantee of shortfall vs guaranteed minimum value; landlord must concurrently pursue Tenant Parent Guaranty + tenant insurance",
+    "capacity_link": "yes: 4.25 GW initial; covers defined portions of lease AND power payments",
+    "source_quality": "filed 8-K + filed Ex-10.1 form of contract + 10-Q note",
+    "confidence_1to5": "5",
+    "notes": "Guarantees classified as credit derivatives; GMV covers data center power and transmission costs; payment conditional on ready-for-service; Guarantor Trigger = insolvency default or monetary default + landlord intent to terminate"
+  },
+  "instruments": {
+    "instrument_id": "HL-0001a",
+    "contract_id": "HL-0001",
+    "from_entity": "E-NVDA",
+    "to_entity": "E-SBE-LANDLORD",
+    "edge_type": "guarantee",
+    "layer": "L_guarantee",
+    "notional_usd_bn": "105.0",
+    "notional_type": "cap",
+    "contingent": "1",
+    "trigger_or_contingency": "Guarantor Trigger: tenant insolvency default or monetary default + landlord intent to terminate; payment conditional on ready-for-service; landlord must concurrently pursue Tenant Parent Guaranty + tenant insurance",
+    "wrong_way_flag": "1",
+    "circularity_flag": "1",
+    "notes": "covers defined portions of lease AND power payments; recoveries under parent guaranty reduce cap dollar-for-dollar; site exclusively NVIDIA architecture >=20y",
+    "ladder_firm": "NVDA",
+    "ladder_rung": "L3",
+    "ladder_class": "C",
+    "rule": "C2",
+    "lower_bn": "",
+    "gross_bn": "105.0",
+    "upper_bn": "105.0",
+    "subsequent_event": "1",
+    "ladder_basis": "signed August 2026 (after 7/26 period end; included in the filing's own guarantee table); 'each guarantee generally becomes effective upon commencement of the applicable lease' - first phase expected FY2029; effective exposure at period end ~0",
+    "ladder_source": "0001045810-26-000075 | nvda-20260726.txt | 616-619",
+    "clause_trigger": "tenant insolvency default or monetary default, with the landlord entitled to and intending to terminate the lease",
+    "assumption": "yes",
+    "purchase": "no",
+    "sublease": "no",
+    "sale": "yes",
+    "other_remedy": "require the landlord to relet; allow the lease to be terminated; defer for up to a year",
+    "exclusivity": "the premises deploy NVIDIA reference architecture exclusively for at least twenty years",
+    "carrying": "not yet effective: each guaranty becomes effective when its lease commences (first phase FY2029)",
+    "clause_note": "purchase and sublease are coded no because the remedy menu (A)-(E) of Section 12(a)(v) omits them; the relet option is the landlord's, at NVIDIA's election"
+  },
+  "evidence_rows": [
+    {
+      "evidence_id": "EV-0001",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (RVG core terms)",
+      "accession": "0001045810-26-000069",
+      "file": "nvda-20260817.txt",
+      "lines": "46",
+      "note": "lines located by the migration (cited '')"
+    },
+    {
+      "evidence_id": "EV-0002",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (RVG core terms)",
+      "accession": "0001045810-26-000069",
+      "file": "nvda-20260817.txt",
+      "lines": "47",
+      "note": "lines located by the migration (cited '')"
+    },
+    {
+      "evidence_id": "EV-0003",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (RVG core terms)",
+      "accession": "0001045810-26-000069",
+      "file": "nvda-20260817.txt",
+      "lines": "48",
+      "note": "lines located by the migration (cited '')"
+    },
+    {
+      "evidence_id": "EV-0004",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (RVG core terms)",
+      "accession": "0001045810-26-000069",
+      "file": "nvda-20260817.txt",
+      "lines": "49",
+      "note": "lines located by the migration (cited '')"
+    },
+    {
+      "evidence_id": "EV-0007",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 purchase link (8-K)",
+      "accession": "0001045810-26-000069",
+      "file": "nvda-20260817.txt",
+      "lines": "51",
+      "note": "lines located by the migration (cited '')"
+    },
+    {
+      "evidence_id": "EV-0014",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (shared cap across Related Guaranties; GMV composition) — line 22",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "22",
+      "note": ""
+    },
+    {
+      "evidence_id": "EV-0019",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (remedies menu) — line 91-96 (§12(a)(v)); (reserves first) — line 32 (§2(c))",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "91-96",
+      "note": "not verbatim, the coder's text: Options: Assumption / Relet / Sale / Rejection / Deferral (≤1 year, paying specified costs).; quote filled from the cited line "
+    },
+    {
+      "evidence_id": "EV-0020",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (remedies menu) — line 91-96 (§12(a)(v)); (reserves first) — line 32 (§2(c))",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "32",
+      "note": "lines located by the migration (cited '91-96')"
+    },
+    {
+      "evidence_id": "EV-0021",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (exclusivity inside the guaranty) — line 130 (§20(e))",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "130",
+      "note": ""
+    },
+    {
+      "evidence_id": "EV-0024",
+      "table": "contracts",
+      "row_id": "HL-0001",
+      "field": "HL-0001 (10-Q guarantee note; phasing) — line 616",
+      "accession": "0001045810-26-000075",
+      "file": "nvda-20260726.txt",
+      "lines": "616",
+      "note": ""
+    },
+    {
+      "evidence_id": "EV-0228",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "trigger",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "88",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0229",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "assumption",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "92",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0230",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "other_remedy",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "93",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0231",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "sale",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "94",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0232",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "other_remedy",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "95",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0233",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "other_remedy",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "96",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0234",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "exclusivity",
+      "accession": "0001045810-26-000075",
+      "file": "nvda2027q2ex101.txt",
+      "lines": "130",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0235",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "exclusivity",
+      "accession": "0001045810-26-000075",
+      "file": "nvda-20260726.txt",
+      "lines": "616",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0236",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "carrying",
+      "accession": "0001045810-26-000075",
+      "file": "nvda-20260726.txt",
+      "lines": "616",
+      "note": "clause SC-01"
+    },
+    {
+      "evidence_id": "EV-0284",
+      "table": "instruments",
+      "row_id": "HL-0001a",
+      "field": "ladder",
+      "accession": "0001045810-26-000075",
+      "file": "nvda-20260726.txt",
+      "lines": "616-619",
+      "note": ""
+    }
+  ],
+  "codebook_summaries": {
+    "2.2_L3": "Cumulative ladder adds support written for another party or asset value. It is not an expected-loss measure.",
+    "2.2_C2": "Signed or subsequently agreed guarantee not yet effective: excluded from lower, included in gross and upper. Blank lower on this row is not a numerical zero observation.",
+    "2.3_wrong_way_flag": "Payment occurs in states where the counterparty or shared sector is impaired; a qualitative coding flag, not an estimated probability or loss correlation.",
+    "2.3_circularity_flag": "Coder labels a disclosed vendor-customer relationship; this is not proof of circular cash flows or a quantified risk estimate."
+  }
+}

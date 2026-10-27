@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "case_id": "nvidia_ports_2026_disclosure",
+  "arrangement": "NVIDIA PORTS Technology Campus residual value guaranties",
+  "analysis_as_of": "2026-08-26",
+  "preparation": "Historical primary-disclosure source pack. Parallax manually prepared factual paraphrases and short verbatim quotations from the SEC documents below, independently of any research coding. This is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings; later developments are outside this evaluation.",
+  "documents": [
+    {
+      "id": "SEC_8K",
+      "title": "NVIDIA Form 8-K, Item 1.01, August 17, 2026",
+      "accession": "0001045810-26-000069",
+      "filed_on": "2026-08-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "locator": "Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA’s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA’s obligations'",
+      "short_quote": "NVIDIA’s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.",
+      "factual_paraphrase": "NVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for approximately 4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio. An affiliate of OpenAI Group PBC is tenant. An Agreement generally becomes effective when its lease commences. Payment conditions include lessor ready-for-service requirements, expected beginning in 2028. Trigger events are tenant insolvency causing lease default or failure to make lease payments. NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries. Remedies include assumption, reletting, sale, termination, or deferral up to a year with specified costs. Termination events include lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events. OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. The summary is qualified by the full agreement form."
+    },
+    {
+      "id": "SEC_10Q",
+      "title": "NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees",
+      "accession": "0001045810-26-000075",
+      "filed_on": "2026-08-26",
+      "period_end": "2026-07-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "locator": "Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table",
+      "short_quote": "Our guarantees are limited to defined portions of lease and power payments",
+      "factual_paraphrase": "The filing reports August 2026 guarantees capped at $105 billion supporting approximately 4.25 GW at SB Energy's PORTS campus on behalf of an OpenAI affiliate. Each guarantee generally becomes effective at its lease commencement. Corresponding guarantee amounts increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease. The guarantees do not cover the entire site's cost or every tenant obligation. In exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions. NVIDIA also has a sole-discretion option to provide phased credit support for approximately 3.8 additional GW. The guarantee table includes the August signing even though the report period ended July 26, 2026."
+    },
+    {
+      "id": "SEC_FORM",
+      "title": "NVIDIA Exhibit 10.1, Form of Residual Value Guaranty",
+      "accession": "0001045810-26-000075",
+      "filed_on": "2026-08-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm",
+      "locator": "Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules",
+      "short_quote": "actually intends to terminate the Lease",
+      "factual_paraphrase": "Form identifies NVIDIA as Guarantor; Landlord is an unnamed Delaware LLC. Tenant and Tenant Parent identities are redacted. Tenant Parent separately guarantees all tenant lease obligations (recital B). Section 1(d): shared cap across related guaranties; GMV covers data-center, power and transmission costs. Sections 1-2: Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires ready-for-service. A redacted pre-RFS termination payment is also defined. Section 2(c): some project costs do not reduce the cap; section 8 cap qualifications are redacted. Section 8: enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current. Collections reduce Liability Cap dollar-for-dollar. Section 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent. Section 12: notice, cure and verification periods apply; insolvency or monetary default requires Landlord's termination right and actual intent, not actual termination. Options: assumption, relet, sale, rejection or deferral up to one year with specified costs. Section 20(e): exclusive NVIDIA reference architecture for at least twenty years. Execution date/counterparty blanks and confidentiality redactions remain in this form."
+    }
+  ]
+}
