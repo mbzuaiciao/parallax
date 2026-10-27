@@ -404,3 +404,43 @@ is Alexander F. Wagner, *Leverage Beyond Debt: Evidence from the AI Build-Out (d
 adaptation notices and the unchanged license/disclaimer are linked in the method.
 All **41 tests pass**, including legacy NVIDIA/Streamlit regressions and the new
 registry, evidence-isolation, checkpointing and assessment-rendering checks.
+
+## Preregistered prompt-guidance ablation
+
+The [separate preregistered protocol](protocols/guidance-ablation-v1.md) and
+[machine-readable snapshot](protocols/guidance-ablation-v1.json) define a new
+3-case × 2-investor × 2-condition matrix, one sample per cell. Guided requests are
+exactly the existing investor-specific prompts. Neutral replaces only the developer
+instruction with a short standardized analysis request; evidence, cutoffs, model
+and API parameters are unchanged. Historical guided responses are supplementary,
+not substitutes for the twelve new calls.
+
+```sh
+uv run python -m parallax.ablation plan
+uv run --env-file .env python -m parallax.ablation run --protocol protocols/guidance-ablation-v1.json --output results/ablation-new-run.json
+uv run python -m parallax.ablation blind --run results/ablation-new-run.json --directory reviews/new-package --mapping results/new-condition-map.json
+uv run python -m parallax.ablation reveal --directory reviews/new-package --assessment assessments/new-recorded-review.json --mapping results/new-condition-map.json --output results/new-revealed-review.json
+```
+
+All output paths must be new. `run` checks committed protocol/narrative bytes,
+request hashes and source versions before any call, checkpoints every attempt,
+and never retries automatically. Each run makes twelve calls at the default single
+sample count. `--samples` supports future repetitions, but a different count needs
+a new matching committed preregistration; no extra repetitions belong to this pilot.
+`preregister --narrative PATH --output PATH` creates the JSON snapshot for a new
+protocol before it is committed. Preview/planning/review commands need no key.
+
+Give a future reviewer **only** the generated review directory. It contains shuffled
+original answer text, anonymized arm labels, company/investor context, evidence,
+reference facts and a blank assessment template. Keep raw runs, prompts, protocol,
+mapping, historical answers and outcome reports outside that reviewer's materials.
+The private controller mapping records its random seed separately. Copy and fill
+the JSON template, recording all category rationales and case/arm consistency
+assessments before `reveal`; the gate cannot prove actual reviewer blinding.
+
+The source packs are curated and already contain explanatory cues. This ablation
+tests developer-guidance removal conditional on those packs, not unaided SEC-filing
+extraction. Assistant-written preliminary assessments are not independent blinded
+human ratings. No aggregate accuracy percentage or statistical significance is
+warranted by one sample per condition. Streamlit, prior evidence/results and
+dependencies remain unchanged.

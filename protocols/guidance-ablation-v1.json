@@ -1,0 +1,241 @@
+{
+  "cells": [
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+      "perspective": "equity_holder",
+      "request_sha256": "e97adac4fff465e83bb36852b70876b7e93373ac80917c45923fc988b2dccef8",
+      "sample": 1
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+      "perspective": "equity_holder",
+      "request_sha256": "313921a3884efb9f091836816c6da922cb98e18d06c07840e737588a9c690335",
+      "sample": 1
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "01e3ac7736896d188e601bd07c633ed390f7507ec2e5e63cbc197646f4ecdcbb",
+      "sample": 1
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+      "perspective": "equity_holder",
+      "request_sha256": "d3ebdc74d5e8a04b0a8d80f5b9e6bea4580a23f10b03d0e3852f351747d1b587",
+      "sample": 1
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+      "perspective": "equity_holder",
+      "request_sha256": "6808ded1c41871309ca02254a95c32cd174a3da292075a46d3a45399f48fa08a",
+      "sample": 1
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "885cd1314eab5268a8f790b690ba4b705d0d95fd946d8fc346700c739c909bc8",
+      "sample": 1
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "255e12ae259d452defe58484f3b4141f3562446d070b25b917d67e46e5f27809",
+      "sample": 1
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+      "perspective": "equity_holder",
+      "request_sha256": "287ec2dd5246f0315e2639b1b00acfb2efd8f7cd311f37dce64646e15878c8f0",
+      "sample": 1
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "f3e06e8b199d41343777fbec990227b74e6ce171612c22bf4e692d3f797969fe",
+      "sample": 1
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+      "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "d80b4c6535d4993ccd0867de0648e500c3086fdc411ab81d6b80d8b9ffedc514",
+      "sample": 1
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+      "perspective": "equity_holder",
+      "request_sha256": "d76ed98e818e2f1590a6ae355c90dbaf302f4002c71f84f5b1744bcfe793ee76",
+      "sample": 1
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+      "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+      "perspective": "senior_unsecured_creditor",
+      "request_sha256": "86f51557e0ca366f9a83c434c9dc7826761003bf866aa1f12a75e14ffcc44e8f",
+      "sample": 1
+    }
+  ],
+  "created_at": "2026-10-27T20:21:55.161978+00:00",
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "execution_seed": 20261027,
+  "experiment": "prompt_guidance_ablation_v1",
+  "judgment_fields": [
+    "investor_implications",
+    "missing_information",
+    "unsupported_assumptions"
+  ],
+  "model": "muse-spark-1.3",
+  "narrative_file": "protocols/guidance-ablation-v1.md",
+  "narrative_sha256": "bf9aa6cb25ca98dc359055d629296f82fcd6d2c3318d6ed6dede36e5479adcd9",
+  "neutral_template": "Analyze the supplied financing arrangement from the perspective of {investor}. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+  "objective_fields": [
+    "obligors_beneficiaries",
+    "obligation_classification",
+    "limits_triggers",
+    "disclosed_amounts",
+    "citations"
+  ],
+  "protocol_schema_version": 1,
+  "samples": 1,
+  "source_versions": {
+    "coreweave-deposit": {
+      "annotations_sha256": "974eabc25a0ba71bbb9025ee2d15707523417d723c09a5174ea2afef0ddde9fd",
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "license": "CC BY 4.0",
+        "license_file": "CC-BY-4.0.txt",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "retrieved_on": "2026-10-27",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1"
+      },
+      "evidence_sha256": "cecb7da8605f7a54a93c4c6025c0942aebb297150233aa34740c91f94d37cdf4",
+      "primary_sources": [
+        {
+          "accession": "0001769628-26-000104",
+          "filed_on": "2026-03-02",
+          "id": "CRWV_10K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+        },
+        {
+          "accession": "0001769628-26-000366",
+          "filed_on": "2026-08-12",
+          "id": "CRWV_10Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm"
+        }
+      ],
+      "reference_sha256": "f6b3d43d10fa2de270d6faf604bf6a7910ce37539738243d1ebcf158e0366ce1",
+      "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+    },
+    "meta-capacity": {
+      "annotations_sha256": "741a375720583d8e14005635081300d3ad736f2220c92437b53bbd5bb586d6d4",
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "license": "CC BY 4.0",
+        "license_file": "CC-BY-4.0.txt",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "retrieved_on": "2026-10-27",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1"
+      },
+      "evidence_sha256": "e9ee4feee125985b0fa42475b0eb6d04c71e452b15deee4e9baf40138ebbb860",
+      "primary_sources": [
+        {
+          "accession": "0001628280-26-050705",
+          "filed_on": "2026-07-30",
+          "id": "META_10Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+        }
+      ],
+      "reference_sha256": "636b6183c09481285b6a83f005fab5229620ce316f6a14b8de9013a1cd472504",
+      "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+    },
+    "nvidia-ports": {
+      "annotations_sha256": "587e5cf9dc2d0bb5320651fbd71b24e83cc53182205079a099344b204ab9da39",
+      "dataset": {
+        "author": "Alexander F. Wagner",
+        "license": "CC BY 4.0",
+        "license_file": "CC-BY-4.0.txt",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+        "retrieved_on": "2026-10-27",
+        "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+        "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+        "version": "1.1"
+      },
+      "evidence_sha256": "6734c41c86eba5c2f1a6eba5a319dea5b71f1fca2564cd27b78431ecc15a9622",
+      "primary_sources": [
+        {
+          "accession": "0001045810-26-000069",
+          "filed_on": "2026-08-17",
+          "id": "SEC_8K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+        },
+        {
+          "accession": "0001045810-26-000075",
+          "filed_on": "2026-08-26",
+          "id": "SEC_10Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+        },
+        {
+          "accession": "0001045810-26-000075",
+          "filed_on": "2026-08-26",
+          "id": "SEC_FORM",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm"
+        }
+      ],
+      "reference_sha256": "2484589c17509b49d8f8ca6473cdd458e564d7ee43d426308db2d1d4c6cd31d0",
+      "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+    }
+  }
+}
