@@ -1,0 +1,97 @@
+{
+  "assignments": {
+    "R001": {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    },
+    "R002": {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:neutral:1",
+      "condition": "neutral",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R003": {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    },
+    "R004": {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:guided:1",
+      "condition": "guided",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R005": {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    },
+    "R006": {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    },
+    "R007": {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:neutral:1",
+      "condition": "neutral",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R008": {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:guided:1",
+      "condition": "guided",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R009": {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:guided:1",
+      "condition": "guided",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R010": {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:neutral:1",
+      "condition": "neutral",
+      "perspective": "equity_holder",
+      "sample": 1
+    },
+    "R011": {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    },
+    "R012": {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "perspective": "senior_unsecured_creditor",
+      "sample": 1
+    }
+  },
+  "blind_seed": 3819338596596930846,
+  "condition_arms": {
+    "guided": "Arm X",
+    "neutral": "Arm Y"
+  },
+  "mapping_schema_version": 1,
+  "package_sha256": "b4eec35416559611625f2c518576c23f3c5ad9989327d23e345ebd43eda073d0",
+  "run_file": "/Users/xq/Documents/GitHub/parallax/results/guidance-ablation-v1-live.json",
+  "run_sha256": "ce0acff9f5c548bc30afc8e632259a0e527d6ff494007a5c415eb7f54a29b3ff"
+}

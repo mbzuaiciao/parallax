@@ -1,0 +1,896 @@
+{
+  "ablation_schema_version": 1,
+  "api_client_sha256": "543a622fc5f4889fc914b1465ff55b69dfbb993feb47e0b17f84165f2081e954",
+  "code_revision": "3ed7db3f2a4df733f16a1e3b08cb37496fc6250a",
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "evaluations": [
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:25:24.032202+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "From the perspective of a CoreWeave common equity holder, this is **expensive, recourse financing senior to equity, not revenue**.\n\n### 1. What it is economically\n\nIn August 2024 CoreWeave received **$230 million cash as a refundable capacity deposit** from MagAI Ventures.\n\nDisclosed terms:\n\n* To be applied to future cloud services for MagAI portfolio companies, to be **negotiated individually and subject to MagAI approval**, with consumption deducted from the deposit.\n* Unused funds **refundable at term end**. Initial term 4 years, with **MagAI able to extend 2 years**.\n* Available capacity **may, by agreement with MagAI, serve other customers with specified profit sharing**.\n\n> Source: CRWV Form 10-K for 12/31/2025, filed 2026-03-02, Note 10, Debt, Magnetar Loan subsection. Accession 0001769628-26-000104. https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm\n\nA February 2025 amendment gave **both parties certain termination-for-convenience rights**. After that, CoreWeave reclassified the deposit as **in-substance debt under ASC 470, Sale of Future Revenue**.\n\nOn such termination, unused deposit is refunded **with an increasing multiplier equivalent to a 12% annual return**.\n\nThat reclassification is critical for equity analysis: accounting concluded this is not deferred revenue / customer prepay. It is a financing where future revenue, if any, is pledged to settle a debt.\n\n### 2. Why it matters to equity\n\n**a) Senior, recourse claim - 12% cost:**\n\nIn the June 30, 2026 10-Q debt table, the item labeled **\"Magnetar Loan\" is listed under recourse debt, with January 2029 maturity, 12% effective interest rate**, $189 million at June 30, 2026 and $273 million at December 31, 2025.\n\n> Source: CRWV Form 10-Q for 6/30/2026, filed 2026-08-12, Note 10, Debt table and Magnetar Loan subsection. Accession 0001769628-26-000366. https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\n\nRecourse matters because much of CoreWeave's asset-level debt is non-recourse. A recourse obligation is a claim against the enterprise as a whole, directly ahead of equity in a stress scenario.\n\n**b) No operating offset so far, but interest accretes:**\n\nAt December 31, 2025 **no services had been provided**; **debt, current was $273 million including $43 million redemption premiums**. Premium accretion was **interest expense**.\n\nIn other words: $230M cash in, ~$43M non-cash interest accrued by year-end 2025, with zero deducted revenue to equity holders. Interest accretion reduces net income attributable to common.\n\n**c) Ongoing cash drain:**\n\nIn June 2026 CoreWeave **paid $100 million to MagAI Ventures in partial settlement** under the amended agreement, reducing carrying amount.\n\nAt June 30, 2026 the **remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums** through that date. Premium accretion continued as interest expense.\n\nMath check illustrates cost: $273M at 12/31/25 - $100M cash paid = $173M, vs. $189M reported, implying ~$16M of additional accretion in H1 2026 - consistent with 12% compounding on a large balance.\n\nFor equity, this is deleveraging at the cost of $100M of liquidity in one month.\n\n**d) Counterparty optionality and encumbered capacity:**\n\n* Future consumption is not committed - individually negotiated + MagAI approval required.\n* CoreWeave cannot freely redeploy reserved capacity to higher-paying customers without MagAI agreement and profit-sharing.\n* Both sides can terminate for convenience, and MagAI controls the 2-year extension.\n\nEquity bears the downside of that optionality: if MagAI terminates, CoreWeave must refund cash + 12% premium; if MagAI extends / withholds approval, capacity remains encumbered.\n\n### 3. Material uncertainties - what these selected notes do NOT establish\n\nBased on this limited record as of analysis date 2026-08-12, an equity holder cannot determine:\n\n1. **Liquidity timing:** Why $273M was classified as **debt, current** at 12/31/25 while the table shows **January 2029 maturity**. This suggests callability within 12 months, but **detailed termination notice periods are not provided** in this selected subsection.\n\n2. **Security and seniority:** **Collateral and relative claim ranking are not provided** in this selected subsection. You cannot assume pari, senior, or subordinated status versus other recourse debt.\n\n3. **Full cash schedule:** The disclosures **do not provide a forward payment schedule**. You cannot model whether the remaining $189M accretes to a larger amount to Jan 2029, is payable on demand, or will be partly settled by services.\n\n4. **Nature of June 2026 $100M payment:** Described only as partial settlement under amended agreement. Whether it reflects negotiated de-risking, a partial termination exercise, or a prelude to full termination is not disclosed here.\n\n5. **Operating upside:** Profit-sharing percentages, capacity amounts, pricing for portfolio-company services, and likelihood of any future consumption offset are not disclosed here.\n\n6. **Recovery analysis:** These notes **do not provide a recovery estimate for a hypothetical senior unsecured creditor**, let alone residual value to equity.\n\nThis analysis is limited to the two manually selected primary SEC note disclosures. It is not the complete amended agreement, and not an issuer solvency model. Equity holders should monitor the full credit agreement exhibit, liquidity / going-concern footnote, statement of cash flows for premium vs. principal characterization, and any related-party disclosure for MagAI/Magnetar, plus current vs. non-current classification in future quarters.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132734,
+        "id": "chatcmpl-01a17f0a-2a24-73a5-8fc9-38c7514aa99d",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3499,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2189
+          },
+          "prompt_tokens": 793,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 4292
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of an equity investor in CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-12\", \"arrangement\": \"CoreWeave MagAI refundable capacity deposit and in-substance debt\", \"case_id\": \"coreweave_deposit_2026_disclosure\", \"documents\": [{\"accession\": \"0001769628-26-000104\", \"factual_paraphrase\": \"In August 2024 CoreWeave entered a capacity/prepayment agreement with MagAI Ventures and received a $230 million refundable deposit. Portfolio-company cloud services would be negotiated individually, subject to MagAI approval, with consumption deducted from the deposit and unused funds refundable at term end. The initial term is four years, with MagAI able to extend two years. Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing. A February 2025 amendment gave both parties certain termination-for-convenience rights. CoreWeave consequently classified the refundable deposit as in-substance debt under ASC 470, Sale of Future Revenue. On such termination, unused deposit is refunded with an increasing multiplier equivalent to a 12% annual return. At December 31, 2025 no services had been provided; debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense. Detailed termination notice periods, collateral and relative claim ranking are not provided in this selected subsection.\", \"filed_on\": \"2026-03-02\", \"id\": \"CRWV_10K\", \"locator\": \"Note 10, Debt, Magnetar Loan subsection\", \"period_end\": \"2025-12-31\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-K for December 31, 2025\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm\"}, {\"accession\": \"0001769628-26-000366\", \"factual_paraphrase\": \"In June 2026 CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing the debt carrying amount. At June 30, 2026 the remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion was recognized as interest expense. In the debt table (dollars in millions), Magnetar Loan is listed under recourse debt, with January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at December 31, 2025. These note disclosures do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor.\", \"filed_on\": \"2026-08-12\", \"id\": \"CRWV_10Q\", \"locator\": \"Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection\", \"period_end\": \"2026-06-30\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context. Parallax prepared factual paraphrases from the annual and quarterly notes for this one arrangement, retaining their different reporting dates. These are selected notes, not the complete amended agreement or an issuer solvency model. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:25:10.852166+00:00"
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:25:32.732109+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-07-30**\n\n**Case:** `meta_capacity_2026_disclosure` \u2014 Meta contingent purchase of cloud capacity\n**Source pack only:** `META_10Q` [Accession 0001628280-26-050705, Filed 2026-07-30, Period-end 2026-06-30]\n\n### 1. Scope and Status\n\nHistorical SEC-disclosure analysis only. This is not a complete contract and not a current-status assessment.\n\nOnly arrangement in scope is the contingent cloud-capacity purchase. Neighboring aggregate figures are context, not a second case.\n\n### 2. Disclosed Facts [META_10Q]\n\n**Locator:** Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning \u201cIn addition, as of June 30, 2026\u201d; also repeated in MD&A Contractual Obligations.\n\n* As of June 30, 2026, Meta reports contingent obligations to purchase **up to $14.72 billion** of cloud capacity **over five years**.\n* Reduction feature, short quote: *\u201cwhich may be reduced if the cloud service provider is able to sell such capacity to other customers\u201d*.\n* Paragraph begins **\u201cIn addition\u201d** \u2014 disclosed as separate from immediately preceding paragraph reporting **$349.31 billion** of non-cancelable contractual commitments across multiple categories, with **$53.52 billion** and **$81.65 billion** due in 2026 and 2027 respectively.\n* For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date.\n* Provider is **unnamed in this passage**.\n* Passage does **not** identify a guarantee of another borrower\u2019s debt.\n\nNo inference of provider identity, no creditor ranking, and no conversion of cap to payable balance is permitted on this evidence.\n\n### 3. Obligors and Beneficiaries\n\n**Direct vs. Contingent distinction:**\n\n* **Contingent obligor:** Meta Platforms \u2014 obligation to purchase cloud capacity up to $14.72B is described as contingent, not as non-cancelable.\n* **Contingent beneficiary:** Unnamed cloud service provider \u2014 would receive purchase payments if obligation becomes payable and to extent not mitigated by sales to others.\n* **Direct obligations:** The $349.31B non-cancelable commitments are direct, but are **not** this arrangement. They are cited only to show this $14.72B is additional and contingent, not included in that total per \u201cIn addition\u201d language.\n\nNo guarantor, co-obligor, or guarantee of third-party debt is disclosed for this arrangement.\n\n### 4. Terms \u2014 Triggers, Effectiveness, Limits, Recoveries, Remedies, Termination\n\n**Payment triggers:** Not fully defined. Disclosed trigger is in substance the contingent purchase obligation for cloud capacity. Specific events, delivery/acceptance conditions, take-or-pay mechanics, or minimum-use thresholds are not disclosed.\n\n**Effectiveness / tenor:** Reported as existing as of June 30, 2026, with a five-year horizon. Exact start/end dates, delivery schedule, and annual payment profile for this arrangement are not disclosed.\n\n**Contractual limits:**\n* Upper bound: up to $14.72B over five years.\n* Downward adjustment only: may be reduced if provider sells such capacity to other customers. Amount or formula for reduction not disclosed.\n* Measurement limit: for variable-term agreements, disclosure limited to minimum quantities and/or pricing as of reporting date. Applicability of that methodology sentence specifically to the $14.72B calculation is not clarified in the paraphrase.\n\n**Recoveries / mitigation:**\n* Only disclosed mitigation is the provider resale reduction feature above. No security, collateral, set-off, or post-payment recovery rights disclosed.\n\n**Remedies and termination:**\n* Not disclosed. No information on breach remedies, unilateral cancellation rights, termination fees, detailed pricing, security or claim ranking.\n\n### 5. Implications for an Equity Investor in Meta Platforms\n\n**Disclosed facts:**\n* Contingent exposure cap of $14.72B over five years, separate from $349.31B non-cancelable commitments.\n* Exposure is reducible, but reducible amount is undisclosed.\n\n**Conditional economic interpretations \u2014 not disclosed facts, only if-then:**\n* *If* the contingency is triggered in full and resale mitigation is zero, *then* cash outflows up to the cap over five years would reduce cash available for capex, buybacks, or other distributions versus a no-trigger scenario.\n* *If* material resale to other customers occurs, *then* actual outflow could be materially below $14.72B, but magnitude cannot be quantified from disclosure.\n* *If* capacity is needed for operations/AI growth, *then* payments may correspond to receipt of usable capacity rather than pure loss; disclosure does not state value-for-money or whether capacity is incremental.\n\nThe $14.72B must not be treated as a liability, expected loss, or payable balance. Timing of any impact on free cash flow and earnings cannot be determined without annual schedule.\n\n### 6. Material Missing Terms and Uncertainties Preventing Quantitative Risk Assessment\n\nPer `META_10Q` paraphrase, the following are not specified for this arrangement:\n\n1. Annual payments or delivery/pricing schedule\n2. Precise trigger definitions and conditions precedent\n3. Probability of payment; expected vs. maximum outcome\n4. Extent/likelihood of provider resale mitigation\n5. Cancellation, termination, renewal, and remedy terms\n6. Security, seniority, or claim ranking \u2014 no assumption permitted\n7. Whether variable-term minimum-quantity methodology constrains the $14.72B figure\n\nWithout these, no definitive assessment of timing, likelihood, net cash cost, or equity value impact is possible from supplied evidence alone.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132743,
+        "id": "chatcmpl-01a17f0a-4c7b-766f-9fd1-70d726e9df91",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2765,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1549
+          },
+          "prompt_tokens": 617,
+          "prompt_tokens_details": {
+            "cached_tokens": 497
+          },
+          "total_tokens": 3382
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:25:24.036896+00:00"
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:25:44.328868+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-07-30**\n\n**Case:** `meta_capacity_2026_disclosure` \u2014 Meta contingent purchase of cloud capacity\n**Source pack only:** `META_10Q` \u2014 Meta Platforms Form 10-Q for June 30, 2026, Accession 0001628280-26-050705, filed 2026-07-30, period-end 2026-06-30\n**Provision locators:** Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning \u2018In addition, as of June 30, 2026\u2019; also repeated in MD&A Contractual Obligations\n\nThis is historical disclosure context, not a complete contract. Only the contingent cloud-capacity arrangement is in scope.\n\n### 1. Disclosed facts\n\n* **Existence and measurement as of reporting date:** As of June 30, 2026, Meta reports contingent obligations to purchase **up to $14.72 billion** of cloud capacity **over five years** [META_10Q, Note 9 - In addition paragraph].\n* **Reduction feature:** Amount quoted as:\n> \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\" [META_10Q, Note 9 - In addition paragraph]\n* **Separate context, not part of case:** Immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent paragraph begins \u2018In addition\u2019 [META_10Q, Note 9 - Leases and Contractual Commitments]. Per preparation instruction, those aggregates are context only.\n* **Measurement limit for variable terms:** For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date [META_10Q, Note 9 - In addition paragraph].\n* **No guarantee disclosed:** Passage does not identify a guarantee of another borrower's debt [META_10Q, Note 9 - In addition paragraph].\n\n### 2. Obligors vs. beneficiaries \u2014 direct vs. contingent\n\n* **Contingent obligor:** Meta \u2014 reports contingent obligation to purchase capacity [META_10Q, Note 9 - In addition paragraph].\n* **Contingent beneficiary:** Unnamed cloud service provider \u2014 provider is unnamed in this passage; identity must not be inferred [META_10Q, Note 9 - In addition paragraph].\n* **Direct obligation under this arrangement:** **None disclosed.** The $14.72 billion is described as contingent, up to a cap, not as non-cancelable. The $349.31 billion non-cancelable total is a separate, neighboring disclosure and is not attributed to this arrangement.\n* **Third-party direct / guarantee obligor:** None disclosed for this arrangement.\n\n### 3. Payment triggers, effectiveness, limits\n\n* **Effectiveness:** Disclosed as existing as of June 30, 2026, reported July 30, 2026 [META_10Q, filed_on / period_end]. Commencement date, delivery schedule, and conditions precedent are not disclosed.\n* **Payment trigger:** Not fully specified. Disclosure establishes only a contingent purchase requirement up to a cap, subject to reduction if provider resells capacity. The contractual events that would make any portion unconditionally payable, take-or-pay mechanics, minimum-take definitions, and pricing/delivery terms are not disclosed [META_10Q, Note 9 - In addition paragraph].\n* **Contractual limit (cap, not payable balance):**\n  - Up to $14.72 billion over five years [META_10Q, Note 9 - In addition paragraph].\n  - Further limited for variable-term agreements to minimum quantities and/or pricing as of reporting date \u2014 i.e., disclosed figure does not include variable amounts beyond minimums [META_10Q, Note 9 - In addition paragraph].\n  - No annual payment schedule for this arrangement is specified.\n\nThe cap must not be read as an expected loss or amount owed.\n\n### 4. Recoveries, remedies, termination\n\n* **Contractual reduction / mitigation:** The sole disclosed mitigant is potential reduction if the provider sells such capacity to other customers [META_10Q, Note 9 - In addition paragraph]. This is a reduction of Meta's purchase requirement, not a creditor recovery against Meta.\n* **Creditor recoveries / set-off / collateral:** Not disclosed. Passage does not specify security or claim ranking [META_10Q, Note 9 - In addition paragraph].\n* **Remedies for non-performance / non-payment:** Not disclosed.\n* **Termination / unilateral cancellation rights:** Not disclosed for this contingent arrangement.\n\n### 5. Implications for a senior unsecured creditor of Meta Platforms \u2014 conditional only\n\nNo ranking, security, or priority of this arrangement relative to senior unsecured claims is disclosed. No definitive priority conclusion can be drawn.\n\nConditional economic interpretations, **not disclosed facts**:\n\n* **IF** any portion becomes payable, it would represent incremental future cash outflow in addition to the separately disclosed non-cancelable commitments, potentially reducing cash available for operating needs and debt service during the five-year window.\n* **IF** the full $14.72 billion cap were triggered without reduction, liquidity pressure would be larger than if partially reduced or untriggered \u2014 but timing within the five years is undisclosed, so near-term refinancing / liquidity impact cannot be quantified.\n* The resale-reduction feature **could** lower realized outflow, but the amount, likelihood, and timing of third-party sales are undisclosed, so no net exposure can be estimated.\n* The variable-term measurement limit means actual economic exposure could differ from the disclosed up-to amount in either direction depending on undisclosed minima vs. future variable terms \u2014 direction and magnitude unknown.\n\nNone of the above converts the $14.72 billion cap into a payable balance or expected loss.\n\n### 6. Material missing terms preventing quantitative risk assessment\n\nAll from absence in [META_10Q, Note 9 - In addition paragraph; MD&A Contractual Obligations]:\n\n* Annual / quarterly payment schedule and five-year start-end dates\n* Detailed pricing, delivery / acceptance, and take-or-pay vs. optional-take mechanics\n* Precise trigger definitions and conditions for payment vs. non-payment\n* Formula / verification for resale reduction; provider resale obligation vs. option\n* Minimum quantity / minimum price components underlying the $14.72B\n* Unilateral cancellation, termination fee, cure periods, remedies\n* Security, collateral, covenants, and claim ranking vs. senior unsecured debt\n* Probability of trigger, discounting, and counterparty performance risk\n\nWithout these, definitive assessment of timing, probability-weighted cash outflow, and recovery for a senior unsecured creditor is not possible on supplied evidence alone.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132755,
+        "id": "chatcmpl-01a17f0a-7906-757b-9fd0-529b84c27bf3",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3434,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2015
+          },
+          "prompt_tokens": 619,
+          "prompt_tokens_details": {
+            "cached_tokens": 497
+          },
+          "total_tokens": 4053
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:25:32.733516+00:00"
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:equity_holder:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:25:56.616589+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "As an equity holder in Meta Platforms, you are the residual claimant - you care about future Free Cash Flow to Equity after all prior cash claims are paid. This disclosure is one of those prior claims.\n\n### 1. What is disclosed\n\nPer Meta Platforms Form 10-Q for June 30, 2026:\n\n**Accession 0001628280-26-050705, filed 2026-07-30, period end 2026-06-30**\n**Locator: Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations**\n\n> \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\"\n\nFactual substance provided:\n\n* As of June 30, 2026, contingent obligations to purchase **up to $14.72 billion of cloud capacity over five years**.\n* Reducible if the provider is able to sell such capacity to other customers.\n* Provider is unnamed in this passage.\n* Purpose, pricing/delivery schedule, and annual payment profile are not specified in the passage.\n\nThis is **only** the contingent cloud-capacity arrangement. It is in scope. Neighboring aggregates are context only.\n\nCritical separation language:\n\nThe immediately preceding paragraph separately reports **$349.31 billion of non-cancelable contractual commitments** across multiple categories, with **$53.52 billion and $81.65 billion due in 2026 and 2027 respectively**.\n\nThe contingent capacity paragraph begins **'In addition'**.\n\nThat is, the $14.72bn is **additive to**, not included in, the $349.31bn non-cancelable total.\n\nFull disclosure: https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\n\nThis is a historical SEC disclosure excerpt, not a complete contract and not a current-status assessment.\n\n### 2. Economic significance to equity\n\nThis is not described as debt or as a guarantee of another borrower's debt. The passage does not identify a debt guarantee. Economically, however, it functions like off-balance-sheet operating leverage:\n\n**a) Scale of future cash claim:**\nUp to $14.72bn over 5 years is material in absolute terms. Relative to the disclosed non-cancelable base, it is ~4.2% incremental ($14.72 / $349.31).\n\nIf spread evenly, that would imply ~$2.9bn/year average, but **the passage does not specify annual payments** - you cannot assume linearity for liquidity or DCF modeling.\n\n**b) Duration and inflexibility:**\n5-year tenor extends the commitment horizon beyond the near-term concentration already disclosed for the non-cancelable book ($53.52bn in 2026, $81.65bn in 2027). It locks in future demand for third-party cloud capacity, increasing fixed-like costs and reducing flexibility to cut cash outflow in a downturn.\n\nFor valuation, that means lower distributable cash flow in scenarios where the contingency is triggered, less capacity for buybacks/dividends, and higher operating risk.\n\n**c) Partial mitigant - resale clause:**\nThe obligation \"may be reduced if the cloud service provider is able to sell such capacity to other customers.\"\n\nThat is downside protection for equity vs. a pure take-or-pay: if Meta does not need the capacity, third-party resale can reduce the cash outflow. Management considered it material enough to repeat in MD&A Contractual Obligations, i.e., relevant to liquidity analysis.\n\n**d) Strategic signal, not proof:**\nLocking up to $14.72bn of third-party capacity for 5 years implies management expects sustained need for external compute/storage. The passage does not state purpose, e.g. AI training/inference, business continuity, or other, so an investor cannot infer return on this spend from this disclosure alone.\n\n### 3. Material uncertainties - what you cannot determine from this passage\n\n1.  **Trigger and true exposure:** Contingent vs. non-cancelable. What causes the full $14.72bn to become payable vs. a lesser amount? Maximum is stated as \"up to,\" but minimum is not stated.\n\n2.  **Resale mechanism:** How likely is resale? Who decides, at what price, and who bears the shortfall if resale is at a lower price or fails? No history or probability is provided.\n\n3.  **Timing:** No annual payments for this arrangement. You cannot assess near-term liquidity pressure or discount the cash flows accurately.\n\n4.  **Pricing:** Fixed price vs. variable price. The disclosure notes that for variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. Whether and how that policy interacts with this cap is unclear from the excerpt.\n\n5.  **Exit rights:** No unilateral cancellation rights, termination penalties, or delivery failure remedies are specified.\n\n6.  **Seniority:** No security or claim ranking is specified. You cannot assume it is senior secured debt or otherwise; treat as an unsecured executory purchase commitment unless proven otherwise.\n\n7.  **Counterparty concentration:** Provider unnamed in this passage. You cannot assess counterparty risk, dependence, or related-party issues.\n\nFor an equity model: include up to $14.72bn as an additional, contingent future cash outflow over 5 years, separate from the $349.31bn non-cancelable commitment, with timing unknown and with an unquantified potential reduction for third-party resale. Do not model it as funded debt or as a third-party debt guarantee - no evidence for that is provided.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132767,
+        "id": "chatcmpl-01a17f0a-a9c5-71d1-96ab-ef43f12e74ac",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3220,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2044
+          },
+          "prompt_tokens": 503,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3723
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of an equity investor in Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:25:44.333406+00:00"
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:26:13.186840+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "As of **2026-08-26**, based only on this selected disclosure pack, an NVIDIA equity holder should view this as a **very large, long-dated, contingent credit support** for AI-infrastructure demand, not as current debt.\n\n### 1. What NVIDIA disclosed\n\nNVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for **~4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio**. An affiliate of OpenAI Group PBC is tenant.\n\n> \"NVIDIA's aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\"\n> - NVIDIA Form 8-K, Item 1.01, Aug 17, 2026 [0001045810-26-000069]\n\nKey mechanics from the 8-K summary:\n\n* **Effectiveness:** An Agreement generally becomes effective when its lease commences.\n* **Pre-condition to payment:** lessor ready-for-service requirements, expected beginning in 2028.\n* **Trigger:** tenant insolvency causing lease default or failure to make lease payments.\n* **Payment:** NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries.\n* **Post-trigger choices:** assumption, reletting, sale, termination, or deferral up to a year with specified costs.\n* **End of obligation:** includes lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events.\n* **Recourse:** OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor.\n* The summary is qualified by the full agreement form.\n\nThe 10-Q Note 17 adds phasing and scope, filed Aug 26, 2026 for period ended July 26, 2026:\n\n* Each guarantee generally becomes effective at its lease commencement.\n* Corresponding guarantee amounts **increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease.**\n* The guarantees **do not cover the entire site's cost or every tenant obligation.**\n\n> \"Our guarantees are limited to defined portions of lease and power payments\"\n> - NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees [0001045810-26-000075]\n\n### 2. Economic significance for equity\n\n**a) Scale and duration of tail risk:**\n$105bn cumulative cap for the initial 4.25 GW commitment is the maximum cash exposure, shared across related guaranties per Section 1(d). Duration is ~20 years per phase. With 9 phases ramping from 2028/2029, exposure could extend into the late 2040s-2050s. This creates long-dated, concentrated exposure to one site, one developer group, and one tenant group.\n\n**b) Phased, amortizing profile, not day-one $105bn:**\nExposure ramps as phases complete, then amortizes over each 20-year lease. The 10-Q guarantee table includes the August signing even though the report period ended July 26, 2026 - i.e., investors saw the commitment before leases had commenced.\n\n**c) Loss is shortfall net of recovery, not first-dollar full lease:**\nGMV covers data-center, power and transmission costs per Form Sec 1(d). Covered Loss Amount formula, discount rate and schedule values are redacted, but structure is: guaranteed minimum value less replacement-lease or sale recoveries. Collections reduce Liability Cap dollar-for-dollar per Sec 8.\n\nThis limits loss if the campus can be relet or sold, but leaves equity exposed to residual-value risk for specialized AI data centers + power/transmission 10-20 years hence.\n\n**d) Strategic consideration - demand lock-in:**\nIn exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions.\nForm Sec 20(e): exclusive NVIDIA reference architecture for at least twenty years.\n\nFor equity, the thesis is: NVIDIA is using its balance sheet to enable SB Energy to build, to secure ~4.25 GW of NVIDIA-platform demand anchored by an OpenAI affiliate. The cost is contingent downside if that tenant fails to pay.\n\n**e) Layered but subordinated mitigants:**\n* Tenant Parent separately guarantees all tenant lease obligations (recital B).\n* Enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current - Sec 8.\n* OpenAI reimbursement/indemnity for amounts NVIDIA actually pays.\n* Sec 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent.\n\nEquity cannot treat Parent guarantee + indemnity as eliminating risk: if trigger is insolvency/default of the OpenAI-affiliated tenant system, the indemnitor may be stressed at the same time, and NVIDIA stands behind the Landlord in priority.\n\n**f) Embedded growth option:**\nNVIDIA also has a sole-discretion option to provide phased credit support for **~3.8 additional GW**. That is optional upside for platform adoption, but if exercised would materially expand contingent exposure beyond the $105bn initial cap. Terms are not in this pack.\n\n### 3. Material uncertainties - what you cannot model from this pack\n\n1. **Quantification blocked by redactions:** Covered Loss Amount formula, discount rate, schedule values, redacted pre-RFS termination payment, Sec 2(c) project costs that do not reduce the cap, Sec 8 cap qualifications, and specified payments NVIDIA must keep current to enforce mitigants are all redacted. Execution date/counterparty blanks remain. This is a form, not the complete executed contract.\n\n2. **Timing mismatch:** 8-K expects ready-for-service beginning in 2028; 10-Q says first of nine phases expected in fiscal 2029. Construction, lease commencement, and when the cap ramps cannot be reconciled here. Covered Loss Amount requires ready-for-service, but a pre-RFS termination payment is also defined - pre-delivery exposure is unclear.\n\n3. **Trigger complexity:** Sec 12 requires notice, cure and verification periods. For insolvency or monetary default, Landlord must have termination right and:\n\n> \"actually intends to terminate the Lease\"\n> - Exhibit 10.1, Sec 12(a)(i)-(v)\n\nNot actual termination. Equity cannot predict Landlord behavior, cure outcomes, or verification disputes.\n\n4. **Recovery uncertainty:** Replacement rent and sale proceeds 10-20 years out for 4.25 GW of AI infrastructure + power assets are unknowable. Deferral up to one year comes with specified but redacted costs. Assumption/relet/sale/rejection economics are not disclosed.\n\n5. **Counterparty credit opacity:** Landlord is an unnamed Delaware LLC; Tenant and Tenant Parent identities are redacted in the form (8-K/10-Q describe as SB Energy affiliates and OpenAI affiliate). No financials for Tenant, Tenant Parent insurance, or OpenAI indemnity capacity are in pack. \"Satisfactory OpenAI credit rating\" termination threshold is undefined.\n\n6. **Partial coverage ambiguity:** Guarantees are limited to defined portions of lease and power payments and do not cover entire site cost or every tenant obligation. What is excluded, and whether excluded obligations could still impair project viability, is not disclosed. Limited exceptions to exclusivity are not disclosed.\n\nFor an equity holder: monitor lease commencements and phase completions, any exercise of the 3.8 GW option, changes in OpenAI / Tenant Parent credit, ready-for-service delays, and any unredacted schedules that allow expected-loss and cap-amortization modeling.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132784,
+        "id": "chatcmpl-01a17f0a-ea7d-7646-99d7-36a21a43708d",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4214,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2639
+          },
+          "prompt_tokens": 1262,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 5476
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of an equity investor in NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-26\", \"arrangement\": \"NVIDIA PORTS Technology Campus residual value guaranties\", \"case_id\": \"nvidia_ports_2026_disclosure\", \"documents\": [{\"accession\": \"0001045810-26-000069\", \"factual_paraphrase\": \"NVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for approximately 4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio. An affiliate of OpenAI Group PBC is tenant. An Agreement generally becomes effective when its lease commences. Payment conditions include lessor ready-for-service requirements, expected beginning in 2028. Trigger events are tenant insolvency causing lease default or failure to make lease payments. NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries. Remedies include assumption, reletting, sale, termination, or deferral up to a year with specified costs. Termination events include lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events. OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. The summary is qualified by the full agreement form.\", \"filed_on\": \"2026-08-17\", \"id\": \"SEC_8K\", \"locator\": \"Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA\\u2019s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA\\u2019s obligations'\", \"short_quote\": \"NVIDIA\\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\", \"title\": \"NVIDIA Form 8-K, Item 1.01, August 17, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"The filing reports August 2026 guarantees capped at $105 billion supporting approximately 4.25 GW at SB Energy's PORTS campus on behalf of an OpenAI affiliate. Each guarantee generally becomes effective at its lease commencement. Corresponding guarantee amounts increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease. The guarantees do not cover the entire site's cost or every tenant obligation. In exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions. NVIDIA also has a sole-discretion option to provide phased credit support for approximately 3.8 additional GW. The guarantee table includes the August signing even though the report period ended July 26, 2026.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_10Q\", \"locator\": \"Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table\", \"period_end\": \"2026-07-26\", \"short_quote\": \"Our guarantees are limited to defined portions of lease and power payments\", \"title\": \"NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"Form identifies NVIDIA as Guarantor; Landlord is an unnamed Delaware LLC. Tenant and Tenant Parent identities are redacted. Tenant Parent separately guarantees all tenant lease obligations (recital B). Section 1(d): shared cap across related guaranties; GMV covers data-center, power and transmission costs. Sections 1-2: Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires ready-for-service. A redacted pre-RFS termination payment is also defined. Section 2(c): some project costs do not reduce the cap; section 8 cap qualifications are redacted. Section 8: enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current. Collections reduce Liability Cap dollar-for-dollar. Section 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent. Section 12: notice, cure and verification periods apply; insolvency or monetary default requires Landlord's termination right and actual intent, not actual termination. Options: assumption, relet, sale, rejection or deferral up to one year with specified costs. Section 20(e): exclusive NVIDIA reference architecture for at least twenty years. Execution date/counterparty blanks and confidentiality redactions remain in this form.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_FORM\", \"locator\": \"Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules\", \"short_quote\": \"actually intends to terminate the Lease\", \"title\": \"NVIDIA Exhibit 10.1, Form of Residual Value Guaranty\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm\"}], \"preparation\": \"Historical primary-disclosure source pack. Parallax manually prepared factual paraphrases and short verbatim quotations from the SEC documents below, independently of any research coding. This is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings; later developments are outside this evaluation.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:25:56.622185+00:00"
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:26:27.542629+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-08-12**\n**Case: `coreweave_deposit_2026_disclosure` \u2014 CoreWeave MagAI refundable capacity deposit and in-substance debt**\n\nScope limited to supplied pack: two selected note disclosures, not the complete amended agreement. No solvency model provided.\n\n### 1. Disclosed Arrangement and Effectiveness\n\n**[FACT - CRWV_10K, Note 10, Debt, Magnetar Loan subsection]:**\n- August 2024: CoreWeave entered capacity/prepayment agreement with MagAI Ventures and received $230 million refundable deposit.\n- Portfolio-company cloud services to be negotiated individually, subject to MagAI approval, with consumption deducted from deposit.\n- Unused funds refundable at term end.\n- Initial term 4 years, with MagAI able to extend 2 years.\n- Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing.\n- February 2025 amendment gave both parties certain termination-for-convenience rights.\n- CoreWeave classified the refundable deposit as in-substance debt under ASC 470, Sale of Future Revenue.\n- At December 31, 2025 no services had been provided; debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense.\n\n**[FACT - CRWV_10Q, Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection]:**\n- June 2026: CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing debt carrying amount.\n- At June 30, 2026 remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion recognized as interest expense.\n- Debt table (dollars in millions): Magnetar Loan listed under recourse debt, January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at December 31, 2025.\n\nLabel note: 10-K and 10-Q subsections are headed \u201cMagnetar Loan\u201d / short_quote \u201cMagnetar Loan\u201d but describe agreement with MagAI Ventures. Pack does not explain the naming relationship. No identity inference made.\n\n### 2. Obligors and Beneficiaries \u2014 Direct vs Contingent\n\n**Direct obligor disclosed:**\n- CoreWeave \u2014 obligor for refund of unused deposit and for in-substance debt carrying amounts above. Recourse debt categorization disclosed in 10-Q table.\n\n**Direct beneficiary disclosed:**\n- MagAI Ventures \u2014 recipient of $230m deposit refund rights, 12%-equivalent multiplier on termination, $100m partial settlement, future services subject to its approval, and agreed profit sharing if capacity reallocated.\n\n**Direct obligations [FACT]:**\n- Refund unused funds at term end.\n- Recognized debt carrying amounts: $273m at 2025-12-31; $189m at 2026-06-30 after $100m payment.\n\n**Contingent obligations [FACT, terms incomplete]:**\n- On termination-for-convenience: refund unused deposit with increasing multiplier equivalent to 12% annual return.\n- Future service delivery/consumption deductions \u2014 contingent on individual negotiations and MagAI approval.\n- Profit sharing on reallocation of available capacity to other customers \u2014 contingent on agreement with MagAI; formula not disclosed.\n- 2-year extension \u2014 at MagAI option; exercise status not disclosed.\n\nNo other guarantors, collateral providers, or beneficiaries disclosed in selected subsections.\n\n### 3. Payment Triggers, Limits, Recoveries, Remedies, Termination\n\n**Payment triggers [FACT]:**\n- Individual service approvals \u2192 consumption deducted from deposit.\n- Term-end \u2192 refund of unused funds.\n- Exercise of termination-for-convenience by either party (post-Feb 2025 amendment) \u2192 refund of unused deposit plus multiplier.\n- Amended-agreement partial settlement \u2192 $100m paid June 2026.\n\n**Contractual limits [FACT]:**\n- Initial cash receipt $230m.\n- Term: 4-year initial; MagAI 2-year extension right.\n- Table maturity: January 2029; 12% effective interest rate.\n- No forward payment schedule disclosed. Carrying amounts are accounting measures at period-ends, not disclosed caps on future cash payable and not expected-loss estimates.\n\n**Recoveries [FACT + MISSING]:**\n- CoreWeave recovery offsets: consumption deductions and specified profit sharing \u2014 mechanics/amounts not disclosed.\n- MagAI recovery: unused deposit + 12%-equivalent premium on termination; term-end refund.\n- No collateral, security, or recovery estimate for hypothetical senior unsecured creditor disclosed. 10-Q expressly provides no forward payment schedule or recovery estimate.\n\n**Remedies:** Not provided in selected subsections. No events of default, covenants, enforcement rights, or intercreditor terms disclosed.\n\n**Termination [FACT + MISSING]:**\n- Both parties have certain termination-for-convenience rights per Feb 2025 amendment.\n- Consequence: unused deposit refunded with increasing multiplier equivalent to 12% annual return.\n- Detailed notice periods, conditions precedent, calculation definition of \u201cunused\u201d after services/partial settlement, and fees/costs not provided.\n\n### 4. Implications for a Senior Unsecured Creditor of CoreWeave\n\nDistinguishing fact from conditional interpretation:\n\n**Disclosed facts relevant to creditor analysis:**\n- Obligation is presented as recourse debt and as debt, current at Dec 31, 2025, then $189m at June 30, 2026 with Jan 2029 maturity in table.\n- Accretion of redemption premium as interest expense increased carrying amount ($43m included at Dec 31, 2025).\n- $100m cash outflow in June 2026 reduced carrying amount but consumed liquidity.\n\n**Conditional economic interpretations \u2014 not disclosed facts, require assumptions not in pack:**\n- *IF* recourse implies claim against general corporate assets, *THEN* the MagAI/Magnetar Loan could compete with other unsecured claims for the same asset pool, potentially diluting recoveries. Ranking versus senior unsecured is **not disclosed \u2014 no conclusion on priority, pari passu, or subordination assumed**.\n- *IF* termination-for-convenience is exercised, *THEN* timing could accelerate versus term-end and amount would include 12%-equivalent accretion, increasing near-term cash demand versus service-consumption path. Ultimate cash payable on such trigger is **not quantified** in disclosures.\n- *IF* services are consumed or capacity is reallocated with profit sharing, *THEN* refund exposure could be reduced. No services had occurred by Dec 31, 2025; post-Dec 2025 service/consumption status (other than $100m settlement) not disclosed.\n- Carrying amounts ($273m / $189m) must not be treated as payable balances, caps, or expected losses.\n\n### 5. Material Missing Terms and Uncertainties Preventing Definitive Quantitative Risk Assessment\n\n- Complete amended capacity agreement, including termination notice periods, termination conditions, and \u201cunused deposit\u201d definition.\n- Calculation mechanics of increasing multiplier beyond \u201cequivalent to 12% annual return\u201d / 12% effective rate.\n- Profit-sharing formula, consumption pricing, and MagAI approval standards.\n- Collateral/security, covenants, defaults, remedies.\n- Relative claim ranking / intercreditor priority vs senior unsecured.\n- Forward payment schedule, extension exercise, post-June 30, 2026 developments.\n- Issuer liquidity, total capital structure, and asset values \u2014 no solvency model in pack.\n\nFor those reasons, no definitive quantum of risk, timing of cash outflow, or recovery for a senior unsecured creditor can be derived from supplied evidence alone.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132798,
+        "id": "chatcmpl-01a17f0b-2285-7392-b7f8-bf37f0c571fa",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4266,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2648
+          },
+          "prompt_tokens": 909,
+          "prompt_tokens_details": {
+            "cached_tokens": 881
+          },
+          "total_tokens": 5175
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-12\", \"arrangement\": \"CoreWeave MagAI refundable capacity deposit and in-substance debt\", \"case_id\": \"coreweave_deposit_2026_disclosure\", \"documents\": [{\"accession\": \"0001769628-26-000104\", \"factual_paraphrase\": \"In August 2024 CoreWeave entered a capacity/prepayment agreement with MagAI Ventures and received a $230 million refundable deposit. Portfolio-company cloud services would be negotiated individually, subject to MagAI approval, with consumption deducted from the deposit and unused funds refundable at term end. The initial term is four years, with MagAI able to extend two years. Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing. A February 2025 amendment gave both parties certain termination-for-convenience rights. CoreWeave consequently classified the refundable deposit as in-substance debt under ASC 470, Sale of Future Revenue. On such termination, unused deposit is refunded with an increasing multiplier equivalent to a 12% annual return. At December 31, 2025 no services had been provided; debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense. Detailed termination notice periods, collateral and relative claim ranking are not provided in this selected subsection.\", \"filed_on\": \"2026-03-02\", \"id\": \"CRWV_10K\", \"locator\": \"Note 10, Debt, Magnetar Loan subsection\", \"period_end\": \"2025-12-31\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-K for December 31, 2025\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm\"}, {\"accession\": \"0001769628-26-000366\", \"factual_paraphrase\": \"In June 2026 CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing the debt carrying amount. At June 30, 2026 the remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion was recognized as interest expense. In the debt table (dollars in millions), Magnetar Loan is listed under recourse debt, with January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at December 31, 2025. These note disclosures do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor.\", \"filed_on\": \"2026-08-12\", \"id\": \"CRWV_10Q\", \"locator\": \"Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection\", \"period_end\": \"2026-06-30\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context. Parallax prepared factual paraphrases from the annual and quarterly notes for this one arrangement, retaining their different reporting dates. These are selected notes, not the complete amended agreement or an issuer solvency model. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:26:13.189341+00:00"
+    },
+    {
+      "case_key": "meta-capacity",
+      "cell_id": "meta-capacity:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:26:42.526384+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Case: meta_capacity_2026_disclosure - Contingent cloud capacity purchase**\n**Perspective: Senior unsecured creditor of Meta Platforms**\n**Analysis as of disclosure: 2026-07-30**\n\nThis is analysis of historical disclosure only, not a complete contract or current status assessment.\n\n### 1. What the arrangement is - and is not\n\nAs disclosed in Meta Platforms Form 10-Q for June 30, 2026 [Accession 0001628280-26-050705, filed 2026-07-30, period end 2026-06-30]:\n\n> Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\n\nMeta reports:\n\n* **contingent obligations to purchase up to $14.72 billion of cloud capacity over five years**\n* beginning with \"In addition\" - i.e. **separate from** the $349.31 billion of non-cancelable contractual commitments reported in the immediately preceding paragraph\n* reducible by the clause:\n\n> \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\"\n\nCritical for a senior unsecured holder:\n\n* This is described as a **contingent purchase commitment**, not funded debt, not a lease liability on balance sheet, and:\n* The passage **does not identify a guarantee of another borrower's debt**\n* The passage **does not specify security or claim ranking, unilateral cancellation rights, detailed pricing or delivery schedule, or annual payments**\n\nIn other words: do not treat this as $14.72bn of par senior unsecured debt outstanding. Treat it as a disclosed off-balance-sheet / notes-disclosed potential future cash outflow that competes for the same enterprise cash flow that services your bonds.\n\n### 2. Economic significance to a senior unsecured creditor\n\n**a) Incremental liquidity / leverage risk, but modest vs. base commitments.**\n\nThe contingent $14.72bn over ~5 years (to ~2031) is incremental to $349.31bn of non-cancelable commitments across multiple categories.\n\n$14.72 / $349.31 = ~4.2% increment to disclosed commitments. Illustrative straight-line average would be ~$2.9bn per year, but Meta **does not disclose annual payments** for this arrangement - actual timing could be lumpy and front- or back-loaded.\n\nThe context matters more than the increment: Meta already discloses $53.52 billion due in 2026 and $81.65 billion due in 2027 under non-cancelable commitments. A senior unsecured creditor must view the contingent capacity as potential additional strain on top of a very large, near-term, non-cancelable funding wall.\n\nIf the contingency is triggered, Meta must either fund from operating cash flow or raise additional debt, increasing probability of default (PD) and potentially increasing senior unsecured supply / diluting recovery.\n\n**b) Conditionality mitigates, but does not eliminate, the risk.**\n\nThe obligation is capped at \"up to\" $14.72bn and \"may be reduced if the cloud service provider is able to sell such capacity to other customers.\"\n\nEconomically this is similar to a take-or-pay / reservation with a mitigation / resale right for the provider. For you as creditor, this is better than a straight $14.72bn take-or-pay because:\n\n* if cloud demand is strong, the provider can mitigate Meta's payment, and\n* Meta presumably only draws if it needs AI / compute capacity to support growth.\n\nIt is worse than no commitment because if demand for that specific capacity is weak - precisely when Meta may also be under stress and does not need it - the provider will be unable to resell and Meta will bear the full cost.\n\n**c) Hidden leverage.**\n\nBecause this is disclosed in Commitments and Contingencies, not as on-balance-sheet debt, traditional balance-sheet leverage ratios will understate economic leverage. In distress, executory purchase contracts for critical operating inputs often have *de facto* seniority to unsecured bonds - Meta must pay to keep operating, while bond coupons can be deferred in restructuring. The disclosure gives no ranking, but operationally this competes ahead of you for cash.\n\nThere is a potential credit positive: securing large-scale cloud capacity may support revenue / AI strategy. The disclosure does not allow assessment of return on that spend. From a creditor view, it signals continuation of a heavy investment cycle alongside the $349.31bn base.\n\n**d) Variable-term limitation.**\n\nMeta states for variable-term agreements, it does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date.\n\nThis means the $14.72bn should be read as a quantified maximum under current minimums, not a comprehensive forecast of all cloud spend. Actual cloud-related cash outflow over 5 years could differ.\n\n### 3. Material uncertainties - what you cannot determine from this passage\n\nA senior unsecured holder cannot quantify loss-given-default or covenant headroom impact because:\n\n1. **Trigger and payment terms unknown:** What causes the contingent to become payable? Take-or-pay? Reservation fee vs. usage fee? Fixed vs. variable price? No delivery schedule or annual breakdown disclosed.\n\n2. **Value of mitigation unknown:** Provider is unnamed in this passage. No history of its ability to resell, no formula for reduction, no floor. You cannot assume any reduction will occur.\n\n3. **Optionality unknown:** No disclosure of unilateral cancellation, termination penalty, renewal, or cure rights. Do not assume Meta can walk away.\n\n4. **Ranking / security unknown:** No statement of secured vs. unsecured, guarantee, or structural priority. Do not assume pari passu with your senior unsecured claim in bankruptcy; operating / trade claims and assumption / rejection of executory contracts will govern.\n\n5. **Staleness and incompleteness:** This is a point-in-time disclosure as of June 30, 2026, filed July 30, 2026, based on a manually selected paraphrase and short quote. It is not the full contract. Status, amendments, drawdowns, or additional side agreements after that date are not in scope.\n\n6. **Interaction with base commitments:** The $349.31bn, $53.52bn (2026) and $81.65bn (2027) figures are context only, across multiple categories. You cannot allocate how much of that base is also cloud / capex / leases, or whether the contingent capacity would substitute for or add to future capex.\n\n**Bottom line for senior unsecured:** Add up to $14.72bn over 5 years of conditional, unranked operating cash outflow to your forward liquidity model, separate from $349.31bn non-cancelable commitments. Assume zero mitigation until proven, monitor 10-K/Q updates for actual purchases, changes in non-cancelable totals, debt issuance to fund commitments, and any naming of provider / pricing terms. Do not treat as funded debt for recovery analysis, but treat as a material potential drain on cash available for debt service with *de facto* operating priority.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132813,
+        "id": "chatcmpl-01a17f0b-5d2e-7322-bfb1-1ae7697bfa08",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3430,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1948
+          },
+          "prompt_tokens": 505,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3935
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-07-30\", \"arrangement\": \"Meta contingent purchase of cloud capacity\", \"case_id\": \"meta_capacity_2026_disclosure\", \"documents\": [{\"accession\": \"0001628280-26-050705\", \"factual_paraphrase\": \"As of June 30, 2026, Meta reports contingent obligations to purchase up to $14.72 billion of cloud capacity over five years, reducible if the cloud service provider sells that capacity to other customers. The provider is unnamed in this passage. The immediately preceding paragraph separately reports $349.31 billion of non-cancelable contractual commitments across multiple categories, with $53.52 billion and $81.65 billion due in 2026 and 2027 respectively. The contingent capacity paragraph begins 'In addition'. For variable-term agreements, Meta does not estimate total obligation beyond minimum quantities and/or pricing as of the reporting date. The passage does not specify annual payments for the contingent arrangement, unilateral cancellation rights, its detailed pricing or delivery schedule, security or claim ranking. It does not identify a guarantee of another borrower's debt.\", \"filed_on\": \"2026-07-30\", \"id\": \"META_10Q\", \"locator\": \"Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations\", \"period_end\": \"2026-06-30\", \"short_quote\": \"which may be reduced if the cloud service provider is able to sell such capacity to other customers\", \"title\": \"Meta Platforms Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context, with a short quotation and factual paraphrase prepared by Parallax. This is not a complete contract, a current-status assessment or a synthetic scenario. Only the contingent cloud-capacity arrangement is in scope; neighboring aggregate commitments are context, not another case. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:26:27.548707+00:00"
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:equity_holder:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:26:57.817940+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Analysis as of 2026-08-12 - Single Arrangement Only**\n\n**Arrangement:** CoreWeave MagAI refundable capacity deposit, accounted for as in-substance debt.\n\nScope is limited to two selected note disclosures. This is not the complete amended agreement or a solvency model.\n\n### 1. Disclosed Facts with Sources\n\n**Formation and economics:**\n\n* Aug 2024: CoreWeave entered capacity / prepayment agreement with MagAI Ventures and received $230 million refundable deposit [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* Cloud services for portfolio companies to be negotiated individually, subject to MagAI approval, with consumption deducted from deposit and unused funds refundable at term end [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* At Dec 31, 2025 no services had been provided [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n\n**Term and amendment:**\n\n* Initial term 4 years, with MagAI able to extend 2 years [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* Feb 2025 amendment gave both parties certain termination-for-convenience rights [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n\n**Accounting and carrying amounts:**\n\n* Classified as in-substance debt under ASC 470, Sale of Future Revenue. Note heading is \"Magnetar Loan\" [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* At Dec 31, 2025: debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n* June 2026: CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing debt carrying amount [CRWV_10Q, Note 10, Debt: Magnetar Loan subsection].\n* At June 30, 2026: remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion recognized as interest expense [CRWV_10Q, Note 10, Debt: Magnetar Loan subsection].\n* Debt table (dollars in millions): Magnetar Loan listed under recourse debt, with January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at Dec 31, 2025 [CRWV_10Q, Note 10, Debt: recourse debt table, Magnetar Loan row].\n\nThese note disclosures do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor [CRWV_10Q, Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection].\n\nDetailed termination notice periods, collateral and relative claim ranking are not provided in this selected subsection [CRWV_10K, Note 10, Debt, Magnetar Loan subsection].\n\n### 2. Obligors vs Beneficiaries\n\n**Direct:**\n\n* Obligor: CoreWeave - to hold refundable deposit, to make capacity available subject to individual negotiation / MagAI approval, to refund unused funds at term end, and to refund with multiplier on termination, and to share profit if capacity re-used for others by agreement.\n* Beneficiary: MagAI Ventures named as counterparty receiving refund / premium and approval rights.\n\n**Contingent:**\n\n* CoreWeave obligation to pay increasing multiplier equivalent to 12% annual return is triggered only on such termination. Unused deposit refund at term end is triggered at term end to extent not consumed.\n* MagAI extension right for 2 years is an option held by MagAI, not an obligation of MagAI disclosed.\n* Use of capacity for other customers and profit sharing applies only if agreed with MagAI.\n* Individual service delivery obligations arise only if individually negotiated and approved - none had been provided at Dec 31, 2025.\n\nNo other guarantors, collateral providers or beneficiaries are disclosed in the selected notes.\n\n### 3. Triggers, Effectiveness, Limits, Recoveries, Remedies, Termination\n\n**Payment triggers - Disclosed Fact:**\n* Consumption: if services are negotiated, approved and delivered, amount deducted from deposit.\n* Term end: unused funds refundable.\n* Termination-for-convenience by either party after Feb 2025 amendment: unused deposit refunded with increasing multiplier equivalent to 12% annual return.\n* Partial settlement: $100 million paid June 2026 under amended agreement.\n\n**Effectiveness:**\n* Original agreement Aug 2024; termination rights added Feb 2025; carrying amounts measured Dec 31, 2025 and June 30, 2026; maturity shown as Jan 2029 in June 2026 table.\n\n**Contractual limits - Disclosed Fact:**\n* Initial cash in: $230 million.\n* Carrying amounts: $273 million at Dec 31, 2025; $189 million at June 30, 2026 after $100 million payment.\n* Effective rate shown as 12% in table; termination multiplier described as equivalent to 12% annual return.\n* These are accounting carrying amounts including accrued redemption premium, not disclosed as a cap on loss or as a confirmed cash payable on immediate termination at analysis date.\n\n**Recoveries / Remedies:**\n* None disclosed in selected notes. No recovery estimate, no collateral description, no default remedies, no covenants disclosed.\n\n**Termination:**\n* Both parties have certain termination-for-convenience rights post-amendment. On termination, formula is unused deposit + increasing multiplier. Notice periods, fees beyond multiplier, and settlement timing not disclosed.\n\n### 4. Implications for CoreWeave Equity Investor\n\nDistinguishing fact from conditional interpretation:\n\n**Fact:** Obligation is presented as recourse debt, current at Dec 31, 2025 ($273M), and as $189M recourse debt at June 30, 2026 with Jan 2029 maturity and 12% effective rate.\n\n**Conditional interpretation:** *If* termination is exercised, equity would face cash outflow of unused deposit plus accrued 12%-equivalent premium, reducing cash available to equity and potentially requiring refinancing. The $100M June 2026 payment demonstrates such cash use can occur before maturity. This is not a forecast that termination will occur.\n\n**Fact:** Premium accretion is interest expense; no service revenue from this deposit through Dec 31, 2025.\n\n**Conditional interpretation:** *If* no services are consumed, the arrangement functions economically like interest-bearing debt rather than revenue-generating prepayment, creating expense drag without offsetting gross profit. *If* services are later negotiated and consumed, portion would reduce refundable balance.\n\n**Fact:** Re-use of capacity for others requires MagAI agreement with specified profit sharing; extension is at MagAI option.\n\n**Conditional interpretation:** *If* CoreWeave wants flexibility to reallocate capacity, value to equity depends on undisclosed profit-share and approval terms, which could limit upside.\n\nNo inference is made about seniority, collateral coverage, or expected loss.\n\n### 5. Material Missing Terms - Preventing Definitive Quantitative Risk Assessment\n\n* Termination conditions, notice periods, settlement timing, and whether $189M at June 30, 2026 equals cash due on immediate termination.\n* How 12% multiplier accrues/compounds after June 30, 2026 and treatment of the June $100M partial settlement in that calculation.\n* Pricing, volume, and approval standards for individual service orders and deduction mechanics.\n* Profit-sharing formula for re-use.\n* Extension economics, fees, and renegotiation rights.\n* Collateral, guarantees, covenants, events of default, other remedies, and relative ranking vs other recourse / non-recourse debt.\n* Forward payment schedule and tax / fee treatment.\n\nWithout these, carrying amount cannot be converted to a definitive future cash outflow, timing, or recovery analysis.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132828,
+        "id": "chatcmpl-01a17f0b-98ee-74cf-b551-abbc9a2c00b0",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3645,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1943
+          },
+          "prompt_tokens": 907,
+          "prompt_tokens_details": {
+            "cached_tokens": 881
+          },
+          "total_tokens": 4552
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-12\", \"arrangement\": \"CoreWeave MagAI refundable capacity deposit and in-substance debt\", \"case_id\": \"coreweave_deposit_2026_disclosure\", \"documents\": [{\"accession\": \"0001769628-26-000104\", \"factual_paraphrase\": \"In August 2024 CoreWeave entered a capacity/prepayment agreement with MagAI Ventures and received a $230 million refundable deposit. Portfolio-company cloud services would be negotiated individually, subject to MagAI approval, with consumption deducted from the deposit and unused funds refundable at term end. The initial term is four years, with MagAI able to extend two years. Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing. A February 2025 amendment gave both parties certain termination-for-convenience rights. CoreWeave consequently classified the refundable deposit as in-substance debt under ASC 470, Sale of Future Revenue. On such termination, unused deposit is refunded with an increasing multiplier equivalent to a 12% annual return. At December 31, 2025 no services had been provided; debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense. Detailed termination notice periods, collateral and relative claim ranking are not provided in this selected subsection.\", \"filed_on\": \"2026-03-02\", \"id\": \"CRWV_10K\", \"locator\": \"Note 10, Debt, Magnetar Loan subsection\", \"period_end\": \"2025-12-31\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-K for December 31, 2025\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm\"}, {\"accession\": \"0001769628-26-000366\", \"factual_paraphrase\": \"In June 2026 CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing the debt carrying amount. At June 30, 2026 the remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion was recognized as interest expense. In the debt table (dollars in millions), Magnetar Loan is listed under recourse debt, with January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at December 31, 2025. These note disclosures do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor.\", \"filed_on\": \"2026-08-12\", \"id\": \"CRWV_10Q\", \"locator\": \"Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection\", \"period_end\": \"2026-06-30\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context. Parallax prepared factual paraphrases from the annual and quarterly notes for this one arrangement, retaining their different reporting dates. These are selected notes, not the complete amended agreement or an issuer solvency model. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:26:42.532796+00:00"
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:27:20.460318+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "As of **2026-08-26**, on the supplied pack alone, a senior unsecured holder in NVIDIA should treat this as a **very large, long-dated, concentrated, wrong-way contingent commitment** - not debt today, but a potential future cash call that would compete directly for NVIDIA's unencumbered cash flow and assets.\n\nThis is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings.\n\n### 1. What NVIDIA promised\n\nStructure: multiple **residual value guaranties** to SB Energy, including its affiliates, as Lessor for **~4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio**.\n\n* Tenant is **an affiliate of OpenAI Group PBC**. Tenant Parent separately guarantees all tenant lease obligations.\n* Lessor: unnamed Delaware LLC in the form. Tenant / Tenant Parent identities are redacted in the form.\n\nMechanics from 8-K Item 1.01 filed 2026-08-17, Accession 0001045810-26-000069 and 10-Q Note 17 filed 2026-08-26, Accession 0001045810-26-000075:\n\n> \"NVIDIA's aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\"\n\n> \"Our guarantees are limited to defined portions of lease and power payments\"\n\nParaphrased terms supplied:\n\n* **Not yet effective:** An Agreement generally becomes effective when its lease commences.\n* **Payment conditions include lessor ready-for-service [RFS] requirements**, expected beginning in 2028 per 8-K summary.\n* **Trigger:** tenant insolvency causing lease default OR failure to make lease payments.\n* **Payment:** generally the shortfall between **guaranteed minimum lease value [GMV]** and replacement-lease or sale recoveries.\n* **GMV covers data-center, power and transmission costs** - Sec.1(d) per form summary.\n* **Remedies / loss mitigation:** assumption, reletting, sale, termination, or deferral up to a year with specified costs.\n* **Shared cap** across related guaranties - Sec.1(d).\n* **Termination of NVIDIA obligation:** lease commencement's 20th anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events.\n* **Recourse:** OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. Form Sec.5: subrogation is postponed behind Landlord; recoupment is solely against Tenant / Tenant Parent.\n* **Summary is qualified by the full agreement form** - Exhibit 10.1, nvda2027q2ex101.htm.\n\nPhasing from 10-Q:\n\n* Guarantee amounts **increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease.**\n* Guarantees **do not cover the entire site's cost or every tenant obligation.**\n* In exchange, site **exclusively hosts NVIDIA AI infrastructure**, subject to limited exceptions. Form Sec.20(e): **exclusive NVIDIA reference architecture for at least twenty years.**\n* NVIDIA also has a **sole-discretion option to provide phased credit support for approximately 3.8 additional GW.**\n* The guarantee table includes the August signing even though report period ended July 26, 2026 - i.e. subsequent-event disclosure.\n\n### 2. Economic significance to a senior unsecured creditor\n\n**a) Scale and tenor create contingent leverage.**\n$105bn cumulative cap for the initial 4.25 GW is by definition a tail-risk claim that, if triggered, would be material to liquidity, leverage and recovery for bondholders. It is 20-years per phase, phased over 9 phases. Exposure ramps as phases complete, then amortizes. You are underwriting ~20+ years of data-center / power residual value at one campus.\n\n**b) It is credit enhancement for OpenAI, funded by NVIDIA.**\nEconomically NVIDIA is backstopping SB Energy against OpenAI-affiliate non-payment / insolvency. The 8-K trigger description and form Sec.12 detail confirm this is not a performance guarantee of construction, it is a financial shortfall guarantee: Covered Loss Amount requires RFS, and insolvency or monetary default requires Landlord's termination right and:\n\n> \"actually intends to terminate the Lease\"\n\nper Exhibit 10.1 Sec.12(a)(i)-(v) - not actual termination. Notice, cure and verification periods apply.\n\nFor a senior unsecured holder, that means:\n* No collateral is described to secure you ahead of this claim. No seniority is disclosed. To the extent funded, it would compete pari passu for cash / enterprise value unless otherwise structured.\n* After payment, NVIDIA's own recovery is weak: subrogation postponed behind Landlord, recoupment solely against Tenant / Tenant Parent. You rely on OpenAI chain for reimbursement.\n\n**c) Wrong-way and concentration risk.**\nSingle site, single developer family (SB Energy + affiliates), single tenant family (OpenAI affiliate), ~4.25 GW, GMV including power/transmission, exclusive NVIDIA architecture.\n\nIf hyperscale AI demand, power economics, or OpenAI credit deteriorates, NVIDIA's core cash flow would likely be stressed at the same time the guarantee is called, and replacement-lease / sale recoveries - which offset NVIDIA's payment - would also be depressed. Collections do reduce Liability Cap dollar-for-dollar per Sec.8, and concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies is required for enforcement, but that is conditional on Guarantor keeping specified redacted payments current.\n\nOptionality helps but does not eliminate: assumption, relet, sale, rejection or deferral up to one year gives NVIDIA time / loss-mitigation, but deferral has specified costs and relet/sale presumes a market for 4.25 GW of specialized load.\n\n**d) Mitigants that matter to creditors:**\n\n* Cap: $105bn cumulative for initial commitment; shared cap; limited to defined portions of lease/power payments, not whole site cost.\n* Not effective until lease commencement + RFS; phased ramp, not immediate $105bn at risk.\n* Shortfall basis - recoveries offset; enforcement must concurrently pursue insurance + Tenant Parent.\n* 20-year amortization per phase; early termination events including satisfactory OpenAI credit rating - i.e. if OpenAI becomes strong enough, guarantee falls away.\n* Commercial quid pro quo: 20-year exclusivity for NVIDIA infrastructure - supports future chip/system sales, but see uncertainties.\n* Additional 3.8 GW is an option at sole discretion, not a commitment - you need to monitor exercise, not assume it.\n\n### 3. Material uncertainties - you cannot size expected loss from this pack\n\n1. **Redacted pricing:** Covered Loss Amount formula, discount rate and schedule values are redacted; GMV breakdown, redacted pre-RFS termination payment, Sec.2(c) treatment where some project costs do not reduce cap, Sec.8 cap qualifications, and specified deferral costs are all redacted. Cannot model timing or severity.\n\n2. **Timing mismatch:** 8-K says RFS expected beginning in 2028; 10-Q says nine phases with first expected in fiscal 2029. Commencement, RFS definition, and ramp schedule are uncertain and drive when cap becomes live.\n\n3. **Trigger / enforcement friction:** Requires RFS + insolvency-caused default or payment failure + notice/cure/verification + Landlord termination right + intent. Sec.8's requirement to pursue insurance / Tenant Parent remedies, and what \"keeping specified redacted payments current\" entails, leaves loss crystallization timing unclear.\n\n4. **Recovery value:** Shortfall vs. relet or sale assumes price discovery for multi-GW AI campus including power/transmission. No disclosure of appraisals, relet assumptions, sale process, or who bears operating costs during relet.\n\n5. **Counterparty chain opacity:** Tenant / Parent redacted in form; financial capacity of OpenAI affiliate, Tenant Parent guaranty, and OpenAI reimbursement/indemnity obligor not quantified. Threshold for \"satisfactory OpenAI credit rating\" to terminate is not supplied. Reimbursement is unsecured promise from same stressed credit that triggered payment.\n\n6. **Power / transmission exposure:** GMV explicitly includes power and transmission costs. Power price, interconnection, regulatory risk at PORTS not disclosed.\n\n7. **Exclusivity scope:** \"exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions\" and 20-year exclusive reference architecture - exceptions, remedies for breach, and antitrust / customer-concentration implications unknown.\n\n8. **Form vs. executed:** Execution date/counterparty blanks and confidentiality redactions remain; identities, schedules redacted; 8-K summary qualified by form. Final executed terms may differ.\n\n9. **Expansion:** Terms, cap, pricing for optional ~3.8 GW undisclosed. Future exercise could materially increase contingent leverage beyond $105bn.\n\n10. **Accounting / disclosure:** Pack references Note 17 maximum gross exposure table but does not supply table values, initial fair value, carrying amount, or whether/when accrual would be required. Creditor cannot assess P&L / balance-sheet recognition from pack alone.\n\n**Creditor takeaway:** Treat $105bn as maximum loss-given-default before recoveries and reimbursement, phased and conditional, 20-year, single-name / single-site, with contractual mitigants but with core economics redacted and recovery fully levered to OpenAI and to residual value of AI data-center capacity. Monitor: RFS / phase completion, executed vs. form differences, unredacted GMV / discount / cap qualifications, Tenant Parent financials, OpenAI rating trigger, any exercise of the 3.8 GW option, and Note 17 exposure / fair-value updates.",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132851,
+        "id": "chatcmpl-01a17f0b-f147-703d-95b3-b9c5e1bd590d",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 5046,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2999
+          },
+          "prompt_tokens": 1264,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 6310
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-26\", \"arrangement\": \"NVIDIA PORTS Technology Campus residual value guaranties\", \"case_id\": \"nvidia_ports_2026_disclosure\", \"documents\": [{\"accession\": \"0001045810-26-000069\", \"factual_paraphrase\": \"NVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for approximately 4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio. An affiliate of OpenAI Group PBC is tenant. An Agreement generally becomes effective when its lease commences. Payment conditions include lessor ready-for-service requirements, expected beginning in 2028. Trigger events are tenant insolvency causing lease default or failure to make lease payments. NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries. Remedies include assumption, reletting, sale, termination, or deferral up to a year with specified costs. Termination events include lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events. OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. The summary is qualified by the full agreement form.\", \"filed_on\": \"2026-08-17\", \"id\": \"SEC_8K\", \"locator\": \"Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA\\u2019s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA\\u2019s obligations'\", \"short_quote\": \"NVIDIA\\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\", \"title\": \"NVIDIA Form 8-K, Item 1.01, August 17, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"The filing reports August 2026 guarantees capped at $105 billion supporting approximately 4.25 GW at SB Energy's PORTS campus on behalf of an OpenAI affiliate. Each guarantee generally becomes effective at its lease commencement. Corresponding guarantee amounts increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease. The guarantees do not cover the entire site's cost or every tenant obligation. In exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions. NVIDIA also has a sole-discretion option to provide phased credit support for approximately 3.8 additional GW. The guarantee table includes the August signing even though the report period ended July 26, 2026.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_10Q\", \"locator\": \"Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table\", \"period_end\": \"2026-07-26\", \"short_quote\": \"Our guarantees are limited to defined portions of lease and power payments\", \"title\": \"NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"Form identifies NVIDIA as Guarantor; Landlord is an unnamed Delaware LLC. Tenant and Tenant Parent identities are redacted. Tenant Parent separately guarantees all tenant lease obligations (recital B). Section 1(d): shared cap across related guaranties; GMV covers data-center, power and transmission costs. Sections 1-2: Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires ready-for-service. A redacted pre-RFS termination payment is also defined. Section 2(c): some project costs do not reduce the cap; section 8 cap qualifications are redacted. Section 8: enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current. Collections reduce Liability Cap dollar-for-dollar. Section 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent. Section 12: notice, cure and verification periods apply; insolvency or monetary default requires Landlord's termination right and actual intent, not actual termination. Options: assumption, relet, sale, rejection or deferral up to one year with specified costs. Section 20(e): exclusive NVIDIA reference architecture for at least twenty years. Execution date/counterparty blanks and confidentiality redactions remain in this form.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_FORM\", \"locator\": \"Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules\", \"short_quote\": \"actually intends to terminate the Lease\", \"title\": \"NVIDIA Exhibit 10.1, Form of Residual Value Guaranty\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm\"}], \"preparation\": \"Historical primary-disclosure source pack. Parallax manually prepared factual paraphrases and short verbatim quotations from the SEC documents below, independently of any research coding. This is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings; later developments are outside this evaluation.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:26:57.824838+00:00"
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "cell_id": "coreweave-deposit:senior_unsecured_creditor:neutral:1",
+      "condition": "neutral",
+      "finished_at": "2026-10-27T20:27:36.996754+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**CoreWeave - MagAI Refundable Capacity Deposit / \"Magnetar Loan\"**\n**View: Senior Unsecured Creditor | Analysis as of 2026-08-12**\n\nBased solely on the two selected primary disclosures provided - not the complete amended agreement and not a solvency model.\n\n### 1. What it is in economic substance\n\nDespite being documented as a capacity / prepayment agreement, this is **in-substance recourse debt**, not non-refundable deferred revenue or equity.\n\nSupporting evidence:\n\n* August 2024: CoreWeave received **$230 million refundable deposit** from MagAI Ventures under a capacity/prepayment agreement. Unused funds refundable at term end. Portfolio-company consumption to be negotiated individually, subject to MagAI approval, and deducted from the deposit. [CRWV_10K, Note 10 Magnetar Loan subsection, 10-K for 12/31/2025 filed 2026-03-02]\n* Initial term 4 years, MagAI can extend 2 years. Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing. [CRWV_10K]\n* February 2025 amendment added **termination-for-convenience rights for both parties**. CoreWeave consequently classified the deposit as **in-substance debt under ASC 470, Sale of Future Revenue**. [CRWV_10K]\n* On such termination, unused deposit is refunded with an **increasing multiplier equivalent to a 12% annual return**. Premium accretion is recognized as **interest expense**. [CRWV_10K]\n* June 2026 10-Q debt table lists the obligation as **\"Magnetar Loan\" under recourse debt, January 2029 maturity, 12% effective interest rate**, $273 at 12/31/2025 and $189 at 6/30/2026, dollars in millions. [CRWV_10Q, Note 10 recourse debt table + Magnetar Loan subsection, 10-Q for 6/30/2026 filed 2026-08-12]\n\n> URL: https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm ; https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\n\nFor a senior unsecured creditor, the label \"deposit\" is irrelevant. Accounting, recourse classification, and cash economics all point to financing.\n\n### 2. Why it matters to a senior unsecured creditor\n\n**a) It competes directly for the recourse recovery pool.**\nThe June 2026 note places the Magnetar Loan **under recourse debt**. That means it is a claim against CoreWeave itself, not non-recourse to a project SPV. It therefore dilutes or competes with senior unsecured claims, rather than being structurally subordinated beneath them.\n\n**b) It has functioned as expensive debt with no operating offset.**\nAt 12/31/2025 **no services had been provided**. The carrying amount was **debt, current $273 million including $43 million redemption premiums**. In other words, $230 million cash in had accreted to $273 million owed with zero consumption to reduce the refund obligation. [CRWV_10K]\n\nAccretion at 12% runs even if GPUs are never consumed by MagAI portfolio companies. That increases leverage and interest expense with no corresponding EBITDA.\n\n**c) It is put-like / demand-like liquidity risk.**\nTermination-for-convenience plus refund of unused deposit + 12% multiplier is economically a put. MagAI can force cash out. CoreWeave also has a termination right per the February 2025 amendment, but a senior unsecured holder cannot control when MagAI exercises.\n\nThis was not theoretical: **In June 2026 CoreWeave paid $100 million to MagAI in partial settlement**, reducing the carrying amount. At 6/30/2026 the remaining obligation was **$189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date**. [CRWV_10Q]\n\nCash already left the enterprise ahead of any senior unsecured maturity, and $189 million plus future 12% accretion remains.\n\n**d) Classification as current at YE 2025 signals near-term refinancing pressure.**\n$273 million was shown as **debt, current** at 12/31/2025. The June 2026 table shows a **January 2029 maturity**. The selected excerpts do not reconcile that shift - whether by amendment, partial paydown, waiver of demand feature, or reclassification. From a senior unsecured view, either outcome is negative: demandable within 12 months, or termed out to January 2029 at 12% adding to the 2029 maturity wall.\n\n**e) Asset and revenue encumbrance.**\nCapacity was reserved for MagAI-approved use. Use for other customers requires MagAI agreement and triggers **specified profit sharing**. [CRWV_10K] That constrains CoreWeave's ability to redeploy what is presumably scarce GPU capacity to maximize unencumbered cash flow available to all recourse creditors.\n\nIn short: $230M of upfront liquidity came at the cost of a recourse, 12%, potentially demandable $273M -> $189M after $100M cash paid, with operating flexibility ceded to MagAI.\n\n### 3. Material uncertainties - what the selected notes do NOT establish\n\nA senior unsecured creditor **cannot determine recovery or relative priority** from these excerpts alone. The preparation notes expressly flag this:\n\n* **Detailed termination notice periods, collateral and relative claim ranking are not provided** in the selected 10-K subsection. [CRWV_10K factual paraphrase]\n* These note disclosures **do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor**. [CRWV_10Q factual paraphrase]\n\nSpecifically missing:\n\n1.  **Security / seniority:** Is the Magnetar Loan secured, guaranteed, or subject to liens on GPUs, receivables, or other collateral that would prime senior unsecured notes? Is it pari, senior, or contractually subordinated?\n2.  **Put mechanics:** Notice period, conditions, cure, whether MagAI's termination right is unconditional, and whether CoreWeave's own termination right can force a settlement on the same 12% terms.\n3.  **Full cash to settle:** $189 million at 6/30/2026 is unused deposit + accrued premiums *through that date*. Future accretion to January 2029 or to an earlier put date is not disclosed in the excerpts. Total ultimate cash could materially exceed $189 million if not consumed.\n4.  **Consumption prospect:** MagAI approval is required deal-by-deal. No disclosure here on probability, pricing, or timing of future service credits that would reduce cash refund.\n5.  **Profit-share drag:** Formula and volume of capacity subject to sharing if reallocated - i.e., how much margin leaks to MagAI.\n6.  **Covenants / cross-default:** Events of default, cross-acceleration to senior unsecured indentures, or vice versa.\n7.  **Maturity reconciliation:** Relationship between 4-year initial term from August 2024, 2-year MagAI extension option, February 2025 amendment, June 2026 partial settlement, prior current classification, and current January 2029 table maturity.\n\nThese are selected notes, not the complete amended capacity agreement. No research annotations or issuer solvency model were included.\n\n### 4. Creditor takeaway\n\nTreat the $189 million June 2026 balance as **live recourse debt at 12% with embedded put risk and capacity encumbrance**, not as customer deferred revenue. It has already consumed $100 million of cash in June 2026, accretes regardless of utilization, and directly reduces cash available for senior unsecured service and recovery.\n\nBefore sizing senior unsecured exposure, demand: full amended MagAI agreement, collateral and guarantee schedule, intercreditor / subordination analysis, complete Note 10 maturity and current vs. non-current breakdown at 6/30/2026, forward accretion schedule to January 2029 and to a put scenario, and any side letters on capacity reservation and profit sharing.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132868,
+        "id": "chatcmpl-01a17f0c-31f3-701b-856c-4980973cf264",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4172,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2432
+          },
+          "prompt_tokens": 795,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 4967
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-12\", \"arrangement\": \"CoreWeave MagAI refundable capacity deposit and in-substance debt\", \"case_id\": \"coreweave_deposit_2026_disclosure\", \"documents\": [{\"accession\": \"0001769628-26-000104\", \"factual_paraphrase\": \"In August 2024 CoreWeave entered a capacity/prepayment agreement with MagAI Ventures and received a $230 million refundable deposit. Portfolio-company cloud services would be negotiated individually, subject to MagAI approval, with consumption deducted from the deposit and unused funds refundable at term end. The initial term is four years, with MagAI able to extend two years. Available capacity may, by agreement with MagAI, serve other customers with specified profit sharing. A February 2025 amendment gave both parties certain termination-for-convenience rights. CoreWeave consequently classified the refundable deposit as in-substance debt under ASC 470, Sale of Future Revenue. On such termination, unused deposit is refunded with an increasing multiplier equivalent to a 12% annual return. At December 31, 2025 no services had been provided; debt, current was $273 million including $43 million redemption premiums. Premium accretion was interest expense. Detailed termination notice periods, collateral and relative claim ranking are not provided in this selected subsection.\", \"filed_on\": \"2026-03-02\", \"id\": \"CRWV_10K\", \"locator\": \"Note 10, Debt, Magnetar Loan subsection\", \"period_end\": \"2025-12-31\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-K for December 31, 2025\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm\"}, {\"accession\": \"0001769628-26-000366\", \"factual_paraphrase\": \"In June 2026 CoreWeave paid $100 million to MagAI Ventures in partial settlement under the amended capacity agreement, reducing the debt carrying amount. At June 30, 2026 the remaining obligation was $189 million, consisting of unused refundable deposit plus accrued redemption premiums through that date. Premium accretion was recognized as interest expense. In the debt table (dollars in millions), Magnetar Loan is listed under recourse debt, with January 2029 maturity, 12% effective interest rate, 189 at June 30, 2026 and 273 at December 31, 2025. These note disclosures do not provide a forward payment schedule or a recovery estimate for a hypothetical senior unsecured creditor.\", \"filed_on\": \"2026-08-12\", \"id\": \"CRWV_10Q\", \"locator\": \"Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection\", \"period_end\": \"2026-06-30\", \"short_quote\": \"Magnetar Loan\", \"title\": \"CoreWeave Form 10-Q for June 30, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm\"}], \"preparation\": \"Historical, manually selected primary SEC disclosure context. Parallax prepared factual paraphrases from the annual and quarterly notes for this one arrangement, retaining their different reporting dates. These are selected notes, not the complete amended agreement or an issuer solvency model. No research annotations are included.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:27:20.466595+00:00"
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:equity_holder:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:27:50.006411+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-08-26**\n\n**Arrangement:** NVIDIA PORTS Technology Campus residual value guaranties for ~4.25 GW IT load at Portsmouth Site, Pike County, Ohio. Case: `nvidia_ports_2026_disclosure`.\n\n> Source limitation: Historical primary-disclosure pack only - selected context, not complete filings or complete executed contract. The 8-K summary is qualified by the full agreement form. The Form of Guaranty retains execution blanks, confidentiality redactions, and redacted schedules.\n\n### 1. Obligors and Beneficiaries \u2014 Direct vs Contingent\n\n**Beneficiary / Lessor side:**\n* SB Energy, including its affiliates, as Lessor [SEC_8K - Item 1.01, para. 'On August 17']. Landlord in the Form is an unnamed Delaware LLC [SEC_FORM - Opening/recitals A-B].\n* No direct payment from NVIDIA disclosed pre-trigger. Landlord has conditions: ready-for-service requirements, notice/cure/verification, concurrent pursuit of other recoveries - see \u00a73-4.\n\n**Contingent obligor: NVIDIA as Guarantor**\n* Identified as Guarantor in Form [SEC_FORM - Opening/recitals A-B].\n* Obligation is contingent residual-value support, not a direct lease obligation. No payment due unless (a) Agreement effective and (b) Trigger Event + conditions satisfied.\n\n**Direct lease obligors (not NVIDIA):**\n* Tenant: described in 8-K/10-Q only as an affiliate of OpenAI Group PBC [SEC_8K - para. 'On August 17'; SEC_10Q - Note 17, para. 'SB Energy Corp. guarantees']. Tenant and Tenant Parent identities are redacted in the Form [SEC_FORM - Opening/recitals A-B].\n* Do not infer redacted identities beyond that disclosure.\n* Tenant Parent separately guarantees all tenant lease obligations per Recital B [SEC_FORM - recital B]. This is a separate contingent guarantee to Landlord, not to NVIDIA.\n\n**Contingent reimbursement obligor to NVIDIA:**\n* OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor [SEC_8K - para. 'NVIDIA\u2019s obligations']. Recoupment under Form is solely against Tenant/Tenant Parent, with subrogation postponed behind Landlord [SEC_FORM - Section 5].\n* This is conditional on actual payment by NVIDIA; no amount disclosed as receivable.\n\n**No current obligation:**\n* NVIDIA sole-discretion option to provide phased credit support for ~3.8 additional GW [SEC_10Q - Note 17]. Disclosed fact: option, not commitment.\n\n### 2. Effectiveness and Payment Triggers\n\n**Effectiveness:**\n* An Agreement generally becomes effective when its lease commences [SEC_8K - para. 'Pursuant to'; SEC_10Q - Note 17].\n* Payment further conditions on lessor ready-for-service requirements, expected beginning in 2028 [SEC_8K - para. 'Pursuant to']. Form: Covered Loss Amount requires ready-for-service [SEC_FORM - Sections 1-2].\n\n**Triggers:**\n* Tenant insolvency causing lease default or failure to make lease payments [SEC_8K - para. 'Upon a Trigger Event'].\n* Procedural qualifier: notice, cure and verification periods apply; for insolvency or monetary default Landlord must have termination right and:\n\n> \"actually intends to terminate the Lease\" [SEC_FORM - Section 12(a)(i)-(v)]\n\n* Disclosure states actual termination is not required, only right + intent. Full list of Trigger Events and cure periods not supplied in paraphrase.\n\n**Payment mechanics disclosed:**\n* NVIDIA pays generally the shortfall between guaranteed minimum lease value [GMV] and replacement-lease or sale recoveries [SEC_8K - para. 'Upon a Trigger Event'].\n* GMV covers data-center, power and transmission costs [SEC_FORM - Section 1(d)].\n* Formula, discount rate and schedule values are redacted [SEC_FORM - Sections 1-2]. A redacted pre-RFS termination payment is also defined [SEC_FORM - Section 2]. Cannot quantify.\n\n### 3. Limits, Recoveries, Remedies, Termination\n\n**Contractual limits \u2014 cap is maximum, not expected loss:**\n* > \"NVIDIA\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\" [SEC_8K - para. 'NVIDIA\u2019s aggregate']\n* Shared cap across related guaranties [SEC_FORM - Section 1(d)].\n* > \"Our guarantees are limited to defined portions of lease and power payments\" [SEC_10Q - Note 17]\n* Guarantees do not cover entire site cost or every tenant obligation [SEC_10Q - Note 17].\n* Phasing: amounts increase with completion of nine construction phases, first expected in fiscal 2029, then decrease over each phase's 20-year lease [SEC_10Q - Note 17]. Table includes August signing though 10-Q period ended July 26, 2026 [SEC_10Q - Note 17].\n* Section 2(c): some project costs do not reduce cap; Section 8 cap qualifications redacted [SEC_FORM - Sections 2, 8].\n\n**Recoveries / mitigation \u2014 conditional, not assured:**\n* Replacement relet or sale proceeds netted in shortfall calculation [SEC_8K - para. 'Upon a Trigger Event'].\n* Collections reduce Liability Cap dollar-for-dollar [SEC_FORM - Section 8].\n* Enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current [SEC_FORM - Section 8]. Redacted payments prevent assessment of this condition.\n* No creditor ranking inferred. Only disclosed priority term: subrogation postponed behind Landlord [SEC_FORM - Section 5].\n\n**Remedies / options on trigger:**\n* Assumption, reletting, sale, termination, or deferral up to a year with specified costs [SEC_8K - para. 'NVIDIA\u2019s obligations']; Form adds rejection as option variant [SEC_FORM - Section 12]. Specified costs redacted.\n\n**Termination of NVIDIA obligations:**\n* Lease commencement's 20th anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events [SEC_8K - para. 'NVIDIA\u2019s obligations']. Threshold for satisfactory rating, lease termination rights, and customary events not supplied.\n\n**Commercial exchange:**\n* Site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions [SEC_10Q - Note 17]; exclusive NVIDIA reference architecture for at least 20 years [SEC_FORM - Section 20(e)]. Exceptions undisclosed.\n\n### 4. Implications for NVIDIA Equity Investor\n\n**Disclosed facts:**\n* Long-dated, phased contingent exposure: max $105bn cumulative for initial 4.25 GW, effective only at lease commencement, RFS from 2028 expected, 9 phases from FY2029 expected, 20-year amortization per phase.\n* Limited scope: defined portions only.\n* Offsets depend entirely on third parties and markets: relet/sale, insurance, Tenant Parent, OpenAI reimbursement/indemnity.\n* Additional 3.8 GW is optional at NVIDIA discretion, not a liability at analysis date.\n\n**Conditional economic interpretations \u2014 not disclosed facts:**\n* *If* no trigger occurs, *then* cash impact is zero, with potential benefit from exclusive infrastructure hosting / architecture lock-in. Value of exclusivity cannot be quantified from pack.\n* *If* trigger occurs, *then* loss equals shortfall formula up to cap, less uncertain recoveries. Cap must not be read as payable balance or expected loss.\n* Reimbursement value is conditional on OpenAI/tenant credit at time of stress \u2014 precisely when collectability is most uncertain. No provision, reserve, or fair value disclosed in pack.\n* Deferral/assumption options could alter timing but require specified (redacted) costs.\n\n### 5. Material Missing Terms Preventing Quantitative Risk Assessment\n\n* Redacted: Covered Loss Amount formula, discount rate, GMV schedules, pre-RFS payment, Liability Cap qualifications, redacted current-payment condition, specified deferral/option costs.\n* Unsupplied: full Lease, Tenant Parent guarantee terms, insurance coverage, definition of ready-for-service, notice/cure durations, customary termination events, satisfactory credit-rating threshold, relet/sale market assumptions, power/transmission cost pass-throughs, limited exceptions to exclusivity.\n* Form vs executed: execution date/counterparty blanks remain; final executed Agreements may differ.\n* No inputs supplied to model probability, timing, recovery rate, or present value. Definitive expected-loss or liquidity analysis is not possible on supplied evidence alone.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132881,
+        "id": "chatcmpl-01a17f0c-64c6-7432-9243-71fc14991942",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4204,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2381
+          },
+          "prompt_tokens": 1376,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 5580
+        }
+      },
+      "perspective": "equity_holder",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-26\", \"arrangement\": \"NVIDIA PORTS Technology Campus residual value guaranties\", \"case_id\": \"nvidia_ports_2026_disclosure\", \"documents\": [{\"accession\": \"0001045810-26-000069\", \"factual_paraphrase\": \"NVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for approximately 4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio. An affiliate of OpenAI Group PBC is tenant. An Agreement generally becomes effective when its lease commences. Payment conditions include lessor ready-for-service requirements, expected beginning in 2028. Trigger events are tenant insolvency causing lease default or failure to make lease payments. NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries. Remedies include assumption, reletting, sale, termination, or deferral up to a year with specified costs. Termination events include lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events. OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. The summary is qualified by the full agreement form.\", \"filed_on\": \"2026-08-17\", \"id\": \"SEC_8K\", \"locator\": \"Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA\\u2019s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA\\u2019s obligations'\", \"short_quote\": \"NVIDIA\\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\", \"title\": \"NVIDIA Form 8-K, Item 1.01, August 17, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"The filing reports August 2026 guarantees capped at $105 billion supporting approximately 4.25 GW at SB Energy's PORTS campus on behalf of an OpenAI affiliate. Each guarantee generally becomes effective at its lease commencement. Corresponding guarantee amounts increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease. The guarantees do not cover the entire site's cost or every tenant obligation. In exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions. NVIDIA also has a sole-discretion option to provide phased credit support for approximately 3.8 additional GW. The guarantee table includes the August signing even though the report period ended July 26, 2026.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_10Q\", \"locator\": \"Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table\", \"period_end\": \"2026-07-26\", \"short_quote\": \"Our guarantees are limited to defined portions of lease and power payments\", \"title\": \"NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"Form identifies NVIDIA as Guarantor; Landlord is an unnamed Delaware LLC. Tenant and Tenant Parent identities are redacted. Tenant Parent separately guarantees all tenant lease obligations (recital B). Section 1(d): shared cap across related guaranties; GMV covers data-center, power and transmission costs. Sections 1-2: Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires ready-for-service. A redacted pre-RFS termination payment is also defined. Section 2(c): some project costs do not reduce the cap; section 8 cap qualifications are redacted. Section 8: enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current. Collections reduce Liability Cap dollar-for-dollar. Section 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent. Section 12: notice, cure and verification periods apply; insolvency or monetary default requires Landlord's termination right and actual intent, not actual termination. Options: assumption, relet, sale, rejection or deferral up to one year with specified costs. Section 20(e): exclusive NVIDIA reference architecture for at least twenty years. Execution date/counterparty blanks and confidentiality redactions remain in this form.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_FORM\", \"locator\": \"Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules\", \"short_quote\": \"actually intends to terminate the Lease\", \"title\": \"NVIDIA Exhibit 10.1, Form of Residual Value Guaranty\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm\"}], \"preparation\": \"Historical primary-disclosure source pack. Parallax manually prepared factual paraphrases and short verbatim quotations from the SEC documents below, independently of any research coding. This is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings; later developments are outside this evaluation.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:27:37.004650+00:00"
+    },
+    {
+      "case_key": "nvidia-ports",
+      "cell_id": "nvidia-ports:senior_unsecured_creditor:guided:1",
+      "condition": "guided",
+      "finished_at": "2026-10-27T20:28:05.024456+00:00",
+      "model_generated": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "**Concise Structured Analysis \u2014 As of 2026-08-26**\n\n**Arrangement:** NVIDIA PORTS Technology Campus residual value guaranties for ~4.25 GW IT load at Portsmouth Site, Pike County, Ohio.\n\nThis pack is selected disclosure context, not complete filings or complete executed contract. The 8-K summary is qualified by the full agreement form. Dates/forecasts are filing dates only.\n\n### 1. Parties \u2014 Obligors vs. Beneficiaries\n\n**Direct obligors disclosed:**\n\n* Tenant \u2014 to Lessor/Landlord for lease payments. Tenant identified in narrative disclosure as \"affiliate of OpenAI Group PBC\" [SEC_8K - Item 1.01: Residual Value Guaranties, para. `On August 17`]. In Form, Tenant identity is redacted \u2014 do not infer which affiliate [SEC_FORM - Opening/recitals A-B].\n* Tenant Parent \u2014 separately guarantees \"all tenant lease obligations\" [SEC_FORM - recital B]. Identity redacted \u2014 do not infer.\n* Lessor/Landlord \u2014 must satisfy ready-for-service and other lease duties before Guarantor exposure. Narrative Lessor: \"SB Energy, including its affiliates\" [SEC_8K - Item 1.01, para. `On August 17`]. Form Landlord: \"unnamed Delaware LLC\" [SEC_FORM - Opening/recitals A-B]. Do not equate redacted LLC to a specific SB entity beyond disclosed group.\n\n**Contingent obligors:**\n\n* NVIDIA as Guarantor [SEC_FORM - Opening/recitals A-B; SEC_10Q - Note 17, Guarantees, para. headed `SB Energy Corp. guarantees`]. Obligation is contingent, not a direct lease debt. Becomes effective generally only at lease commencement [SEC_8K - Item 1.01, para. `Pursuant to`; SEC_10Q - Note 17].\n* OpenAI \u2014 agrees \"to reimburse and indemnify amounts NVIDIA actually pays the Lessor\" [SEC_8K - Item 1.01, para. `NVIDIA's obligations`]. This is a contingent reimbursement to NVIDIA, not a direct obligation to Lessor. Exact OpenAI obligor entity and agreement terms not in pack.\n\n**Beneficiaries:**\n\n* Primary: Lessor/Landlord \u2014 recipient of any Guarantor shortfall payment [SEC_8K - Item 1.01, para. `Upon a Trigger Event`; SEC_FORM - Sections 1-2].\n* Secondary / commercial: NVIDIA \u2014 site \"exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions\" [SEC_10Q - Note 17] and exclusive NVIDIA reference architecture for at least twenty years [SEC_FORM - Section 20(e)]. This is disclosed commercial benefit, not a credit recovery.\n\n### 2. Effectiveness and Payment Triggers\n\n**Effectiveness \u2014 disclosed fact:**\n\n* Each Agreement \"generally becomes effective when its lease commences\" [SEC_8K; SEC_10Q].\n* Payment requires lessor ready-for-service [RFS]; expected beginning in 2028 [SEC_8K - Item 1.01, para. `Pursuant to`; SEC_FORM - Sections 1-2].\n* Nine construction phases; guarantee amounts increase with completion, first expected fiscal 2029, then decrease over each phase's twenty-year lease [SEC_10Q - Note 17]. 10-Q period ended July 26, 2026 but table includes August signing [SEC_10Q - factual context].\n\n**Triggers \u2014 disclosed fact:**\n\n* \"tenant insolvency causing lease default or failure to make lease payments\" [SEC_8K - Item 1.01, para. `Upon a Trigger Event`].\n* Form adds process conditions: notice, cure and verification periods apply; for insolvency or monetary default, Landlord must have termination right and \"actually intends to terminate the Lease\" \u2014 not actual termination [SEC_FORM - Section 12(a)(i)-(v)].\n* A redacted pre-RFS termination payment is also defined, but formula not disclosed [SEC_FORM - Sections 1-2].\n\n**Payment measure \u2014 disclosed fact:**\n\n* NVIDIA pays \"generally the shortfall between guaranteed minimum lease value [GMV] and replacement-lease or sale recoveries\" [SEC_8K - Item 1.01, para. `Upon a Trigger Event`].\n* GMV covers data-center, power and transmission costs [SEC_FORM - Section 1(d)].\n* Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires RFS [SEC_FORM - Sections 1-2; redacted schedules].\n* Guarantees are \"limited to defined portions of lease and power payments\" and \"do not cover the entire site's cost or every tenant obligation\" [SEC_10Q - Note 17].\n\n### 3. Contractual Limits\n\n**Disclosed fact \u2014 cap is maximum, not payable balance:**\n\n> \"NVIDIA's aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\" [SEC_8K - Item 1.01, para. `NVIDIA's aggregate`]\n\n* Shared cap across related guaranties [SEC_FORM - Section 1(d)].\n* Some project costs do not reduce cap; Section 8 cap qualifications redacted [SEC_FORM - Section 2(c); Section 8].\n* Phase profile: exposure builds with phases then amortizes over 20 years per phase [SEC_10Q - Note 17].\n\nDo not interpret $105bn as expected loss, liability accrued, or amount due.\n\n### 4. Recoveries and Mitigants\n\n**Disclosed facts:**\n\n* Collections reduce Liability Cap dollar-for-dollar [SEC_FORM - Section 8].\n* Landlord enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current [SEC_FORM - Section 8]. Specified payments redacted.\n* Subrogation postponed behind Landlord; recoupment solely against Tenant/Tenant Parent [SEC_FORM - Section 5].\n* OpenAI reimbursement/indemnity for amounts actually paid [SEC_8K - Item 1.01].\n\nNo collateral, security, set-off, or priority of reimbursement/subrogation vs. other creditors disclosed.\n\n### 5. Lessor Remedies on Trigger\n\n**Disclosed facts [SEC_8K - Item 1.01; SEC_FORM - Section 12]:**\n\n* assumption, reletting, sale, termination/rejection, or deferral up to a year with specified costs.\n* Specified deferral costs redacted.\n\nRemedies determine replacement-lease/sale recoveries that reduce shortfall, but valuation mechanics not disclosed.\n\n### 6. Termination / Expiry and Optionality\n\n**Disclosed termination events [SEC_8K - Item 1.01, para. `NVIDIA's obligations`]:**\n\n* lease commencement's twentieth anniversary,\n* tenant termination under lease terms,\n* satisfactory OpenAI credit rating,\n* customary events.\n\nRating threshold, lease termination rights, and customary events not disclosed.\n\n**Optionality \u2014 not an obligation:**\n\n* NVIDIA has \"sole-discretion option to provide phased credit support for approximately 3.8 additional GW\" [SEC_10Q - Note 17]. Terms, cap, pricing not disclosed. Do not add to $105bn exposure.\n\n### 7. Implications for Senior Unsecured Creditor of NVIDIA\n\n**Disclosed facts relevant to credit:**\n\n* Contingent, long-dated exposure: RFS from 2028, first phase FY2029, 20-year tenor per phase implies horizon into 2040s-2050s if phases stagger; no payment due absent effectiveness + RFS + Trigger + process conditions.\n* Maximum contractual quantum for initial commitment is $105bn gross before recoveries, reimbursements, and cap reductions. This is not a balance-sheet liability amount in the pack.\n\n**Conditional economic interpretation \u2014 not disclosed fact:**\n\n* *If* leases commence, RFS is met, and a Trigger occurs, *then* creditor would face: (a) potential large cash outflow equal to shortfall up to remaining cap, increasing claims on enterprise cash flow; (b) delayed/uncertain recoveries because subrogation is junior to Landlord, recoupment is only vs. Tenant/Tenant Parent, and OpenAI reimbursement depends on OpenAI performance; (c) timing risk from up-to-1-year deferral and relet/sale execution.\n* *If* no Trigger occurs, cash impact is zero and exclusive-use benefit remains commercial only.\n* Mitigants that *could* reduce loss \u2014 replacement rent/sale proceeds, insurance, Tenant Parent pursuit, OpenAI indemnity \u2014 are disclosed as concepts only; amounts, enforceability and timing are undisclosed.\n\nNo ranking conclusion: pack does not disclose priority of guaranty vs. senior unsecured notes, covenants, cross-default, funding commitments, or liquidity backstop. Do not assume pari passu, senior, subordinated, or secured treatment.\n\n### 8. Material Missing Terms / Uncertainties Preventing Quantitative Risk Assessment\n\n* Redacted economics: Covered Loss Amount formula, GMV schedules, discount rate, pre-RFS payment, deferral costs, keep-current payments, Section 8 cap qualifications.\n* Unfiled operative documents: executed leases, Tenant Parent guarantee, tenant insurance, OpenAI reimbursement/indemnity agreement, power/transmission cost components.\n* Undefined triggers/thresholds: RFS criteria, cure/verification periods, \"satisfactory\" OpenAI rating, tenant lease termination rights, customary termination events, Landlord termination-right standard.\n* Valuation/enforcement: replacement lease/sale process, who controls relet/sale, appraisal method, collection allocation, dollar-for-dollar cap-reduction timing.\n* Counterparty/credit: redacted Tenant/Tenant Parent/Landlord identities, tenant and OpenAI credit capacity, SB Energy performance risk.\n* Accounting/timing: recognition, cash-settlement timing, currency, tax, treatment of phased build and 20-year amortization.\n* Future option: terms for optional 3.8 GW support.\n\nWithout these, no expected loss, probability-weighted exposure, liquidity impact, or rating effect can be definitively quantified from this pack alone.\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1793132896,
+        "id": "chatcmpl-01a17f0c-9f50-7454-a6e8-e12f0cb6b727",
+        "model": "muse-spark-1.3",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 4687,
+          "completion_tokens_details": {
+            "reasoning_tokens": 2553
+          },
+          "prompt_tokens": 1378,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 6065
+        }
+      },
+      "perspective": "senior_unsecured_creditor",
+      "request": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+            "role": "developer"
+          },
+          {
+            "content": "{\"analysis_as_of\": \"2026-08-26\", \"arrangement\": \"NVIDIA PORTS Technology Campus residual value guaranties\", \"case_id\": \"nvidia_ports_2026_disclosure\", \"documents\": [{\"accession\": \"0001045810-26-000069\", \"factual_paraphrase\": \"NVIDIA entered multiple residual value guaranties with SB Energy, including its affiliates, as Lessor for approximately 4.25 GW of IT load at the Portsmouth Site in Pike County, Ohio. An affiliate of OpenAI Group PBC is tenant. An Agreement generally becomes effective when its lease commences. Payment conditions include lessor ready-for-service requirements, expected beginning in 2028. Trigger events are tenant insolvency causing lease default or failure to make lease payments. NVIDIA pays generally the shortfall between guaranteed minimum lease value and replacement-lease or sale recoveries. Remedies include assumption, reletting, sale, termination, or deferral up to a year with specified costs. Termination events include lease commencement's twentieth anniversary, tenant termination under lease terms, satisfactory OpenAI credit rating, and customary events. OpenAI agrees to reimburse and indemnify amounts NVIDIA actually pays the Lessor. The summary is qualified by the full agreement form.\", \"filed_on\": \"2026-08-17\", \"id\": \"SEC_8K\", \"locator\": \"Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA\\u2019s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA\\u2019s obligations'\", \"short_quote\": \"NVIDIA\\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.\", \"title\": \"NVIDIA Form 8-K, Item 1.01, August 17, 2026\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"The filing reports August 2026 guarantees capped at $105 billion supporting approximately 4.25 GW at SB Energy's PORTS campus on behalf of an OpenAI affiliate. Each guarantee generally becomes effective at its lease commencement. Corresponding guarantee amounts increase with completion of nine construction phases, the first expected in fiscal 2029, then decrease over each phase's twenty-year lease. The guarantees do not cover the entire site's cost or every tenant obligation. In exchange, the site exclusively hosts NVIDIA AI infrastructure, subject to limited exceptions. NVIDIA also has a sole-discretion option to provide phased credit support for approximately 3.8 additional GW. The guarantee table includes the August signing even though the report period ended July 26, 2026.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_10Q\", \"locator\": \"Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table\", \"period_end\": \"2026-07-26\", \"short_quote\": \"Our guarantees are limited to defined portions of lease and power payments\", \"title\": \"NVIDIA Form 10-Q, Note 17, SB Energy Corp. guarantees\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm\"}, {\"accession\": \"0001045810-26-000075\", \"factual_paraphrase\": \"Form identifies NVIDIA as Guarantor; Landlord is an unnamed Delaware LLC. Tenant and Tenant Parent identities are redacted. Tenant Parent separately guarantees all tenant lease obligations (recital B). Section 1(d): shared cap across related guaranties; GMV covers data-center, power and transmission costs. Sections 1-2: Covered Loss Amount formula, discount rate and schedule values are redacted; Covered Loss Amount requires ready-for-service. A redacted pre-RFS termination payment is also defined. Section 2(c): some project costs do not reduce the cap; section 8 cap qualifications are redacted. Section 8: enforcement requires concurrent pursuit of tenant insurance and commercially reasonable Tenant Parent remedies, conditional on Guarantor keeping specified redacted payments current. Collections reduce Liability Cap dollar-for-dollar. Section 5: subrogation is postponed behind Landlord; recoupment is solely against Tenant/Tenant Parent. Section 12: notice, cure and verification periods apply; insolvency or monetary default requires Landlord's termination right and actual intent, not actual termination. Options: assumption, relet, sale, rejection or deferral up to one year with specified costs. Section 20(e): exclusive NVIDIA reference architecture for at least twenty years. Execution date/counterparty blanks and confidentiality redactions remain in this form.\", \"filed_on\": \"2026-08-26\", \"id\": \"SEC_FORM\", \"locator\": \"Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules\", \"short_quote\": \"actually intends to terminate the Lease\", \"title\": \"NVIDIA Exhibit 10.1, Form of Residual Value Guaranty\", \"url\": \"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm\"}], \"preparation\": \"Historical primary-disclosure source pack. Parallax manually prepared factual paraphrases and short verbatim quotations from the SEC documents below, independently of any research coding. This is selected disclosure context, not the complete filings or a complete executed contract. Dates and forecasts are those of the filings; later developments are outside this evaluation.\"}",
+            "role": "user"
+          }
+        ],
+        "model": "muse-spark-1.3"
+      },
+      "sample": 1,
+      "status": "completed",
+      "submitted_at": "2026-10-27T20:27:50.012808+00:00"
+    }
+  ],
+  "experiment": "prompt_guidance_ablation_v1",
+  "finished_at": "2026-10-27T20:28:05.031088+00:00",
+  "model": "muse-spark-1.3",
+  "notes": "Independent conversations; no retries; no historical responses or references submitted. All prompts and provider JSON preserved. Conditions are unblinded researcher data; do not give this file to a blinded reviewer.",
+  "protocol_file": "protocols/guidance-ablation-v1.json",
+  "protocol_sha256": "37258fd4bd8a4d02eda9717dca46a55269b91f1b14a44b4904f7e819a2100d11",
+  "protocol_snapshot": {
+    "cells": [
+      {
+        "case_key": "coreweave-deposit",
+        "cell_id": "coreweave-deposit:equity_holder:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+        "perspective": "equity_holder",
+        "request_sha256": "e97adac4fff465e83bb36852b70876b7e93373ac80917c45923fc988b2dccef8",
+        "sample": 1
+      },
+      {
+        "case_key": "meta-capacity",
+        "cell_id": "meta-capacity:equity_holder:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+        "perspective": "equity_holder",
+        "request_sha256": "313921a3884efb9f091836816c6da922cb98e18d06c07840e737588a9c690335",
+        "sample": 1
+      },
+      {
+        "case_key": "meta-capacity",
+        "cell_id": "meta-capacity:senior_unsecured_creditor:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of Meta Platforms. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "01e3ac7736896d188e601bd07c633ed390f7507ec2e5e63cbc197646f4ecdcbb",
+        "sample": 1
+      },
+      {
+        "case_key": "meta-capacity",
+        "cell_id": "meta-capacity:equity_holder:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+        "perspective": "equity_holder",
+        "request_sha256": "d3ebdc74d5e8a04b0a8d80f5b9e6bea4580a23f10b03d0e3852f351747d1b587",
+        "sample": 1
+      },
+      {
+        "case_key": "nvidia-ports",
+        "cell_id": "nvidia-ports:equity_holder:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of an equity investor in NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+        "perspective": "equity_holder",
+        "request_sha256": "6808ded1c41871309ca02254a95c32cd174a3da292075a46d3a45399f48fa08a",
+        "sample": 1
+      },
+      {
+        "case_key": "coreweave-deposit",
+        "cell_id": "coreweave-deposit:senior_unsecured_creditor:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "885cd1314eab5268a8f790b690ba4b705d0d95fd946d8fc346700c739c909bc8",
+        "sample": 1
+      },
+      {
+        "case_key": "meta-capacity",
+        "cell_id": "meta-capacity:senior_unsecured_creditor:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of Meta Platforms. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "a9e60ff63745d64dfac3dadd1d66517d82edd6247141da63a6b0bff591fd14e8",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "255e12ae259d452defe58484f3b4141f3562446d070b25b917d67e46e5f27809",
+        "sample": 1
+      },
+      {
+        "case_key": "coreweave-deposit",
+        "cell_id": "coreweave-deposit:equity_holder:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in CoreWeave. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+        "perspective": "equity_holder",
+        "request_sha256": "287ec2dd5246f0315e2639b1b00acfb2efd8f7cd311f37dce64646e15878c8f0",
+        "sample": 1
+      },
+      {
+        "case_key": "nvidia-ports",
+        "cell_id": "nvidia-ports:senior_unsecured_creditor:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of NVIDIA. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "f3e06e8b199d41343777fbec990227b74e6ce171612c22bf4e692d3f797969fe",
+        "sample": 1
+      },
+      {
+        "case_key": "coreweave-deposit",
+        "cell_id": "coreweave-deposit:senior_unsecured_creditor:neutral:1",
+        "condition": "neutral",
+        "developer_instruction": "Analyze the supplied financing arrangement from the perspective of a senior unsecured creditor of CoreWeave. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+        "evidence_message_sha256": "180c8ddc4e840b119b5aea694493eb577bed30535b6d162be8d80998916a96a9",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "d80b4c6535d4993ccd0867de0648e500c3086fdc411ab81d6b80d8b9ffedc514",
+        "sample": 1
+      },
+      {
+        "case_key": "nvidia-ports",
+        "cell_id": "nvidia-ports:equity_holder:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for an equity investor in NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+        "perspective": "equity_holder",
+        "request_sha256": "d76ed98e818e2f1590a6ae355c90dbaf302f4002c71f84f5b1744bcfe793ee76",
+        "sample": 1
+      },
+      {
+        "case_key": "nvidia-ports",
+        "cell_id": "nvidia-ports:senior_unsecured_creditor:guided:1",
+        "condition": "guided",
+        "developer_instruction": "Analyze only the single financing arrangement in the supplied historical SEC-disclosure source pack, as of its analysis date. Identify contractual obligors and beneficiaries, distinguishing direct from contingent obligations. Explain payment triggers, effectiveness, contractual limits, recoveries, remedies and termination terms. Assess the implications for a senior unsecured creditor of NVIDIA. Distinguish disclosed facts from conditional economic interpretations. Cite document IDs and provision locators. Disclose material missing terms and uncertainties preventing definitive quantitative risk assessment. Use only the supplied evidence; do not infer redacted identities, invent financial inputs, assume a creditor ranking, or turn a disclosed cap into an expected loss or payable balance. No outside research or dataset classifications are available. Give a concise, structured analysis.",
+        "evidence_message_sha256": "b898a302f57ffdcedea04838df643d64464ba30341023af8c77227557ce08e32",
+        "perspective": "senior_unsecured_creditor",
+        "request_sha256": "86f51557e0ca366f9a83c434c9dc7826761003bf866aa1f12a75e14ffcc44e8f",
+        "sample": 1
+      }
+    ],
+    "created_at": "2026-10-27T20:21:55.161978+00:00",
+    "endpoint": "https://api.meta.ai/v1/chat/completions",
+    "execution_seed": 20261027,
+    "experiment": "prompt_guidance_ablation_v1",
+    "judgment_fields": [
+      "investor_implications",
+      "missing_information",
+      "unsupported_assumptions"
+    ],
+    "model": "muse-spark-1.3",
+    "narrative_file": "protocols/guidance-ablation-v1.md",
+    "narrative_sha256": "bf9aa6cb25ca98dc359055d629296f82fcd6d2c3318d6ed6dede36e5479adcd9",
+    "neutral_template": "Analyze the supplied financing arrangement from the perspective of {investor}. Explain its economic significance, cite supporting evidence, and identify material uncertainties.",
+    "objective_fields": [
+      "obligors_beneficiaries",
+      "obligation_classification",
+      "limits_triggers",
+      "disclosed_amounts",
+      "citations"
+    ],
+    "protocol_schema_version": 1,
+    "samples": 1,
+    "source_versions": {
+      "coreweave-deposit": {
+        "annotations_sha256": "974eabc25a0ba71bbb9025ee2d15707523417d723c09a5174ea2afef0ddde9fd",
+        "dataset": {
+          "author": "Alexander F. Wagner",
+          "license": "CC BY 4.0",
+          "license_file": "CC-BY-4.0.txt",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+          "retrieved_on": "2026-10-27",
+          "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+          "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+          "version": "1.1"
+        },
+        "evidence_sha256": "cecb7da8605f7a54a93c4c6025c0942aebb297150233aa34740c91f94d37cdf4",
+        "primary_sources": [
+          {
+            "accession": "0001769628-26-000104",
+            "filed_on": "2026-03-02",
+            "id": "CRWV_10K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+          },
+          {
+            "accession": "0001769628-26-000366",
+            "filed_on": "2026-08-12",
+            "id": "CRWV_10Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm"
+          }
+        ],
+        "reference_sha256": "f6b3d43d10fa2de270d6faf604bf6a7910ce37539738243d1ebcf158e0366ce1",
+        "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+      },
+      "meta-capacity": {
+        "annotations_sha256": "741a375720583d8e14005635081300d3ad736f2220c92437b53bbd5bb586d6d4",
+        "dataset": {
+          "author": "Alexander F. Wagner",
+          "license": "CC BY 4.0",
+          "license_file": "CC-BY-4.0.txt",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+          "retrieved_on": "2026-10-27",
+          "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+          "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+          "version": "1.1"
+        },
+        "evidence_sha256": "e9ee4feee125985b0fa42475b0eb6d04c71e452b15deee4e9baf40138ebbb860",
+        "primary_sources": [
+          {
+            "accession": "0001628280-26-050705",
+            "filed_on": "2026-07-30",
+            "id": "META_10Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+          }
+        ],
+        "reference_sha256": "636b6183c09481285b6a83f005fab5229620ce316f6a14b8de9013a1cd472504",
+        "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+      },
+      "nvidia-ports": {
+        "annotations_sha256": "587e5cf9dc2d0bb5320651fbd71b24e83cc53182205079a099344b204ab9da39",
+        "dataset": {
+          "author": "Alexander F. Wagner",
+          "license": "CC BY 4.0",
+          "license_file": "CC-BY-4.0.txt",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "repository": "https://github.com/alex-wagner-research/leverage-beyond-debt",
+          "retrieved_on": "2026-10-27",
+          "revision": "98c8bba76a453e117f4b07de1881e4f5e08dd8f6",
+          "title": "Leverage Beyond Debt: Evidence from the AI Build-Out (data)",
+          "version": "1.1"
+        },
+        "evidence_sha256": "6734c41c86eba5c2f1a6eba5a319dea5b71f1fca2564cd27b78431ecc15a9622",
+        "primary_sources": [
+          {
+            "accession": "0001045810-26-000069",
+            "filed_on": "2026-08-17",
+            "id": "SEC_8K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+          },
+          {
+            "accession": "0001045810-26-000075",
+            "filed_on": "2026-08-26",
+            "id": "SEC_10Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+          },
+          {
+            "accession": "0001045810-26-000075",
+            "filed_on": "2026-08-26",
+            "id": "SEC_FORM",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm"
+          }
+        ],
+        "reference_sha256": "2484589c17509b49d8f8ca6473cdd458e564d7ee43d426308db2d1d4c6cd31d0",
+        "registry_sha256": "277ab9d19291efd04625ec376ee66a25497812fc10f63750c9fdde621bf422cb"
+      }
+    }
+  },
+  "python_version": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "runner_sha256": "236117a57e96320c4bd5e43a4b7c0da04eb044edf70c4c7eaab3e4b28a408984",
+  "samples": 1,
+  "started_at": "2026-10-27T20:25:10.840044+00:00",
+  "working_tree_dirty": false
+}

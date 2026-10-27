@@ -1,0 +1,720 @@
+{
+  "answers": [
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Relevant creditor cash-call, reimbursement, concentration and liquidity channels are covered, but pari-passu default is unsupported; legal claim priority is not disclosed.",
+          "response_excerpt": "To the extent funded, it would compete pari passu",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Recognizes formulas, phase timing, indemnitor credit, executed terms and accounting inputs are absent. Fiscal2029 versus calendar2028 is not itself proof of conflicting forecasts.",
+          "response_excerpt": "you cannot size expected loss",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Cap applies to contractual payments measured using shortfall mechanics, not established LGD before recoveries; cap qualifications/pre-RFS costs are redacted. Also calls reimbursement an unsecured promise without evidence, defaults to pari passu, and states correlated cash-flow stress as likely rather than a scenario.",
+          "response_excerpt": "Treat $105bn as maximum loss-given-default before recoveries",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Accession/document identifiers and Item 1.01, Note 17, Sections 1/2/5/8/12/20(e) correspond to supplied source locations. Citation presence is checked against the pack; unsupported interpretations noted separately are not validated by those citations.",
+          "response_excerpt": "0001045810-26-000069",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Preserves initial shared USD105bn cap, 4.25GW, nine phases, twenty-year leases and optional 3.8GW. No newly computed leverage, probability or recovery estimate; magnitude alone does not establish expected loss.",
+          "response_excerpt": "$105",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core triggers and caps preserved, but final LGD interpretation and pari-passu/default unsecured assumptions are not disclosed. See unsupported_assumptions.",
+          "response_excerpt": "Treat $105bn as maximum loss-given-default before recoveries",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Preserves contingent residual-value support and discretionary additional 3.8 GW option rather than current borrowing principal. Compare SEC_8K and SEC_10Q Note 17.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies NVIDIA guarantor, SB Energy/affiliated lessor, OpenAI-affiliated tenant, separate Tenant Parent guarantee and OpenAI reimbursement. Does not supply redacted entity names. Compare SEC_8K Item 1.01 and SEC_FORM recitals/Section 5.",
+          "response_excerpt": "NVIDIA",
+          "status": "supported"
+        }
+      },
+      "review_id": "R001"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Equity-specific exclusive-platform upside is weighed against contingent cash burden, residual value and indemnitor collectability. No valuation estimate invented.",
+          "response_excerpt": "Strategic consideration - demand lock-in",
+          "status": "supported"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Lists redacted economics, enforcement and counterparty capacity; recognizes pre-RFS uncertainty. Different fiscal/calendar labels need not conflict.",
+          "response_excerpt": "Quantification blocked by redactions",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Optional support has undisclosed terms/cap; magnitude and aggregate treatment are not established. Also calls105bn maximum cash exposure despite redacted cap qualifications and infers lease noncommencement from subsequent-event disclosure. These are unsupported assertions, not arithmetic errors.",
+          "response_excerpt": "would materially expand contingent exposure beyond the $105bn initial cap",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Accession/document identifiers and Item 1.01, Note 17, Sections 1/2/5/8/12/20(e) correspond to supplied source locations. Citation presence is checked against the pack; unsupported interpretations noted separately are not validated by those citations.",
+          "response_excerpt": "0001045810-26-000069",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Preserves initial shared USD105bn cap, 4.25GW, nine phases, twenty-year leases and optional 3.8GW. No newly computed leverage, probability or recovery estimate; magnitude alone does not establish expected loss.",
+          "response_excerpt": "$105",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core mechanics preserved; size of discretionary expansion and absence of lease commencement not established by supplied terms.",
+          "response_excerpt": "would materially expand",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Preserves contingent residual-value support and discretionary additional 3.8 GW option rather than current borrowing principal. Compare SEC_8K and SEC_10Q Note 17.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies NVIDIA guarantor, SB Energy/affiliated lessor, OpenAI-affiliated tenant, separate Tenant Parent guarantee and OpenAI reimbursement. Does not supply redacted entity names. Compare SEC_8K Item 1.01 and SEC_FORM recitals/Section 5.",
+          "response_excerpt": "NVIDIA",
+          "status": "supported"
+        }
+      },
+      "review_id": "R002"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Creditor liquidity/mitigation channels and possible commercial benefit are discussed, but de facto priority and mandatory funding/debt issuance conclusions exceed supplied evidence.",
+          "response_excerpt": "operationally this competes ahead of you for cash",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Recognizes missing trigger, ranking, cancellation, supplier identity, timing and resale mechanics. Those caveats do not cure contradictory confident statements elsewhere.",
+          "response_excerpt": "Trigger and payment terms unknown",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Unsupported usage optionality; says weak resale means full cost despite unknown triggers, assumes off-balance-sheet/lease accounting, claims default probability must rise, and prescribes zero mitigation as a baseline. Such assumptions could be explicit stress scenarios, not established case facts.",
+          "response_excerpt": "Meta presumably only draws if it needs",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Source accession/URL or META_10Q and Note 9/MD&A locator correspond to supplied pack. The resale quotation matches. Economic claims are assessed separately; this is not independent full-filing citation validation.",
+          "response_excerpt": "0001628280-26-050705",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "USD14.72bn over five years and separate USD349.31bn/53.52bn/81.65bn context are retained without using aggregate due amounts as the arrangement schedule.",
+          "response_excerpt": "$14.72",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves five-year up-to amount and possible provider resale reduction, states precise triggers, annual schedule and cancellation rights are missing. No contractual floor or guaranteed resale assigned.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Recognizes contingent capacity purchase rather than another borrower guarantee or funded principal. Contingency describes payment conditions, not absence of a direct contractual Meta commitment.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies Meta purchaser and unnamed cloud provider; no Nebius identity imported from annotations. Compare META_10Q Note 9 contingent-capacity paragraph.",
+          "response_excerpt": "Meta",
+          "status": "supported"
+        }
+      },
+      "review_id": "R003"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Covers equity cash-use downside and commercial exclusivity upside, but categorical zero cash absent trigger is not established for all contractual costs; pre-RFS payment and keep-current obligations are redacted.",
+          "response_excerpt": "If* no trigger occurs",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Explicitly preserves redacted formula, pre-RFS, cap, insurance and counterparty unknowns; no quantitative valuation or expected loss supplied.",
+          "response_excerpt": "No inputs supplied to model probability",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Zero is overconfident given unknown pre-RFS/other payments. Shortfall up to cap less uncertain recoveries is ambiguous because relet/sale already enter shortfall; possible double subtraction is a wording concern, not proven numeric double counting.",
+          "response_excerpt": "then* cash impact is zero",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Accession/document identifiers and Item 1.01, Note 17, Sections 1/2/5/8/12/20(e) correspond to supplied source locations. Citation presence is checked against the pack; unsupported interpretations noted separately are not validated by those citations.",
+          "response_excerpt": "SEC_FORM",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Preserves initial shared USD105bn cap, 4.25GW, nine phases, twenty-year leases and optional 3.8GW. No newly computed leverage, probability or recovery estimate; magnitude alone does not establish expected loss.",
+          "response_excerpt": "$105",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core triggers present, but redacted pre-RFS and keep-current payments prevent universal zero-cash conclusion.",
+          "response_excerpt": "then* cash impact is zero",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Preserves contingent residual-value support and discretionary additional 3.8 GW option rather than current borrowing principal. Compare SEC_8K and SEC_10Q Note 17.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies NVIDIA guarantor, SB Energy/affiliated lessor, OpenAI-affiliated tenant, separate Tenant Parent guarantee and OpenAI reimbursement. Does not supply redacted entity names. Compare SEC_8K Item 1.01 and SEC_FORM recitals/Section 5.",
+          "response_excerpt": "NVIDIA",
+          "status": "supported"
+        }
+      },
+      "review_id": "R004"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Relevant refund/termination, liquidity and capacity-flexibility discussion, but no senior unsecured maturity is supplied. Recourse classification does not establish entity-level structural ranking or that either maturity interpretation must be negative.",
+          "response_excerpt": "Cash already left the enterprise ahead of any senior unsecured maturity",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Lists missing security, put mechanics, maturity/current reconciliation, profit share and service use. The acknowledgement conflicts with overconfident structural/recovery language elsewhere.",
+          "response_excerpt": "cannot determine recovery or relative priority",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Unsupported structural priority and maturity comparison. No operating offset/no corresponding EBITDA ignores possible other-customer services and profit share. Future accretion and demand-like timing require mechanics; current classification is not proof of unconditional immediate callability.",
+          "response_excerpt": "rather than being structurally subordinated beneath them",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "CRWV_10K/10Q identifiers or exact supplied URLs/accessions and Note 10 Magnetar Loan/table locators correspond to source pack. Unsupported extensions are not certified merely because adjacent facts have correct citations.",
+          "response_excerpt": "CRWV_10Q",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Retains USD230m original receipt, USD273m Dec2025 carrying including USD43m premium, USD100m June settlement and USD189m June2026 carrying, plus 12% effective return. These are dated amounts, not an additional exposure layered on reported debt.",
+          "response_excerpt": "$189",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves unused-deposit refund, negotiated consumption deductions, both-party termination rights, 12%-equivalent multiplier, four-year initial term/two-year extension and January2029 table maturity. Notice timing and relative priority remain unknown.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Correctly identifies already-recognized in-substance recourse debt, refund obligation, termination-conditioned premium and MagAI extension option, not off-balance-sheet guarantee.",
+          "response_excerpt": "in-substance",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies CoreWeave refund/service obligor and MagAI depositor/beneficiary; keeps disclosed Magnetar Loan note heading without inventing a distinct guarantor. Compare CRWV_10K/10Q Note 10.",
+          "response_excerpt": "CoreWeave",
+          "status": "supported"
+        }
+      },
+      "review_id": "R005"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Creditor liquidity, timing and unknown ranking are covered. Material omission: no economic discussion of capacity received or commercial benefit that might support enterprise cash generation, despite careful treatment of cash burden. This is an omission, not a false assertion.",
+          "response_excerpt": "potentially reducing cash available",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Acknowledges unknown triggers, annual schedule, resale, collateral and priority. Does not invent recovery or default probability.",
+          "response_excerpt": "definitive assessment of timing",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Applies the generic variable-term measurement policy directly to this14.72bn calculation, whose applicability is not established; later claims exposure may differ either direction. Core terms remain correct. Direct obligation none disclosed is defensible only as no unconditional payment, not no direct Meta contractual obligation.",
+          "response_excerpt": "Further limited for variable-term agreements",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Source accession/URL or META_10Q and Note 9/MD&A locator correspond to supplied pack. The resale quotation matches. Economic claims are assessed separately; this is not independent full-filing citation validation.",
+          "response_excerpt": "META_10Q",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "USD14.72bn over five years and separate USD349.31bn/53.52bn/81.65bn context are retained without using aggregate due amounts as the arrangement schedule.",
+          "response_excerpt": "$14.72",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core resale/five-year limits retained; generic variable-term policy applied to this arrangement without established applicability.",
+          "response_excerpt": "Further limited for variable-term agreements",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Recognizes contingent capacity purchase rather than another borrower guarantee or funded principal. Contingency describes payment conditions, not absence of a direct contractual Meta commitment.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies Meta purchaser and unnamed cloud provider; no Nebius identity imported from annotations. Compare META_10Q Note 9 contingent-capacity paragraph.",
+          "response_excerpt": "Meta",
+          "status": "supported"
+        }
+      },
+      "review_id": "R006"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Discusses distributions, flexibility, strategy and mitigation, but emphasizes cash claims without recognizing capacity consideration as potentially offsetting value. Does not quantify equity loss; conditional distribution effect is reasonable.",
+          "response_excerpt": "lower distributable cash flow",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Recognizes trigger, timing, pricing, resale and provider unknowns and correctly questions generic measurement-policy applicability.",
+          "response_excerpt": "What causes the full $14.72bn",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Unsupported default unsecured status immediately after saying security/ranking unspecified. Duration implies inflexibility and management demand expectations without terms establishing them. Off-balance-sheet characterization is unverified; no invented debt balance or expected-loss number.",
+          "response_excerpt": "treat as an unsecured executory purchase commitment unless proven otherwise",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Source accession/URL or META_10Q and Note 9/MD&A locator correspond to supplied pack. The resale quotation matches. Economic claims are assessed separately; this is not independent full-filing citation validation.",
+          "response_excerpt": "0001628280-26-050705",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "USD14.72bn over five years and separate USD349.31bn/53.52bn/81.65bn context are retained without using aggregate due amounts as the arrangement schedule.",
+          "response_excerpt": "$14.72",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves five-year up-to amount and possible provider resale reduction, states precise triggers, annual schedule and cancellation rights are missing. No contractual floor or guaranteed resale assigned.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Recognizes contingent capacity purchase rather than another borrower guarantee or funded principal. Contingency describes payment conditions, not absence of a direct contractual Meta commitment.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies Meta purchaser and unnamed cloud provider; no Nebius identity imported from annotations. Compare META_10Q Note 9 contingent-capacity paragraph.",
+          "response_excerpt": "Meta",
+          "status": "supported"
+        }
+      },
+      "review_id": "R007"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Equity analysis weighs refund liquidity/interest burden against future consumption and capacity profit-share flexibility; refinancing is conditional rather than required.",
+          "response_excerpt": "potentially requiring refinancing",
+          "status": "supported"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Correctly separates dated carrying from future termination payoff and requests multiplier, timing, service and security inputs.",
+          "response_excerpt": "whether $189M at June 30, 2026 equals cash due",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Conditional framing avoids current payoff, creditor-ranking or expected-loss estimates. No material unsupported assertion identified within scope; this is not exhaustive full-contract certification.",
+          "response_excerpt": "not a forecast that termination will occur",
+          "status": "supported"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "CRWV_10K/10Q identifiers or exact supplied URLs/accessions and Note 10 Magnetar Loan/table locators correspond to source pack. Unsupported extensions are not certified merely because adjacent facts have correct citations.",
+          "response_excerpt": "CRWV_10Q",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Retains USD230m original receipt, USD273m Dec2025 carrying including USD43m premium, USD100m June settlement and USD189m June2026 carrying, plus 12% effective return. These are dated amounts, not an additional exposure layered on reported debt.",
+          "response_excerpt": "$189",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves unused-deposit refund, negotiated consumption deductions, both-party termination rights, 12%-equivalent multiplier, four-year initial term/two-year extension and January2029 table maturity. Notice timing and relative priority remain unknown.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Correctly identifies already-recognized in-substance recourse debt, refund obligation, termination-conditioned premium and MagAI extension option, not off-balance-sheet guarantee.",
+          "response_excerpt": "in-substance",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies CoreWeave refund/service obligor and MagAI depositor/beneficiary; keeps disclosed Magnetar Loan note heading without inventing a distinct guarantor. Compare CRWV_10K/10Q Note 10.",
+          "response_excerpt": "CoreWeave",
+          "status": "supported"
+        }
+      },
+      "review_id": "R008"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Equity cash-distribution downside is balanced with capacity consideration, resale mitigation and unknown value-for-money; no mandated different answer or valuation number.",
+          "response_excerpt": "receipt of usable capacity rather than pure loss",
+          "status": "supported"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Acknowledges missing trigger, schedule, pricing, ranking and that generic variable-term methodology may not specifically constrain14.72bn.",
+          "response_excerpt": "Applicability of that methodology sentence",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Overbroad prohibition: not a payable balance or expected loss is justified; saying not a liability categorically obscures disclosed contractual obligation and unspecified accounting. Core contingent identification is preserved.",
+          "response_excerpt": "must not be treated as a liability",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Source accession/URL or META_10Q and Note 9/MD&A locator correspond to supplied pack. The resale quotation matches. Economic claims are assessed separately; this is not independent full-filing citation validation.",
+          "response_excerpt": "META_10Q",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "USD14.72bn over five years and separate USD349.31bn/53.52bn/81.65bn context are retained without using aggregate due amounts as the arrangement schedule.",
+          "response_excerpt": "$14.72",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves five-year up-to amount and possible provider resale reduction, states precise triggers, annual schedule and cancellation rights are missing. No contractual floor or guaranteed resale assigned.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Recognizes contingent capacity purchase rather than another borrower guarantee or funded principal. Contingency describes payment conditions, not absence of a direct contractual Meta commitment.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies Meta purchaser and unnamed cloud provider; no Nebius identity imported from annotations. Compare META_10Q Note 9 contingent-capacity paragraph.",
+          "response_excerpt": "Meta",
+          "status": "supported"
+        }
+      },
+      "review_id": "R009"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Equity priority, interest expense, capacity optionality and actual100m liquidity use are relevant. Introduces issuer-wide debt structure outside supplied evidence and overstates a cash roll-forward inference.",
+          "response_excerpt": "much of CoreWeave's asset-level debt is non-recourse",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Recognizes settlement purpose, security/relative seniority, forward cash schedule, service upside and current-versus-maturity uncertainty.",
+          "response_excerpt": "Whether it reflects negotiated de-risking",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "273-100 to189 leaves16 arithmetically, but no complete roll-forward establishes all16 is accretion or proves12% compounding. Asset-level debt characterization and future-revenue pledged wording also exceed selected notes. Senior to equity is economically justified, unlike ranking against other debt.",
+          "response_excerpt": "implying ~$16M of additional accretion",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "CRWV_10K/10Q identifiers or exact supplied URLs/accessions and Note 10 Magnetar Loan/table locators correspond to source pack. Unsupported extensions are not certified merely because adjacent facts have correct citations.",
+          "response_excerpt": "0001769628-26-000104",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Reported numbers correct and arithmetic residual16m correct; attribution entirely to accretion is unsupported without complete roll-forward, not an arithmetic error.",
+          "response_excerpt": "implying ~$16M of additional accretion",
+          "status": "concern"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Preserves unused-deposit refund, negotiated consumption deductions, both-party termination rights, 12%-equivalent multiplier, four-year initial term/two-year extension and January2029 table maturity. Notice timing and relative priority remain unknown.",
+          "response_excerpt": "termination",
+          "status": "supported"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Correctly identifies already-recognized in-substance recourse debt, refund obligation, termination-conditioned premium and MagAI extension option, not off-balance-sheet guarantee.",
+          "response_excerpt": "in-substance",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies CoreWeave refund/service obligor and MagAI depositor/beneficiary; keeps disclosed Magnetar Loan note heading without inventing a distinct guarantor. Compare CRWV_10K/10Q Note 10.",
+          "response_excerpt": "CoreWeave",
+          "status": "supported"
+        }
+      },
+      "review_id": "R010"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Creditor cash-use and competing-claims discussion is appropriately conditional, but suggests profit-sharing/reallocation reduces refund exposure without a disclosed deposit-offset mechanism. Consumption deductions do reduce deposit.",
+          "response_excerpt": "capacity is reallocated with profit sharing",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Acknowledges absent ranking, termination mechanics, balance-sheet risk inputs, future payment schedule and compound mechanics.",
+          "response_excerpt": "Relative claim ranking / intercreditor priority",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Profit share is not established as a CoreWeave recovery or deposit-reduction offset. This direction-of-benefit inference is unsupported despite otherwise cautious guidance. No numeric recovery estimate invented.",
+          "response_excerpt": "CoreWeave recovery offsets: consumption deductions and specified profit sharing",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "CRWV_10K/10Q identifiers or exact supplied URLs/accessions and Note 10 Magnetar Loan/table locators correspond to source pack. Unsupported extensions are not certified merely because adjacent facts have correct citations.",
+          "response_excerpt": "CRWV_10Q",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Retains USD230m original receipt, USD273m Dec2025 carrying including USD43m premium, USD100m June settlement and USD189m June2026 carrying, plus 12% effective return. These are dated amounts, not an additional exposure layered on reported debt.",
+          "response_excerpt": "$189",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core refund/termination terms correct; profit sharing not established as reduction to refund exposure.",
+          "response_excerpt": "CoreWeave recovery offsets",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "Correctly identifies already-recognized in-substance recourse debt, refund obligation, termination-conditioned premium and MagAI extension option, not off-balance-sheet guarantee.",
+          "response_excerpt": "contingent",
+          "status": "supported"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies CoreWeave refund/service obligor and MagAI depositor/beneficiary; keeps disclosed Magnetar Loan note heading without inventing a distinct guarantor. Compare CRWV_10K/10Q Note 10.",
+          "response_excerpt": "CoreWeave",
+          "status": "supported"
+        }
+      },
+      "review_id": "R011"
+    },
+    {
+      "judgment": {
+        "investor_implications": {
+          "citations": [],
+          "notes": "Creditor cash-call and recovery timing risks and commercial benefit are distinguished; no priority assumed. Categorical zero cash without Trigger overstates knowledge given redacted pre-RFS and keep-current costs.",
+          "response_excerpt": "If* no Trigger occurs, cash impact is zero",
+          "status": "concern"
+        },
+        "missing_information": {
+          "citations": [],
+          "notes": "Thoroughly states missing formulas, counterparties, executed documents, liquidity, security and cap exceptions; unknown ranks/losses remain unscorable.",
+          "response_excerpt": "Without these, no expected loss",
+          "status": "supported"
+        },
+        "unsupported_assumptions": {
+          "citations": [],
+          "notes": "Shortfall payment already incorporates relet/sale recoveries; gross-before-recoveries wording is ambiguous and cap qualifications redacted. Zero-cash assertion is unsupported. Tenant Parent listed as direct obligor while separately a guarantor is inconsistent taxonomy, not evidence of direct NVIDIA lease debt.",
+          "response_excerpt": "Maximum contractual quantum for initial commitment is $105bn gross before recoveries",
+          "status": "concern"
+        }
+      },
+      "objective": {
+        "citations": {
+          "citations": [],
+          "notes": "Accession/document identifiers and Item 1.01, Note 17, Sections 1/2/5/8/12/20(e) correspond to supplied source locations. Citation presence is checked against the pack; unsupported interpretations noted separately are not validated by those citations.",
+          "response_excerpt": "SEC_FORM",
+          "status": "supported"
+        },
+        "disclosed_amounts": {
+          "citations": [],
+          "notes": "Preserves initial shared USD105bn cap, 4.25GW, nine phases, twenty-year leases and optional 3.8GW. No newly computed leverage, probability or recovery estimate; magnitude alone does not establish expected loss.",
+          "response_excerpt": "$105",
+          "status": "supported"
+        },
+        "limits_triggers": {
+          "citations": [],
+          "notes": "Core conditions preserved, but zero-cash assertion stronger than redacted pre-RFS/other payment terms allow.",
+          "response_excerpt": "If* no Trigger occurs, cash impact is zero",
+          "status": "concern"
+        },
+        "obligation_classification": {
+          "citations": [],
+          "notes": "NVIDIA correctly contingent; Tenant Parent listed under direct obligors though separately a guarantor. Taxonomy inconsistent, not changed NVIDIA lease obligation.",
+          "response_excerpt": "Direct obligors disclosed",
+          "status": "concern"
+        },
+        "obligors_beneficiaries": {
+          "citations": [],
+          "notes": "Identifies NVIDIA guarantor, SB Energy/affiliated lessor, OpenAI-affiliated tenant, separate Tenant Parent guarantee and OpenAI reimbursement. Does not supply redacted entity names. Compare SEC_8K Item 1.01 and SEC_FORM recitals/Section 5.",
+          "response_excerpt": "NVIDIA",
+          "status": "supported"
+        }
+      },
+      "review_id": "R012"
+    }
+  ],
+  "assessment_schema_version": 1,
+  "limitations": "Preliminary source-pack review, not independent blinded human ratings or re-verification of complete SEC filings. Recorded using anonymous IDs before reveal. Supported means scoped assessment, not exhaustive certification. Unknown payment probabilities, ranks, and recoveries remain unscorable.",
+  "package_sha256": "b4eec35416559611625f2c518576c23f3c5ad9989327d23e345ebd43eda073d0",
+  "pair_consistency": [
+    {
+      "arm": "Arm X",
+      "case_key": "nvidia-ports",
+      "citations": [],
+      "notes": "Core parties, cap, option, triggers and reimbursement unchanged; equity discusses exclusivity and creditor claims/timing without inventing rank. Shared zero-cash-overstatement and gross/net wording concerns remain.",
+      "response_excerpt": "R004/R012",
+      "status": "concern"
+    },
+    {
+      "arm": "Arm Y",
+      "case_key": "nvidia-ports",
+      "citations": [],
+      "notes": "Core facts stable and priorities differ economically, but creditor answer defaults to pari passu/unsecured reimbursement and gross LGD; equity asserts expansion materially beyond cap. No source evidence licenses these additions.",
+      "response_excerpt": "R001/R002",
+      "status": "concern"
+    },
+    {
+      "arm": "Arm X",
+      "case_key": "meta-capacity",
+      "citations": [],
+      "notes": "Same14.72bn five-year contingent purchase/provider anonymity across investors. Equity acknowledges capacity consideration; creditor omits that benefit. Generic measurement-policy handling differs without changed evidence.",
+      "response_excerpt": "R006/R009",
+      "status": "concern"
+    },
+    {
+      "arm": "Arm Y",
+      "case_key": "meta-capacity",
+      "citations": [],
+      "notes": "Same amounts, resale reduction and anonymous supplier preserved. Creditor adds de facto priority/financing assertions; equity adds default unsecured status. Investor role justifies different priorities, not new legal facts.",
+      "response_excerpt": "R003/R007",
+      "status": "concern"
+    },
+    {
+      "arm": "Arm X",
+      "case_key": "coreweave-deposit",
+      "citations": [],
+      "notes": "Same dated amounts, repayment,12% and maturity retained. Equity cash-use/service-upside and creditor conditional claim discussion justified; creditor alone introduces unsupported profit-share recovery offset.",
+      "response_excerpt": "R008/R011",
+      "status": "concern"
+    },
+    {
+      "arm": "Arm Y",
+      "case_key": "coreweave-deposit",
+      "citations": [],
+      "notes": "Core dated facts stable and investor focus recognizably different; equity adds unsupported16m roll-forward/asset-debt facts and creditor adds structural/maturity and no-operating-offset claims.",
+      "response_excerpt": "R005/R010",
+      "status": "concern"
+    }
+  ],
+  "review_type": "assistant_not_blinded",
+  "reviewed_on": "2026-10-27",
+  "reviewer": "Parallax assistant; authored experiment and may infer conditions from answer style"
+}

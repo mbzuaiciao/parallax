@@ -444,3 +444,16 @@ extraction. Assistant-written preliminary assessments are not independent blinde
 human ratings. No aggregate accuracy percentage or statistical significance is
 warranted by one sample per condition. Streamlit, prior evidence/results and
 dependencies remain unchanged.
+
+The first ablation run is complete: **12/12 new responses**, one per cell, no retries.
+See the [preliminary assistant comparison](results/guidance-ablation-v1-preliminary-review.md),
+[unchanged request/provider records](results/guidance-ablation-v1-live.json),
+[anonymized reviewer package](reviews/guidance-ablation-v1/review.md) and
+[recorded assistant assessments](assessments/guidance-ablation-v1-preliminary.json).
+The reveal file binds the assessment bytes to the package and separate mapping;
+it is researcher material, not part of the masked review package. All **47 tests
+pass**. Basic mechanism extraction survived neutral prompting; unsupported creditor
+priority/funding inferences appear more sensitive to guidance in this single sample.
+Guided answers still contain overconfidence and an unsupported profit-share offset.
+These are preliminary qualitative observations, not independent human ratings or
+statistical findings.
