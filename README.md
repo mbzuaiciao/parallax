@@ -317,3 +317,29 @@ the contractual structure, supported investor-specific reasoning, an unsupported
 fee inference, and legal-label/citation caveats. No quantitative risk ground truth
 was invented. All 29 tests pass. Existing examples and UI are unchanged; this adds
 no general ingestion, retrieval system, dependency or UI feature.
+
+### Independent investor prompts on the same disclosure
+
+The investor-conditional PORTS experiment reuses the exact existing source pack
+and August 26, 2026 cutoff. It sends two separate conversations, changing only the
+investor phrase in the developer instruction: NVIDIA equity investor or NVIDIA
+senior unsecured creditor. All other instructions, evidence text and API parameters
+are identical. Neither conversation sees the combined-perspective answer, research
+annotations or review conclusions. Different outcomes are not required.
+
+```sh
+uv run python -m parallax.real_world --preview --investor-pair
+uv run --env-file .env python -m parallax.real_world --evaluate --investor-pair --output results/nvidia-ports-investor-pair-repeat.json
+```
+
+Each live run makes exactly two requests without retries and saves the original
+payloads and provider responses together, with the unchanged source-pack hash.
+The new output path must not exist; failures/incomplete responses are checkpointed.
+Omitting `--investor-pair` retains the original combined-perspective command.
+
+The [two unaltered live responses](results/nvidia-ports-investor-pair-live.json)
+and [comparative review](results/nvidia-ports-investor-pair-review.md) preserve the
+contractual facts while documenting justified changes in investor priorities,
+unsupported cost/accounting assumptions, missing information and citation errors.
+The original combined result is unchanged. All 33 tests pass, including exact
+evidence equality and a check that only the investor phrase changes between prompts.
