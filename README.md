@@ -18,60 +18,78 @@ uv sync --locked
 uv run streamlit run streamlit_app.py --server.address 127.0.0.1
 ```
 
-Open [localhost:8501](http://localhost:8501). Select Harbor, Cedar or NVIDIA PORTS, an investor
-perspective, and Harbor's base/stress scenario or Cedar's A/B guarantee structure.
-Cedar always uses the existing subsidiary-default scenario, with its no-default
-comparison available in the facts panel. The page shows synthetic contractual
-facts, expandable assumptions, locally verified reference calculations for the
-synthetic cases, and the matching historical Muse Spark response. All ten saved selections work offline
-without credentials or model requests. Historical timestamps and source files
-identify the saved outputs; model interpretations remain explicitly unverified.
+Open [localhost:8501](http://localhost:8501). The navigation has three sections:
 
-NVIDIA PORTS uses the existing real-world disclosure pack and the two independent
-investor responses, with an explicit **August 26, 2026 historical cutoff** and links
-to all three underlying SEC disclosures. Switching investor changes the explanatory
-economic focus and corresponding saved reasoning, while contractual facts and the
-disclosed initial aggregate cap remain identical. The **$105 billion cap is neither
-outstanding debt nor expected loss**; redacted terms, recoveries and missing financial
-information prevent a leverage ratio, valuation adjustment or recovery estimate.
-No synthetic calculation metrics or deterministic-reference table are shown for
-NVIDIA. Source-pack paraphrases and material qualifications remain available beside
-the unaltered, potentially fallible historical output.
+- **Overview** leads with Cedar's synthetic controlled comparison: unchanged parent
+  reported principal and cash, but different contractual claims and bond recovery
+  (100% versus 68.75%). Cash-allocation bars distinguish bond, guarantee and equity
+  payments. The arithmetic and stipulated terms are expandable. Three concise
+  real-world cards introduce NVIDIA, Meta and CoreWeave, with historical cutoffs,
+  primary SEC links and limitations behind detail controls.
+- **Capital Structure** compares structures at fixed scenario inputs using the
+  existing Cedar and Harbor Decimal calculators. Switch investor to see conditional
+  bond shortfalls/recovery or equity distributions. Harbor also supports base/stress;
+  changing that scenario changes both cash and default, so it does not isolate the
+  guarantee effect. Reported principal, direct claims (including Harbor's coupon),
+  guarantee caps, triggered claims and actual payments remain distinct. A settlement
+  ledger, complete assumptions, reference values and historical answers are secondary.
+- **AI Reasoning Lab** compares recorded guided/neutral assessments for each real-world
+  case and investor. The cards show first-sentence excerpts of existing assistant
+  judgments, with full notes available below. The complete preliminary comparison,
+  source packs and separate reference annotations can be downloaded. Original model
+  text is hidden until requested; exact request/provider JSON is downloadable.
+  Earlier guided evaluations remain available as supplementary responses.
 
-For the optional **Run fresh analysis** button, configure `MODEL_API_KEY` in the
-ignored local `.env` file as described below, then launch with uv loading it:
+Synthetic figures are stipulated, conditional settlement outcomes, not market-value
+losses or expected returns. The same cash pool is used in each guarantee comparison.
+Cedar's group borrowing principal is distinct from the parent's own legal claims.
+Real-world figures measure different things: NVIDIA's initial aggregate cap is
+neither outstanding debt nor expected loss; Meta's up-to purchase commitment is not
+an automatic loss; CoreWeave's dated carrying amount is already recognized financing,
+not an additional off-balance-sheet debt layer. Do not add these figures into leverage.
+The packs cannot determine issuer leverage ratios, equity valuations or creditor
+recoveries. Secured, subordinated and CDS perspectives need further contractual inputs
+and are not modeled.
+
+The lab displays **preliminary assistant-authored assessments**, not independent
+blinded human ratings or correctness scores. Twelve completed ablation calls do not
+mean twelve correct answers. Curated evidence, one sample per cell, imperfect masking
+and assistant judgment limit inference. Research experiments, source packs, reference
+annotations and historical outputs are unchanged by this interface redesign.
+
+For optional live inference, configure `MODEL_API_KEY` in the ignored local `.env`
+file as described below, then launch with uv loading it:
 
 ```sh
 uv run --env-file .env streamlit run streamlit_app.py --server.address 127.0.0.1
 ```
 
-Each button click sends exactly one request for the current company, perspective
-and scenario/structure through the existing Meta client. Reference answers remain
-excluded from prompts. Results stay in the browser session, associated with that
-selection; switching cases never shows another selection's fresh answer. No
-historical files are overwritten, no batch evaluation is run, and there are no
-automatic retries. Without a configured key the button is disabled. Keys are
-never entered in the page or included in requests saved on disk.
+Expand **Optional live analysis** on Capital Structure or AI Reasoning Lab. One click
+sends exactly one request for the selected case, investor and scenario/structure or
+prompt condition through the existing Meta client. References are excluded from
+requests. Responses stay bound to that selection in the session; historical files
+are never overwritten, and there are no automatic retries. Without a configured key,
+the button is disabled; the entire saved-results demo remains usable. No keys are
+entered in the page. This redesign makes no new live calls during verification.
 
-For a short demonstration, compare Harbor's base and stress bond recovery, then
-switch Cedar between A and B: the parent has the same cash but a different legal
-claim under its guarantee. Toggle the investor to inspect the corresponding saved
-reasoning. Expand **All deterministic reference values** to compare claims with
-cash payments. Live analysis is optional.
+For a 30-second demonstration, start with Cedar's recovery change on Overview,
+open Capital Structure and switch equity/creditor, then visit the lab and compare
+NVIDIA's unsupported priority assertion across guidance conditions. Expand the
+original response or sources only when needed.
 
-The UI reuses existing loaders, request builders, calculations and API client.
-Streamlit AppTest checks all ten saved selections with no key and no API calls,
-selected-only live submission with a mock, selection-bound session results and
-failure handling. Run the entire suite with
-`uv run python -m unittest discover -s tests -v`. No deployment infrastructure is
-required. Demo verification on October 27, 2026: all 25 tests passed, all eight
-saved selections were exercised without a key, and one live button request for
-Cedar B / senior unsecured creditor completed with finish reason `stop`. The fresh
-response was kept only in the verification session; previous results are unchanged.
-The NVIDIA extension passes all 35 tests, including keyless investor switching,
-absence of synthetic calculations and a mocked selected-only live request. No new
-live API calls were needed for this extension. The optional button reuses the
-existing investor-specific PORTS request builder and API client.
+The UI reuses the existing loaders, request builders, recorded assessments and API
+client. No dependencies or research data were added. Streamlit AppTest verifies
+navigation, investor/scenario switching, fixed-cash calculations, primary source
+links, keyless access to all saved combinations, original-response access and
+mocked single-selection live requests/errors. Run the complete suite with:
+
+```sh
+uv run python -m unittest discover -s tests -v
+```
+
+Redesign verification (October 27, 2026): all **50 tests pass**. A browser smoke
+check confirmed the compact overview, page navigation, investor switching and
+on-demand original model text. No new live inference was performed.
 
 ## Run
 
