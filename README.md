@@ -22,23 +22,53 @@ The [post-audit correction record](docs/post-audit-corrections.md) documents pri
 sources, corrected UI representations and unresolved accounting questions. Historical
 case packs, reference answers, assessments and experiment results remain unchanged.
 
-## React evidence workstation · Phase 1
+## Primary local interface: React evidence workstation
 
 The local React/TypeScript/Vite workstation covers NVIDIA, Meta, CoreWeave,
 Apple and Microsoft using existing historical SEC source packs. It separates
 disclosed evidence, provisional conditional interpretation and evidence limits.
-The existing Streamlit application remains available and unchanged.
+
+Requirements: Python 3.10+, [uv](https://docs.astral.sh/uv/), and Node
+22.12+, 24+, or 26+ matching the engines range in `frontend/package.json`.
+No API key is needed. From the repository root:
+
+```sh
+uv sync --locked
+npm ci --prefix frontend
+npm run build --prefix frontend
+uv run python -m parallax.workstation
+```
+
+Open [127.0.0.1:8000](http://127.0.0.1:8000). The Python server serves the
+React production build and the read-only case API on loopback. Stop with Ctrl+C.
+
+For development with hot reload, complete the setup above, then run these in
+two terminals from the repository root:
+
+```sh
+uv run python -m parallax.workstation
+```
+
+```sh
+npm run dev --prefix frontend
+```
+
+Open Vite's printed local URL (normally
+[127.0.0.1:5173](http://127.0.0.1:5173)). Vite proxies `/api` to the Python
+service on port 8000. Stop the production server before starting another Python
+server on the same port, or reuse the server already running.
 
 See [workstation development and validation](docs/workstation.md) for setup,
 API routes, provenance, interface description and limitations.
 
-## Launch the interactive workstation
+## Legacy interface: Streamlit
 
-From the repository root, launch saved-results mode without an API key:
+The original Streamlit application remains available separately. From the
+repository root, launch saved-results mode without an API key:
 
 ```sh
 uv sync --locked
-uv run streamlit run streamlit_app.py --server.address 127.0.0.1
+uv run streamlit run streamlit_app.py
 ```
 
 Open [localhost:8501](http://localhost:8501). Parallax operates as an issuer-centric financial analysis workstation inspired by Bloomberg Terminal workflows:
