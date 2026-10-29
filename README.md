@@ -22,6 +22,16 @@ The [post-audit correction record](docs/post-audit-corrections.md) documents pri
 sources, corrected UI representations and unresolved accounting questions. Historical
 case packs, reference answers, assessments and experiment results remain unchanged.
 
+## React evidence workstation · Phase 1
+
+The local React/TypeScript/Vite workstation covers NVIDIA, Meta, CoreWeave,
+Apple and Microsoft using existing historical SEC source packs. It separates
+disclosed evidence, provisional conditional interpretation and evidence limits.
+The existing Streamlit application remains available and unchanged.
+
+See [workstation development and validation](docs/workstation.md) for setup,
+API routes, provenance, interface description and limitations.
+
 ## Launch the interactive workstation
 
 From the repository root, launch saved-results mode without an API key:
