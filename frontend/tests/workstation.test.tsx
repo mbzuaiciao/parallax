@@ -55,16 +55,83 @@ test('unknown amounts and missing fields stay explicitly unavailable', () => {
   const { container } = render(<CaseView data={missing} />);
   expect(screen.getByRole('table').textContent).toContain('Unavailable in supplied evidence');
   expect(container.textContent).not.toContain('$0');
-  expect(screen.queryByRole('link')).toBeNull();
+  expect(screen.queryAllByRole('link').every(link => link.getAttribute('href') === '#accounting')).toBe(true);
   expect(screen.getByText('Interpretation unavailable in the existing reference.')).toBeTruthy();
   expect(screen.getByText('Accounting information unavailable')).toBeTruthy();
 });
 
 test('unknown accounting is distinct from disclosed contractual amounts', () => {
   render(<CaseView data={cases[1]} />);
-  expect(screen.getByText('Carrying amount unknown')).toBeTruthy();
+  expect(screen.getAllByText('Carrying amount unknown')).toHaveLength(2);
   expect(screen.getByRole('table').textContent).toContain('$14.72 billion');
   expect(screen.getByText(/Missing evidence is never represented as zero/)).toBeTruthy();
+});
+
+test('arrangement summary reuses existing measures and recognition boundaries for all five cases', () => {
+  for (const item of cases) {
+    const { unmount } = render(<CaseView data={item} />);
+    const summary = screen.getByRole('region', { name: 'Arrangement summary' });
+    const measure = within(summary).getByRole('heading', { name: 'Contractual exposure / disclosed measure' }).parentElement!;
+    const recognition = within(summary).getByRole('heading', { name: 'Recognition status' }).parentElement!;
+    const exposure = item.key === 'microsoft-leases' ? item.amounts[3] : item.amounts[0];
+    expect(within(summary).getByText(item.arrangement!)).toBeTruthy();
+    expect(within(measure).getByText(exposure.value!)).toBeTruthy();
+    expect(within(measure).getByText(exposure.label)).toBeTruthy();
+    expect(within(measure).getByText(exposure.context)).toBeTruthy();
+    if (item.accounting.status === 'not_established') {
+      expect(within(summary).getByText('Carrying amount unknown')).toBeTruthy();
+    } else {
+      const recognized = item.amounts.find(amount => amount.label.startsWith('Recognized'))!;
+      expect(within(recognition).getByText(recognized.value!)).toBeTruthy();
+      expect(within(recognition).getByText(recognized.context)).toBeTruthy();
+    }
+    unmount();
+  }
+});
+
+test('every source passage expands and preserves all original text and citations', async () => {
+  const user = userEvent.setup();
+  for (const item of cases) {
+    const { unmount } = render(<CaseView data={item} />);
+    for (const doc of item.documents) {
+      const control = screen.getByText(`Read evidence passage · ${doc.id}`);
+      const details = control.closest('details')!;
+      const article = details.closest('article')!;
+      expect(details.hasAttribute('open')).toBe(false);
+      expect(within(article).getByRole('link').getAttribute('href')).toBe(doc.url);
+      await user.click(control);
+      expect(details.hasAttribute('open')).toBe(true);
+      expect(article.querySelector('.passage-text')?.textContent).toBe(doc.factual_paraphrase);
+      expect(within(article).getByText(doc.locator!)).toBeTruthy();
+      expect(article.querySelector('blockquote')?.textContent).toBe(doc.short_quote);
+      expect(within(article).getByText(`Accession: ${doc.accession}`)).toBeTruthy();
+      await user.click(control);
+      expect(details.hasAttribute('open')).toBe(false);
+    }
+    unmount();
+  }
+});
+
+test('empty summary fields and missing recognized balances never imply a zero or a cap', () => {
+  const item = { ...cases[2], arrangement: null, amounts: [] };
+  render(<CaseView data={item} />);
+  const summary = screen.getByRole('region', { name: 'Arrangement summary' });
+  expect(within(summary).getAllByText('Unavailable in supplied evidence')).toHaveLength(2);
+  expect(within(summary).getByText('Recognition amount unavailable')).toBeTruthy();
+  expect(summary.textContent).not.toContain('$0');
+  expect(summary.textContent).not.toContain('$230');
+  expect(summary.textContent).not.toContain('$189');
+});
+
+test.each([null, ''])('missing carrying value (%s) remains unavailable when the recognition record exists', value => {
+  const item = { ...cases[2], amounts: cases[2].amounts.map(amount =>
+    amount.label === 'Recognized carrying obligation' ? { ...amount, value } : amount) };
+  render(<CaseView data={item} />);
+  const summary = screen.getByRole('region', { name: 'Arrangement summary' });
+  const recognition = within(summary).getByRole('heading', { name: 'Recognition status' }).parentElement!;
+  expect(within(recognition).getByText('Recognition amount unavailable')).toBeTruthy();
+  expect(recognition.textContent).not.toContain('$0');
+  expect(recognition.textContent).not.toContain('$189');
 });
 
 test('search supports ticker, empty state and clearing', async () => {

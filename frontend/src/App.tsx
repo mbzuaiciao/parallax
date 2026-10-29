@@ -15,16 +15,54 @@ async function getJSON<T,>(path: string, signal: AbortSignal): Promise<T> {
   return data;
 }
 
+function EvidencePassage({ text }: { text?: string }) {
+  if (!text) return <p>{unavailable}</p>;
+  // Formatting only: retain every character, including sentence-boundary spaces.
+  const sentences = Array.from(new Intl.Segmenter('en', { granularity: 'sentence' }).segment(text), part => part.segment);
+  const paragraphs = [];
+  for (let index = 0; index < sentences.length; index += 2) {
+    paragraphs.push(sentences.slice(index, index + 2).join(''));
+  }
+  return <>{paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</>;
+}
+
 export function CaseView({ data }: { data: Case }) {
   const [perspective, setPerspective] = useState<'equity' | 'senior_unsecured_creditor'>('equity');
   const docs = data.documents ?? [];
+  const exposure = data.amounts?.find(amount => amount.label === 'Undiscounted operating lease payments')
+    ?? data.amounts?.[0];
+  const recognized = data.accounting?.status === 'disclosed_recognition_pending_independent_verification'
+    ? data.amounts?.find(amount => amount.label.startsWith('Recognized')) : undefined;
+  const recognitionLabel = data.accounting?.status === 'not_established'
+    ? 'Carrying amount unknown' : recognized?.value
+      ? recognized.label : 'Recognition amount unavailable';
   return <>
     <header className="case-header">
       <div className="eyebrow">DISCLOSURE CASE <span>/ {data.ticker}</span></div>
       <h1>{data.company}</h1>
-      <p className="arrangement">{data.arrangement || unavailable}</p>
       <div className="case-meta"><span>Historical cutoff <strong>{data.analysis_as_of || unavailable}</strong></span><span>{docs.length} source {docs.length === 1 ? 'document' : 'documents'}</span><span>Selected disclosure context</span></div>
     </header>
+    <section className="arrangement-summary panel" aria-label="Arrangement summary">
+      <div>
+        <h2>Contractual exposure / disclosed measure</h2>
+        <strong className="summary-amount">{exposure?.value || unavailable}</strong>
+        <p>{exposure?.label || 'Measurement unavailable'}</p>
+        <small>{exposure?.context || 'No amount available for this summary.'}</small>
+        <SourceLink doc={docs.find(doc => doc.id === exposure?.document_id)} />
+      </div>
+      <div>
+        <h2>Recognition status</h2>
+        <strong className={recognized?.value ? 'summary-amount' : 'summary-unknown'}>{recognized?.value || recognitionLabel}</strong>
+        {recognized?.value && <p>{recognitionLabel}</p>}
+        <small>{recognized?.context || 'Unknown is not zero; see the existing accounting commentary.'}</small>
+        <a href="#accounting">Provisional accounting reference ↓</a>
+      </div>
+      <div>
+        <h2>Obligation type</h2>
+        <p className="summary-type">{data.arrangement || unavailable}</p>
+        <small>Arrangement description from the source pack. Amounts retain their distinct measurements.</small>
+      </div>
+    </section>
     <div className="legend" aria-label="Evidence categories">
       <span><b className="dot fact-dot" />Disclosed fact <small>Selected SEC context</small></span>
       <span><b className="dot interpretation-dot" />Conditional interpretation <small>Provisional reference</small></span>
@@ -42,9 +80,14 @@ export function CaseView({ data }: { data: Case }) {
           <div className="evidence-note"><strong>Evidence provenance</strong><p>Manually curated SEC quotations and paraphrases. These are selected passages, not independently certified facts or complete contracts.</p></div>
           {docs.map((doc, index) => <article className="document" key={doc.id}>
             <div className="document-top"><span className="document-number">{String(index + 1).padStart(2, '0')}</span><div><h3>{doc.title || doc.id}</h3><div className="document-meta">Filed {doc.filed_on || 'date unavailable'}{doc.period_end ? ` · Period end ${doc.period_end}` : ''}</div></div><SourceLink doc={doc} /></div>
-            <p className="locator">{doc.locator || 'Locator unavailable'}</p>
-            <p>{doc.factual_paraphrase || unavailable}</p>
-            <details><summary>Source quotation & accession</summary>{doc.short_quote ? <blockquote>{doc.short_quote}</blockquote> : <p>Quotation unavailable</p>}<p className="mono">Accession: {doc.accession || 'Unavailable'}</p></details>
+            <details className="source-passage">
+              <summary>Read evidence passage · {doc.id}</summary>
+              <p className="locator">{doc.locator || 'Locator unavailable'}</p>
+              <div className="passage-text"><EvidencePassage text={doc.factual_paraphrase} /></div>
+              <h4>Original source-pack quotation</h4>
+              {doc.short_quote ? <blockquote>{doc.short_quote}</blockquote> : <p>Quotation unavailable</p>}
+              <p className="mono">Accession: {doc.accession || 'Unavailable'}</p>
+            </details>
           </article>)}
           {!docs.length && <p className="empty">Source documents unavailable.</p>}
         </section>
@@ -62,7 +105,7 @@ export function CaseView({ data }: { data: Case }) {
           <div className="interpretation-text" aria-live="polite"><h3>{perspective === 'equity' ? 'Equity holder' : 'Senior unsecured creditor'}</h3><p>{data.interpretations?.[perspective] || 'Interpretation unavailable in the existing reference.'}</p></div>
           <p className="footnote">Reproduced from the existing provisional reference without new inference or calculations.</p>
         </section>
-        <section className="panel accounting">
+        <section id="accounting" className="panel accounting">
           <div className="section-heading"><div><span className="eyebrow">RECOGNITION BOUNDARY</span><h2>Exposure ≠ carrying liability</h2></div></div>
           <span className={`tag ${data.accounting?.status === 'not_established' ? 'unknown-tag' : ''}`}>{data.accounting?.status === 'not_established' ? 'Carrying amount unknown' : data.accounting?.statement ? 'Recognition discussed in source pack' : 'Accounting information unavailable'}</span>
           <p>{data.accounting?.statement || unavailable}</p>

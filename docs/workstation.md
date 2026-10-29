@@ -48,7 +48,11 @@ uv run streamlit run streamlit_app.py
 ![Desktop evidence workstation](screenshots/workstation-desktop.jpg)
 
 The workstation has a restrained dark palette, a searchable five-company case
-library and a dated arrangement header. On wide screens, source evidence occupies
+library and a dated arrangement header. A compact summary reuses the existing
+disclosed measure, recognition status and source-pack arrangement description;
+unknown quantities stay explicit. Microsoft pairs the existing undiscounted
+lease payments with the existing recognized balance, without calculating either.
+On wide screens, source evidence occupies
 the main column and interpretation and limits sit alongside it. Smaller screens
 stack the panels; the amount table scrolls within its panel. Keyboard focus,
 search labels, selected-case state, a skip link and semantic tables support
@@ -58,8 +62,10 @@ Three numbered categories distinguish disclosed facts (teal), conditional
 interpretation (blue) and unknown/unsupported conclusions (amber), with text
 labels as well as color. The amount table names each measurement, its date or
 qualifications, and its original SEC source. Document cards preserve the existing
-paraphrases, filing/period dates and locators. Quotations and accessions expand
-on demand. The investor control switches between the existing equity-holder
+paraphrases, filing/period dates and locators. Each passage, quotation and accession
+expands on demand while its original SEC link remains visible. Long paraphrases
+are divided into shorter paragraphs without changing their text. The investor
+control switches between the existing equity-holder
 and senior-unsecured-creditor interpretations. Accounting boundaries and
 material unknowns remain visible. Source file paths and SHA-256 hashes are
 available under provenance. Loading, failure/retry, no search matches and missing
