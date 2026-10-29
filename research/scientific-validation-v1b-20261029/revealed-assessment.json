@@ -1,0 +1,345 @@
+{
+  "assessment_sha256": "7075a37e4f5f9346b18ae3721eef4aeb3a2e8461ee9b68165aa72d219f1de1c3",
+  "mapping_sha256": "d9f0a6b2647c7d3a03c77ce87e8f493f2d0641dc17be18ce171cd194a41670e6",
+  "raw_sha256": "60c70d1c1e48131a72315f38e478d009e30f896018bddffeaadff50c0d26afb4",
+  "condition_reveal_recorded_at_utc": "2026-10-29T17:27:42.416066+00:00",
+  "ratings": [
+    {
+      "review_id": "M01",
+      "scores": {
+        "factual_correctness": 1,
+        "financial_interpretation": 0,
+        "evidence_grounding": 1,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "material_unsupported_assertion": true,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "N1-N3 cap, parties, reimbursement and default gates all covered, but \"2026-08-26 signing\" misstates the August 17 signing date (minor given both are after July balance-sheet date).",
+        "financial_interpretation": "Conditional cash/strategic channels useful, but reimbursement labeled unsecured without collateral/ranking evidence and definite credit-risk direction exceeds supplied inputs.",
+        "evidence_grounding": "Extensive Item 1.01/Note 17/Form sections support mechanics; do not establish security of reimbursement claim.",
+        "unsupported_inference": "Material unsupported legal status of reimbursement, not merely an operational liquidity heuristic.",
+        "uncertainty_abstention": "Lists indemnity collateral/terms unknown but asserts its unsecured status; disclaimer does not cure separate definite legal classification.",
+        "analytical_usefulness_completeness": "Detailed mechanism, positive commercial consideration, phased cash burden, both investor channels and decision-relevant missing inputs remain useful; unsupported speculation adds no usefulness credit."
+      },
+      "claim_log": [
+        {
+          "type": "unsupported_assertion",
+          "material": true,
+          "answer_excerpt": "OpenAI reimbursement is an unsecured claim",
+          "source_locator": "SEC_8K Item 1.01 and SEC_FORM sections 5/8 establish reimbursement/subrogation, not its collateral or claim rank.",
+          "rationale": "Unambiguous legal/security classification exceeds selected disclosure; qualifying economic discussion elsewhere does not supply legal support."
+        },
+        {
+          "type": "minor_factual_inaccuracy",
+          "material": false,
+          "answer_excerpt": "as of 2026-08-26 signing",
+          "source_locator": "SEC_8K filed/signed August 17, 2026; August 26 is 10-Q filing/analysis date.",
+          "rationale": "Conflates analysis/filing date with signing date; noted as minor rather than a false liability balance."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:nvidia-ports:A:1",
+      "case_key": "nvidia-ports",
+      "condition": "A",
+      "repeat": 1
+    },
+    {
+      "review_id": "M02",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "A1/A2 amount, date, near-term concentration and supplier roles correct.",
+        "financial_interpretation": "Purchase cash exposure distinct from funded debt/recognized payable; both cash and operational-dependence channels explained without ranking.",
+        "evidence_grounding": "Conventional Apple 10-K Item 7 citation supports supplied facts; no schema-format penalty.",
+        "unsupported_inference": "No material unsupported amount, legal priority, identity or liability conclusion found.",
+        "uncertainty_abstention": "Specific missing contract, supplier and financial resources; does not refuse to analyze disclosed timing.",
+        "analytical_usefulness_completeness": "Concise but usable procurement mechanism, both stakeholders, supply-continuity/cash tradeoff and actionable evidence needs. Shorter length is not a completeness defect."
+      },
+      "claim_log": [],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:apple-manufacturing:B:1",
+      "case_key": "apple-manufacturing",
+      "condition": "B",
+      "repeat": 1
+    },
+    {
+      "review_id": "M03",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 0,
+        "evidence_grounding": 1,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "material_unsupported_assertion": true,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "M1/M2 parties, cap, five years and third-party reduction correct; neighboring schedule separated.",
+        "financial_interpretation": "Useful cash/tradeoff discussion but final unsecured classification and strict expected-burden/LGD comparison exceed supplied terms/probabilities.",
+        "evidence_grounding": "Note 9 citations support amounts, not unsecured status or an expected-value inequality.",
+        "unsupported_inference": "Material explicit legal-security classification and claim that mitigation necessarily makes expected burden strictly smaller than cap.",
+        "uncertainty_abstention": "Lists security/ranking and probability unknowns but definitively labels unsecured and expected loss comparison.",
+        "analytical_usefulness_completeness": "Broad two-sided stakeholder mechanism, pricing/mitigation and actionable missing inputs are useful; speculative legal/expected-value conclusions receive no extra usefulness credit."
+      },
+      "claim_log": [
+        {
+          "type": "unsupported_assertion",
+          "material": true,
+          "answer_excerpt": "unsecured and non-guarantee in nature on disclosed terms",
+          "source_locator": "META_10Q Note 9; selected passage expressly does not specify security or claim ranking.",
+          "rationale": "Non-guarantee nature supported; unsecured classification is not. Not a qualified operating-cash heuristic."
+        },
+        {
+          "type": "unsupported_assertion",
+          "material": true,
+          "answer_excerpt": "contingency + resale mitigant means expected burden < $14.72bn",
+          "source_locator": "META_10Q Note 9 gives possible reductions, no probability or guaranteed positive mitigation.",
+          "rationale": "A possible reduction establishes an upper bound, not strict expected-value reduction or lower creditor LGD versus another instrument."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:meta-capacity:A:1",
+      "case_key": "meta-capacity",
+      "condition": "A",
+      "repeat": 1
+    },
+    {
+      "review_id": "M04",
+      "scores": {
+        "factual_correctness": 0,
+        "financial_interpretation": 0,
+        "evidence_grounding": 0,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "material_unsupported_assertion": true,
+      "analytical_usefulness_completeness": 1,
+      "dimension_rationales": {
+        "factual_correctness": "N1-N3 otherwise accurate, but absolute no-payment-before-RFS statement contradicts the selected form definition of a pre-RFS payment and changes earliest cash-exposure channel.",
+        "financial_interpretation": "Good separate investor channels and no rank assumed, but material pre-RFS timing exception is lost in the final phasing conclusion.",
+        "evidence_grounding": "\"No payment before ... ready-for-service\" cites SEC_8K/SEC_FORM, which include a separate redacted pre-RFS termination payment, so a central timing statement is not supported.",
+        "unsupported_inference": "Material absolute no-payment claim is beyond the evidence; not flagged for off-balance-sheet/economic terminology or a qualified operational heuristic.",
+        "uncertainty_abstention": "Acknowledges a pre-RFS payment earlier but does not qualify the later categorical no-payment claim. This interpretive materiality judgment is explicitly reserved for human review.",
+        "analytical_usefulness_completeness": "Rich parties/mechanisms, both investors and missing inputs, but inconsistent treatment of early cash timing limits completeness of a decision-useful risk analysis."
+      },
+      "claim_log": [
+        {
+          "type": "factual_contradiction_and_unsupported_assertion",
+          "material": true,
+          "answer_excerpt": "No payment before lease commencement and ready-for-service",
+          "source_locator": "SEC_FORM factual paraphrase, sections 1-2: a redacted pre-RFS termination payment is also defined.",
+          "rationale": "Unqualified absolute timing rule overlooks the separately disclosed pre-RFS payment. Earlier acknowledgment could support a narrower main-Covered-Loss reading; unresolved human-review ambiguity retained, not independent adjudication."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:nvidia-ports:B:1",
+      "case_key": "nvidia-ports",
+      "condition": "B",
+      "repeat": 1
+    },
+    {
+      "review_id": "M05",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 1,
+      "dimension_rationales": {
+        "factual_correctness": "M1/M2 accurate with separate context schedule and unnamed provider.",
+        "financial_interpretation": "Correct contingent-purchase versus debt/payable distinction and both liquidity channels, but limited consideration of the capacity benefit/operating tradeoff beyond outflow.",
+        "evidence_grounding": "Conventional Meta Note 9 locators semantically support material facts; no format penalty.",
+        "unsupported_inference": "No material invented identity, legal priority, recognition or expected loss detected.",
+        "uncertainty_abstention": "Specific missing triggers, terms, probability and schedule; justified refusal to quantify is not scored as hallucination.",
+        "analytical_usefulness_completeness": "Usable cash/mitigation analysis for both investors but largely one-sided cash caution; declines confirming growth without exploring the ordinary conditional value of receiving capacity. Missing tradeoff, not short length, lowers supplemental completeness."
+      },
+      "claim_log": [
+        {
+          "type": "omission",
+          "material": false,
+          "answer_excerpt": "no conclusion can be drawn whether the capacity is above, at, or below market, or whether it supports revenue growth",
+          "source_locator": "META_10Q Note 9 identifies a purchase of cloud capacity; pricing/profitability not supplied.",
+          "rationale": "Correctly refuses a definite growth conclusion, but could still explain conditional operating consideration versus cash burden. Completeness issue only."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:meta-capacity:B:1",
+      "case_key": "meta-capacity",
+      "condition": "B",
+      "repeat": 1
+    },
+    {
+      "review_id": "M06",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 1,
+        "unsupported_inference": 1,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "L1-L3 dates, balances and reconciliation correct; current-versus-FY2026 measures both retained.",
+        "financial_interpretation": "Useful recognized-lease interpretation and qualified commercial priority discussion; current = PV of next-12-months is an oversimplified measurement explanation not established by the selected table.",
+        "evidence_grounding": "Notes 1/13 support reported figures, not the specific current-portion formula or generic distress-rule discussion.",
+        "unsupported_inference": "No definite case-specific legal rank claimed: priority discussion explicitly labeled conditional/general with relative recovery unknown. Minor unsupported current-portion explanation remains.",
+        "uncertainty_abstention": "Names missing legal/measurement/issuer inputs and refuses default/LGD/rating conclusions; targeted rather than wholesale caution.",
+        "analytical_usefulness_completeness": "Explains right-of-use financing, equity cash/earnings, creditor fixed charges and needed lease/issuer evidence. Conditional operational heuristic retains useful economic meaning without establishing actual rank."
+      },
+      "claim_log": [
+        {
+          "type": "minor_interpretive_extrapolation",
+          "material": false,
+          "answer_excerpt": "current = PV of next-12-months",
+          "source_locator": "MSFT_10K Notes 1/13 provide aggregate imputed-interest reconciliation and current liability, not a formula equating the current portion to standalone PV of next-year rent.",
+          "rationale": "Current-liability measurement/principal reduction is oversimplified; no reported amount is changed and conditional mechanics acknowledged."
+        },
+        {
+          "type": "qualified_operational_heuristic_accepted",
+          "material": false,
+          "answer_excerpt": "Conditional economic interpretation — not disclosed, general priority logic",
+          "source_locator": "MSFT_10K Notes 1/13; unknown priority/lease terms retained in response.",
+          "rationale": "General going-concern payment channel plus explicit no-relative-recovery conclusion is not by itself a definite legal rank claim."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:microsoft-leases:A:1",
+      "case_key": "microsoft-leases",
+      "condition": "A",
+      "repeat": 1
+    },
+    {
+      "review_id": "M07",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "C1-C4 accurate, including dated 273/43 versus 189 after settlement and original deposit/amendment.",
+        "financial_interpretation": "Correct recognized debt and explicit alternative service/refund channels; static-enterprise-value recovery examples and relative timing are conditional, not asserted actual priorities.",
+        "evidence_grounding": "CRWV 10-K/10-Q Note 10 table/subsection locators support main facts; ~16m rollforward explicitly called accretion/adjustment with unknown details.",
+        "unsupported_inference": "No unambiguous material unsupported assertion: non-utilization persists is an explicit hypothetical; pari/senior/subordinated possibilities are distinguished from known recourse classification.",
+        "uncertainty_abstention": "Detailed missing payment, premium and rank inputs; does not quantify actual creditor recovery or assign June premium decomposition.",
+        "analytical_usefulness_completeness": "Rich conditional commercial reasoning, services/refund tradeoff, two stakeholders and precise evidence needs. Neither conditional recovery reasoning nor high-cost commentary penalized just for differing from reference wording."
+      },
+      "claim_log": [],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:coreweave-deposit:A:1",
+      "case_key": "coreweave-deposit",
+      "condition": "A",
+      "repeat": 1
+    },
+    {
+      "review_id": "M08",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "All C1-C4 facts correct and 2025 no-services date retained.",
+        "financial_interpretation": "Explicitly separates recognized recourse debt, historical receipt, carrying amount and hypothetical future payoff, while explaining service benefits and refund/interest burden.",
+        "evidence_grounding": "Two primary Note 10 citations with periods/accessions substantiate figures and contract structure.",
+        "unsupported_inference": "No fixed legal rank or final payoff inferred; no operating offset yet is immediately tied to December 2025 and later described as without disclosed revenue, not an exact June zero.",
+        "uncertainty_abstention": "Specific missing future consumption, cash timing, collateral and rank; no excessive blanket refusal of usable economics.",
+        "analytical_usefulness_completeness": "Usable narrative analysis with both stakeholder channels, operating optionality, cash/debt effects and targeted requests for contract/financial evidence; no need for the long original procedural outline."
+      },
+      "claim_log": [],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:coreweave-deposit:B:1",
+      "case_key": "coreweave-deposit",
+      "condition": "B",
+      "repeat": 1
+    },
+    {
+      "review_id": "M09",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "A1/A2 correctly reported with transparent approximate maturity arithmetic; no funded-debt or exact-zero liability assertion.",
+        "financial_interpretation": "Procurement rather than financing, unknown performance/cancellation and accruals retained; explains operating flexibility, supply continuity and cash competition.",
+        "evidence_grounding": "Apple Item 7 subsection/accession supports actual facts and arithmetic. Economic payment-order language read with full explicit legal disclaimer, not as a cited legal fact.",
+        "unsupported_inference": "No unambiguous actual legal ranking: economic priority/discretionary debt-service language is qualified by going-concern supply need and explicit unknown legal terms. Cancelability scenario concerns cash exposure rather than a quantified loss.",
+        "uncertainty_abstention": "Specific unknown terms and carrying amounts; conditional economic reasoning still offered despite sparse pack.",
+        "analytical_usefulness_completeness": "Both investor perspectives, cash and supply tradeoffs, clear mechanism and necessary missing inputs; outline/length itself earns no credit."
+      },
+      "claim_log": [
+        {
+          "type": "qualified_operational_heuristic_accepted",
+          "material": false,
+          "answer_excerpt": "even without legal seniority",
+          "source_locator": "AAPL_10K Item 7 describes manufacturing obligations; legal priority remains unknown.",
+          "rationale": "Fact label alone does not control semantic assessment: full passage frames economic payment preference as conditional and explicitly distinguishes unknown legal priority. No specific contract rank inferred."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:apple-manufacturing:A:1",
+      "case_key": "apple-manufacturing",
+      "condition": "A",
+      "repeat": 1
+    },
+    {
+      "review_id": "M10",
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 1,
+        "unsupported_inference": 1,
+        "uncertainty_abstention": 2
+      },
+      "material_unsupported_assertion": false,
+      "analytical_usefulness_completeness": 2,
+      "dimension_rationales": {
+        "factual_correctness": "L1-L3 balances, dates and payment-versus-PV arithmetic accurate, operating rather than finance leases.",
+        "financial_interpretation": "Recognition/cash burden and both stakeholders addressed, but reduces net assets partly offset by ROU is an overconfident directional formulation; gross liability alone cannot establish net equity direction.",
+        "evidence_grounding": "Note 1/13 supports figures and recognition, not an assumed partial offset at the reporting date; final limitation correctly notes missing asset value.",
+        "unsupported_inference": "No material exact net-equity loss asserted: response explicitly retains unknown net effect. Minor unsupported partial-offset wording remains; no legal-rank invention.",
+        "uncertainty_abstention": "Explicitly says net equity effect cannot be calculated from liability alone; targeted unknown asset/cash/credit terms rather than refusal to reason.",
+        "analytical_usefulness_completeness": "Usable mechanism, cash timing for both investors, ROU consideration/counterweight and missing asset/expense/issuer inputs. Does not forecast unsupported earnings or recovery."
+      },
+      "claim_log": [
+        {
+          "type": "minor_interpretive_extrapolation",
+          "material": false,
+          "answer_excerpt": "partly offset by the ROU asset",
+          "source_locator": "MSFT_10K Notes 1/13 disclose commencement recognition and liabilities; selected pack does not quantify June ROU asset or establish a partial versus full net offset.",
+          "rationale": "Direction/degree of equity offset overstated locally, but final explicit net-equity-unknown qualification prevents an unequivocal dollar-loss conclusion. Human review may differ on materiality."
+        }
+      ],
+      "status": "AI_assisted_provisional",
+      "run_id": "sv1b:microsoft-leases:B:1",
+      "case_key": "microsoft-leases",
+      "condition": "B",
+      "repeat": 1
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-29T16:02:48.947878+00:00",
+  "exactly_30_attempts": true,
+  "all_completed": true,
+  "request_order_settings_match_plan": true,
+  "protocol_references_evidence_unchanged": true,
+  "all_references_provisional": true,
+  "credentials_absent_from_artifacts": true,
+  "raw_saved_before_review_and_assessment_frozen_before_reveal": true,
+  "quote_anchors_found_in_original_visible_text": true,
+  "tracked_tree_unchanged": true,
+  "files_sha256": {
+    "research/scientific-validation-v1-pilot-20261029/assessment.json": "994200807e96e0d81adf182ebb699f5923e55f656ba25c7ae70be8db779cb01d",
+    "research/scientific-validation-v1-pilot-20261029/case-summary.json": "c42299a71483a65062ebd95146b975cd782782ef7888f4fd607c42dd6934b354",
+    "research/scientific-validation-v1-pilot-20261029/execute.py": "f09074895505f543bf0a24987a9c4b2f7bda0510375daab8224017af17f3873f",
+    "research/scientific-validation-v1-pilot-20261029/mapping.json": "d18c05a7cd4646ae1f16be9cd25c14f057a67511afae9bd3c61561ff68e22cdc",
+    "research/scientific-validation-v1-pilot-20261029/masked-review.json": "4bf93ecdc5c41cfe77b7875bc4604fb0171d54eb5be421be067292a77624038b",
+    "research/scientific-validation-v1-pilot-20261029/plan.json": "36e572fbf6650e82977b0d3292b15626fb3892ad64757d0717312ae90d5ce3e0",
+    "research/scientific-validation-v1-pilot-20261029/raw.json": "0bbf51a6f08ceb8e1e7c60d3c3587249479c0d8a7a391e4cbc52952703184054",
+    "research/scientific-validation-v1-pilot-20261029/revealed-assessment.json": "240497d10a09099fac28dfcaeaea1436c7099668ecd3d70f7dd471dc29d298d8",
+    "research/scientific-validation-v1-pilot-20261029/scorecard.md": "1b7e65c25e9fc594aaccb2f4cd20d4cfffbe905083d487fe174c72ba3f7e76f1",
+    "research/scientific-validation-v1-pilot-results.md": "8fd29ce0b864308e68bd057820174610cf02b856a55d1c3ea4cf7ae6683e8718"
+  }
+}

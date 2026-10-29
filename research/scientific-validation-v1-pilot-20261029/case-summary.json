@@ -1,0 +1,337 @@
+{
+  "assessment_sha256": "994200807e96e0d81adf182ebb699f5923e55f656ba25c7ae70be8db779cb01d",
+  "independently_adjudicated_aggregate": null,
+  "reason": "No independent human source approval or response adjudication; provisional case-level results only.",
+  "case_condition_results": [
+    {
+      "case": "nvidia-ports",
+      "condition": "neutral",
+      "completed": 3,
+      "material_unsupported_count": 3,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "evidence_grounding": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        },
+        "unsupported_inference": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncertainty_abstention": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "case": "nvidia-ports",
+      "condition": "guided",
+      "completed": 3,
+      "material_unsupported_count": 1,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 1.3333333333333333,
+          "min": 0,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 1.3333333333333333,
+          "min": 0,
+          "max": 2
+        },
+        "unsupported_inference": {
+          "mean": 1.3333333333333333,
+          "min": 0,
+          "max": 2
+        },
+        "uncertainty_abstention": {
+          "mean": 1.3333333333333333,
+          "min": 0,
+          "max": 2
+        }
+      }
+    },
+    {
+      "case": "meta-capacity",
+      "condition": "neutral",
+      "completed": 3,
+      "material_unsupported_count": 2,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 0.6666666666666666,
+          "min": 0,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        },
+        "unsupported_inference": {
+          "mean": 0.3333333333333333,
+          "min": 0,
+          "max": 1
+        },
+        "uncertainty_abstention": {
+          "mean": 0.6666666666666666,
+          "min": 0,
+          "max": 2
+        }
+      }
+    },
+    {
+      "case": "meta-capacity",
+      "condition": "guided",
+      "completed": 3,
+      "material_unsupported_count": 0,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "unsupported_inference": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "uncertainty_abstention": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        }
+      }
+    },
+    {
+      "case": "coreweave-deposit",
+      "condition": "neutral",
+      "completed": 3,
+      "material_unsupported_count": 3,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "evidence_grounding": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        },
+        "unsupported_inference": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncertainty_abstention": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "case": "coreweave-deposit",
+      "condition": "guided",
+      "completed": 3,
+      "material_unsupported_count": 0,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "unsupported_inference": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "uncertainty_abstention": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        }
+      }
+    },
+    {
+      "case": "apple-manufacturing",
+      "condition": "neutral",
+      "completed": 3,
+      "material_unsupported_count": 3,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "evidence_grounding": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        },
+        "unsupported_inference": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncertainty_abstention": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "case": "apple-manufacturing",
+      "condition": "guided",
+      "completed": 3,
+      "material_unsupported_count": 0,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "unsupported_inference": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "uncertainty_abstention": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        }
+      }
+    },
+    {
+      "case": "microsoft-leases",
+      "condition": "neutral",
+      "completed": 3,
+      "material_unsupported_count": 3,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "evidence_grounding": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        },
+        "unsupported_inference": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "uncertainty_abstention": {
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    {
+      "case": "microsoft-leases",
+      "condition": "guided",
+      "completed": 3,
+      "material_unsupported_count": 0,
+      "dimensions": {
+        "factual_correctness": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "financial_interpretation": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "evidence_grounding": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "unsupported_inference": {
+          "mean": 2,
+          "min": 2,
+          "max": 2
+        },
+        "uncertainty_abstention": {
+          "mean": 1.6666666666666667,
+          "min": 1,
+          "max": 2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "presentation_seed": 20261031,
+  "raw_sha256": "60c70d1c1e48131a72315f38e478d009e30f896018bddffeaadff50c0d26afb4",
+  "assignments": {
+    "M01": {
+      "run_id": "sv1b:nvidia-ports:A:1",
+      "case_key": "nvidia-ports",
+      "condition": "A",
+      "repeat": 1
+    },
+    "M02": {
+      "run_id": "sv1b:apple-manufacturing:B:1",
+      "case_key": "apple-manufacturing",
+      "condition": "B",
+      "repeat": 1
+    },
+    "M03": {
+      "run_id": "sv1b:meta-capacity:A:1",
+      "case_key": "meta-capacity",
+      "condition": "A",
+      "repeat": 1
+    },
+    "M04": {
+      "run_id": "sv1b:nvidia-ports:B:1",
+      "case_key": "nvidia-ports",
+      "condition": "B",
+      "repeat": 1
+    },
+    "M05": {
+      "run_id": "sv1b:meta-capacity:B:1",
+      "case_key": "meta-capacity",
+      "condition": "B",
+      "repeat": 1
+    },
+    "M06": {
+      "run_id": "sv1b:microsoft-leases:A:1",
+      "case_key": "microsoft-leases",
+      "condition": "A",
+      "repeat": 1
+    },
+    "M07": {
+      "run_id": "sv1b:coreweave-deposit:A:1",
+      "case_key": "coreweave-deposit",
+      "condition": "A",
+      "repeat": 1
+    },
+    "M08": {
+      "run_id": "sv1b:coreweave-deposit:B:1",
+      "case_key": "coreweave-deposit",
+      "condition": "B",
+      "repeat": 1
+    },
+    "M09": {
+      "run_id": "sv1b:apple-manufacturing:A:1",
+      "case_key": "apple-manufacturing",
+      "condition": "A",
+      "repeat": 1
+    },
+    "M10": {
+      "run_id": "sv1b:microsoft-leases:B:1",
+      "case_key": "microsoft-leases",
+      "condition": "B",
+      "repeat": 1
+    }
+  }
+}

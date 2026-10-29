@@ -1,0 +1,157 @@
+{
+  "assessment_sha256": "7075a37e4f5f9346b18ae3721eef4aeb3a2e8461ee9b68165aa72d219f1de1c3",
+  "independently_adjudicated_aggregate": null,
+  "reason": "AI-assisted provisional ratings; no independent human adjudication or source certification.",
+  "case_condition_results": [
+    {
+      "case": "nvidia-ports",
+      "condition": "A",
+      "completed": 1,
+      "material_unsupported_count": 1,
+      "scores": {
+        "factual_correctness": 1,
+        "financial_interpretation": 0,
+        "evidence_grounding": 1,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M01"
+    },
+    {
+      "case": "nvidia-ports",
+      "condition": "B",
+      "completed": 1,
+      "material_unsupported_count": 1,
+      "scores": {
+        "factual_correctness": 0,
+        "financial_interpretation": 0,
+        "evidence_grounding": 0,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "analytical_usefulness_completeness": 1,
+      "review_id": "M04"
+    },
+    {
+      "case": "meta-capacity",
+      "condition": "A",
+      "completed": 1,
+      "material_unsupported_count": 1,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 0,
+        "evidence_grounding": 1,
+        "unsupported_inference": 0,
+        "uncertainty_abstention": 0
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M03"
+    },
+    {
+      "case": "meta-capacity",
+      "condition": "B",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 1,
+      "review_id": "M05"
+    },
+    {
+      "case": "coreweave-deposit",
+      "condition": "A",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M07"
+    },
+    {
+      "case": "coreweave-deposit",
+      "condition": "B",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M08"
+    },
+    {
+      "case": "apple-manufacturing",
+      "condition": "A",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M09"
+    },
+    {
+      "case": "apple-manufacturing",
+      "condition": "B",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 2,
+        "evidence_grounding": 2,
+        "unsupported_inference": 2,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M02"
+    },
+    {
+      "case": "microsoft-leases",
+      "condition": "A",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 1,
+        "unsupported_inference": 1,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M06"
+    },
+    {
+      "case": "microsoft-leases",
+      "condition": "B",
+      "completed": 1,
+      "material_unsupported_count": 0,
+      "scores": {
+        "factual_correctness": 2,
+        "financial_interpretation": 1,
+        "evidence_grounding": 1,
+        "unsupported_inference": 1,
+        "uncertainty_abstention": 2
+      },
+      "analytical_usefulness_completeness": 2,
+      "review_id": "M10"
+    }
+  ]
+}
