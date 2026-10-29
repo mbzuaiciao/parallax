@@ -207,9 +207,9 @@ def page_issuer_overview(issuer_data, active_perspective):
             cols[2].metric("Direct Bond Claim", "$105m (incl. coupon)")
             cols[3].metric("Guarantee Cap", "$40m")
     else:
-        cols[0].metric("Disclosed Contractual Cap", issuer_data["contractual_cap"].split()[0])
-        cols[1].metric("Reported Carrying Debt", issuer_data["reported_principal"].split()[0])
-        cols[2].metric("Direct Commitment", "None reported" if issuer_data["reported_principal"].startswith("None") else "$189m carrying")
+        cols[0].metric(issuer_data.get("amount_label", "Disclosed Contractual Cap"), issuer_data["disclosed_amount"])
+        cols[1].metric("Reported Carrying Debt", issuer_data["reported_principal"])
+        cols[2].metric("Direct Commitment", "$189m recognized debt" if issuer_data["id"] == "coreweave-deposit" else "Contingent obligation")
         cols[3].metric("Reimbursement / Offset", "Contractual" if issuer_data["reimbursement"] else "None")
 
     st.markdown("### Reconstruction of Corporate Obligations & Economic Exposure")
@@ -220,12 +220,14 @@ def page_issuer_overview(issuer_data, active_perspective):
         {
             "Analytical Layer": "1. Reported Borrowing Principal / Carrying Value",
             "Disclosed Status": issuer_data["reported_principal"],
-            "Economic Significance": "Recognized on balance sheet; baseline borrowing obligation before contingent contractual overlays.",
+            "Economic Significance": "Disclosed borrowing status; a guarantee liability carrying amount is distinct from borrowing principal.",
         },
         {
-            "Analytical Layer": "2. Disclosed Contingent Obligations & Contractual Caps",
-            "Disclosed Status": issuer_data["contractual_cap"],
-            "Economic Significance": "Maximum contractual ceiling. Never present a cap as current outstanding debt or expected loss.",
+            "Analytical Layer": issuer_data.get("amount_label", "2. Disclosed Contingent Obligations & Contractual Caps"),
+            "Disclosed Status": issuer_data["disclosed_amount"],
+            "Economic Significance": ("Original financing received, not a contractual cap or additional debt layer."
+                                      if issuer_data["id"] == "coreweave-deposit" else
+                                      "Maximum contractual ceiling. Never present a cap as current outstanding debt or expected loss."),
         },
         {
             "Analytical Layer": "3. Direct vs Optional Contractual Commitments",
@@ -245,7 +247,9 @@ def page_issuer_overview(issuer_data, active_perspective):
                 if issuer_data["id"] == "meta-capacity"
                 else "$189m carrying balance (with 12% effective rate)"
             ),
-            "Economic Significance": "Contractual claim amount competing at settlement only if specific trigger events occur.",
+            "Economic Significance": ("Recognized financing balance; no additional guarantee activation is required."
+                                      if issuer_data["id"] == "coreweave-deposit" else
+                                      "Contractual claim amount competing at settlement only if specific trigger events occur."),
         },
         {
             "Analytical Layer": "5. Actual Scenario Cash Payments",
@@ -276,7 +280,7 @@ def page_issuer_overview(issuer_data, active_perspective):
         st.markdown("**Analytical Principle: Never fabricate adjusted-debt totals**")
         prose(
             "Contractual caps are contingent ceilings, not current outstanding debt. Adding contingent caps "
-            f"({issuer_data['contractual_cap']}) to reported debt principal produces a fabricated total that distorts "
+            "to reported debt principal, or adding an original deposit again to its recognized carrying balance, distorts "
             "legal priority and economic exposure. Claims must be evaluated in their distinct contractual mechanisms."
         )
 
@@ -342,7 +346,7 @@ def page_financial_obligations(issuer_data, active_perspective):
 
     with col2, st.container(border=True):
         st.markdown("**Disclosed Amounts & Caps**")
-        st.metric("Disclosed Cap / Value", issuer_data["contractual_cap"])
+        st.metric(issuer_data.get("amount_label", "Disclosed Cap / Value"), issuer_data["disclosed_amount"])
         st.metric("Balance Sheet Carrying Debt", issuer_data["reported_principal"])
         st.caption(f"Historical cutoff: {evidence['analysis_as_of']}")
 
@@ -497,7 +501,8 @@ def page_capital_structure(issuer_data, active_perspective):
             "Legal Entity": issuer_data["obligor"],
             "Contract / Obligation": issuer_data["arrangement"],
             "Contractual Nature": issuer_data["obligation_type"],
-            "Nominal Cap / Carrying Value": issuer_data["contractual_cap"],
+            "Disclosed Amount / Basis": (issuer_data["reported_principal"] if issuer_data["id"] == "coreweave-deposit"
+                                         else issuer_data["disclosed_amount"]),
             "Seniority Status": issuer_data["ranking"],
             "Investor Exposure": (
                 "Subordinate claim on cash; value offset by commercial capacity and reimbursement rights"
@@ -619,18 +624,33 @@ def page_scenario_analysis(issuer_data, active_perspective):
         },
         {
             "Scenario / Stage": "Max Contractual Enforcement",
-            "Contract Status": f"Liability capped at {issuer_data['contractual_cap']}",
-            "Cash Demand on Issuer": f"Up to contractual cap ({issuer_data['contractual_cap']})",
+            "Contract Status": f"Liability capped at {issuer_data['disclosed_amount']}",
+            "Cash Demand on Issuer": f"Up to contractual cap ({issuer_data['disclosed_amount']})",
             "Investor Consequence": "Competes with other unsecured creditors if default occurs; mitigants apply.",
         },
     ]
+    if issuer_data["id"] == "coreweave-deposit":
+        matrix_rows = [
+            {
+                "Scenario / Stage": "Recognized financing at cutoff",
+                "Contract Status": "On-balance-sheet recourse debt",
+                "Cash Demand on Issuer": "$189m carrying value at 30 Jun 2026; future payoff not established",
+                "Investor Consequence": "Already included in reported debt; $230m original deposit is not a cap.",
+            },
+            {
+                "Scenario / Stage": "Termination / Maturity",
+                "Contract Status": "Termination rights; January 2029 table maturity; 12% effective return",
+                "Cash Demand on Issuer": "Unused deposit plus applicable redemption premiums; payment schedule not supplied",
+                "Investor Consequence": "Liquidity and competing claims matter; relative priority is unestablished.",
+            },
+        ]
     st.table(matrix_rows)
 
     with st.container(border=True):
         st.markdown("**Why Deterministic Scenario Recovery Is Withheld for Real Issuers**")
         prose(
             "Deterministic settlement waterfalls require a closed asset pool, verified creditor hierarchy, and "
-            "comprehensive claim amounts. Real-world disclosures provide contractual caps, not total enterprise "
+            "comprehensive claim amounts. These disclosures provide selected contractual amounts, not total enterprise "
             "liquidation values. Parallax traces the contractual activation pathway without fabricating recovery percentages."
         )
 

@@ -146,12 +146,44 @@ class DemoTests(unittest.TestCase):
         app = open_app(page="Financial Obligations", issuer="nvidia-ports")
         self.assertFalse(app.exception)
         self.assertIn("NVIDIA PORTS Technology Campus residual value guaranties", text(app))
-        self.assertIn("0001045810-26-000085", text(app))
+        self.assertIn("0001045810-26-000069", text(app))
+        self.assertIn("0001045810-26-000075", text(app))
         # Verified fact N1-N4 assertions
         self.assertIn("OpenAI reimbursement undertaking", text(app))
         self.assertIn("Residual-value guaranties have commencement", text(app))
         self.assertIn("Initial shared aggregate cap is USD 105 billion", text(app))
         chat.assert_not_called()
+
+    def test_registry_provenance_matches_primary_document_accessions(self):
+        for key in REAL_CASES.values():
+            with self.subTest(case=key):
+                _, evidence = benchmark.load_case(key)
+                for doc in evidence["documents"]:
+                    self.assertIn(doc["accession"], ISSUER_REGISTRY[key]["provenance"])
+                    self.assertIn(doc["accession"].replace("-", ""), doc["url"])
+
+    def test_meta_overview_preserves_complete_contractual_cap(self):
+        app = open_app(issuer="meta-capacity")
+        self.assertFalse(app.exception)
+        cap = next(m for m in app.metric if m.label == "Disclosed Contractual Cap")
+        self.assertEqual(cap.value, "Up to $14.72bn over five years")
+
+    def test_accounting_amounts_and_deposit_are_not_zero_liability_or_cap(self):
+        app = open_app(issuer="nvidia-ports")
+        self.assertFalse(app.exception)
+        self.assertIn("PORTS guarantee liability carrying amount not separately established", text(app))
+        self.assertNotIn("$0 recognized on balance sheet", text(app))
+        app.selectbox(key="active_issuer_select").set_value("coreweave-deposit").run()
+        deposit = next(m for m in app.metric if m.label == "Original Deposit Received")
+        self.assertEqual(deposit.value, "$230m original refundable deposit ($100m settled Jun 2026)")
+        self.assertIn("On-balance-sheet comparison case", text(app))
+        self.assertNotIn("includes $43m accrued premiums", text(app))
+        for page in ("Financial Obligations", "Capital Structure", "Scenario Analysis"):
+            app.radio(key="page").set_value(page).run()
+            self.assertFalse(app.exception)
+            self.assertNotIn("Liability capped at", text(app))
+            self.assertNotIn("Up to contractual cap", text(app))
+            self.assertIn("$189m", text(app) + "\n" + "\n".join(m.value for m in app.metric))
 
     def test_cash_conservation_and_controlled_calculation_comparisons(self):
         a, b = capital_comparison("Cedar")

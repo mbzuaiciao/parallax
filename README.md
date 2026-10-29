@@ -9,6 +9,19 @@ requests to Meta Model API and save their unmodified responses for inspection.
 The financial backend uses Python's standard library. The hackathon demo adds
 Streamlit as its only direct dependency; its required dependencies are locked by uv.
 
+The three real-world cases use **curated disclosure summaries**: manually selected
+short quotations and factual paraphrases, rather than raw SEC filings. They test
+financial interpretation of supplied summaries, not autonomous information extraction,
+filing discovery or retrieval. Human/assistant preparation already selects and
+organizes the relevant terms. Both neutral and guided experimental conditions are
+preserved; even neutral prompts receive these curated summaries, and guided results
+measure performance with explicit analytical instructions, not unaided capability.
+CoreWeave is an on-balance-sheet comparison case, not an extra hidden debt layer.
+
+The [post-audit correction record](docs/post-audit-corrections.md) documents primary
+sources, corrected UI representations and unresolved accounting questions. Historical
+case packs, reference answers, assessments and experiment results remain unchanged.
+
 ## Launch the interactive workstation
 
 From the repository root, launch saved-results mode without an API key:
@@ -325,7 +338,7 @@ uv run python -m unittest discover -s tests -v
 ```
 
 The command makes one request assessing both NVIDIA equity and senior unsecured
-creditors using a compact source pack prepared directly from SEC disclosures.
+creditors using curated summaries prepared from SEC disclosures, rather than raw filings.
 Wagner's coded conclusions are kept in a separate, attributed comparison file and
 never sent to the model. The [unaltered live response](results/nvidia-ports-live.json)
 and [manual evaluation](results/nvidia-ports-review.md) record broad agreement on
@@ -388,7 +401,7 @@ provider responses, source versions/hashes, Git/working-draft metadata and times
 are saved. NVIDIA's existing commands, prompts and results remain compatible.
 
 Primary evidence, reference facts and Wagner research annotations are separate
-files. Only primary evidence enters prompts. Automated checks cover bytes, protocol
+files. Only the curated primary-disclosure summaries enter prompts. Automated checks cover bytes, protocol
 structure, completion statuses and recognized catalog identifiers; they do **not**
 grade narrative extraction, citation support, legal reasoning or economic judgment.
 Recorded assessments are explicitly assistant drafts awaiting human review.
