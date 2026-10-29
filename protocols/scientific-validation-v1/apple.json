@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "apple_manufacturing_2025",
+  "arrangement": "Apple manufacturing purchase obligations",
+  "analysis_as_of": "2025-10-31",
+  "preparation": "Historical selected SEC disclosure context, paraphrased by the preparing assistant. Not a full filing or complete executed contract. No research annotations or reference judgments are included.",
+  "documents": [
+    {
+      "id": "AAPL_10K",
+      "title": "Apple 2025 Form 10-K",
+      "accession": "0000320193-25-000079",
+      "filed_on": "2025-10-31",
+      "period_end": "2025-09-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "locator": "Item 7, Liquidity and Capital Resources, Manufacturing Purchase Obligations",
+      "short_quote": "manufacturing purchase obligations of $56.2 billion, with $55.4 billion payable within 12 months.",
+      "factual_paraphrase": "Apple uses outsourcing partners for subassembly, final assembly and testing, and buys components from suppliers. At September 27, 2025, manufacturing purchase obligations were $56.2 billion, including $55.4 billion payable within 12 months. This selected passage concerns manufacturing purchases; other purchase obligations are outside this case."
+    }
+  ]
+}

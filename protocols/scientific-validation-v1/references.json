@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "authority": "Provisional review material; primary sources alone support factual verification. No model judgment is authoritative ground truth.",
+  "cases": [
+    {
+      "case_key": "nvidia-ports",
+      "company": "NVIDIA",
+      "evidence_file": "cases/real_world/nvidia_ports.json",
+      "legacy_reference_file": "cases/real_world/nvidia_ports_reference.json",
+      "status": "provisional",
+      "independent_verification": {
+        "reviewer": null,
+        "date": null,
+        "decision": "pending",
+        "method": "Inspect primary source for each factual assertion; record approval or dispute with locator before outcome scoring."
+      },
+      "source_inspection": {
+        "preparer": "Codex assistant; not an independent financial adjudicator",
+        "date": "2026-10-29",
+        "scope": "Primary passages opened through web; complete contracts and all accounting records not independently verified."
+      },
+      "primary_sources": [
+        {
+          "id": "SEC_8K",
+          "accession": "0001045810-26-000069",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+          "filed_on": "2026-08-17",
+          "locator": "Item 1.01: Residual Value Guaranties; paragraphs beginning 'On August 17', 'NVIDIA’s aggregate', 'Pursuant to', 'Upon a Trigger Event' and 'NVIDIA’s obligations'"
+        },
+        {
+          "id": "SEC_10Q",
+          "accession": "0001045810-26-000075",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "filed_on": "2026-08-26",
+          "locator": "Note 17, Guarantees: paragraph headed 'SB Energy Corp. guarantees', immediately before the maximum gross exposure table"
+        },
+        {
+          "id": "SEC_FORM",
+          "accession": "0001045810-26-000075",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda2027q2ex101.htm",
+          "filed_on": "2026-08-26",
+          "locator": "Opening/recitals A-B; sections 1(b)-(h), 2, 5, 8, 12(a)(i)-(v), 20(e); redacted schedules"
+        }
+      ],
+      "source_checked_facts": [
+        {
+          "id": "N1",
+          "assertion": "NVIDIA guarantees defined lease-related obligations to SB Energy lessors; an OpenAI affiliate is tenant and OpenAI undertakes reimbursement.",
+          "document_id": "SEC_8K",
+          "locator": "Item 1.01, Residual Value Guaranties",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "N2",
+          "assertion": "Initial cumulative cap is $105 billion across the initial guaranties; effectiveness/payment have lease-commencement and ready-for-service conditions.",
+          "document_id": "SEC_8K",
+          "locator": "Item 1.01, cap and payment-condition paragraphs",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "N3",
+          "assertion": "Default triggers require landlord termination right and intent plus contractual procedure; remedies and recoveries qualify exposure.",
+          "document_id": "SEC_FORM",
+          "locator": "Sections 2, 8 and 12",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        }
+      ],
+      "core_factual_targets": [
+        "N1",
+        "N2",
+        "N3"
+      ],
+      "contractual_obligations": "Contingent guarantor payment, qualified by triggers, shared limits, recoveries and remedies; reimbursement is a right, not cash already collected.",
+      "recognized_accounting_liabilities": {
+        "status": "not_established",
+        "statement": "No separately measured PORTS carrying liability established by this supplied pack. Neither zero nor the cap is a verified accounting balance. August signing follows the July balance-sheet date; unrelated cloud-guarantee accounting is not PORTS evidence.",
+        "scoring_rule": "Correct exposure-versus-recognition distinction earns full recognition-component credit, including an evidence-limited unknown carrying amount; do not reward unsupported zero or nonrecognition assertions."
+      },
+      "financial_interpretations": {
+        "status": "conditional interpretations, not verified facts or unique required wording",
+        "equity": "Conditional cash outflows may compete with distributions/investment, while infrastructure exclusivity may have commercial value; neither net value nor returns are quantified.",
+        "senior_unsecured_creditor": "Triggered payments may reduce liquidity; reimbursement collectibility and claim priorities affect exposure but are not established."
+      },
+      "material_uncertainties_and_unsupported_conclusions": [
+        "Redacted formulas/schedules and incomplete executed terms.",
+        "No default probability, expected loss, recovery, issuer leverage or legal priority can be quantified.",
+        "Do not infer all obligations become immediately payable or all reimbursement is recoverable."
+      ],
+      "scoring_boundary": "Score only information available in this evidence pack. Accounting conclusions not established here are unknown, not zero. Reviewer must independently approve factual targets; historical assistant reference labels confer no verification."
+    },
+    {
+      "case_key": "meta-capacity",
+      "company": "Meta Platforms",
+      "evidence_file": "cases/real_world/meta_capacity.json",
+      "legacy_reference_file": "cases/real_world/meta_capacity_reference.json",
+      "status": "provisional",
+      "independent_verification": {
+        "reviewer": null,
+        "date": null,
+        "decision": "pending",
+        "method": "Inspect primary source for each factual assertion; record approval or dispute with locator before outcome scoring."
+      },
+      "source_inspection": {
+        "preparer": "Codex assistant; not an independent financial adjudicator",
+        "date": "2026-10-29",
+        "scope": "Primary passages opened through web; complete contracts and all accounting records not independently verified."
+      },
+      "primary_sources": [
+        {
+          "id": "META_10Q",
+          "accession": "0001628280-26-050705",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "filed_on": "2026-07-30",
+          "locator": "Note 9, Commitments and Contingencies, Leases and Contractual Commitments: paragraph beginning 'In addition, as of June 30, 2026'; also repeated in MD&A Contractual Obligations"
+        }
+      ],
+      "source_checked_facts": [
+        {
+          "id": "M1",
+          "assertion": "Meta is purchaser of up to $14.72 billion cloud capacity over five years; the provider is unnamed in the selected passage.",
+          "document_id": "META_10Q",
+          "locator": "Note 9, paragraph beginning In addition",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "M2",
+          "assertion": "Third-party capacity sales may reduce the contingent purchase obligation.",
+          "document_id": "META_10Q",
+          "locator": "Note 9, contingent capacity paragraph",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        }
+      ],
+      "core_factual_targets": [
+        "M1",
+        "M2"
+      ],
+      "contractual_obligations": "Own contingent capacity purchases with third-party sales offsets; no guarantee of another borrower is identified in this passage.",
+      "recognized_accounting_liabilities": {
+        "status": "not_established",
+        "statement": "The selected passage does not establish a separately recognized carrying liability for this arrangement; the disclosed cap is not that measurement.",
+        "scoring_rule": "Correct exposure-versus-recognition distinction earns full recognition-component credit, including an evidence-limited unknown carrying amount; do not reward unsupported zero or nonrecognition assertions."
+      },
+      "financial_interpretations": {
+        "status": "conditional interpretations, not verified facts or unique required wording",
+        "equity": "Capacity availability may support operations, while underused capacity may consume cash and constrain allocation.",
+        "senior_unsecured_creditor": "Conditional cash demand may reduce liquidity, with magnitude dependent on third-party sales; no recovery or priority implication is automatic."
+      },
+      "material_uncertainties_and_unsupported_conclusions": [
+        "Provider identity, pricing, annual contingent payments and cancellation terms are not established.",
+        "No forced borrowing, debt equivalence, de facto operating priority, expected loss or default probability is verified."
+      ],
+      "scoring_boundary": "Score only information available in this evidence pack. Accounting conclusions not established here are unknown, not zero. Reviewer must independently approve factual targets; historical assistant reference labels confer no verification.",
+      "evaluation_guidance": [
+        {
+          "id": "M3",
+          "assertion": "The neighboring $349.31 billion aggregate commitments and 2026/2027 amounts are separate context, not the capacity arrangement payment schedule.",
+          "document_id": "META_10Q",
+          "locator": "Note 9, preceding aggregate-commitment paragraph",
+          "status": "provisional_evaluation_guidance_pending_independent_review",
+          "type": "inference_constraint",
+          "scoring_rule": "Omission is not a factual-coverage error. Misattributing the neighboring aggregates as the capacity payment schedule is evaluated as a factual/interpretive error and unsupported inference where material."
+        }
+      ]
+    },
+    {
+      "case_key": "coreweave-deposit",
+      "company": "CoreWeave",
+      "evidence_file": "cases/real_world/coreweave_deposit.json",
+      "legacy_reference_file": "cases/real_world/coreweave_deposit_reference.json",
+      "status": "provisional",
+      "independent_verification": {
+        "reviewer": null,
+        "date": null,
+        "decision": "pending",
+        "method": "Inspect primary source for each factual assertion; record approval or dispute with locator before outcome scoring."
+      },
+      "source_inspection": {
+        "preparer": "Codex assistant; not an independent financial adjudicator",
+        "date": "2026-10-29",
+        "scope": "Primary passages opened through web; complete contracts and all accounting records not independently verified."
+      },
+      "primary_sources": [
+        {
+          "id": "CRWV_10K",
+          "accession": "0001769628-26-000104",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "filed_on": "2026-03-02",
+          "locator": "Note 10, Debt, Magnetar Loan subsection"
+        },
+        {
+          "id": "CRWV_10Q",
+          "accession": "0001769628-26-000366",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
+          "filed_on": "2026-08-12",
+          "locator": "Note 10, Debt: recourse debt table, Magnetar Loan row, and Magnetar Loan subsection"
+        }
+      ],
+      "source_checked_facts": [
+        {
+          "id": "C1",
+          "assertion": "CoreWeave received a $230 million refundable deposit from MagAI Ventures; consumption reduces the deposit and unused funds are refundable.",
+          "document_id": "CRWV_10K",
+          "locator": "Note 10, Magnetar Loan",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "C2",
+          "assertion": "The February 2025 termination-right amendment led to in-substance debt classification under ASC 470; termination multiplier is equivalent to a 12% annual return.",
+          "document_id": "CRWV_10K",
+          "locator": "Note 10, Magnetar Loan",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "C3",
+          "assertion": "December 31, 2025 debt was $273 million including $43 million premiums.",
+          "document_id": "CRWV_10K",
+          "locator": "Note 10, Magnetar Loan",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "C4",
+          "assertion": "June 2026 settlement was $100 million; June 30 remaining carrying obligation was $189 million including unused deposit and accrued premiums.",
+          "document_id": "CRWV_10Q",
+          "locator": "Note 10, Magnetar Loan and recourse debt table",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        }
+      ],
+      "core_factual_targets": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "contractual_obligations": "Service/refund obligations under amended capacity agreement; certain termination rights accelerate refund with return multiplier. The original deposit is financing received, not a cap.",
+      "recognized_accounting_liabilities": {
+        "status": "disclosed_recognition_pending_independent_verification",
+        "statement": "Recognized in-substance debt: $273m December 2025, $189m June 2026. Premium accretion is interest expense. Do not add the carrying amount again as hidden debt.",
+        "scoring_rule": "Correct exposure-versus-recognition distinction earns full recognition-component credit, including an evidence-limited unknown carrying amount; do not reward unsupported zero or nonrecognition assertions."
+      },
+      "financial_interpretations": {
+        "status": "conditional interpretations, not verified facts or unique required wording",
+        "equity": "Financing supplies cash initially but refund obligations and premium accretion burden future cash and residual value.",
+        "senior_unsecured_creditor": "Recognized recourse financing competes for cash; relative priority and collateral are not disclosed in the selected notes."
+      },
+      "material_uncertainties_and_unsupported_conclusions": [
+        "Do not assign the December $43m premiums to the June balance.",
+        "Do not infer coupon cash schedule from effective return, future payoff, equal ranking, or unsecured status.",
+        "Full termination procedures, collateral and recovery inputs are absent."
+      ],
+      "scoring_boundary": "Score only information available in this evidence pack. Accounting conclusions not established here are unknown, not zero. Reviewer must independently approve factual targets; historical assistant reference labels confer no verification."
+    },
+    {
+      "case_key": "apple-manufacturing",
+      "company": "Apple",
+      "evidence_file": "protocols/scientific-validation-v1/apple.json",
+      "legacy_reference_file": null,
+      "status": "provisional",
+      "independent_verification": {
+        "reviewer": null,
+        "date": null,
+        "decision": "pending",
+        "method": "Inspect primary source for each factual assertion; record approval or dispute with locator before outcome scoring."
+      },
+      "source_inspection": {
+        "preparer": "Codex assistant; not an independent financial adjudicator",
+        "date": "2026-10-29",
+        "scope": "Primary passages opened through web; complete contracts and all accounting records not independently verified."
+      },
+      "primary_sources": [
+        {
+          "id": "AAPL_10K",
+          "accession": "0000320193-25-000079",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "filed_on": "2025-10-31",
+          "locator": "Item 7, Liquidity and Capital Resources, Manufacturing Purchase Obligations"
+        }
+      ],
+      "source_checked_facts": [
+        {
+          "id": "A1",
+          "assertion": "Manufacturing purchase obligations are $56.2bn at September 27, 2025; $55.4bn payable within 12 months.",
+          "document_id": "AAPL_10K",
+          "locator": "Item 7, Liquidity and Capital Resources, Manufacturing Purchase Obligations",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "A2",
+          "assertion": "Purchases involve outsourced manufacturing/assembly/testing and component suppliers.",
+          "document_id": "AAPL_10K",
+          "locator": "Item 7, Liquidity and Capital Resources, Manufacturing Purchase Obligations",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        }
+      ],
+      "core_factual_targets": [
+        "A1",
+        "A2"
+      ],
+      "contractual_obligations": "Manufacturing purchases from suppliers; selected disclosure is not an executed contract.",
+      "recognized_accounting_liabilities": {
+        "status": "not_established",
+        "statement": "Ordinary unperformed executory purchase commitments generally do not create a gross payable merely on signing. The selected Item 7 passage does not establish the exact recognized balance of related accounts payable, cancellation-fee reserves or other accruals at period end. Do not equate the disclosed commitment with additional funded debt or infer that every related liability is zero.",
+        "scoring_rule": "Credit a correctly qualified explanation of ordinary executory-contract nonrecognition, or an evidence-limited unknown carrying amount, for the recognition component. Do not penalize the general accounting principle or require a numerical balance. A definite issuer-specific zero for all related liabilities requires evidence not supplied here. Full dimension credit also requires warranted stakeholder analysis."
+      },
+      "financial_interpretations": {
+        "status": "conditional interpretations, not verified facts or unique required wording",
+        "equity": "Procurement supports product supply but concentrates cash requirements; inventory utilization and margins determine net value.",
+        "senior_unsecured_creditor": "Near-term purchases may constrain cash availability; countervailing operating inflows and claim ranking are unknown."
+      },
+      "material_uncertainties_and_unsupported_conclusions": [
+        "Individual counterparties, cancellation rights, pricing, collateral, liability overlap and recovery are not supplied.",
+        "No expected loss, solvency conclusion or all-in economic leverage can be calculated."
+      ],
+      "scoring_boundary": "Score only information available in this evidence pack. Accounting conclusions not established here are unknown, not zero. Reviewer must independently approve factual targets; historical assistant reference labels confer no verification.",
+      "short_quote_verification": {
+        "status": "verbatim_excerpt_checked_by_assistant",
+        "checked_on": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "locator": "Item 7, Manufacturing Purchase Obligations",
+        "independent_verification": "pending; quote inspection does not certify the reference record"
+      }
+    },
+    {
+      "case_key": "microsoft-leases",
+      "company": "Microsoft",
+      "evidence_file": "protocols/scientific-validation-v1/microsoft.json",
+      "legacy_reference_file": null,
+      "status": "provisional",
+      "independent_verification": {
+        "reviewer": null,
+        "date": null,
+        "decision": "pending",
+        "method": "Inspect primary source for each factual assertion; record approval or dispute with locator before outcome scoring."
+      },
+      "source_inspection": {
+        "preparer": "Codex assistant; not an independent financial adjudicator",
+        "date": "2026-10-29",
+        "scope": "Primary passages opened through web; complete contracts and all accounting records not independently verified."
+      },
+      "primary_sources": [
+        {
+          "id": "MSFT_10K",
+          "accession": "0000950170-25-100235",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+          "filed_on": "2025-07-30",
+          "locator": "Note 1, Leases accounting policy; Note 13, Leases, supplemental balance-sheet and maturity tables, operating lease columns"
+        }
+      ],
+      "source_checked_facts": [
+        {
+          "id": "L1",
+          "assertion": "Operating lease liability is $22,861m at June 30, 2025: $5,424m current and $17,437m noncurrent.",
+          "document_id": "MSFT_10K",
+          "locator": "Note 13, operating lease balance-sheet rows",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "L2",
+          "assertion": "Undiscounted operating payments $25,481m less $2,620m imputed interest reconcile to the liability; fiscal 2026 payments are $6,111m.",
+          "document_id": "MSFT_10K",
+          "locator": "Note 13, maturity table, operating lease column",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        },
+        {
+          "id": "L3",
+          "assertion": "Recognition at commencement uses present value of lease payments.",
+          "document_id": "MSFT_10K",
+          "locator": "Note 1, Leases",
+          "status": "primary_source_checked_by_assistant_pending_independent_verification"
+        }
+      ],
+      "core_factual_targets": [
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "contractual_obligations": "Commenced operating leases require payments in exchange for asset use.",
+      "recognized_accounting_liabilities": {
+        "status": "disclosed_recognition_pending_independent_verification",
+        "statement": "Recognized operating lease liability is $22,861m. Undiscounted payments and current liability are different measurements; finance lease column is outside scope.",
+        "scoring_rule": "Correct exposure-versus-recognition distinction earns full recognition-component credit, including an evidence-limited unknown carrying amount; do not reward unsupported zero or nonrecognition assertions."
+      },
+      "financial_interpretations": {
+        "status": "conditional interpretations, not verified facts or unique required wording",
+        "equity": "Asset access supports operations while contractual payments constrain residual cash.",
+        "senior_unsecured_creditor": "Lease payments affect liquidity, but the liability alone does not determine creditor recoveries."
+      },
+      "material_uncertainties_and_unsupported_conclusions": [
+        "No lessor identities, relative creditor ranking or recovery assumptions supplied.",
+        "Do not add undiscounted payments to recognized liability as a separate debt burden.",
+        "Fiscal 2026 cash payments differ from current carrying liability; they need not be equal."
+      ],
+      "scoring_boundary": "Score only information available in this evidence pack. Accounting conclusions not established here are unknown, not zero. Reviewer must independently approve factual targets; historical assistant reference labels confer no verification.",
+      "short_quote_verification": {
+        "status": "verbatim_excerpt_checked_by_assistant",
+        "checked_on": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+        "locator": "Note 1, Leases",
+        "independent_verification": "pending; quote inspection does not certify the reference record"
+      }
+    }
+  ],
+  "scoring_guidance": {
+    "recognition": "Full credit for the recognition component includes correctly stating that a carrying liability cannot be established from the supplied evidence. Unknown is neither zero nor proof of nonrecognition. Unsupported zero or unrecorded-liability assertions receive no credit for that component and count as material unsupported assertions. Full dimension credit also requires warranted stakeholder analysis.",
+    "citations": "Conventional primary filing, note or section citations and internal document/locator IDs are equally acceptable when semantically supporting the claim. Internal schema IDs are not required. Fabricated citations earn no grounding credit for the associated claim.",
+    "presentation": "Score semantic correctness independently of headings, organization, prose or bullets, and guided-prompt terminology."
+  }
+}

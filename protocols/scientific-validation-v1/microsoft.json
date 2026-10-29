@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "microsoft_operating_leases_2025",
+  "arrangement": "Microsoft commenced operating leases",
+  "analysis_as_of": "2025-07-30",
+  "preparation": "Historical selected SEC disclosure context, paraphrased by the preparing assistant. Not a full filing or complete executed contract. No research annotations or reference judgments are included.",
+  "documents": [
+    {
+      "id": "MSFT_10K",
+      "title": "Microsoft 2025 Form 10-K",
+      "accession": "0000950170-25-100235",
+      "filed_on": "2025-07-30",
+      "period_end": "2025-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "locator": "Note 1, Leases accounting policy; Note 13, Leases, supplemental balance-sheet and maturity tables, operating lease columns",
+      "short_quote": "Operating lease ROU assets and liabilities are recognized at commencement date based on the present value of lease payments over the lease term.",
+      "factual_paraphrase": "Operating lease liabilities are recognized at commencement at the present value of lease payments. At June 30, 2025, Microsoft reports operating lease liabilities of $22,861 million: $5,424 million current and $17,437 million noncurrent. Operating lease payments total $25,481 million before $2,620 million imputed interest. The maturity table lists $6,111 million in fiscal 2026. Finance leases are a separate column and outside this case."
+    }
+  ]
+}
