@@ -14,6 +14,14 @@ from parallax import benchmark, workstation
 
 
 class WorkstationDataTests(unittest.TestCase):
+    def test_backend_default_port_avoids_metis(self):
+        with patch('sys.argv', ['parallax.workstation']), patch.object(
+                workstation, 'ThreadingHTTPServer') as server:
+            server.return_value.serve_forever.side_effect = KeyboardInterrupt
+            workstation.main()
+        server.assert_called_once_with(('127.0.0.1', 8001), workstation.Handler)
+        server.return_value.server_close.assert_called_once()
+
     def test_all_five_cases_and_evidence_bytes_are_reused(self):
         catalog = workstation.case_catalog()
         self.assertEqual([item['company'] for item in catalog],

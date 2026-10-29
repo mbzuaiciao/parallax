@@ -108,7 +108,7 @@ export default function App() {
       <div className="sidebar-footer"><span className="local-dot" /> Local evidence workspace<p>Historical disclosures<br />Phase 1 · Read-only research</p></div>
     </aside>
     <div className="main-shell"><div className="topbar"><span>Research workstation <b>/</b> Case evidence</span><a href="#provenance">Source provenance ↓</a></div>
-      <main id="main" tabIndex={-1}>{error ? <div className="panel empty" role="alert"><h1>Evidence unavailable</h1><p>{error} Check that the Python service is running on port 8000.</p><button className="retry" onClick={() => { setError(''); setRetry(value => value + 1); }}>Retry loading</button></div> : data ? <CaseView key={data.key} data={data} /> : <p className="empty" role="status">Loading disclosure evidence…</p>}</main>
+      <main id="main" tabIndex={-1}>{error ? <div className="panel empty" role="alert"><h1>Evidence unavailable</h1><p>{error} Check that the Python service is running on port 8001.</p><button className="retry" onClick={() => { setError(''); setRetry(value => value + 1); }}>Retry loading</button></div> : data ? <CaseView key={data.key} data={data} /> : <p className="empty" role="status">Loading disclosure evidence…</p>}</main>
       <footer className="main-footer">PARALLAX <span>Selected historical evidence · No live pricing or new inference</span></footer>
     </div>
   </div>;

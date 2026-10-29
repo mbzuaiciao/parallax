@@ -30,33 +30,50 @@ disclosed evidence, provisional conditional interpretation and evidence limits.
 
 Requirements: Python 3.10+, [uv](https://docs.astral.sh/uv/), and Node
 22.12+, 24+, or 26+ matching the engines range in `frontend/package.json`.
-No API key is needed. From the repository root:
+No API key is needed. Run this one-time setup from the repository root:
 
 ```sh
 uv sync --locked
 npm ci --prefix frontend
-npm run build --prefix frontend
-uv run python -m parallax.workstation
 ```
 
-Open [127.0.0.1:8000](http://127.0.0.1:8000). The Python server serves the
-React production build and the read-only case API on loopback. Stop with Ctrl+C.
-
-For development with hot reload, complete the setup above, then run these in
-two terminals from the repository root:
+Start both services in separate terminals from the repository root, and keep
+both running. **Terminal 1 — Python evidence API:**
 
 ```sh
-uv run python -m parallax.workstation
+uv run python -m parallax.workstation --port 8001
 ```
+
+**Terminal 2 — React frontend with hot reload:**
 
 ```sh
 npm run dev --prefix frontend
 ```
 
-Open Vite's printed local URL (normally
-[127.0.0.1:5173](http://127.0.0.1:5173)). Vite proxies `/api` to the Python
-service on port 8000. Stop the production server before starting another Python
-server on the same port, or reuse the server already running.
+Open [127.0.0.1:5174](http://127.0.0.1:5174). React uses relative `/api` URLs;
+Vite proxies them to the Python service at `http://127.0.0.1:8001`. Starting
+Vite alone does not start Python. The case catalog is available directly at
+[127.0.0.1:8001/api/cases](http://127.0.0.1:8001/api/cases), and through Vite at
+[127.0.0.1:5174/api/cases](http://127.0.0.1:5174/api/cases).
+
+Parallax uses API port 8001 and frontend port 5174 so it can run alongside
+Metis on ports 8000 and 5173. Vite reports an error if its configured port is
+occupied rather than silently selecting another URL. Reuse an existing Parallax
+server or stop it before starting another on the same port. If changing the API
+port, update both proxy targets in `frontend/vite.config.ts` and the Python
+startup command. No CORS configuration is needed for the proxied workflow.
+Stop each service with Ctrl+C in its terminal.
+
+To serve the React production build and API together using only Python:
+
+```sh
+npm run build --prefix frontend
+uv run python -m parallax.workstation --port 8001
+```
+
+Open [127.0.0.1:8001](http://127.0.0.1:8001). Alternatively,
+`npm run preview --prefix frontend` serves the built frontend on port 4174 and
+proxies its API requests to the separately running Python service on port 8001.
 
 See [workstation development and validation](docs/workstation.md) for setup,
 API routes, provenance, interface description and limitations.

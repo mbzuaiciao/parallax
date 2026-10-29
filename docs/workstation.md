@@ -10,10 +10,10 @@ is needed. From the repository root:
 uv sync --locked
 npm ci --prefix frontend
 npm run build --prefix frontend
-uv run python -m parallax.workstation
+uv run python -m parallax.workstation --port 8001
 ```
 
-Open <http://127.0.0.1:8000>. The standard-library Python server serves the
+Open <http://127.0.0.1:8001>. The standard-library Python server serves the
 production build and exactly two read-only JSON routes. It binds to loopback.
 Use `--port PORT` to change the port when serving the production build.
 Stop with Ctrl+C.
@@ -21,16 +21,21 @@ Stop with Ctrl+C.
 For development with hot reload, run these in two terminals from the root:
 
 ```sh
-uv run python -m parallax.workstation
+uv run python -m parallax.workstation --port 8001
 ```
 
 ```sh
 npm run dev --prefix frontend
 ```
 
-Open Vite's printed local URL (normally <http://127.0.0.1:5173>). Vite proxies
-`/api` to port 8000; update `frontend/vite.config.ts` if changing the API port.
-`npm run preview --prefix frontend` also proxies the API, and requires a build.
+Keep both terminals running and open <http://127.0.0.1:5174>. Vite proxies
+relative `/api` requests to `http://127.0.0.1:8001`; update both proxy targets
+in `frontend/vite.config.ts` if changing the Python API port. Starting Vite alone
+does not start Python. No CORS change is needed for these same-origin requests.
+`npm run preview --prefix frontend` serves port 4174, also proxies the API, and
+requires a build plus the running Python service. Vite's dev and preview ports
+are fixed and fail if occupied. These defaults avoid Metis's ports 8000/5173.
+Reuse existing Parallax servers or stop them before launching duplicates.
 
 The original app still runs separately:
 

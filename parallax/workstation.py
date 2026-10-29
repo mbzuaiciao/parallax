@@ -1,6 +1,6 @@
 """Read-only local workstation adapter. No inference or financial calculations.
 
-Run: python -m parallax.workstation [--port 8000]
+Run: python -m parallax.workstation [--port 8001]
 """
 
 import argparse
@@ -133,7 +133,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--port", type=int, default=8001)
     args = parser.parse_args()
     server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
     print(f"Parallax workstation: http://127.0.0.1:{args.port}", flush=True)
