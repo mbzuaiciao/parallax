@@ -1,0 +1,17 @@
+{
+  "A": {
+    "archived_response": "10.response.json",
+    "original_review_id": "a373507d",
+    "review_id": "04588fb2"
+  },
+  "B": {
+    "archived_response": "12.response.json",
+    "original_review_id": "2aae0074",
+    "review_id": "319d118f"
+  },
+  "C": {
+    "archived_response": "11.response.json",
+    "original_review_id": "d3b6f33c",
+    "review_id": "46b2ad73"
+  }
+}
