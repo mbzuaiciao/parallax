@@ -1,0 +1,4 @@
+{"status": "started", "at": "2026-11-07T16:10:38.895374+00:00"}
+{"index": 1, "case": "01", "arm": "A", "requested_model": "meta-models/muse-spark-open", "status": "sending", "at": "2026-11-07T16:10:38.895864+00:00"}
+{"index": 1, "case": "01", "arm": "A", "requested_model": "meta-models/muse-spark-open", "status": "provider_error", "http_status": 403, "at": "2026-11-07T16:10:39.363368+00:00"}
+{"status": "stopped", "at": "2026-11-07T16:10:39.363660+00:00", "index": 1}

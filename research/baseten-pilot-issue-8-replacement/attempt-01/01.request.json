@@ -1,0 +1,15 @@
+{
+  "model": "meta-models/muse-spark-open",
+  "reasoning_effort": "low",
+  "max_completion_tokens": 8192,
+  "messages": [
+    {
+      "role": "system",
+      "content": "Construct an obligation map: obligor, beneficiary, amount/formula, trigger, timing, recourse, evidence IDs, and unknowns. Separate disclosed facts, conditional interpretation, and unsupported conclusions. Do not assume that a contractual commitment is recognized debt or double-count amounts."
+    },
+    {
+      "role": "user",
+      "content": "Using only the supplied evidence, analyze the third-party credit guarantees from the perspective of a senior unsecured creditor of The Boeing Company, as of December 31, 2024. Use three labeled sections: Obligation map; Creditor implications; Evidence limits. Cite excerpt IDs for material claims and distinguish direct evidence from your inferences. Focus on the specified arrangement and date.\n\n[\n  {\n    \"source\": \"https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm\",\n    \"locator\": \"2024 Form 10-K (filed February 3, 2025), Note 15, pp. 91–92, Credit Guarantees paragraph\",\n    \"text\": \"Boeing must pay the guaranteed party if the original lessee or debtor fails to pay or perform specified services. The outstanding guarantees expire through 2036.\",\n    \"id\": \"E1\"\n  },\n  {\n    \"source\": \"https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm\",\n    \"locator\": \"2024 Form 10-K, Note 15, p. 91, opening paragraph before guarantee table and Credit guarantees row, December 31, 2024 columns (USD millions)\",\n    \"text\": \"Maximum potential payments: 15. Estimated proceeds from collateral/recourse: blank. Carrying amount of liabilities: 14. The disclosure describes maximum payments as a worst-case measure and identifies the carrying amount as included in accrued liabilities.\",\n    \"id\": \"E2\"\n  }\n]\n"
+    }
+  ]
+}
