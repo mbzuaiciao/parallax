@@ -1,0 +1,9 @@
+# Issue #8 replacement freeze
+
+The original attempt at commit `12e4121` stopped because Baseten reported the routed version of `meta-models/muse-spark-open-1026` was deactivated. This independent revision uses `meta-models/muse-spark-open`, the identifier Meta currently documents for Baseten. The original attempt remains preserved. [Meta deployment documentation](https://dev.meta.ai/docs/muse-spark-open/deploy)
+
+The new manifest pins the original freeze, which transitively verifies the original prompts, evidence, references, scoring protocol and runner. The wrapper changes only the model field in each outgoing payload and records the replacement manifest digest in the run plan. The endpoint remains `https://inference.baseten.co/v1/chat/completions`, with low reasoning effort, 8,192 completion tokens per request, the existing 120-second socket timeout, and all other request options unchanged. The original sequential stop-on-error transport is reused. The exact schedule remains 12 cells with one request per cell.
+
+The authenticated model catalog lists the replacement model with reasoning support and a completion limit above 8,192. It reports $1.25 per million uncached input tokens, $0.15 per million cached input tokens, $4.25 per million completion tokens, and no per-request charge. An allowance of 64,000 uncached input tokens and the full 98,304 completion-token budget gives an estimated $0.50, below the authorized $1 estimated maximum. Catalog availability does not establish live routing. The first request is the first experimental cell.
+
+The user previously confirmed review of the references and reported $100 credit expiring November 9, 2026. They explicitly authorized this independent replacement run. The planned private output directory is `/tmp/parallax-pilot-replacement-attempt-01`. The offline check compares the full replacement grid against the archived original and requires that every payload differ only in its model field.
