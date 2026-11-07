@@ -1,0 +1,22 @@
+{
+  "issuer": "Starbucks Corporation",
+  "as_of": "September 29, 2024",
+  "scope": "the operating leases",
+  "excerpts": [
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+      "locator": "2024 Form 10-K (filed November 20, 2024), Part II Item 7, Material Cash Requirements, operating lease obligations row and footnote (1), and Note 10, p. 78, minimum future maturities table (USD millions)",
+      "text": "Consolidated operating lease payment schedule by fiscal year: 2025 1,808.5; 2026 1,692.1; 2027 1,510.1; 2028 1,308.1; 2029 1,125.0; thereafter 4,498.5. Total lease payments 11,942.3; less imputed interest 1,707.6; total after that deduction 10,234.7. The material cash requirements table describes these as direct lease obligations excluding taxes, insurance and other related expenses."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+      "locator": "2024 Form 10-K, Note 10, p. 78, supplemental information cash-paid row and paragraph immediately after minimum future maturities table",
+      "text": "Cash paid related to operating lease liabilities during fiscal 2024 was USD 1,672.5 million. As of September 29, 2024, Starbucks had entered into USD 1.6 billion of operating leases that had yet to commence, mainly for real estate, with starts in fiscal 2025 through 2028 and terms of 5 to 20 years."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+      "locator": "2024 Form 10-K, Item 8, consolidated balance sheets, p. 52, September 29, 2024 operating lease liability rows (USD millions)",
+      "text": "Current portion of operating lease liability: 1,463.1. Long-term operating lease liability: 8,771.6."
+    }
+  ]
+}

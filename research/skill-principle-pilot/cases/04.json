@@ -1,0 +1,22 @@
+{
+  "issuer": "Sanofi",
+  "as_of": "July 17, 2025, at tender acceptance",
+  "scope": "the consideration for validly tendered and accepted Blueprint Medicines shares",
+  "excerpts": [
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1597264/000119312525160804/d909980d8k.htm",
+      "locator": "Blueprint Medicines Form 8-K, event July 17, 2025, signed July 18, 2025, Introductory Note, paragraphs 1–5",
+      "text": "Rothko Merger Sub was wholly owned by Aventis, itself wholly owned by Sanofi. The tender consideration was USD 129 cash per share without interest and subject to withholding, plus one contractual contingent value right (CVR) per share. The CVR represents up to USD 6 in additional cash per share tied to milestones within the applicable periods. With the offer conditions satisfied, Rothko irrevocably accepted all validly tendered and unwithdrawn shares for payment on July 17, 2025."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1597264/000110465925055143/tm2516831d1_ex2-1.htm",
+      "locator": "Agreement and Plan of Merger dated June 2, 2025, Exhibit 2.1, §1.1(c), p. 3",
+      "text": "Rothko must pay or cause payment for validly tendered and unwithdrawn shares as soon as practicable, within one business day after acceptance. Sanofi must cause Rothko to accept and pay in accordance with the agreement."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1597264/000119312525160804/d909980dex991.htm",
+      "locator": "CVR Agreement dated July 15, 2025, Exhibit 99.1, preamble, Article I milestone and Product definitions, and §4.2",
+      "text": "Aventis is called Parent in this agreement. Aventis deposits or causes the deposit of payable milestone amounts with Continental Stock Transfer & Trust Company, the rights agent, for payment to covered CVR holders other than equity award holders. Milestone one pays USD 2 per CVR if the fifth patient is dosed in the first Phase 2b or first Phase 3 BLU-808 study (whichever occurs first) during the period ending December 31, 2028. Milestone two pays USD 4 per CVR for qualifying FDA approval of BLU-808 during the period ending June 30, 2032. Both periods begin at the merger effective time. Aventis selects each payment date within ten business days following the end of the quarter in which the amounts can be determined after the applicable milestone. No payment is required for a milestone that is not achieved by its period's expiration."
+    }
+  ]
+}

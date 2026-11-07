@@ -1,0 +1,20 @@
+{
+  "endpoint": "https://inference.baseten.co/v1/chat/completions",
+  "settings": {
+    "model": "meta-models/muse-spark-open-1026",
+    "reasoning_effort": "low",
+    "max_completion_tokens": 8192
+  },
+  "timeout_seconds": 120,
+  "scope_sentence": "Then analyze equity-holder versus senior unsecured creditor exposure. ",
+  "principle": "Distinguish contractual exposure, recognized accounting liabilities and their dated carrying values, and amounts currently due or actually paid. Do not equate these without supporting evidence. Preserve supported payment obligations and material stakeholder implications, while explicitly identifying contingent or unknown quantities.",
+  "positive_example": "Positive applicability example (fictional). A venue operator reports a year-end carrying amount for its obligation to restore a leased site when it vacates. Keep that dated measurement separate from the contractual restoration requirement and the cash amount and timing of the eventual work.",
+  "boundary_example": "Boundary example (fictional). A carrier has delivered the goods and a fixed freight charge is payable today under the contract. Report the charge and its immediate use of cash if paid. An unknown balance-sheet amount does not make the documented charge or deadline uncertain.",
+  "question": "Using only the supplied evidence, analyze {scope} from the perspective of a senior unsecured creditor of {issuer}, as of {as_of}. Use three labeled sections: Obligation map; Creditor implications; Evidence limits. Cite excerpt IDs for material claims and distinguish direct evidence from your inferences. Focus on the specified arrangement and date.",
+  "schedule": [
+    ["01", "A"], ["01", "B"], ["01", "C"],
+    ["02", "B"], ["02", "C"], ["02", "A"],
+    ["03", "C"], ["03", "A"], ["03", "B"],
+    ["04", "A"], ["04", "C"], ["04", "B"]
+  ]
+}
