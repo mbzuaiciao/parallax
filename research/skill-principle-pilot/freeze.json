@@ -1,0 +1,11 @@
+{
+  "design.json": "76069a624bbde9b5de2f881fb29ee77526965a3376ed52ce07579a04e4a812f8",
+  "protocol.md": "6cca0b3e6fe3e0c4111d91f29712e1635312d7a8dd244364c228f18339d95661",
+  "references.md": "cc7bb029669f6e0e3ee950d4ec7c451c3e98b1f629da3af6b000b57a9829016d",
+  "run.py": "8dc39293600dff5b58e7d44b07097f0a1c350faa81bdea4aa4857e57a77b3ed1",
+  "../../experiments/disney_hulu_baseten_ab.py": "c8fdac3178d8def2f1c05d5d0c78e2e61feced898142149da99318aabbdcebce",
+  "cases/01.json": "a1008a709c656ddc3fdec7410e57e074fa136f1ae1132ad063e010c9cf7e1a40",
+  "cases/02.json": "45cf78458f8fc6b2278083b989b933294726af726d125ec1c765ac6b244b8727",
+  "cases/03.json": "72b4bce346b44e9501634c20169cd792abe9b3e5e8c4e8479bcfd9f7edc1b122",
+  "cases/04.json": "caef08ba637c796117ace8f041dc1f6f4024936afe53c3a2f2bb0bf3fd7ea17c"
+}
