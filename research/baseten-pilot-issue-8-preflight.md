@@ -21,3 +21,11 @@ The assistant rechecked the four frozen packets against primary disclosures. Hum
 - Planning estimate remains **$0.08–$0.17** at public Muse Spark Open family rates, or about **$0.43** at the full completion budget under the protocol's input-token assumption. This is a planning estimate. Exact-alias pricing and an approved hard budget are pending. No live attempt directory was created. [Baseten pricing](https://www.baseten.co/pricing/)
 
 Before execution, record human sign-off, account credit confirmation and exact-alias pricing, the approved hard budget, and a fresh private output directory as required by Issue #8.
+
+## Follow-up preflight
+
+The user confirmed the frozen SEC references had been checked and authorized a maximum of **$1** in inference spend once they confirm credit in the Baseten dashboard. No substantive discrepancy was identified in the reference recheck, including the distinction between Sempra's scheduled obligation and reported fulfillment.
+
+A fresh authenticated model catalog GET verified the exact `meta-models/muse-spark-open-1026` listing and its rates: $1.25 per million input tokens, $0.15 per million cached input tokens, $4.25 per million completion tokens, and zero per-request charge. At the frozen 98,304-token completion cap, completion charges would be $0.417792. Allowing 64,000 uncached input tokens for 32,007 bytes of message text plus framing gives a conservative planning estimate of **$0.50**, below the $1 budget. The runner caps calls and completion tokens. The dollar estimate uses catalog rates and an input allowance.
+
+Offline regeneration matched both hashes above. The planned private output directory, `/tmp/parallax-pilot-attempt-01`, was absent at preflight and will be checked again at launch. The sole outstanding execution gate is the user's confirmation of active credit and its applicability to this run. Inference requests, tokens and charges remain at zero.
