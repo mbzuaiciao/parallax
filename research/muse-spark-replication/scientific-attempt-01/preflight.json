@@ -1,0 +1,22 @@
+{
+  "commit": "c920458d8a8b4d04671e8c33acecc43eec33d57e",
+  "grid_sha256": "c13ca4004c414c4612a47b7cbba543b1d15d1927b924f0d578a284978c77e442",
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "model": "muse-spark-1.3",
+  "credential_present_in_ignored_untracked_env": true,
+  "synthetic_compatibility_passed": true,
+  "new_synthetic_requests": 0,
+  "quota_checked": false,
+  "request_count": 12,
+  "socket_timeout_seconds": 60,
+  "retries": 0,
+  "redirects": false,
+  "pricing_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+  "uncached_input_usd_per_million": "1.25",
+  "cached_input_usd_per_million": "0.15",
+  "output_usd_per_million": "4.25",
+  "input_token_allowance": 12000,
+  "maximum_completion_tokens": 98304,
+  "estimated_budget_scenario_usd": "0.432792",
+  "authorized_estimated_usd": 1
+}

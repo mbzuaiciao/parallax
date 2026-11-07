@@ -1,0 +1,62 @@
+{
+  "bf18fb5a": {
+    "case": "01",
+    "arm": "A",
+    "index": 1
+  },
+  "01c7ea08": {
+    "case": "01",
+    "arm": "B",
+    "index": 2
+  },
+  "3adba905": {
+    "case": "01",
+    "arm": "C",
+    "index": 3
+  },
+  "b8295bce": {
+    "case": "02",
+    "arm": "B",
+    "index": 4
+  },
+  "11f0faee": {
+    "case": "02",
+    "arm": "C",
+    "index": 5
+  },
+  "e10361c4": {
+    "case": "02",
+    "arm": "A",
+    "index": 6
+  },
+  "3e1f1c6c": {
+    "case": "03",
+    "arm": "C",
+    "index": 7
+  },
+  "cb7ffd9a": {
+    "case": "03",
+    "arm": "A",
+    "index": 8
+  },
+  "298c420d": {
+    "case": "03",
+    "arm": "B",
+    "index": 9
+  },
+  "8152e4cf": {
+    "case": "04",
+    "arm": "A",
+    "index": 10
+  },
+  "d07e2da5": {
+    "case": "04",
+    "arm": "C",
+    "index": 11
+  },
+  "fcffd961": {
+    "case": "04",
+    "arm": "B",
+    "index": 12
+  }
+}

@@ -31,3 +31,7 @@ The grid selects Meta's standard `muse-spark-1.3`, disables streaming, and sets 
 The grid contains 31,989 message characters. Using Beam's observed 9,278 input and 55,747 generated tokens as a planning proxy, the 12 Muse requests would cost about **USD 0.25** at Meta's standard rates of USD 1.25 per million uncached input and USD 4.25 per million output tokens. An allowance of 12,000 input tokens and all 98,304 available completion tokens gives a **USD 0.43** budget scenario before any cache savings. Muse's tokenizer and reasoning usage can differ. Account quota, credits, actual billing, and behavior on the full scientific packets remain unverified. [Meta pricing](https://dev.meta.ai/docs/pricing-rate-limits)
 
 The grid is ready for offline review. **Zero of the 12 scientific calls were sent.** Live execution requires separate authorization. For an authorized run, preserve the fixed order and masking procedure, archive exact requests and returned responses in a fresh attempt directory, and stop on any provider or transport error, malformed or empty output, missing model or usage, changed model ID, or non-`stop` finish. Score only the visible assistant text under the frozen checklist.
+
+## Completed scientific run
+
+The separately authorized run completed all 12 frozen calls once at `c920458`. The preparation above records the state before that authorization. See the [execution and preliminary scoring report](scientific-attempt-01/report.md) for the archive, within-Muse comparisons, and comparison with Beam.
