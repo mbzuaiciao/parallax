@@ -1,0 +1,66 @@
+{
+  "verified_on": "2026-11-05",
+  "analysis_as_of": "2023-11-21",
+  "provenance": "Verified 2026-11-05 against direct SEC HTML retrieval and independent HTML downloads. Each paragraph matches downloaded filing text after whitespace normalization; paragraph breaks are preserved. Only source, locator and text enter the model requests; no research interpretations or reference answers.",
+  "filings": [
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000119312523231673/d541232d8k.htm",
+      "accession": "0001193125-23-231673",
+      "filed_on": "2023-09-08",
+      "form": "8-K",
+      "retrieved_html_sha256": "cf9a8d95f99195a72f3b53714eb344763e956969d4caef331180d65f4a05d132"
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000206/dis-20231101.htm",
+      "accession": "0001744489-23-000206",
+      "filed_on": "2023-11-01",
+      "form": "8-K",
+      "retrieved_html_sha256": "e39ab0f3efc566d92e0b8cd4efb637d9ee29767996e23b457c9b231a29586896"
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm",
+      "accession": "0001744489-23-000216",
+      "filed_on": "2023-11-21",
+      "form": "10-K",
+      "period_end": "2023-09-30",
+      "retrieved_html_sha256": "ed9cd9d6a68402cf1028f854f5bb55924f929229f6ffdb38c21c7ca9246c0f05"
+    }
+  ],
+  "excerpts": [
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000119312523231673/d541232d8k.htm",
+      "locator": "Item 8.01, paragraph 1 (May 2019 agreement)",
+      "text": "In May 2019, subsidiaries of The Walt Disney Company (collectively with its subsidiaries, “Disney”), a subsidiary of NBC Universal (collectively with its subsidiaries, “NBCU”) and Hulu, LLC (“Hulu”), which is owned 67% by Disney and 33% by NBCU, subject to dilution under certain circumstances, entered into an amended agreement."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000119312523231673/d541232d8k.htm",
+      "locator": "Item 8.01, paragraphs 3–5 (exercise window and appraisal)",
+      "text": "Under the agreement, as amended, in November 2023 (in addition to subsequent periods), NBCU has the option to require Disney to purchase, and Disney has the option to require NBCU to sell, NBCU’s interest in Hulu to Disney, in either case at a redemption value based on NBCU’s equity ownership percentage of the greater of Hulu’s equity fair value or a guaranteed floor value of $27.5 billion. If the put/call is exercised in November 2023, Hulu’s equity fair value will be assessed as of September 30, 2023.\nIn the event the parties do not come to agreement regarding equity fair value, each party appoints an investment banking firm to determine the value. If the two determinations are not within ten percent (10%) of each other, then the two investment banking firms select a third firm to make a third determination, in which case the equity fair value shall be the average of the two determinations that are closest in value to each other.\nThe appraisers shall take into account factors they determine relevant to valuation and certain specific factors, including, among others, Hulu’s historical financial and operating results, which shall be based solely on audited financial statements; that Hulu is valued as a going concern, carrying on its existing business activities; and Hulu’s future business prospects and projected financial and operating results, assuming that the assets, contract rights and intellectual property used in Hulu’s business that are provided by Disney will be continued and available to Hulu in a manner and on terms consistent with past practice."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000206/dis-20231101.htm",
+      "locator": "Item 8.01, paragraph 1 (November 1 exercise)",
+      "text": "On November 1, 2023, a subsidiary of NBC Universal (collectively with its subsidiaries, “NBCU”) provided notice to a subsidiary of The Walt Disney Company (collectively with its subsidiaries, “Disney”) of its exercise of its right under a put/call arrangement pursuant to an agreement, as amended (the “Hulu Agreement\"), among Disney, NBCU and Hulu, LLC (“Hulu”), which is owned 67% by Disney and 33% by NBCU, subject to dilution under certain circumstances, to require Disney to purchase NBCU’s interest in Hulu, at a value based on NBCU’s equity ownership percentage of the greater of Hulu’s equity fair value or a guaranteed floor value of $27.5 billion (the “guaranteed floor value”)."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000206/dis-20231101.htm",
+      "locator": "Item 8.01, paragraphs 2–3 (initial payment)",
+      "text": "On or before December 1, 2023, Disney is required to pay NBCU the guaranteed purchase price (as described below) minus the outstanding NBCU capital call contributions under the Hulu Agreement payable to Disney remaining unpaid on such date.\nAccordingly, on such date, Disney expects it will pay NBCU approximately $8.61 billion, representing NBCU’s equity ownership percentage of the guaranteed floor value of approximately $9.17 billion (the “guaranteed purchase price”) minus the outstanding NBCU capital call contributions under the Hulu Agreement payable to Disney, currently approximately $567 million, if the full amount of such outstanding capital call contributions remains unpaid on such date."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000206/dis-20231101.htm",
+      "locator": "Item 8.01, paragraph 4 (appraisal adjustment and tax sharing)",
+      "text": "Hulu’s equity fair value will be assessed as of September 30, 2023, and determined in accordance with the parties’ agreed appraisal process. If the equity fair value is finally determined to be greater than the guaranteed floor value, Disney will pay NBCU an amount equal to NBCU’s equity ownership percentage of the equity fair value net of the guaranteed purchase price within 45 days of such final determination. Disney will share with NBCU 50% of Disney’s estimated U.S. tax savings resulting from the acquisition, which payments are expected to be made primarily over a 15-year period."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm",
+      "locator": "Note 2, Redeemable Noncontrolling Interests and Contributions from Noncontrolling Interest Holders — Hulu LLC, printed p. 99",
+      "text": "The Company consolidates the results of Hulu LLC (Hulu), a DTC streaming service provider, which is owned 67% by the Company and 33% by NBC Universal (NBCU). In May 2019, the Company entered into a put/call agreement with NBCU that provided the Company with full operational control of Hulu.\nUnder the agreement, NBCU has the option to require the Company to purchase NBCU’s interest in Hulu (put right) and the Company has the option to require NBCU to sell its interest in Hulu to the Company (call right) at a redemption value based on NBCU’s equity ownership percentage of the greater of Hulu’s equity fair value or a guaranteed floor value of $27.5 billion.\nIn August 2023, certain provisions under the put/call agreement were amended, including the addition of a November 2023 exercise window for the put/call, which would require assessment of Hulu’s equity fair value as of September 30, 2023.\nIn November 2023, NBCU exercised its put right and the Company is obligated to pay NBCU the minimum value (approximately $9.2 billion based on the guaranteed floor value, less the unpaid capital call contributions payable by NBCU to the Company of $0.6 billion) within 30 days of exercise of the put. In accordance with the valuation procedures, Hulu’s equity fair value is not expected to be determined until sometime in calendar 2024.\nIf Hulu’s equity fair value is determined to be higher than the guaranteed floor value, the Company would be required to pay NBCU’s share of the difference between the equity fair value and the guaranteed floor value at that time.\nDetermining the estimated redemption value requires management to make significant judgments. To the extent the fair value is deemed to exceed the guaranteed floor value, we would recognize NBCU’s share of the additional amount as a charge to “Net income from continuing operations attributable to noncontrolling interests” and thus reduce “Net income attributable to Disney” in the Consolidated Statements of Income."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm",
+      "locator": "Note 2, Redeemable Noncontrolling Interests and Contributions from Noncontrolling Interest Holders — Hulu LLC, printed p. 100, first two paragraphs",
+      "text": "In addition, the Company will share 50% of its tax benefit from the purchase of NBCU’s interest in Hulu with NBCU, which payments are expected to be made primarily over a 15-year period.\nAt September 30, 2023, NBCU’s interest in Hulu is recorded in the Company’s financial statements at $9.1 billion, which is reported as “Redeemable noncontrolling interest” in the Consolidated Balance Sheet."
+    }
+  ]
+}
