@@ -1,0 +1,61 @@
+{
+  "version": {
+    "version": "0.40.15"
+  },
+  "account_whoami_http_status": 200,
+  "tags_http_status": 200,
+  "model_show_http_status": 200,
+  "tag": {
+    "name": "beam:cloud",
+    "model": "beam:cloud",
+    "remote_model": "beam",
+    "remote_host": "https://ollama.com",
+    "modified_at": "2026-11-06T17:06:46.406834641-08:00",
+    "size": 284,
+    "digest": "6f9b20c827296f6a35976058facb0ff70d612985eceffbbc3e4454819f7a373f",
+    "details": {
+      "parent_model": "",
+      "format": "",
+      "family": "",
+      "families": null,
+      "parameter_size": "501B",
+      "quantization_level": "",
+      "context_length": 1048576
+    },
+    "capabilities": [
+      "completion",
+      "thinking",
+      "tools"
+    ]
+  },
+  "model_info": {
+    "beam.context_length": 1048576,
+    "beam.embedding_length": 0,
+    "general.architecture": "beam",
+    "general.parameter_count": 501000000000
+  },
+  "total_payload_bytes": 34211,
+  "max_payload_bytes": 4174,
+  "recorded_at": "2026-11-07T16:28:07.748015+00:00",
+  "commit": "806d091e2e65f4f170e39c32faaa9b0f76eff10e",
+  "grid_sha256": "0aece7e2cd7d3e2a7c1a3282ead682e6b754fe7747fb3593d8fecf90b7976325",
+  "reference_review": "Reused prior human review recorded in Issue #8 replacement revision. No reference edits.",
+  "maximum_estimated_budget_usd": 1,
+  "public_promotion": "Beam listed as free through November 9, 2026 at 12:01 a.m. PST",
+  "pricing_sources": [
+    "https://ollama.com/library/beam:cloud",
+    "https://ollama.com/pricing"
+  ],
+  "standard_usd_per_million": {
+    "input": 0.125,
+    "cached_input": 0.015,
+    "output": 0.4
+  },
+  "conservative_planning_tokens": {
+    "input_uncached": 64000,
+    "generated_including_thinking": 120000
+  },
+  "conservative_planning_estimate_usd": 0.056,
+  "quota_balance": "Unavailable from the checked local API; user authorized proceeding with account and model checks and documented estimate.",
+  "access_basis": "Authenticated Ollama identity check, matching installed cloud route and public Beam listing, and prior successful smoke on the same configuration."
+}

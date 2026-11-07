@@ -1,0 +1,16 @@
+{
+  "method": "POST",
+  "endpoint": "http://127.0.0.1:11434/api/chat",
+  "headers": {"Content-Type": "application/json"},
+  "timeout_seconds": 120,
+  "max_requests": 1,
+  "request_file": "request.json",
+  "validation": {
+    "http_status": 200,
+    "done": true,
+    "done_reason": "stop",
+    "model": "nonempty reported identifier",
+    "message.role": "assistant",
+    "message.content_trimmed": "GREEN"
+  }
+}

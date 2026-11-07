@@ -1,0 +1,50 @@
+{
+  "version": {
+    "version": "0.40.15"
+  },
+  "tag": {
+    "name": "beam:cloud",
+    "model": "beam:cloud",
+    "remote_model": "beam",
+    "remote_host": "https://ollama.com",
+    "modified_at": "2026-11-06T17:06:46.406834641-08:00",
+    "size": 284,
+    "digest": "6f9b20c827296f6a35976058facb0ff70d612985eceffbbc3e4454819f7a373f",
+    "details": {
+      "parent_model": "",
+      "format": "",
+      "family": "",
+      "families": null,
+      "parameter_size": "501B",
+      "quantization_level": "",
+      "context_length": 1048576
+    },
+    "capabilities": [
+      "completion",
+      "thinking",
+      "tools"
+    ]
+  },
+  "show": {
+    "details": {
+      "parent_model": "beam",
+      "format": "",
+      "family": "beam",
+      "families": null,
+      "parameter_size": "501000000000",
+      "quantization_level": ""
+    },
+    "capabilities": [
+      "completion",
+      "thinking",
+      "tools"
+    ],
+    "model_info": {
+      "beam.context_length": 1048576,
+      "beam.embedding_length": 0,
+      "general.architecture": "beam",
+      "general.parameter_count": 501000000000
+    },
+    "parameters": null
+  }
+}

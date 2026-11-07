@@ -1,0 +1,74 @@
+[
+  {
+    "id": "770a9ca8",
+    "index": 1,
+    "case": "01",
+    "arm": "A"
+  },
+  {
+    "id": "9016f31c",
+    "index": 2,
+    "case": "01",
+    "arm": "B"
+  },
+  {
+    "id": "aa3edffe",
+    "index": 3,
+    "case": "01",
+    "arm": "C"
+  },
+  {
+    "id": "155cf720",
+    "index": 4,
+    "case": "02",
+    "arm": "B"
+  },
+  {
+    "id": "1360c029",
+    "index": 5,
+    "case": "02",
+    "arm": "C"
+  },
+  {
+    "id": "b246cc43",
+    "index": 6,
+    "case": "02",
+    "arm": "A"
+  },
+  {
+    "id": "9e0a765d",
+    "index": 7,
+    "case": "03",
+    "arm": "C"
+  },
+  {
+    "id": "9b62abff",
+    "index": 8,
+    "case": "03",
+    "arm": "A"
+  },
+  {
+    "id": "f7164521",
+    "index": 9,
+    "case": "03",
+    "arm": "B"
+  },
+  {
+    "id": "a373507d",
+    "index": 10,
+    "case": "04",
+    "arm": "A"
+  },
+  {
+    "id": "d3b6f33c",
+    "index": 11,
+    "case": "04",
+    "arm": "C"
+  },
+  {
+    "id": "2aae0074",
+    "index": 12,
+    "case": "04",
+    "arm": "B"
+  }
+]

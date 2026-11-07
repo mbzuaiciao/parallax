@@ -1,0 +1,8 @@
+{
+  "model": "beam:cloud",
+  "stream": false,
+  "messages": [
+    {"role": "system", "content": "Answer with only the name of the selected color in uppercase, without punctuation."},
+    {"role": "user", "content": "In a fictional lantern puzzle, a lantern starts blue. The blue lantern changes to green when the bell rings. The bell rings once. What color is the lantern now?"}
+  ]
+}
