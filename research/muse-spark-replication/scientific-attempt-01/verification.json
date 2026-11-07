@@ -1,0 +1,14 @@
+{
+  "submitted": 12,
+  "completed": 12,
+  "unattempted": 0,
+  "invalid": 0,
+  "usage_records": 12,
+  "prompt_tokens": 7667,
+  "cached_prompt_tokens": 0,
+  "completion_tokens": 52511,
+  "reported_reasoning_tokens": 34503,
+  "reasoning_usage_records": 12,
+  "list_price_estimate_usd_from_reported_usage": "0.2327555",
+  "client_elapsed_seconds": 460.314
+}

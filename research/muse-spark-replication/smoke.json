@@ -1,0 +1,53 @@
+{
+  "endpoint": "https://api.meta.ai/v1/chat/completions",
+  "method": "POST",
+  "request": {
+    "model": "muse-spark-1.3",
+    "stream": false,
+    "max_completion_tokens": 8192,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Follow the user instruction. Reply with only the requested word."
+      },
+      {
+        "role": "user",
+        "content": "A fictional lamp is purple. What color is the lamp? Reply PURPLE."
+      }
+    ]
+  },
+  "started_at_utc": "2026-11-07T17:25:55.043060+00:00",
+  "response": {
+    "id": "chatcmpl-01a1b70b-b626-706e-86c3-d682b8ccc409",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "PURPLE",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "logprobs": null
+      }
+    ],
+    "created": 1794072360,
+    "model": "muse-spark-1.3",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 301,
+      "prompt_tokens": 40,
+      "total_tokens": 341,
+      "completion_tokens_details": {
+        "reasoning_tokens": 290
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    }
+  },
+  "error": null,
+  "compatible": true,
+  "elapsed_seconds": 2.816
+}
