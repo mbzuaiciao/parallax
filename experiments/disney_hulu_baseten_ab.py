@@ -48,7 +48,8 @@ def load_excerpts(path):
 def run_call(key, condition, excerpts):
     payload = {
         "model": MODEL,
-        "max_completion_tokens": 4096,
+        "max_completion_tokens": 8192,
+        "reasoning_effort": "low",
         "messages": [
             {"role": "system", "content": PROMPTS[condition]},
             {"role": "user", "content": QUESTION + "\n\n" + json.dumps(excerpts)},
